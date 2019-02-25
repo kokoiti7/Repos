@@ -52,12 +52,11 @@ namespace WindowsFormsApp1
         static string GetBlobSasUri(CloudBlobContainer container)
         {
             //Get a reference to a blob within the container.
-            CloudBlockBlob blob = container.GetBlockBlobReference("777.pdf");
+            CloudBlockBlob blob = container.GetBlockBlobReference("222.pdf");
 
             //Upload text to the blob. If the blob does not yet exist, it will be created.
             //If the blob does exist, its existing content will be overwritten.
-            string blobContent = "This blob will be accessible to clients via a shared access signature (SAS).";
-            blob.UploadText(blobContent);
+
 
             //Set the expiry time and permissions for the blob.
             //In this case, the start time is specified as a few minutes in the past, to mitigate clock skew.
@@ -93,7 +92,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.webBrowser2.Navigate("https://temmstorage.blob.core.windows.net/test/777.pdf?sv=2018-03-28&sr=b&sig=tYrn9xi5atbOaBpeI4%2FzUrS1nGLCy5GI1attQrylExM%3D&st=2019-02-25T08%3A04%3A41Z&se=2019-02-26T08%3A09%3A41Z&sp=rw");
+            this.webBrowser2.Navigate (URI);
         }
     }
 }

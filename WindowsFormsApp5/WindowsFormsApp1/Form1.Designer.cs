@@ -37,9 +37,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 46);
+            this.textBox1.Location = new System.Drawing.Point(12, 52);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(482, 19);
+            this.textBox1.Size = new System.Drawing.Size(425, 19);
             this.textBox1.TabIndex = 0;
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -69,9 +69,7 @@
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.Size = new System.Drawing.Size(425, 250);
             this.webBrowser2.TabIndex = 3;
-            this.webBrowser2.Url = new System.Uri("https://temmstorage.blob.core.windows.net/test/777.pdf?sv=2018-03-28&sr=b&sig=xdw" +
-        "9bJX6cN4wKaWd2ueZzT6kskbx0v51C2cd7mvNS1I%3D&st=2019-02-25T08%3A06%3A12Z&se=2019-" +
-        "02-26T08%3A11%3A12Z&sp=rw", System.UriKind.Absolute);
+            this.webBrowser2.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // button2
             // 
