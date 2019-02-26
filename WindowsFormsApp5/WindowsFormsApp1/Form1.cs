@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
 
         string URI;
         CloudBlockBlob blockBlob_upload;
+        CloudBlobContainer bakupcontainer;
+        public string filenamelist;
 
         public Form1()
         {
@@ -29,16 +31,42 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Parse the connection string and return a reference to the storage account.
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
 
-            //Create the blob client object.
+
+
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
+
+            ////////////////// ここまでは各Storageサービス共通 //////////////////////////////////
+
+            //blob
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            //container
+            CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
 
-            //Get a reference to a container to use for the sample code, and create it if it does not exist.
-            CloudBlobContainer container = blobClient.GetContainerReference("test2");
 
 
+            var backupBlobClient = storageAccount.CreateCloudBlobClient();
+            var backupContainer = backupBlobClient.GetContainerReference("temmfile");
+
+            // useFlatBlobListing is true to ensure loading all files in
+            // virtual blob sub-folders as a plain list
+            var list = backupContainer.ListBlobs(useFlatBlobListing: true);
+            var listOfFileNames = new List<string>();
+
+
+
+            var blobs = backupContainer.ListBlobs().OfType<CloudBlockBlob>().ToList();
+
+
+            foreach (var blob in blobs)
+            {
+                var blobFileName = blob.Uri.Segments.Last();
+
+                listOfFileNames.Add(blobFileName);
+
+            }
+
+            listBox1.DataSource = listOfFileNames;
 
             URI = GetBlobSasUri(container);
 
@@ -178,35 +206,25 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
 
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
 
-            ////////////////// ここまでは各Storageサービス共通 //////////////////////////////////
+            CloudBlockBlob blockBlob_download = bakupcontainer.GetBlockBlobReference(listBox1.SelectedItem.ToString());
 
-            //blob
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            //container
-            CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
+            //ダウンロード処理
+            //ダウンロード後のパスとファイル名を指定。
+            blockBlob_download.DownloadToFile(@"C:\Users\hoge\Desktop\ddd.jpg", System.IO.FileMode.CreateNew);
 
 
+        }
 
-           
-            var backupBlobClient = storageAccount.CreateCloudBlobClient();
-            var backupContainer = backupBlobClient.GetContainerReference("temmfile");
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //listBox1.SelectedItems.Remove(); 
+            MessageBox.Show(filenamelist);
+        }
 
-            // useFlatBlobListing is true to ensure loading all files in
-            // virtual blob sub-folders as a plain list
-            var list = backupContainer.ListBlobs(useFlatBlobListing: true);
-            var listOfFileNames = new List<string>();
-
-            var blobs = backupContainer.ListBlobs().OfType<CloudBlockBlob>().ToList();
-
-            foreach (var blob in blobs)
-            {
-                var blobFileName = blob.Uri.Segments.Last();
-                listOfFileNames.Add(blobFileName);
-            }
-
-            MessageBox.Show(listOfFileNames.ToString());
+        public void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filenamelist= listBox1.SelectedItem.ToString();
         }
     }
 }

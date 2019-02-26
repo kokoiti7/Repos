@@ -37,6 +37,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -87,7 +89,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(519, 52);
+            this.button3.Location = new System.Drawing.Point(686, 127);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(134, 23);
             this.button3.TabIndex = 5;
@@ -104,7 +106,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(519, 127);
+            this.button4.Location = new System.Drawing.Point(529, 431);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(134, 23);
             this.button4.TabIndex = 7;
@@ -114,19 +116,41 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(519, 193);
+            this.button5.Location = new System.Drawing.Point(529, 377);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(134, 23);
             this.button5.TabIndex = 8;
-            this.button5.Text = "button5";
+            this.button5.Text = "download";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(357, 127);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(306, 232);
+            this.listBox1.TabIndex = 9;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(357, 431);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(134, 23);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "delete";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 613);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
@@ -155,6 +179,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button6;
     }
 }
 
