@@ -11,6 +11,7 @@ using System.IO;
 using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System.Diagnostics;
 
 namespace WindowsFormsApp1
 {
@@ -18,6 +19,7 @@ namespace WindowsFormsApp1
     {
 
         string URI;
+        CloudBlockBlob blockBlob_upload;
 
         public Form1()
         {
@@ -34,8 +36,9 @@ namespace WindowsFormsApp1
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
             //Get a reference to a container to use for the sample code, and create it if it does not exist.
-            CloudBlobContainer container = blobClient.GetContainerReference("test");
-            container.CreateIfNotExists();
+            CloudBlobContainer container = blobClient.GetContainerReference("test2");
+
+
 
             URI = GetBlobSasUri(container);
 
@@ -52,25 +55,26 @@ namespace WindowsFormsApp1
         static string GetBlobSasUri(CloudBlobContainer container)
         {
             //Get a reference to a blob within the container.
-            CloudBlockBlob blob = container.GetBlockBlobReference("222.pdf");
+            CloudBlockBlob blob = container.GetBlockBlobReference("Great Perseus DWG.pdf");
 
-            //Upload text to the blob. If the blob does not yet exist, it will be created.
-            //If the blob does exist, its existing content will be overwritten.
+            //Get a reference to a blob within the container.
+        
 
+           // blob.Exists();
 
-            //Set the expiry time and permissions for the blob.
-            //In this case, the start time is specified as a few minutes in the past, to mitigate clock skew.
-            //The shared access signature will be valid immediately.
+            
             SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
+            
             sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
             sasConstraints.SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24);
             sasConstraints.Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write;
 
             //Generate the shared access signature on the blob, setting the constraints directly on the signature.
             string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
-
+           
             //Return the URI string for the container, including the SAS token.
             return blob.Uri + sasBlobToken;
+           
         }
 
 
@@ -93,6 +97,116 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.webBrowser2.Navigate (URI);
+        }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            // To create the account SAS, you need to use your shared key credentials. Modify for your account.
+            const string ConnectionString = "DefaultEndpointsProtocol=https;AccountName=temmstorage;AccountKey=zaMKR6/YhEMlmhpUu8TcW/1qas5M3GdZDfcoLQJ3LTC3EaLn9GRfHGEJ56/C+D+rWhl5rkxsgpZv5f+Ivkn/sA==";
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConnectionString);
+            CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer container = blobClientWithSAS.GetContainerReference("test2");
+
+            //blockBlob_upload = container;
+
+            //Get a reference to a blob within the container.
+            CloudBlockBlob blob = container.GetBlockBlobReference("gg.xlsx");
+
+            //Set the expiry time and permissions for the blob.
+            //In this case, the start time is specified as a few minutes in the past, to mitigate clock skew.
+            //The shared access signature will be valid immediately.
+            SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
+            sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
+            sasConstraints.SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24);
+            sasConstraints.Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write;
+
+            //Generate the shared access signature on the blob, setting the constraints directly on the signature.
+            string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
+
+            //Return the URI string for the container, including the SAS token.
+            MessageBox.Show(blob.Uri + sasBlobToken);
+            //webBrowser1.Navigate(new Uri(blob.Uri + sasBlobToken));
+            textBox2.Text = blob.Uri + sasBlobToken.ToString();
+            Process.Start(blob.Uri + sasBlobToken);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
+
+            ////////////////// ここまでは各Storageサービス共通 //////////////////////////////////
+
+            //blob
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            //container
+            CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
+            
+
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            //複数のファイルを選択できるようにする
+            ofd.Multiselect = true;
+
+
+            //ダイアログを表示する
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                //OKボタンがクリックされたとき、選択されたファイル名をすべて表示する
+                foreach (string fn in ofd.FileNames)
+                {
+                    var fileStream = System.IO.File.OpenRead(fn);
+                    var filenamefn = System.IO.Path.GetFileName(fn);
+                    CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenamefn);
+                    blockBlob_upload.UploadFromStream(fileStream);
+                }
+            }
+
+            else
+            {
+                this.Close();
+            }
+
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=temmblobadmin;AccountKey=+7YLZ8+YK6td1m55K0AopQBpA/Pp+0z4iBMPind6HI87jhxF9DBe+wb11BbOyZhg+DWCqtitg/iWGexBWDaUdA==");
+
+            ////////////////// ここまでは各Storageサービス共通 //////////////////////////////////
+
+            //blob
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            //container
+            CloudBlobContainer container = blobClient.GetContainerReference("temmfile");
+
+
+
+           
+            var backupBlobClient = storageAccount.CreateCloudBlobClient();
+            var backupContainer = backupBlobClient.GetContainerReference("temmfile");
+
+            // useFlatBlobListing is true to ensure loading all files in
+            // virtual blob sub-folders as a plain list
+            var list = backupContainer.ListBlobs(useFlatBlobListing: true);
+            var listOfFileNames = new List<string>();
+
+            var blobs = backupContainer.ListBlobs().OfType<CloudBlockBlob>().ToList();
+
+            foreach (var blob in blobs)
+            {
+                var blobFileName = blob.Uri.Segments.Last();
+                listOfFileNames.Add(blobFileName);
+            }
+
+            MessageBox.Show(listOfFileNames.ToString());
         }
     }
 }
