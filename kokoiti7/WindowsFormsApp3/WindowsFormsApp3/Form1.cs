@@ -135,9 +135,7 @@ namespace WindowsFormsApp3
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //datachenagebindingsorceをソートして日付降順
-            dataExchangeBindingSource2.Sort = "MonthGroup";
-            dataExchange_feeBindingSource1.Sort = "MonthGroup";
+
             //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
             dataExchangeBindingSource2.Filter = string.Format("Shipname like '{0:s}'", comboBox1.Text) + "AND MonthGroup = '" + textBox1.Text + "'";
 
