@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00B1EE16-1784-4F08-80D3-A281D07E40BE}</ProjectGuid>
+    <ProjectGuid>{866EC9C3-F857-4709-BE71-0F5A8ED7F1D5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ImageViewer</RootNamespace>
-    <AssemblyName>ImageViewer</AssemblyName>
+    <RootNamespace>PhotoViewer</RootNamespace>
+    <AssemblyName>PhotoViewer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AZUREDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AZUREDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +76,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="AZUREDBDataSet.xsc">
+      <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AZUREDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AZUREDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AZUREDBDataSet.xss">
+      <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="AZUREDBDataSet1.xsc">
       <DependentUpon>AZUREDBDataSet1.xsd</DependentUpon>
     </None>

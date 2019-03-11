@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoView", "PhotoView\PhotoView.csproj", "{7AF186FE-B596-41E5-AA4B-7E896F87431E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AF186FE-B596-41E5-AA4B-7E896F87431E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF186FE-B596-41E5-AA4B-7E896F87431E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF186FE-B596-41E5-AA4B-7E896F87431E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF186FE-B596-41E5-AA4B-7E896F87431E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB525DEE-F11D-4381-83E2-DFD2ABB0E1F1}
+	EndGlobalSection
+EndGlobal

@@ -20,17 +20,17 @@ namespace ImageViewer {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AZUREDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("AZUREDBDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AZUREDBDataSet : global::System.Data.DataSet {
+    public partial class AZUREDBDataSet2 : global::System.Data.DataSet {
         
-        private ImagetestDataTable tableImagetest;
+        private IMPA4thED_SectionDataTable tableIMPA4thED_Section;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public AZUREDBDataSet() {
+        public AZUREDBDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace ImageViewer {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected AZUREDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected AZUREDBDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace ImageViewer {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Imagetest"] != null)) {
-                    base.Tables.Add(new ImagetestDataTable(ds.Tables["Imagetest"]));
+                if ((ds.Tables["IMPA4thED_Section"] != null)) {
+                    base.Tables.Add(new IMPA4thED_SectionDataTable(ds.Tables["IMPA4thED_Section"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ImageViewer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ImagetestDataTable Imagetest {
+        public IMPA4thED_SectionDataTable IMPA4thED_Section {
             get {
-                return this.tableImagetest;
+                return this.tableIMPA4thED_Section;
             }
         }
         
@@ -127,7 +127,7 @@ namespace ImageViewer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AZUREDBDataSet cln = ((AZUREDBDataSet)(base.Clone()));
+            AZUREDBDataSet2 cln = ((AZUREDBDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace ImageViewer {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Imagetest"] != null)) {
-                    base.Tables.Add(new ImagetestDataTable(ds.Tables["Imagetest"]));
+                if ((ds.Tables["IMPA4thED_Section"] != null)) {
+                    base.Tables.Add(new IMPA4thED_SectionDataTable(ds.Tables["IMPA4thED_Section"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ImageViewer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableImagetest = ((ImagetestDataTable)(base.Tables["Imagetest"]));
+            this.tableIMPA4thED_Section = ((IMPA4thED_SectionDataTable)(base.Tables["IMPA4thED_Section"]));
             if ((initTable == true)) {
-                if ((this.tableImagetest != null)) {
-                    this.tableImagetest.InitVars();
+                if ((this.tableIMPA4thED_Section != null)) {
+                    this.tableIMPA4thED_Section.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace ImageViewer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AZUREDBDataSet";
+            this.DataSetName = "AZUREDBDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AZUREDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/AZUREDBDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableImagetest = new ImagetestDataTable();
-            base.Tables.Add(this.tableImagetest);
+            this.tableIMPA4thED_Section = new IMPA4thED_SectionDataTable();
+            base.Tables.Add(this.tableIMPA4thED_Section);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeImagetest() {
+        private bool ShouldSerializeIMPA4thED_Section() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace ImageViewer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AZUREDBDataSet ds = new AZUREDBDataSet();
+            AZUREDBDataSet2 ds = new AZUREDBDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,25 @@ namespace ImageViewer {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ImagetestRowChangeEventHandler(object sender, ImagetestRowChangeEvent e);
+        public delegate void IMPA4thED_SectionRowChangeEventHandler(object sender, IMPA4thED_SectionRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ImagetestDataTable : global::System.Data.TypedTableBase<ImagetestRow> {
+        public partial class IMPA4thED_SectionDataTable : global::System.Data.TypedTableBase<IMPA4thED_SectionRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnSection;
             
-            private global::System.Data.DataColumn columnImage;
+            private global::System.Data.DataColumn columnESection;
             
-            private global::System.Data.DataColumn columnRemark;
-            
-            private global::System.Data.DataColumn columnfilename;
+            private global::System.Data.DataColumn columnCSection;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestDataTable() {
-                this.TableName = "Imagetest";
+            public IMPA4thED_SectionDataTable() {
+                this.TableName = "IMPA4thED_Section";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +296,7 @@ namespace ImageViewer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ImagetestDataTable(global::System.Data.DataTable table) {
+            internal IMPA4thED_SectionDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +313,32 @@ namespace ImageViewer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ImagetestDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected IMPA4thED_SectionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn SectionColumn {
                 get {
-                    return this.columnID;
+                    return this.columnSection;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ImageColumn {
+            public global::System.Data.DataColumn ESectionColumn {
                 get {
-                    return this.columnImage;
+                    return this.columnESection;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RemarkColumn {
+            public global::System.Data.DataColumn CSectionColumn {
                 get {
-                    return this.columnRemark;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn filenameColumn {
-                get {
-                    return this.columnfilename;
+                    return this.columnCSection;
                 }
             }
             
@@ -363,55 +353,54 @@ namespace ImageViewer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestRow this[int index] {
+            public IMPA4thED_SectionRow this[int index] {
                 get {
-                    return ((ImagetestRow)(this.Rows[index]));
+                    return ((IMPA4thED_SectionRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ImagetestRowChangeEventHandler ImagetestRowChanging;
+            public event IMPA4thED_SectionRowChangeEventHandler IMPA4thED_SectionRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ImagetestRowChangeEventHandler ImagetestRowChanged;
+            public event IMPA4thED_SectionRowChangeEventHandler IMPA4thED_SectionRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ImagetestRowChangeEventHandler ImagetestRowDeleting;
+            public event IMPA4thED_SectionRowChangeEventHandler IMPA4thED_SectionRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ImagetestRowChangeEventHandler ImagetestRowDeleted;
+            public event IMPA4thED_SectionRowChangeEventHandler IMPA4thED_SectionRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddImagetestRow(ImagetestRow row) {
+            public void AddIMPA4thED_SectionRow(IMPA4thED_SectionRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestRow AddImagetestRow(byte[] Image, string Remark, string filename) {
-                ImagetestRow rowImagetestRow = ((ImagetestRow)(this.NewRow()));
+            public IMPA4thED_SectionRow AddIMPA4thED_SectionRow(string ESection, string CSection) {
+                IMPA4thED_SectionRow rowIMPA4thED_SectionRow = ((IMPA4thED_SectionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Image,
-                        Remark,
-                        filename};
-                rowImagetestRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowImagetestRow);
-                return rowImagetestRow;
+                        ESection,
+                        CSection};
+                rowIMPA4thED_SectionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowIMPA4thED_SectionRow);
+                return rowIMPA4thED_SectionRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestRow FindByID(int ID) {
-                return ((ImagetestRow)(this.Rows.Find(new object[] {
-                            ID})));
+            public IMPA4thED_SectionRow FindBySection(int Section) {
+                return ((IMPA4thED_SectionRow)(this.Rows.Find(new object[] {
+                            Section})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ImagetestDataTable cln = ((ImagetestDataTable)(base.Clone()));
+                IMPA4thED_SectionDataTable cln = ((IMPA4thED_SectionDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,65 +408,62 @@ namespace ImageViewer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ImagetestDataTable();
+                return new IMPA4thED_SectionDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnImage = base.Columns["Image"];
-                this.columnRemark = base.Columns["Remark"];
-                this.columnfilename = base.Columns["filename"];
+                this.columnSection = base.Columns["Section"];
+                this.columnESection = base.Columns["ESection"];
+                this.columnCSection = base.Columns["CSection"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnImage = new global::System.Data.DataColumn("Image", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnImage);
-                this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRemark);
-                this.columnfilename = new global::System.Data.DataColumn("filename", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfilename);
+                this.columnSection = new global::System.Data.DataColumn("Section", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSection);
+                this.columnESection = new global::System.Data.DataColumn("ESection", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESection);
+                this.columnCSection = new global::System.Data.DataColumn("CSection", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCSection);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
-                this.columnID.Unique = true;
-                this.columnRemark.MaxLength = 2147483647;
-                this.columnfilename.MaxLength = 2147483647;
+                                this.columnSection}, true));
+                this.columnSection.AutoIncrement = true;
+                this.columnSection.AutoIncrementSeed = -1;
+                this.columnSection.AutoIncrementStep = -1;
+                this.columnSection.AllowDBNull = false;
+                this.columnSection.ReadOnly = true;
+                this.columnSection.Unique = true;
+                this.columnESection.MaxLength = 255;
+                this.columnCSection.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestRow NewImagetestRow() {
-                return ((ImagetestRow)(this.NewRow()));
+            public IMPA4thED_SectionRow NewIMPA4thED_SectionRow() {
+                return ((IMPA4thED_SectionRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ImagetestRow(builder);
+                return new IMPA4thED_SectionRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ImagetestRow);
+                return typeof(IMPA4thED_SectionRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ImagetestRowChanged != null)) {
-                    this.ImagetestRowChanged(this, new ImagetestRowChangeEvent(((ImagetestRow)(e.Row)), e.Action));
+                if ((this.IMPA4thED_SectionRowChanged != null)) {
+                    this.IMPA4thED_SectionRowChanged(this, new IMPA4thED_SectionRowChangeEvent(((IMPA4thED_SectionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -485,8 +471,8 @@ namespace ImageViewer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ImagetestRowChanging != null)) {
-                    this.ImagetestRowChanging(this, new ImagetestRowChangeEvent(((ImagetestRow)(e.Row)), e.Action));
+                if ((this.IMPA4thED_SectionRowChanging != null)) {
+                    this.IMPA4thED_SectionRowChanging(this, new IMPA4thED_SectionRowChangeEvent(((IMPA4thED_SectionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -494,8 +480,8 @@ namespace ImageViewer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ImagetestRowDeleted != null)) {
-                    this.ImagetestRowDeleted(this, new ImagetestRowChangeEvent(((ImagetestRow)(e.Row)), e.Action));
+                if ((this.IMPA4thED_SectionRowDeleted != null)) {
+                    this.IMPA4thED_SectionRowDeleted(this, new IMPA4thED_SectionRowChangeEvent(((IMPA4thED_SectionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,14 +489,14 @@ namespace ImageViewer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ImagetestRowDeleting != null)) {
-                    this.ImagetestRowDeleting(this, new ImagetestRowChangeEvent(((ImagetestRow)(e.Row)), e.Action));
+                if ((this.IMPA4thED_SectionRowDeleting != null)) {
+                    this.IMPA4thED_SectionRowDeleting(this, new IMPA4thED_SectionRowChangeEvent(((IMPA4thED_SectionRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveImagetestRow(ImagetestRow row) {
+            public void RemoveIMPA4thED_SectionRow(IMPA4thED_SectionRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -519,7 +505,7 @@ namespace ImageViewer {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AZUREDBDataSet ds = new AZUREDBDataSet();
+                AZUREDBDataSet2 ds = new AZUREDBDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -537,7 +523,7 @@ namespace ImageViewer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ImagetestDataTable";
+                attribute2.FixedValue = "IMPA4thED_SectionDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -581,110 +567,82 @@ namespace ImageViewer {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ImagetestRow : global::System.Data.DataRow {
+        public partial class IMPA4thED_SectionRow : global::System.Data.DataRow {
             
-            private ImagetestDataTable tableImagetest;
+            private IMPA4thED_SectionDataTable tableIMPA4thED_Section;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ImagetestRow(global::System.Data.DataRowBuilder rb) : 
+            internal IMPA4thED_SectionRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableImagetest = ((ImagetestDataTable)(this.Table));
+                this.tableIMPA4thED_Section = ((IMPA4thED_SectionDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID {
+            public int Section {
                 get {
-                    return ((int)(this[this.tableImagetest.IDColumn]));
+                    return ((int)(this[this.tableIMPA4thED_Section.SectionColumn]));
                 }
                 set {
-                    this[this.tableImagetest.IDColumn] = value;
+                    this[this.tableIMPA4thED_Section.SectionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public byte[] Image {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableImagetest.ImageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'Imagetest\' にある列 \'Image\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableImagetest.ImageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Remark {
+            public string ESection {
                 get {
                     try {
-                        return ((string)(this[this.tableImagetest.RemarkColumn]));
+                        return ((string)(this[this.tableIMPA4thED_Section.ESectionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'Imagetest\' にある列 \'Remark\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'IMPA4thED_Section\' にある列 \'ESection\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableImagetest.RemarkColumn] = value;
+                    this[this.tableIMPA4thED_Section.ESectionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string filename {
+            public string CSection {
                 get {
                     try {
-                        return ((string)(this[this.tableImagetest.filenameColumn]));
+                        return ((string)(this[this.tableIMPA4thED_Section.CSectionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'Imagetest\' にある列 \'filename\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'IMPA4thED_Section\' にある列 \'CSection\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableImagetest.filenameColumn] = value;
+                    this[this.tableIMPA4thED_Section.CSectionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsImageNull() {
-                return this.IsNull(this.tableImagetest.ImageColumn);
+            public bool IsESectionNull() {
+                return this.IsNull(this.tableIMPA4thED_Section.ESectionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetImageNull() {
-                this[this.tableImagetest.ImageColumn] = global::System.Convert.DBNull;
+            public void SetESectionNull() {
+                this[this.tableIMPA4thED_Section.ESectionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRemarkNull() {
-                return this.IsNull(this.tableImagetest.RemarkColumn);
+            public bool IsCSectionNull() {
+                return this.IsNull(this.tableIMPA4thED_Section.CSectionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRemarkNull() {
-                this[this.tableImagetest.RemarkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsfilenameNull() {
-                return this.IsNull(this.tableImagetest.filenameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetfilenameNull() {
-                this[this.tableImagetest.filenameColumn] = global::System.Convert.DBNull;
+            public void SetCSectionNull() {
+                this[this.tableIMPA4thED_Section.CSectionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +650,22 @@ namespace ImageViewer {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ImagetestRowChangeEvent : global::System.EventArgs {
+        public class IMPA4thED_SectionRowChangeEvent : global::System.EventArgs {
             
-            private ImagetestRow eventRow;
+            private IMPA4thED_SectionRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestRowChangeEvent(ImagetestRow row, global::System.Data.DataRowAction action) {
+            public IMPA4thED_SectionRowChangeEvent(IMPA4thED_SectionRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ImagetestRow Row {
+            public IMPA4thED_SectionRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -723,7 +681,7 @@ namespace ImageViewer {
         }
     }
 }
-namespace ImageViewer.AZUREDBDataSetTableAdapters {
+namespace ImageViewer.AZUREDBDataSet2TableAdapters {
     
     
     /// <summary>
@@ -735,7 +693,7 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ImagetestTableAdapter : global::System.ComponentModel.Component {
+    public partial class IMPA4thED_SectionTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -749,7 +707,7 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ImagetestTableAdapter() {
+        public IMPA4thED_SectionTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -846,37 +804,44 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Imagetest";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("Image", "Image");
-            tableMapping.ColumnMappings.Add("Remark", "Remark");
-            tableMapping.ColumnMappings.Add("filename", "filename");
+            tableMapping.DataSetTable = "IMPA4thED_Section";
+            tableMapping.ColumnMappings.Add("Section", "Section");
+            tableMapping.ColumnMappings.Add("ESection", "ESection");
+            tableMapping.ColumnMappings.Add("CSection", "CSection");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Imagetest] WHERE (([ID] = @Original_ID))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[IMPA4thED_Section] WHERE (([Section] = @Original_Section) AND " +
+                "((@IsNull_ESection = 1 AND [ESection] IS NULL) OR ([ESection] = @Original_ESecti" +
+                "on)) AND ((@IsNull_CSection = 1 AND [CSection] IS NULL) OR ([CSection] = @Origin" +
+                "al_CSection)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Section", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Section", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ESection", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ESection", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ESection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ESection", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CSection", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CSection", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CSection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CSection", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Imagetest] ([Image], [Remark], [filename]) VALUES (@Image, @Re" +
-                "mark, @filename);\r\nSELECT ID, Image, Remark, filename FROM Imagetest WHERE (ID =" +
-                " SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[IMPA4thED_Section] ([ESection], [CSection]) VALUES (@ESection," +
+                " @CSection);\r\nSELECT Section, ESection, CSection FROM IMPA4thED_Section WHERE (S" +
+                "ection = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filename", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filename", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ESection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ESection", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CSection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CSection", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Imagetest] SET [Image] = @Image, [Remark] = @Remark, [filename] = @" +
-                "filename WHERE (([ID] = @Original_ID));\r\nSELECT ID, Image, Remark, filename FROM" +
-                " Imagetest WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[IMPA4thED_Section] SET [ESection] = @ESection, [CSection] = @CSection WHERE (([Section] = @Original_Section) AND ((@IsNull_ESection = 1 AND [ESection] IS NULL) OR ([ESection] = @Original_ESection)) AND ((@IsNull_CSection = 1 AND [CSection] IS NULL) OR ([CSection] = @Original_CSection)));
+SELECT Section, ESection, CSection FROM IMPA4thED_Section WHERE (Section = @Section)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Image", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Image", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filename", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "filename", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ESection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ESection", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CSection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CSection", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Section", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Section", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ESection", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ESection", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ESection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ESection", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CSection", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CSection", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CSection", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CSection", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Section", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Section", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -892,7 +857,7 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Image, Remark, filename FROM dbo.Imagetest";
+            this._commandCollection[0].CommandText = "SELECT Section, ESection, CSection FROM dbo.IMPA4thED_Section";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -900,7 +865,7 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet.ImagetestDataTable dataTable) {
+        public virtual int Fill(AZUREDBDataSet2.IMPA4thED_SectionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -913,9 +878,9 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet.ImagetestDataTable GetData() {
+        public virtual AZUREDBDataSet2.IMPA4thED_SectionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet.ImagetestDataTable dataTable = new AZUREDBDataSet.ImagetestDataTable();
+            AZUREDBDataSet2.IMPA4thED_SectionDataTable dataTable = new AZUREDBDataSet2.IMPA4thED_SectionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -923,15 +888,15 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet.ImagetestDataTable dataTable) {
+        public virtual int Update(AZUREDBDataSet2.IMPA4thED_SectionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Imagetest");
+        public virtual int Update(AZUREDBDataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "IMPA4thED_Section");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -953,8 +918,24 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+        public virtual int Delete(int Original_Section, string Original_ESection, string Original_CSection) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Section));
+            if ((Original_ESection == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ESection));
+            }
+            if ((Original_CSection == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_CSection));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -975,24 +956,18 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(byte[] Image, string Remark, string filename) {
-            if ((Image == null)) {
+        public virtual int Insert(string ESection, string CSection) {
+            if ((ESection == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((byte[])(Image));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ESection));
             }
-            if ((Remark == null)) {
+            if ((CSection == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Remark));
-            }
-            if ((filename == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(filename));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CSection));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1014,27 +989,37 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] Image, string Remark, string filename, int Original_ID, int ID) {
-            if ((Image == null)) {
+        public virtual int Update(string ESection, string CSection, int Original_Section, string Original_ESection, string Original_CSection, int Section) {
+            if ((ESection == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte[])(Image));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ESection));
             }
-            if ((Remark == null)) {
+            if ((CSection == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Remark));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CSection));
             }
-            if ((filename == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Section));
+            if ((Original_ESection == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(filename));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_ESection));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID));
+            if ((Original_CSection == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_CSection));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Section));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1055,8 +1040,8 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(byte[] Image, string Remark, string filename, int Original_ID) {
-            return this.Update(Image, Remark, filename, Original_ID, Original_ID);
+        public virtual int Update(string ESection, string CSection, int Original_Section, string Original_ESection, string Original_CSection) {
+            return this.Update(ESection, CSection, Original_Section, Original_ESection, Original_CSection, Original_Section);
         }
     }
     
@@ -1072,7 +1057,7 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private ImagetestTableAdapter _imagetestTableAdapter;
+        private IMPA4thED_SectionTableAdapter _iMPA4thED_SectionTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1094,12 +1079,12 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ImagetestTableAdapter ImagetestTableAdapter {
+        public IMPA4thED_SectionTableAdapter IMPA4thED_SectionTableAdapter {
             get {
-                return this._imagetestTableAdapter;
+                return this._iMPA4thED_SectionTableAdapter;
             }
             set {
-                this._imagetestTableAdapter = value;
+                this._iMPA4thED_SectionTableAdapter = value;
             }
         }
         
@@ -1122,9 +1107,9 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._imagetestTableAdapter != null) 
-                            && (this._imagetestTableAdapter.Connection != null))) {
-                    return this._imagetestTableAdapter.Connection;
+                if (((this._iMPA4thED_SectionTableAdapter != null) 
+                            && (this._iMPA4thED_SectionTableAdapter.Connection != null))) {
+                    return this._iMPA4thED_SectionTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1139,7 +1124,7 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._imagetestTableAdapter != null)) {
+                if ((this._iMPA4thED_SectionTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1151,14 +1136,14 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(AZUREDBDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._imagetestTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Imagetest.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._iMPA4thED_SectionTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.IMPA4thED_Section.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._imagetestTableAdapter.Update(updatedRows));
+                    result = (result + this._iMPA4thED_SectionTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1170,13 +1155,13 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(AZUREDBDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._imagetestTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Imagetest.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._iMPA4thED_SectionTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.IMPA4thED_Section.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._imagetestTableAdapter.Update(addedRows));
+                    result = (result + this._iMPA4thED_SectionTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1188,13 +1173,13 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(AZUREDBDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._imagetestTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Imagetest.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._iMPA4thED_SectionTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.IMPA4thED_Section.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._imagetestTableAdapter.Update(deletedRows));
+                    result = (result + this._iMPA4thED_SectionTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1230,15 +1215,15 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(AZUREDBDataSet dataSet) {
+        public virtual int UpdateAll(AZUREDBDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._imagetestTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._imagetestTableAdapter.Connection) == false))) {
+            if (((this._iMPA4thED_SectionTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._iMPA4thED_SectionTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -1272,13 +1257,13 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._imagetestTableAdapter != null)) {
-                    revertConnections.Add(this._imagetestTableAdapter, this._imagetestTableAdapter.Connection);
-                    this._imagetestTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._imagetestTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._imagetestTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._imagetestTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._imagetestTableAdapter.Adapter);
+                if ((this._iMPA4thED_SectionTableAdapter != null)) {
+                    revertConnections.Add(this._iMPA4thED_SectionTableAdapter, this._iMPA4thED_SectionTableAdapter.Connection);
+                    this._iMPA4thED_SectionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._iMPA4thED_SectionTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._iMPA4thED_SectionTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._iMPA4thED_SectionTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._iMPA4thED_SectionTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1339,9 +1324,9 @@ namespace ImageViewer.AZUREDBDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._imagetestTableAdapter != null)) {
-                    this._imagetestTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._imagetestTableAdapter]));
-                    this._imagetestTableAdapter.Transaction = null;
+                if ((this._iMPA4thED_SectionTableAdapter != null)) {
+                    this._iMPA4thED_SectionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._iMPA4thED_SectionTableAdapter]));
+                    this._iMPA4thED_SectionTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
