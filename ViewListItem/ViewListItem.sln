@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp3", "WindowsFormsApp3\WindowsFormsApp3.csproj", "{4F92E46F-DDC3-47E0-8ADC-10C0345EEDDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewListItem", "ViewListItem\ViewListItem.csproj", "{CC372E67-D6EA-4601-89E3-BC4DBB754490}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4F92E46F-DDC3-47E0-8ADC-10C0345EEDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F92E46F-DDC3-47E0-8ADC-10C0345EEDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F92E46F-DDC3-47E0-8ADC-10C0345EEDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F92E46F-DDC3-47E0-8ADC-10C0345EEDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC372E67-D6EA-4601-89E3-BC4DBB754490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC372E67-D6EA-4601-89E3-BC4DBB754490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC372E67-D6EA-4601-89E3-BC4DBB754490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC372E67-D6EA-4601-89E3-BC4DBB754490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1C032E68-DA20-490C-8008-560D8054BEAF}
+		SolutionGuid = {315F9A5F-9B1F-4CD4-8A93-838E42D9661C}
 	EndGlobalSection
 EndGlobal

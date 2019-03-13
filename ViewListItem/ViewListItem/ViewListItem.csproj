@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4F92E46F-DDC3-47E0-8ADC-10C0345EEDDD}</ProjectGuid>
+    <ProjectGuid>{CC372E67-D6EA-4601-89E3-BC4DBB754490}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp3</RootNamespace>
-    <AssemblyName>WindowsFormsApp3</AssemblyName>
+    <RootNamespace>ViewListItem</RootNamespace>
+    <AssemblyName>ViewListItem</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="allviewgrid.cs">
+    <Compile Include="AllView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="allviewgrid.Designer.cs">
-      <DependentUpon>allviewgrid.cs</DependentUpon>
+    <Compile Include="AllView.Designer.cs">
+      <DependentUpon>AllView.cs</DependentUpon>
     </Compile>
     <Compile Include="AZUREDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -74,8 +74,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="allviewgrid.resx">
-      <DependentUpon>allviewgrid.cs</DependentUpon>
+    <EmbeddedResource Include="AllView.resx">
+      <DependentUpon>AllView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -88,6 +88,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AZUREDBDataSet.xsc">
       <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>

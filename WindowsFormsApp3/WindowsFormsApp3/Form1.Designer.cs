@@ -73,6 +73,15 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validity_ItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.validity_attachDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validity_attachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Update = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
@@ -85,15 +94,6 @@
             this.fileNameTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingNavigator)).BeginInit();
             this.validity_MasterBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingSource)).BeginInit();
@@ -472,6 +472,63 @@
             this.validity_attachDataGridView.Size = new System.Drawing.Size(736, 220);
             this.validity_attachDataGridView.TabIndex = 3;
             // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "AttachID";
+            this.dataGridViewTextBoxColumn21.HeaderText = "AttachID";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "itemID";
+            this.dataGridViewTextBoxColumn22.HeaderText = "itemID";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Type of file";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Type of file";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn
+            // 
+            this.dataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn.DataPropertyName = "fileName";
+            this.dataGridViewTextBoxColumn.HeaderText = "fileName";
+            this.dataGridViewTextBoxColumn.Name = "dataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "filepath";
+            this.dataGridViewTextBoxColumn25.HeaderText = "filepath";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Remark";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Remark";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "BitSpare";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "BitSpare";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Update";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Update";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "nverSpare";
+            this.dataGridViewTextBoxColumn28.HeaderText = "nverSpare";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
             // validity_attachBindingSource
             // 
             this.validity_attachBindingSource.DataMember = "FK_Validity_attach_Validity_Items";
@@ -521,6 +578,7 @@
             // 
             // fileNameListBox
             // 
+            this.fileNameListBox.AllowDrop = true;
             this.fileNameListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.fileNameListBox.DataSource = this.validity_attachBindingSource;
             this.fileNameListBox.DisplayMember = "fileName";
@@ -590,63 +648,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(474, 669);
             this.panel2.TabIndex = 11;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "AttachID";
-            this.dataGridViewTextBoxColumn21.HeaderText = "AttachID";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "itemID";
-            this.dataGridViewTextBoxColumn22.HeaderText = "itemID";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "Type of file";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Type of file";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn
-            // 
-            this.dataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn.DataPropertyName = "fileName";
-            this.dataGridViewTextBoxColumn.HeaderText = "fileName";
-            this.dataGridViewTextBoxColumn.Name = "dataGridViewTextBoxColumn";
-            this.dataGridViewTextBoxColumn.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "filepath";
-            this.dataGridViewTextBoxColumn25.HeaderText = "filepath";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Remark";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "BitSpare";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "BitSpare";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "Update";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Update";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "nverSpare";
-            this.dataGridViewTextBoxColumn28.HeaderText = "nverSpare";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             // 
             // Form1
             // 

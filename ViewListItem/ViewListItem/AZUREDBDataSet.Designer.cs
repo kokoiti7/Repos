@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WindowsFormsApp3 {
+namespace ViewListItem {
     
     
     /// <summary>
@@ -30,13 +30,13 @@ namespace WindowsFormsApp3 {
         
         private Validity_MasterDataTable tableValidity_Master;
         
-        private NewSelectCommandDataTable tableNewSelectCommand;
-        
         private DataTable1DataTable tableDataTable1;
         
         private global::System.Data.DataRelation relationFK_Validity_attach_Validity_Items;
         
         private global::System.Data.DataRelation relationFK_Validity_Items_Validity_Master1;
+        
+        private global::System.Data.DataRelation relationFK_Validity_attach_Validity_Items1;
         
         private global::System.Data.DataRelation relationFK_Validity_Items_Validity_Master11;
         
@@ -76,9 +76,6 @@ namespace WindowsFormsApp3 {
                 }
                 if ((ds.Tables["Validity_Master"] != null)) {
                     base.Tables.Add(new Validity_MasterDataTable(ds.Tables["Validity_Master"]));
-                }
-                if ((ds.Tables["NewSelectCommand"] != null)) {
-                    base.Tables.Add(new NewSelectCommandDataTable(ds.Tables["NewSelectCommand"]));
                 }
                 if ((ds.Tables["DataTable1"] != null)) {
                     base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
@@ -128,16 +125,6 @@ namespace WindowsFormsApp3 {
         public Validity_MasterDataTable Validity_Master {
             get {
                 return this.tableValidity_Master;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public NewSelectCommandDataTable NewSelectCommand {
-            get {
-                return this.tableNewSelectCommand;
             }
         }
         
@@ -227,9 +214,6 @@ namespace WindowsFormsApp3 {
                 if ((ds.Tables["Validity_Master"] != null)) {
                     base.Tables.Add(new Validity_MasterDataTable(ds.Tables["Validity_Master"]));
                 }
-                if ((ds.Tables["NewSelectCommand"] != null)) {
-                    base.Tables.Add(new NewSelectCommandDataTable(ds.Tables["NewSelectCommand"]));
-                }
                 if ((ds.Tables["DataTable1"] != null)) {
                     base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
@@ -284,12 +268,6 @@ namespace WindowsFormsApp3 {
                     this.tableValidity_Master.InitVars();
                 }
             }
-            this.tableNewSelectCommand = ((NewSelectCommandDataTable)(base.Tables["NewSelectCommand"]));
-            if ((initTable == true)) {
-                if ((this.tableNewSelectCommand != null)) {
-                    this.tableNewSelectCommand.InitVars();
-                }
-            }
             this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
             if ((initTable == true)) {
                 if ((this.tableDataTable1 != null)) {
@@ -298,6 +276,7 @@ namespace WindowsFormsApp3 {
             }
             this.relationFK_Validity_attach_Validity_Items = this.Relations["FK_Validity_attach_Validity_Items"];
             this.relationFK_Validity_Items_Validity_Master1 = this.Relations["FK_Validity_Items_Validity_Master1"];
+            this.relationFK_Validity_attach_Validity_Items1 = this.Relations["FK_Validity_attach_Validity_Items1"];
             this.relationFK_Validity_Items_Validity_Master11 = this.Relations["FK_Validity_Items_Validity_Master11"];
         }
         
@@ -315,8 +294,6 @@ namespace WindowsFormsApp3 {
             base.Tables.Add(this.tableValidity_Items);
             this.tableValidity_Master = new Validity_MasterDataTable();
             base.Tables.Add(this.tableValidity_Master);
-            this.tableNewSelectCommand = new NewSelectCommandDataTable();
-            base.Tables.Add(this.tableNewSelectCommand);
             this.tableDataTable1 = new DataTable1DataTable();
             base.Tables.Add(this.tableDataTable1);
             this.relationFK_Validity_attach_Validity_Items = new global::System.Data.DataRelation("FK_Validity_attach_Validity_Items", new global::System.Data.DataColumn[] {
@@ -327,6 +304,10 @@ namespace WindowsFormsApp3 {
                         this.tableValidity_Master.ValidityIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableValidity_Items.ValidityIDColumn}, false);
             this.Relations.Add(this.relationFK_Validity_Items_Validity_Master1);
+            this.relationFK_Validity_attach_Validity_Items1 = new global::System.Data.DataRelation("FK_Validity_attach_Validity_Items1", new global::System.Data.DataColumn[] {
+                        this.tableDataTable1.itemIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableValidity_attach.itemIDColumn}, false);
+            this.Relations.Add(this.relationFK_Validity_attach_Validity_Items1);
             this.relationFK_Validity_Items_Validity_Master11 = new global::System.Data.DataRelation("FK_Validity_Items_Validity_Master11", new global::System.Data.DataColumn[] {
                         this.tableValidity_Master.ValidityIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableDataTable1.ValidityIDColumn}, false);
@@ -348,12 +329,6 @@ namespace WindowsFormsApp3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeValidity_Master() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeNewSelectCommand() {
             return false;
         }
         
@@ -426,9 +401,6 @@ namespace WindowsFormsApp3 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void Validity_MasterRowChangeEventHandler(object sender, Validity_MasterRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void NewSelectCommandRowChangeEventHandler(object sender, NewSelectCommandRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
@@ -1615,485 +1587,6 @@ namespace WindowsFormsApp3 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class NewSelectCommandDataTable : global::System.Data.TypedTableBase<NewSelectCommandRow> {
-            
-            private global::System.Data.DataColumn columnValidityID;
-            
-            private global::System.Data.DataColumn columnCategolyName;
-            
-            private global::System.Data.DataColumn _columnItem_Equipment;
-            
-            private global::System.Data.DataColumn columnPeriod;
-            
-            private global::System.Data.DataColumn columnRemark;
-            
-            private global::System.Data.DataColumn columnShipID;
-            
-            private global::System.Data.DataColumn columnType;
-            
-            private global::System.Data.DataColumn columnAccessory;
-            
-            private global::System.Data.DataColumn columnSupply_Date;
-            
-            private global::System.Data.DataColumn columnNext_due_date;
-            
-            private global::System.Data.DataColumn columnvarSpare;
-            
-            private global::System.Data.DataColumn columnAttachID;
-            
-            private global::System.Data.DataColumn columnType_of_file;
-            
-            private global::System.Data.DataColumn columnfileName;
-            
-            private global::System.Data.DataColumn columnUpdate;
-            
-            private global::System.Data.DataColumn columnBitSpare;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NewSelectCommandDataTable() {
-                this.TableName = "NewSelectCommand";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal NewSelectCommandDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected NewSelectCommandDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ValidityIDColumn {
-                get {
-                    return this.columnValidityID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CategolyNameColumn {
-                get {
-                    return this.columnCategolyName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn _Item_EquipmentColumn {
-                get {
-                    return this._columnItem_Equipment;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PeriodColumn {
-                get {
-                    return this.columnPeriod;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RemarkColumn {
-                get {
-                    return this.columnRemark;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ShipIDColumn {
-                get {
-                    return this.columnShipID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TypeColumn {
-                get {
-                    return this.columnType;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AccessoryColumn {
-                get {
-                    return this.columnAccessory;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Supply_DateColumn {
-                get {
-                    return this.columnSupply_Date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Next_due_dateColumn {
-                get {
-                    return this.columnNext_due_date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn varSpareColumn {
-                get {
-                    return this.columnvarSpare;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AttachIDColumn {
-                get {
-                    return this.columnAttachID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Type_of_fileColumn {
-                get {
-                    return this.columnType_of_file;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn fileNameColumn {
-                get {
-                    return this.columnfileName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UpdateColumn {
-                get {
-                    return this.columnUpdate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn BitSpareColumn {
-                get {
-                    return this.columnBitSpare;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NewSelectCommandRow this[int index] {
-                get {
-                    return ((NewSelectCommandRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event NewSelectCommandRowChangeEventHandler NewSelectCommandRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event NewSelectCommandRowChangeEventHandler NewSelectCommandRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event NewSelectCommandRowChangeEventHandler NewSelectCommandRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event NewSelectCommandRowChangeEventHandler NewSelectCommandRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddNewSelectCommandRow(NewSelectCommandRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NewSelectCommandRow AddNewSelectCommandRow(string CategolyName, string _Item_Equipment, string Period, string Remark, int ShipID, string Type, string Accessory, System.DateTime Supply_Date, System.DateTime Next_due_date, string varSpare, string Type_of_file, string fileName, string Update, bool BitSpare) {
-                NewSelectCommandRow rowNewSelectCommandRow = ((NewSelectCommandRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        CategolyName,
-                        _Item_Equipment,
-                        Period,
-                        Remark,
-                        ShipID,
-                        Type,
-                        Accessory,
-                        Supply_Date,
-                        Next_due_date,
-                        varSpare,
-                        null,
-                        Type_of_file,
-                        fileName,
-                        Update,
-                        BitSpare};
-                rowNewSelectCommandRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowNewSelectCommandRow);
-                return rowNewSelectCommandRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                NewSelectCommandDataTable cln = ((NewSelectCommandDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new NewSelectCommandDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnValidityID = base.Columns["ValidityID"];
-                this.columnCategolyName = base.Columns["CategolyName"];
-                this._columnItem_Equipment = base.Columns["Item/Equipment"];
-                this.columnPeriod = base.Columns["Period"];
-                this.columnRemark = base.Columns["Remark"];
-                this.columnShipID = base.Columns["ShipID"];
-                this.columnType = base.Columns["Type"];
-                this.columnAccessory = base.Columns["Accessory"];
-                this.columnSupply_Date = base.Columns["Supply Date"];
-                this.columnNext_due_date = base.Columns["Next due date"];
-                this.columnvarSpare = base.Columns["varSpare"];
-                this.columnAttachID = base.Columns["AttachID"];
-                this.columnType_of_file = base.Columns["Type of file"];
-                this.columnfileName = base.Columns["fileName"];
-                this.columnUpdate = base.Columns["Update"];
-                this.columnBitSpare = base.Columns["BitSpare"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnValidityID = new global::System.Data.DataColumn("ValidityID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValidityID);
-                this.columnCategolyName = new global::System.Data.DataColumn("CategolyName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCategolyName);
-                this._columnItem_Equipment = new global::System.Data.DataColumn("Item/Equipment", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnItem_Equipment.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnItem_Equipment");
-                this._columnItem_Equipment.ExtendedProperties.Add("Generator_UserColumnName", "Item/Equipment");
-                base.Columns.Add(this._columnItem_Equipment);
-                this.columnPeriod = new global::System.Data.DataColumn("Period", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPeriod);
-                this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRemark);
-                this.columnShipID = new global::System.Data.DataColumn("ShipID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShipID);
-                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnType);
-                this.columnAccessory = new global::System.Data.DataColumn("Accessory", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAccessory);
-                this.columnSupply_Date = new global::System.Data.DataColumn("Supply Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSupply_Date);
-                this.columnNext_due_date = new global::System.Data.DataColumn("Next due date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNext_due_date);
-                this.columnvarSpare = new global::System.Data.DataColumn("varSpare", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvarSpare);
-                this.columnAttachID = new global::System.Data.DataColumn("AttachID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAttachID);
-                this.columnType_of_file = new global::System.Data.DataColumn("Type of file", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnType_of_file);
-                this.columnfileName = new global::System.Data.DataColumn("fileName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfileName);
-                this.columnUpdate = new global::System.Data.DataColumn("Update", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUpdate);
-                this.columnBitSpare = new global::System.Data.DataColumn("BitSpare", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBitSpare);
-                this.columnValidityID.AutoIncrement = true;
-                this.columnValidityID.AutoIncrementSeed = -1;
-                this.columnValidityID.AutoIncrementStep = -1;
-                this.columnValidityID.AllowDBNull = false;
-                this.columnValidityID.ReadOnly = true;
-                this.columnCategolyName.MaxLength = 50;
-                this._columnItem_Equipment.MaxLength = 2147483647;
-                this.columnPeriod.MaxLength = 2147483647;
-                this.columnRemark.MaxLength = 2147483647;
-                this.columnType.MaxLength = 2147483647;
-                this.columnAccessory.MaxLength = 2147483647;
-                this.columnvarSpare.MaxLength = 2147483647;
-                this.columnAttachID.AutoIncrement = true;
-                this.columnAttachID.AutoIncrementSeed = -1;
-                this.columnAttachID.AutoIncrementStep = -1;
-                this.columnAttachID.AllowDBNull = false;
-                this.columnAttachID.ReadOnly = true;
-                this.columnType_of_file.MaxLength = 2147483647;
-                this.columnfileName.MaxLength = 2147483647;
-                this.columnUpdate.MaxLength = 2147483647;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NewSelectCommandRow NewNewSelectCommandRow() {
-                return ((NewSelectCommandRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new NewSelectCommandRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(NewSelectCommandRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.NewSelectCommandRowChanged != null)) {
-                    this.NewSelectCommandRowChanged(this, new NewSelectCommandRowChangeEvent(((NewSelectCommandRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.NewSelectCommandRowChanging != null)) {
-                    this.NewSelectCommandRowChanging(this, new NewSelectCommandRowChangeEvent(((NewSelectCommandRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.NewSelectCommandRowDeleted != null)) {
-                    this.NewSelectCommandRowDeleted(this, new NewSelectCommandRowChangeEvent(((NewSelectCommandRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.NewSelectCommandRowDeleting != null)) {
-                    this.NewSelectCommandRowDeleting(this, new NewSelectCommandRowChangeEvent(((NewSelectCommandRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveNewSelectCommandRow(NewSelectCommandRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AZUREDBDataSet ds = new AZUREDBDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "NewSelectCommandDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
             private global::System.Data.DataColumn columnValidityID;
@@ -2104,25 +1597,23 @@ namespace WindowsFormsApp3 {
             
             private global::System.Data.DataColumn columnPeriod;
             
-            private global::System.Data.DataColumn columnShipID;
-            
             private global::System.Data.DataColumn columnRemark;
+            
+            private global::System.Data.DataColumn columnShipID;
             
             private global::System.Data.DataColumn columnMaker;
             
             private global::System.Data.DataColumn columnType;
             
-            private global::System.Data.DataColumn columnAccessory;
-            
-            private global::System.Data.DataColumn columnSupply_Date;
-            
             private global::System.Data.DataColumn columnUpdate;
             
-            private global::System.Data.DataColumn columnAttachID;
+            private global::System.Data.DataColumn columnitemID;
             
             private global::System.Data.DataColumn columnType_of_file;
             
             private global::System.Data.DataColumn columnfileName;
+            
+            private global::System.Data.DataColumn columnBitSpare;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -2191,17 +1682,17 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ShipIDColumn {
+            public global::System.Data.DataColumn RemarkColumn {
                 get {
-                    return this.columnShipID;
+                    return this.columnRemark;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RemarkColumn {
+            public global::System.Data.DataColumn ShipIDColumn {
                 get {
-                    return this.columnRemark;
+                    return this.columnShipID;
                 }
             }
             
@@ -2223,22 +1714,6 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AccessoryColumn {
-                get {
-                    return this.columnAccessory;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Supply_DateColumn {
-                get {
-                    return this.columnSupply_Date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UpdateColumn {
                 get {
                     return this.columnUpdate;
@@ -2247,9 +1722,9 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AttachIDColumn {
+            public global::System.Data.DataColumn itemIDColumn {
                 get {
-                    return this.columnAttachID;
+                    return this.columnitemID;
                 }
             }
             
@@ -2266,6 +1741,14 @@ namespace WindowsFormsApp3 {
             public global::System.Data.DataColumn fileNameColumn {
                 get {
                     return this.columnfileName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn BitSpareColumn {
+                get {
+                    return this.columnBitSpare;
                 }
             }
             
@@ -2306,26 +1789,32 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string CategolyName, string _Item_Equipment, string Period, int ShipID, string Remark, string Maker, string Type, string Accessory, System.DateTime Supply_Date, string Update, string Type_of_file, string fileName) {
+            public DataTable1Row AddDataTable1Row(string CategolyName, string _Item_Equipment, string Period, string Remark, int ShipID, string Maker, string Type, string Update, int itemID, string Type_of_file, string fileName, bool BitSpare) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CategolyName,
                         _Item_Equipment,
                         Period,
-                        ShipID,
                         Remark,
+                        ShipID,
                         Maker,
                         Type,
-                        Accessory,
-                        Supply_Date,
                         Update,
-                        null,
+                        itemID,
                         Type_of_file,
-                        fileName};
+                        fileName,
+                        BitSpare};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DataTable1Row FindByValidityID(int ValidityID) {
+                return ((DataTable1Row)(this.Rows.Find(new object[] {
+                            ValidityID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2349,16 +1838,15 @@ namespace WindowsFormsApp3 {
                 this.columnCategolyName = base.Columns["CategolyName"];
                 this._columnItem_Equipment = base.Columns["Item/Equipment"];
                 this.columnPeriod = base.Columns["Period"];
-                this.columnShipID = base.Columns["ShipID"];
                 this.columnRemark = base.Columns["Remark"];
+                this.columnShipID = base.Columns["ShipID"];
                 this.columnMaker = base.Columns["Maker"];
                 this.columnType = base.Columns["Type"];
-                this.columnAccessory = base.Columns["Accessory"];
-                this.columnSupply_Date = base.Columns["Supply Date"];
                 this.columnUpdate = base.Columns["Update"];
-                this.columnAttachID = base.Columns["AttachID"];
+                this.columnitemID = base.Columns["itemID"];
                 this.columnType_of_file = base.Columns["Type of file"];
                 this.columnfileName = base.Columns["fileName"];
+                this.columnBitSpare = base.Columns["BitSpare"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2374,44 +1862,39 @@ namespace WindowsFormsApp3 {
                 base.Columns.Add(this._columnItem_Equipment);
                 this.columnPeriod = new global::System.Data.DataColumn("Period", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPeriod);
-                this.columnShipID = new global::System.Data.DataColumn("ShipID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShipID);
                 this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRemark);
+                this.columnShipID = new global::System.Data.DataColumn("ShipID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShipID);
                 this.columnMaker = new global::System.Data.DataColumn("Maker", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaker);
                 this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnType);
-                this.columnAccessory = new global::System.Data.DataColumn("Accessory", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAccessory);
-                this.columnSupply_Date = new global::System.Data.DataColumn("Supply Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSupply_Date);
                 this.columnUpdate = new global::System.Data.DataColumn("Update", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUpdate);
-                this.columnAttachID = new global::System.Data.DataColumn("AttachID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAttachID);
+                this.columnitemID = new global::System.Data.DataColumn("itemID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitemID);
                 this.columnType_of_file = new global::System.Data.DataColumn("Type of file", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnType_of_file);
                 this.columnfileName = new global::System.Data.DataColumn("fileName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfileName);
+                this.columnBitSpare = new global::System.Data.DataColumn("BitSpare", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBitSpare);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnValidityID}, true));
                 this.columnValidityID.AutoIncrement = true;
                 this.columnValidityID.AutoIncrementSeed = -1;
                 this.columnValidityID.AutoIncrementStep = -1;
                 this.columnValidityID.AllowDBNull = false;
                 this.columnValidityID.ReadOnly = true;
+                this.columnValidityID.Unique = true;
                 this.columnCategolyName.MaxLength = 50;
                 this._columnItem_Equipment.MaxLength = 2147483647;
                 this.columnPeriod.MaxLength = 2147483647;
                 this.columnRemark.MaxLength = 2147483647;
                 this.columnMaker.MaxLength = 2147483647;
                 this.columnType.MaxLength = 2147483647;
-                this.columnAccessory.MaxLength = 2147483647;
                 this.columnUpdate.MaxLength = 2147483647;
-                this.columnAttachID.AutoIncrement = true;
-                this.columnAttachID.AutoIncrementSeed = -1;
-                this.columnAttachID.AutoIncrementStep = -1;
-                this.columnAttachID.AllowDBNull = false;
-                this.columnAttachID.ReadOnly = true;
                 this.columnType_of_file.MaxLength = 2147483647;
                 this.columnfileName.MaxLength = 2147483647;
             }
@@ -2701,6 +2184,17 @@ namespace WindowsFormsApp3 {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Validity_attach_Validity_Items"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DataTable1Row DataTable1Row {
+                get {
+                    return ((DataTable1Row)(this.GetParentRow(this.Table.ParentRelations["FK_Validity_attach_Validity_Items1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Validity_attach_Validity_Items1"]);
                 }
             }
             
@@ -3404,435 +2898,6 @@ namespace WindowsFormsApp3 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class NewSelectCommandRow : global::System.Data.DataRow {
-            
-            private NewSelectCommandDataTable tableNewSelectCommand;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal NewSelectCommandRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableNewSelectCommand = ((NewSelectCommandDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ValidityID {
-                get {
-                    return ((int)(this[this.tableNewSelectCommand.ValidityIDColumn]));
-                }
-                set {
-                    this[this.tableNewSelectCommand.ValidityIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CategolyName {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.CategolyNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'CategolyName\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.CategolyNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string _Item_Equipment {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand._Item_EquipmentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Item/Equipment\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand._Item_EquipmentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Period {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.PeriodColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Period\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.PeriodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Remark {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.RemarkColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Remark\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.RemarkColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ShipID {
-                get {
-                    try {
-                        return ((int)(this[this.tableNewSelectCommand.ShipIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'ShipID\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.ShipIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Type {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.TypeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Type\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.TypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Accessory {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.AccessoryColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Accessory\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.AccessoryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Supply_Date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableNewSelectCommand.Supply_DateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Supply Date\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.Supply_DateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Next_due_date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableNewSelectCommand.Next_due_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Next due date\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.Next_due_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string varSpare {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.varSpareColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'varSpare\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.varSpareColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AttachID {
-                get {
-                    return ((int)(this[this.tableNewSelectCommand.AttachIDColumn]));
-                }
-                set {
-                    this[this.tableNewSelectCommand.AttachIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Type_of_file {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.Type_of_fileColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Type of file\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.Type_of_fileColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string fileName {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.fileNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'fileName\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.fileNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Update {
-                get {
-                    try {
-                        return ((string)(this[this.tableNewSelectCommand.UpdateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'Update\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.UpdateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool BitSpare {
-                get {
-                    try {
-                        return ((bool)(this[this.tableNewSelectCommand.BitSpareColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'NewSelectCommand\' にある列 \'BitSpare\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableNewSelectCommand.BitSpareColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCategolyNameNull() {
-                return this.IsNull(this.tableNewSelectCommand.CategolyNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCategolyNameNull() {
-                this[this.tableNewSelectCommand.CategolyNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is_Item_EquipmentNull() {
-                return this.IsNull(this.tableNewSelectCommand._Item_EquipmentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set_Item_EquipmentNull() {
-                this[this.tableNewSelectCommand._Item_EquipmentColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPeriodNull() {
-                return this.IsNull(this.tableNewSelectCommand.PeriodColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPeriodNull() {
-                this[this.tableNewSelectCommand.PeriodColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRemarkNull() {
-                return this.IsNull(this.tableNewSelectCommand.RemarkColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRemarkNull() {
-                this[this.tableNewSelectCommand.RemarkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsShipIDNull() {
-                return this.IsNull(this.tableNewSelectCommand.ShipIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetShipIDNull() {
-                this[this.tableNewSelectCommand.ShipIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTypeNull() {
-                return this.IsNull(this.tableNewSelectCommand.TypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTypeNull() {
-                this[this.tableNewSelectCommand.TypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAccessoryNull() {
-                return this.IsNull(this.tableNewSelectCommand.AccessoryColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAccessoryNull() {
-                this[this.tableNewSelectCommand.AccessoryColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSupply_DateNull() {
-                return this.IsNull(this.tableNewSelectCommand.Supply_DateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSupply_DateNull() {
-                this[this.tableNewSelectCommand.Supply_DateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNext_due_dateNull() {
-                return this.IsNull(this.tableNewSelectCommand.Next_due_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNext_due_dateNull() {
-                this[this.tableNewSelectCommand.Next_due_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsvarSpareNull() {
-                return this.IsNull(this.tableNewSelectCommand.varSpareColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetvarSpareNull() {
-                this[this.tableNewSelectCommand.varSpareColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsType_of_fileNull() {
-                return this.IsNull(this.tableNewSelectCommand.Type_of_fileColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetType_of_fileNull() {
-                this[this.tableNewSelectCommand.Type_of_fileColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsfileNameNull() {
-                return this.IsNull(this.tableNewSelectCommand.fileNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetfileNameNull() {
-                this[this.tableNewSelectCommand.fileNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUpdateNull() {
-                return this.IsNull(this.tableNewSelectCommand.UpdateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUpdateNull() {
-                this[this.tableNewSelectCommand.UpdateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsBitSpareNull() {
-                return this.IsNull(this.tableNewSelectCommand.BitSpareColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetBitSpareNull() {
-                this[this.tableNewSelectCommand.BitSpareColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class DataTable1Row : global::System.Data.DataRow {
             
             private DataTable1DataTable tableDataTable1;
@@ -3905,22 +2970,6 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ShipID {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable1.ShipIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'ShipID\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.ShipIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Remark {
                 get {
                     try {
@@ -3932,6 +2981,22 @@ namespace WindowsFormsApp3 {
                 }
                 set {
                     this[this.tableDataTable1.RemarkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ShipID {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.ShipIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'ShipID\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.ShipIDColumn] = value;
                 }
             }
             
@@ -3969,38 +3034,6 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Accessory {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.AccessoryColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'Accessory\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.AccessoryColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Supply_Date {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.Supply_DateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'Supply Date\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.Supply_DateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Update {
                 get {
                     try {
@@ -4017,12 +3050,17 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int AttachID {
+            public int itemID {
                 get {
-                    return ((int)(this[this.tableDataTable1.AttachIDColumn]));
+                    try {
+                        return ((int)(this[this.tableDataTable1.itemIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'itemID\' の値は DBNull です。", e);
+                    }
                 }
                 set {
-                    this[this.tableDataTable1.AttachIDColumn] = value;
+                    this[this.tableDataTable1.itemIDColumn] = value;
                 }
             }
             
@@ -4055,6 +3093,22 @@ namespace WindowsFormsApp3 {
                 }
                 set {
                     this[this.tableDataTable1.fileNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool BitSpare {
+                get {
+                    try {
+                        return ((bool)(this[this.tableDataTable1.BitSpareColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'BitSpare\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.BitSpareColumn] = value;
                 }
             }
             
@@ -4107,18 +3161,6 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsShipIDNull() {
-                return this.IsNull(this.tableDataTable1.ShipIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetShipIDNull() {
-                this[this.tableDataTable1.ShipIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsRemarkNull() {
                 return this.IsNull(this.tableDataTable1.RemarkColumn);
             }
@@ -4127,6 +3169,18 @@ namespace WindowsFormsApp3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetRemarkNull() {
                 this[this.tableDataTable1.RemarkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsShipIDNull() {
+                return this.IsNull(this.tableDataTable1.ShipIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetShipIDNull() {
+                this[this.tableDataTable1.ShipIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4155,30 +3209,6 @@ namespace WindowsFormsApp3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAccessoryNull() {
-                return this.IsNull(this.tableDataTable1.AccessoryColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAccessoryNull() {
-                this[this.tableDataTable1.AccessoryColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSupply_DateNull() {
-                return this.IsNull(this.tableDataTable1.Supply_DateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSupply_DateNull() {
-                this[this.tableDataTable1.Supply_DateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsUpdateNull() {
                 return this.IsNull(this.tableDataTable1.UpdateColumn);
             }
@@ -4187,6 +3217,18 @@ namespace WindowsFormsApp3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUpdateNull() {
                 this[this.tableDataTable1.UpdateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsitemIDNull() {
+                return this.IsNull(this.tableDataTable1.itemIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetitemIDNull() {
+                this[this.tableDataTable1.itemIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4211,6 +3253,29 @@ namespace WindowsFormsApp3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetfileNameNull() {
                 this[this.tableDataTable1.fileNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsBitSpareNull() {
+                return this.IsNull(this.tableDataTable1.BitSpareColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetBitSpareNull() {
+                this[this.tableDataTable1.BitSpareColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Validity_attachRow[] GetValidity_attachRows() {
+                if ((this.Table.ChildRelations["FK_Validity_attach_Validity_Items1"] == null)) {
+                    return new Validity_attachRow[0];
+                }
+                else {
+                    return ((Validity_attachRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Validity_attach_Validity_Items1"])));
+                }
             }
         }
         
@@ -4320,40 +3385,6 @@ namespace WindowsFormsApp3 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class NewSelectCommandRowChangeEvent : global::System.EventArgs {
-            
-            private NewSelectCommandRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NewSelectCommandRowChangeEvent(NewSelectCommandRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NewSelectCommandRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class DataTable1RowChangeEvent : global::System.EventArgs {
             
             private DataTable1Row eventRow;
@@ -4385,7 +3416,7 @@ namespace WindowsFormsApp3 {
         }
     }
 }
-namespace WindowsFormsApp3.AZUREDBDataSetTableAdapters {
+namespace ViewListItem.AZUREDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -4569,7 +3600,7 @@ SELECT AttachID, itemID, [Type of file], fileName, filepath, Remark, BitSpare, [
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp3.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::ViewListItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5040,7 +4071,7 @@ SELECT itemID, ValidityID, Maker, Type, Remark, Accessory, [Accessory Remark], [
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp3.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::ViewListItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5609,7 +4640,7 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp3.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::ViewListItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5852,189 +4883,6 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class NewSelectCommandTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public NewSelectCommandTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "NewSelectCommand";
-            tableMapping.ColumnMappings.Add("ValidityID", "ValidityID");
-            tableMapping.ColumnMappings.Add("CategolyName", "CategolyName");
-            tableMapping.ColumnMappings.Add("Item/Equipment", "Item/Equipment");
-            tableMapping.ColumnMappings.Add("Period", "Period");
-            tableMapping.ColumnMappings.Add("Remark", "Remark");
-            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
-            tableMapping.ColumnMappings.Add("Type", "Type");
-            tableMapping.ColumnMappings.Add("Accessory", "Accessory");
-            tableMapping.ColumnMappings.Add("Supply Date", "Supply Date");
-            tableMapping.ColumnMappings.Add("Next due date", "Next due date");
-            tableMapping.ColumnMappings.Add("varSpare", "varSpare");
-            tableMapping.ColumnMappings.Add("AttachID", "AttachID");
-            tableMapping.ColumnMappings.Add("Type of file", "Type of file");
-            tableMapping.ColumnMappings.Add("fileName", "fileName");
-            tableMapping.ColumnMappings.Add("Update", "Update");
-            tableMapping.ColumnMappings.Add("BitSpare", "BitSpare");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp3.Properties.Settings.Default.AZUREDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.NewSelectCommand";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet.NewSelectCommandDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet.NewSelectCommandDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet.NewSelectCommandDataTable dataTable = new AZUREDBDataSet.NewSelectCommandDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -6151,16 +4999,15 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
             tableMapping.ColumnMappings.Add("CategolyName", "CategolyName");
             tableMapping.ColumnMappings.Add("Item/Equipment", "Item/Equipment");
             tableMapping.ColumnMappings.Add("Period", "Period");
-            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
             tableMapping.ColumnMappings.Add("Remark", "Remark");
+            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
             tableMapping.ColumnMappings.Add("Maker", "Maker");
             tableMapping.ColumnMappings.Add("Type", "Type");
-            tableMapping.ColumnMappings.Add("Accessory", "Accessory");
-            tableMapping.ColumnMappings.Add("Supply Date", "Supply Date");
             tableMapping.ColumnMappings.Add("Update", "Update");
-            tableMapping.ColumnMappings.Add("AttachID", "AttachID");
+            tableMapping.ColumnMappings.Add("itemID", "itemID");
             tableMapping.ColumnMappings.Add("Type of file", "Type of file");
             tableMapping.ColumnMappings.Add("fileName", "fileName");
+            tableMapping.ColumnMappings.Add("BitSpare", "BitSpare");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6168,7 +5015,7 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp3.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::ViewListItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6177,9 +5024,8 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT            Validity_Master.ValidityID, Validity_Master.CategolyName, Validity_Master.[Item/Equipment], Validity_Master.Period, Validity_Master.ShipID, Validity_Master.Remark, 
-                        Validity_Items.Maker, Validity_Items.Type, Validity_Items.Accessory, Validity_Items.[Supply Date], Validity_attach.AttachID, Validity_attach.[Type of file], Validity_attach.fileName, 
-                        Validity_attach.[Update]
+            this._commandCollection[0].CommandText = @"SELECT            Validity_Master.ValidityID, Validity_Master.CategolyName, Validity_Master.[Item/Equipment], Validity_Master.Period, Validity_Master.Remark, Validity_Master.ShipID, 
+                        Validity_Items.Maker, Validity_Items.Type, Validity_Items.[Update], Validity_attach.itemID, Validity_attach.[Type of file], Validity_attach.fileName, Validity_attach.BitSpare
 FROM              Validity_Master INNER JOIN
                         Validity_Items ON Validity_Master.ValidityID = Validity_Items.ValidityID INNER JOIN
                         Validity_attach ON Validity_Items.itemID = Validity_attach.itemID";
