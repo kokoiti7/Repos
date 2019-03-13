@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AZUREDBDataSet" targetNamespace="http://tempuri.org/AZUREDBDataSet.xsd" xmlns:mstns="http://tempuri.org/AZUREDBDataSet.xsd" xmlns="http://tempuri.org/AZUREDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AZUREDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AZUREDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Service_Due_Maneger.Properties.Settings.GlobalReference.Default.AZUREDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Ship_Master_TBTableAdapter" GeneratorDataComponentClassName="Ship_Master_TBTableAdapter" Name="Ship_Master_TB" UserDataComponentName="Ship_Master_TBTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectName="AZUREDB.dbo.Ship_Master_TB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Ship_Master_TB] WHERE (([ID] = @Original_ID) AND ((@IsNull_OwnerGroup = 1 AND [OwnerGroup] IS NULL) OR ([OwnerGroup] = @Original_OwnerGroup)) AND ((@IsNull_PresentName = 1 AND [PresentName] IS NULL) OR ([PresentName] = @Original_PresentName)) AND ((@IsNull_Shortcharacter = 1 AND [Shortcharacter] IS NULL) OR ([Shortcharacter] = @Original_Shortcharacter)) AND ((@IsNull_IMONumber = 1 AND [IMONumber] IS NULL) OR ([IMONumber] = @Original_IMONumber)) AND ((@IsNull_FBBtelephone = 1 AND [FBBtelephone] IS NULL) OR ([FBBtelephone] = @Original_FBBtelephone)) AND ((@IsNull_FBBtelephoneShort = 1 AND [FBBtelephoneShort] IS NULL) OR ([FBBtelephoneShort] = @Original_FBBtelephoneShort)) AND ((@IsNull_FBBfacsimile = 1 AND [FBBfacsimile] IS NULL) OR ([FBBfacsimile] = @Original_FBBfacsimile)) AND ((@IsNull_InmFtelephone1 = 1 AND [InmFtelephone1] IS NULL) OR ([InmFtelephone1] = @Original_InmFtelephone1)) AND ((@IsNull_InmFtelephone2 = 1 AND [InmFtelephone2] IS NULL) OR ([InmFtelephone2] = @Original_InmFtelephone2)) AND ((@IsNull_InmFfacsimile = 1 AND [InmFfacsimile] IS NULL) OR ([InmFfacsimile] = @Original_InmFfacsimile)) AND ((@IsNull_InmCSATmail1 = 1 AND [InmCSATmail1] IS NULL) OR ([InmCSATmail1] = @Original_InmCSATmail1)) AND ((@IsNull_InmCSATmail2 = 1 AND [InmCSATmail2] IS NULL) OR ([InmCSATmail2] = @Original_InmCSATmail2)) AND ((@IsNull_email1 = 1 AND [email1] IS NULL) OR ([email1] = @Original_email1)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ((@IsNull_LastUpdateforContacts = 1 AND [LastUpdateforContacts] IS NULL) OR ([LastUpdateforContacts] = @Original_LastUpdateforContacts)) AND ((@IsNull_PreviousName = 1 AND [PreviousName] IS NULL) OR ([PreviousName] = @Original_PreviousName)) AND ((@IsNull_ExOwner = 1 AND [ExOwner] IS NULL) OR ([ExOwner] = @Original_ExOwner)) AND ((@IsNull_Builder = 1 AND [Builder] IS NULL) OR ([Builder] = @Original_Builder)) AND ((@IsNull_BuldersShipNumber = 1 AND [BuldersShipNumber] IS NULL) OR ([BuldersShipNumber] = @Original_BuldersShipNumber)) AND ((@IsNull_BuildYear = 1 AND [BuildYear] IS NULL) OR ([BuildYear] = @Original_BuildYear)) AND ((@IsNull_Flag = 1 AND [Flag] IS NULL) OR ([Flag] = @Original_Flag)) AND ((@IsNull_Classification = 1 AND [Classification] IS NULL) OR ([Classification] = @Original_Classification)) AND ((@IsNull_TYPE = 1 AND [TYPE] IS NULL) OR ([TYPE] = @Original_TYPE)) AND ((@IsNull_LoA = 1 AND [LoA] IS NULL) OR ([LoA] = @Original_LoA)) AND ((@IsNull_BTH = 1 AND [BTH] IS NULL) OR ([BTH] = @Original_BTH)) AND ((@IsNull_DWT = 1 AND [DWT] IS NULL) OR ([DWT] = @Original_DWT)) AND ((@IsNull_Sold = 1 AND [Sold] IS NULL) OR ([Sold] = @Original_Sold)) AND ((@IsNull_PROwner = 1 AND [PROwner] IS NULL) OR ([PROwner] = @Original_PROwner)) AND ((@IsNull_Owner = 1 AND [Owner] IS NULL) OR ([Owner] = @Original_Owner)) AND ((@IsNull_Photofilename1 = 1 AND [Photofilename1] IS NULL) OR ([Photofilename1] = @Original_Photofilename1)) AND ((@IsNull_Photofilename2 = 1 AND [Photofilename2] IS NULL) OR ([Photofilename2] = @Original_Photofilename2)) AND ((@IsNull_PICID = 1 AND [PICID] IS NULL) OR ([PICID] = @Original_PICID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerGroup" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnerGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerGroup" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PresentName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PresentName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PresentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PresentName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Shortcharacter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Shortcharacter" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Shortcharacter" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shortcharacter" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IMONumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IMONumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IMONumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMONumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FBBtelephone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FBBtelephone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FBBtelephone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FBBtelephoneShort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FBBtelephoneShort" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FBBtelephoneShort" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephoneShort" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FBBfacsimile" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FBBfacsimile" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FBBfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBfacsimile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmFtelephone1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmFtelephone1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmFtelephone1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmFtelephone2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmFtelephone2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmFtelephone2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmFfacsimile" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmFfacsimile" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmFfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFfacsimile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmCSATmail1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmCSATmail1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmCSATmail1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmCSATmail2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmCSATmail2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmCSATmail2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_email1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="email1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_email1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_email2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="email2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_email2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LastUpdateforContacts" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LastUpdateforContacts" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LastUpdateforContacts" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastUpdateforContacts" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreviousName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreviousName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PreviousName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreviousName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ExOwner" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ExOwner" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ExOwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ExOwner" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Builder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Builder" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Builder" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Builder" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuldersShipNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuldersShipNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_BuldersShipNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BuldersShipNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuildYear" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuildYear" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_BuildYear" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BuildYear" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Flag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Flag" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Flag" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Flag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Classification" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Classification" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Classification" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Classification" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TYPE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TYPE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TYPE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LoA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LoA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BTH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BTH" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_BTH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BTH" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DWT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DWT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DWT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DWT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sold" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sold" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sold" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sold" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PROwner" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PROwner" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PROwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PROwner" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Owner" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Owner" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Owner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Owner" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Photofilename1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Photofilename1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Photofilename1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Photofilename2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Photofilename2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Photofilename2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PICID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PICID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PICID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PICID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Ship_Master_TB] ([ID], [OwnerGroup], [PresentName], [Shortcharacter], [IMONumber], [FBBtelephone], [FBBtelephoneShort], [FBBfacsimile], [InmFtelephone1], [InmFtelephone2], [InmFfacsimile], [InmCSATmail1], [InmCSATmail2], [email1], [email2], [LastUpdateforContacts], [PreviousName], [ExOwner], [Builder], [BuldersShipNumber], [BuildYear], [Flag], [Classification], [TYPE], [LoA], [BTH], [DWT], [Sold], [PROwner], [Owner], [Photofilename1], [Photofilename2], [PICID]) VALUES (@ID, @OwnerGroup, @PresentName, @Shortcharacter, @IMONumber, @FBBtelephone, @FBBtelephoneShort, @FBBfacsimile, @InmFtelephone1, @InmFtelephone2, @InmFfacsimile, @InmCSATmail1, @InmCSATmail2, @email1, @email2, @LastUpdateforContacts, @PreviousName, @ExOwner, @Builder, @BuldersShipNumber, @BuildYear, @Flag, @Classification, @TYPE, @LoA, @BTH, @DWT, @Sold, @PROwner, @Owner, @Photofilename1, @Photofilename2, @PICID);
+SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBBtelephoneShort, FBBfacsimile, InmFtelephone1, InmFtelephone2, InmFfacsimile, InmCSATmail1, InmCSATmail2, email1, email2, LastUpdateforContacts, PreviousName, ExOwner, Builder, BuldersShipNumber, BuildYear, Flag, Classification, TYPE, LoA, BTH, DWT, Sold, PROwner, Owner, Photofilename1, Photofilename2, PICID FROM Ship_Master_TB WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnerGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerGroup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PresentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PresentName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Shortcharacter" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shortcharacter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IMONumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMONumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FBBtelephone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FBBtelephoneShort" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephoneShort" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FBBfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBfacsimile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmFtelephone1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmFtelephone2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmFfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFfacsimile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmCSATmail1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmCSATmail2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@email1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@email2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastUpdateforContacts" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastUpdateforContacts" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PreviousName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreviousName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ExOwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ExOwner" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Builder" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Builder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@BuldersShipNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BuldersShipNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@BuildYear" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BuildYear" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Flag" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Flag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Classification" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Classification" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@BTH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BTH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DWT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DWT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sold" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sold" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PROwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PROwner" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Owner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Owner" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Photofilename1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Photofilename2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PICID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PICID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBBtelephoneShort, FBBfacsimile, InmFtelephone1, InmFtelephone2, InmFfacsimile, InmCSATmail1, InmCSATmail2, email1, email2, LastUpdateforContacts, PreviousName, ExOwner, Builder, BuldersShipNumber, BuildYear, Flag, Classification, TYPE, LoA, BTH, DWT, Sold, PROwner, Owner, Photofilename1, Photofilename2, PICID FROM dbo.Ship_Master_TB</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Ship_Master_TB] SET [ID] = @ID, [OwnerGroup] = @OwnerGroup, [PresentName] = @PresentName, [Shortcharacter] = @Shortcharacter, [IMONumber] = @IMONumber, [FBBtelephone] = @FBBtelephone, [FBBtelephoneShort] = @FBBtelephoneShort, [FBBfacsimile] = @FBBfacsimile, [InmFtelephone1] = @InmFtelephone1, [InmFtelephone2] = @InmFtelephone2, [InmFfacsimile] = @InmFfacsimile, [InmCSATmail1] = @InmCSATmail1, [InmCSATmail2] = @InmCSATmail2, [email1] = @email1, [email2] = @email2, [LastUpdateforContacts] = @LastUpdateforContacts, [PreviousName] = @PreviousName, [ExOwner] = @ExOwner, [Builder] = @Builder, [BuldersShipNumber] = @BuldersShipNumber, [BuildYear] = @BuildYear, [Flag] = @Flag, [Classification] = @Classification, [TYPE] = @TYPE, [LoA] = @LoA, [BTH] = @BTH, [DWT] = @DWT, [Sold] = @Sold, [PROwner] = @PROwner, [Owner] = @Owner, [Photofilename1] = @Photofilename1, [Photofilename2] = @Photofilename2, [PICID] = @PICID WHERE (([ID] = @Original_ID) AND ((@IsNull_OwnerGroup = 1 AND [OwnerGroup] IS NULL) OR ([OwnerGroup] = @Original_OwnerGroup)) AND ((@IsNull_PresentName = 1 AND [PresentName] IS NULL) OR ([PresentName] = @Original_PresentName)) AND ((@IsNull_Shortcharacter = 1 AND [Shortcharacter] IS NULL) OR ([Shortcharacter] = @Original_Shortcharacter)) AND ((@IsNull_IMONumber = 1 AND [IMONumber] IS NULL) OR ([IMONumber] = @Original_IMONumber)) AND ((@IsNull_FBBtelephone = 1 AND [FBBtelephone] IS NULL) OR ([FBBtelephone] = @Original_FBBtelephone)) AND ((@IsNull_FBBtelephoneShort = 1 AND [FBBtelephoneShort] IS NULL) OR ([FBBtelephoneShort] = @Original_FBBtelephoneShort)) AND ((@IsNull_FBBfacsimile = 1 AND [FBBfacsimile] IS NULL) OR ([FBBfacsimile] = @Original_FBBfacsimile)) AND ((@IsNull_InmFtelephone1 = 1 AND [InmFtelephone1] IS NULL) OR ([InmFtelephone1] = @Original_InmFtelephone1)) AND ((@IsNull_InmFtelephone2 = 1 AND [InmFtelephone2] IS NULL) OR ([InmFtelephone2] = @Original_InmFtelephone2)) AND ((@IsNull_InmFfacsimile = 1 AND [InmFfacsimile] IS NULL) OR ([InmFfacsimile] = @Original_InmFfacsimile)) AND ((@IsNull_InmCSATmail1 = 1 AND [InmCSATmail1] IS NULL) OR ([InmCSATmail1] = @Original_InmCSATmail1)) AND ((@IsNull_InmCSATmail2 = 1 AND [InmCSATmail2] IS NULL) OR ([InmCSATmail2] = @Original_InmCSATmail2)) AND ((@IsNull_email1 = 1 AND [email1] IS NULL) OR ([email1] = @Original_email1)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ((@IsNull_LastUpdateforContacts = 1 AND [LastUpdateforContacts] IS NULL) OR ([LastUpdateforContacts] = @Original_LastUpdateforContacts)) AND ((@IsNull_PreviousName = 1 AND [PreviousName] IS NULL) OR ([PreviousName] = @Original_PreviousName)) AND ((@IsNull_ExOwner = 1 AND [ExOwner] IS NULL) OR ([ExOwner] = @Original_ExOwner)) AND ((@IsNull_Builder = 1 AND [Builder] IS NULL) OR ([Builder] = @Original_Builder)) AND ((@IsNull_BuldersShipNumber = 1 AND [BuldersShipNumber] IS NULL) OR ([BuldersShipNumber] = @Original_BuldersShipNumber)) AND ((@IsNull_BuildYear = 1 AND [BuildYear] IS NULL) OR ([BuildYear] = @Original_BuildYear)) AND ((@IsNull_Flag = 1 AND [Flag] IS NULL) OR ([Flag] = @Original_Flag)) AND ((@IsNull_Classification = 1 AND [Classification] IS NULL) OR ([Classification] = @Original_Classification)) AND ((@IsNull_TYPE = 1 AND [TYPE] IS NULL) OR ([TYPE] = @Original_TYPE)) AND ((@IsNull_LoA = 1 AND [LoA] IS NULL) OR ([LoA] = @Original_LoA)) AND ((@IsNull_BTH = 1 AND [BTH] IS NULL) OR ([BTH] = @Original_BTH)) AND ((@IsNull_DWT = 1 AND [DWT] IS NULL) OR ([DWT] = @Original_DWT)) AND ((@IsNull_Sold = 1 AND [Sold] IS NULL) OR ([Sold] = @Original_Sold)) AND ((@IsNull_PROwner = 1 AND [PROwner] IS NULL) OR ([PROwner] = @Original_PROwner)) AND ((@IsNull_Owner = 1 AND [Owner] IS NULL) OR ([Owner] = @Original_Owner)) AND ((@IsNull_Photofilename1 = 1 AND [Photofilename1] IS NULL) OR ([Photofilename1] = @Original_Photofilename1)) AND ((@IsNull_Photofilename2 = 1 AND [Photofilename2] IS NULL) OR ([Photofilename2] = @Original_Photofilename2)) AND ((@IsNull_PICID = 1 AND [PICID] IS NULL) OR ([PICID] = @Original_PICID)));
+SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBBtelephoneShort, FBBfacsimile, InmFtelephone1, InmFtelephone2, InmFfacsimile, InmCSATmail1, InmCSATmail2, email1, email2, LastUpdateforContacts, PreviousName, ExOwner, Builder, BuldersShipNumber, BuildYear, Flag, Classification, TYPE, LoA, BTH, DWT, Sold, PROwner, Owner, Photofilename1, Photofilename2, PICID FROM Ship_Master_TB WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@OwnerGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerGroup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PresentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PresentName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Shortcharacter" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shortcharacter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IMONumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMONumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FBBtelephone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FBBtelephoneShort" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephoneShort" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FBBfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBfacsimile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmFtelephone1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmFtelephone2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmFfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFfacsimile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmCSATmail1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InmCSATmail2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@email1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@email2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastUpdateforContacts" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastUpdateforContacts" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PreviousName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreviousName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ExOwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ExOwner" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Builder" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Builder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@BuldersShipNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BuldersShipNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@BuildYear" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BuildYear" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Flag" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Flag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Classification" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Classification" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@BTH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BTH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DWT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DWT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sold" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sold" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PROwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PROwner" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Owner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Owner" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Photofilename1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Photofilename2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PICID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PICID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OwnerGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerGroup" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_OwnerGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OwnerGroup" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PresentName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PresentName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PresentName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PresentName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Shortcharacter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Shortcharacter" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Shortcharacter" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Shortcharacter" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IMONumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IMONumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IMONumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMONumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FBBtelephone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FBBtelephone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FBBtelephone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FBBtelephoneShort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FBBtelephoneShort" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FBBtelephoneShort" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBtelephoneShort" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FBBfacsimile" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FBBfacsimile" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FBBfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FBBfacsimile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmFtelephone1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmFtelephone1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmFtelephone1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmFtelephone2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmFtelephone2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmFtelephone2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFtelephone2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmFfacsimile" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmFfacsimile" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmFfacsimile" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmFfacsimile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmCSATmail1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmCSATmail1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmCSATmail1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InmCSATmail2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InmCSATmail2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InmCSATmail2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InmCSATmail2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_email1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="email1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_email1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_email2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="email2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_email2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LastUpdateforContacts" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LastUpdateforContacts" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LastUpdateforContacts" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastUpdateforContacts" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreviousName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreviousName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PreviousName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PreviousName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ExOwner" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ExOwner" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ExOwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ExOwner" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Builder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Builder" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Builder" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Builder" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuldersShipNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuldersShipNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_BuldersShipNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BuldersShipNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuildYear" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuildYear" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_BuildYear" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="BuildYear" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Flag" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Flag" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Flag" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Flag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Classification" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Classification" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Classification" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Classification" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TYPE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TYPE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TYPE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LoA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LoA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BTH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BTH" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_BTH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="BTH" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DWT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DWT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DWT" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DWT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sold" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sold" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sold" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sold" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PROwner" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PROwner" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PROwner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PROwner" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Owner" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Owner" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Owner" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Owner" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Photofilename1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Photofilename1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Photofilename1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Photofilename2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Photofilename2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Photofilename2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Photofilename2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PICID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PICID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PICID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PICID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="OwnerGroup" DataSetColumn="OwnerGroup" />
+              <Mapping SourceColumn="PresentName" DataSetColumn="PresentName" />
+              <Mapping SourceColumn="Shortcharacter" DataSetColumn="Shortcharacter" />
+              <Mapping SourceColumn="IMONumber" DataSetColumn="IMONumber" />
+              <Mapping SourceColumn="FBBtelephone" DataSetColumn="FBBtelephone" />
+              <Mapping SourceColumn="FBBtelephoneShort" DataSetColumn="FBBtelephoneShort" />
+              <Mapping SourceColumn="FBBfacsimile" DataSetColumn="FBBfacsimile" />
+              <Mapping SourceColumn="InmFtelephone1" DataSetColumn="InmFtelephone1" />
+              <Mapping SourceColumn="InmFtelephone2" DataSetColumn="InmFtelephone2" />
+              <Mapping SourceColumn="InmFfacsimile" DataSetColumn="InmFfacsimile" />
+              <Mapping SourceColumn="InmCSATmail1" DataSetColumn="InmCSATmail1" />
+              <Mapping SourceColumn="InmCSATmail2" DataSetColumn="InmCSATmail2" />
+              <Mapping SourceColumn="email1" DataSetColumn="email1" />
+              <Mapping SourceColumn="email2" DataSetColumn="email2" />
+              <Mapping SourceColumn="LastUpdateforContacts" DataSetColumn="LastUpdateforContacts" />
+              <Mapping SourceColumn="PreviousName" DataSetColumn="PreviousName" />
+              <Mapping SourceColumn="ExOwner" DataSetColumn="ExOwner" />
+              <Mapping SourceColumn="Builder" DataSetColumn="Builder" />
+              <Mapping SourceColumn="BuldersShipNumber" DataSetColumn="BuldersShipNumber" />
+              <Mapping SourceColumn="BuildYear" DataSetColumn="BuildYear" />
+              <Mapping SourceColumn="Flag" DataSetColumn="Flag" />
+              <Mapping SourceColumn="Classification" DataSetColumn="Classification" />
+              <Mapping SourceColumn="TYPE" DataSetColumn="TYPE" />
+              <Mapping SourceColumn="LoA" DataSetColumn="LoA" />
+              <Mapping SourceColumn="BTH" DataSetColumn="BTH" />
+              <Mapping SourceColumn="DWT" DataSetColumn="DWT" />
+              <Mapping SourceColumn="Sold" DataSetColumn="Sold" />
+              <Mapping SourceColumn="PROwner" DataSetColumn="PROwner" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="Photofilename1" DataSetColumn="Photofilename1" />
+              <Mapping SourceColumn="Photofilename2" DataSetColumn="Photofilename2" />
+              <Mapping SourceColumn="PICID" DataSetColumn="PICID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Validity_attachTableAdapter" GeneratorDataComponentClassName="Validity_attachTableAdapter" Name="Validity_attach" UserDataComponentName="Validity_attachTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectName="AZUREDB.dbo.Validity_attach" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Validity_attach] WHERE (([AttachID] = @Original_AttachID) AND ((@IsNull_itemID = 1 AND [itemID] IS NULL) OR ([itemID] = @Original_itemID)) AND ((@IsNull_BitSpare = 1 AND [BitSpare] IS NULL) OR ([BitSpare] = @Original_BitSpare)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AttachID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AttachID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BitSpare" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BitSpare" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_BitSpare" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="BitSpare" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Validity_attach] ([itemID], [Type of file], [fileName], [filepath], [Remark], [BitSpare], [Update], [nverSpare]) VALUES (@itemID, @Type_of_file, @fileName, @filepath, @Remark, @BitSpare, @Update, @nverSpare);
+SELECT AttachID, itemID, [Type of file], fileName, filepath, Remark, BitSpare, [Update], nverSpare FROM Validity_attach WHERE (AttachID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type_of_file" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type of file" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@fileName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="fileName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@filepath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="filepath" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@BitSpare" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="BitSpare" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Update" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Update" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nverSpare" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="nverSpare" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AttachID, itemID, [Type of file], fileName, filepath, Remark, BitSpare, [Update], nverSpare FROM dbo.Validity_attach</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Validity_attach] SET [itemID] = @itemID, [Type of file] = @Type_of_file, [fileName] = @fileName, [filepath] = @filepath, [Remark] = @Remark, [BitSpare] = @BitSpare, [Update] = @Update, [nverSpare] = @nverSpare WHERE (([AttachID] = @Original_AttachID) AND ((@IsNull_itemID = 1 AND [itemID] IS NULL) OR ([itemID] = @Original_itemID)) AND ((@IsNull_BitSpare = 1 AND [BitSpare] IS NULL) OR ([BitSpare] = @Original_BitSpare)));
+SELECT AttachID, itemID, [Type of file], fileName, filepath, Remark, BitSpare, [Update], nverSpare FROM Validity_attach WHERE (AttachID = @AttachID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type_of_file" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type of file" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@fileName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="fileName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@filepath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="filepath" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@BitSpare" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="BitSpare" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Update" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Update" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@nverSpare" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="nverSpare" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AttachID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AttachID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BitSpare" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BitSpare" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_BitSpare" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="BitSpare" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AttachID" ColumnName="AttachID" DataSourceName="AZUREDB.dbo.Validity_attach" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@AttachID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="AttachID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AttachID" DataSetColumn="AttachID" />
+              <Mapping SourceColumn="itemID" DataSetColumn="itemID" />
+              <Mapping SourceColumn="Type of file" DataSetColumn="Type of file" />
+              <Mapping SourceColumn="fileName" DataSetColumn="fileName" />
+              <Mapping SourceColumn="filepath" DataSetColumn="filepath" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="BitSpare" DataSetColumn="BitSpare" />
+              <Mapping SourceColumn="Update" DataSetColumn="Update" />
+              <Mapping SourceColumn="nverSpare" DataSetColumn="nverSpare" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Validity_ItemsTableAdapter" GeneratorDataComponentClassName="Validity_ItemsTableAdapter" Name="Validity_Items" UserDataComponentName="Validity_ItemsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectName="AZUREDB.dbo.Validity_Items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Validity_Items] WHERE (([itemID] = @Original_itemID) AND ((@IsNull_ValidityID = 1 AND [ValidityID] IS NULL) OR ([ValidityID] = @Original_ValidityID)) AND ((@IsNull_Supply_Date = 1 AND [Supply Date] IS NULL) OR ([Supply Date] = @Original_Supply_Date)) AND ((@IsNull_Next_due_date = 1 AND [Next due date] IS NULL) OR ([Next due date] = @Original_Next_due_date)) AND ((@IsNull_shipID = 1 AND [shipID] IS NULL) OR ([shipID] = @Original_shipID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Supply_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Supply Date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Supply_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Supply Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Next_due_date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Next due date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Next_due_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Next due date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_shipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shipID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_shipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shipID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Validity_Items] ([ValidityID], [Maker], [Type], [Remark], [Accessory], [Accessory Remark], [Supply Date], [Next due date], [Update], [Remark for next service], [Remark2], [shipID], [varSpare]) VALUES (@ValidityID, @Maker, @Type, @Remark, @Accessory, @Accessory_Remark, @Supply_Date, @Next_due_date, @Update, @Remark_for_next_service, @Remark2, @shipID, @varSpare);
+SELECT itemID, ValidityID, Maker, Type, Remark, Accessory, [Accessory Remark], [Supply Date], [Next due date], [Update], [Remark for next service], Remark2, shipID, varSpare FROM Validity_Items WHERE (itemID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Maker" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Maker" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Accessory" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Accessory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Accessory_Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Accessory Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Supply_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Supply Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Next_due_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Next due date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Update" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Update" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark_for_next_service" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark for next service" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@shipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shipID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@varSpare" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="varSpare" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT itemID, ValidityID, Maker, Type, Remark, Accessory, [Accessory Remark], [Supply Date], [Next due date], [Update], [Remark for next service], Remark2, shipID, varSpare FROM dbo.Validity_Items</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Validity_Items] SET [ValidityID] = @ValidityID, [Maker] = @Maker, [Type] = @Type, [Remark] = @Remark, [Accessory] = @Accessory, [Accessory Remark] = @Accessory_Remark, [Supply Date] = @Supply_Date, [Next due date] = @Next_due_date, [Update] = @Update, [Remark for next service] = @Remark_for_next_service, [Remark2] = @Remark2, [shipID] = @shipID, [varSpare] = @varSpare WHERE (([itemID] = @Original_itemID) AND ((@IsNull_ValidityID = 1 AND [ValidityID] IS NULL) OR ([ValidityID] = @Original_ValidityID)) AND ((@IsNull_Supply_Date = 1 AND [Supply Date] IS NULL) OR ([Supply Date] = @Original_Supply_Date)) AND ((@IsNull_Next_due_date = 1 AND [Next due date] IS NULL) OR ([Next due date] = @Original_Next_due_date)) AND ((@IsNull_shipID = 1 AND [shipID] IS NULL) OR ([shipID] = @Original_shipID)));
+SELECT itemID, ValidityID, Maker, Type, Remark, Accessory, [Accessory Remark], [Supply Date], [Next due date], [Update], [Remark for next service], Remark2, shipID, varSpare FROM Validity_Items WHERE (itemID = @itemID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Maker" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Maker" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Accessory" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Accessory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Accessory_Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Accessory Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Supply_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Supply Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Next_due_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Next due date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Update" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Update" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark_for_next_service" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark for next service" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@shipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shipID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@varSpare" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="varSpare" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_itemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Supply_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Supply Date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Supply_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Supply Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Next_due_date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Next due date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Next_due_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Next due date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_shipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shipID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_shipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="shipID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="itemID" ColumnName="itemID" DataSourceName="AZUREDB.dbo.Validity_Items" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@itemID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="itemID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="itemID" DataSetColumn="itemID" />
+              <Mapping SourceColumn="ValidityID" DataSetColumn="ValidityID" />
+              <Mapping SourceColumn="Maker" DataSetColumn="Maker" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="Accessory" DataSetColumn="Accessory" />
+              <Mapping SourceColumn="Accessory Remark" DataSetColumn="Accessory Remark" />
+              <Mapping SourceColumn="Supply Date" DataSetColumn="Supply Date" />
+              <Mapping SourceColumn="Next due date" DataSetColumn="Next due date" />
+              <Mapping SourceColumn="Update" DataSetColumn="Update" />
+              <Mapping SourceColumn="Remark for next service" DataSetColumn="Remark for next service" />
+              <Mapping SourceColumn="Remark2" DataSetColumn="Remark2" />
+              <Mapping SourceColumn="shipID" DataSetColumn="shipID" />
+              <Mapping SourceColumn="varSpare" DataSetColumn="varSpare" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Validity_MasterTableAdapter" GeneratorDataComponentClassName="Validity_MasterTableAdapter" Name="Validity_Master" UserDataComponentName="Validity_MasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectName="AZUREDB.dbo.Validity_Master" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Validity_Master] WHERE (([ValidityID] = @Original_ValidityID) AND ((@IsNull_CategolyName = 1 AND [CategolyName] IS NULL) OR ([CategolyName] = @Original_CategolyName)) AND ((@IsNull_ShipID = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CategolyName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CategolyName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CategolyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CategolyName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ShipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ShipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Validity_Master] ([CategolyName], [Item/Equipment], [Period], [Remark], [ShipID]) VALUES (@CategolyName, @p1, @Period, @Remark, @ShipID);
+SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM Validity_Master WHERE (ValidityID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CategolyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CategolyName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item/Equipment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Period" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ShipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM dbo.Validity_Master</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Validity_Master] SET [CategolyName] = @CategolyName, [Item/Equipment] = @p1, [Period] = @Period, [Remark] = @Remark, [ShipID] = @ShipID WHERE (([ValidityID] = @Original_ValidityID) AND ((@IsNull_CategolyName = 1 AND [CategolyName] IS NULL) OR ([CategolyName] = @Original_CategolyName)) AND ((@IsNull_ShipID = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)));
+SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM Validity_Master WHERE (ValidityID = @ValidityID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CategolyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CategolyName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Item/Equipment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Period" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ShipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CategolyName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CategolyName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CategolyName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CategolyName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ShipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ShipID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ShipID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ValidityID" ColumnName="ValidityID" DataSourceName="AZUREDB.dbo.Validity_Master" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ValidityID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ValidityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ValidityID" DataSetColumn="ValidityID" />
+              <Mapping SourceColumn="CategolyName" DataSetColumn="CategolyName" />
+              <Mapping SourceColumn="Item/Equipment" DataSetColumn="Item/Equipment" />
+              <Mapping SourceColumn="Period" DataSetColumn="Period" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="ShipID" DataSetColumn="ShipID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AZUREDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AZUREDBDataSet" msprop:Generator_UserDSName="AZUREDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ship_Master_TB" msprop:Generator_TableClassName="Ship_Master_TBDataTable" msprop:Generator_TableVarName="tableShip_Master_TB" msprop:Generator_TablePropName="Ship_Master_TB" msprop:Generator_RowDeletingName="Ship_Master_TBRowDeleting" msprop:Generator_RowChangingName="Ship_Master_TBRowChanging" msprop:Generator_RowEvHandlerName="Ship_Master_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Ship_Master_TBRowDeleted" msprop:Generator_UserTableName="Ship_Master_TB" msprop:Generator_RowChangedName="Ship_Master_TBRowChanged" msprop:Generator_RowEvArgName="Ship_Master_TBRowChangeEvent" msprop:Generator_RowClassName="Ship_Master_TBRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="OwnerGroup" msprop:Generator_ColumnVarNameInTable="columnOwnerGroup" msprop:Generator_ColumnPropNameInRow="OwnerGroup" msprop:Generator_ColumnPropNameInTable="OwnerGroupColumn" msprop:Generator_UserColumnName="OwnerGroup" type="xs:int" minOccurs="0" />
+              <xs:element name="PresentName" msprop:Generator_ColumnVarNameInTable="columnPresentName" msprop:Generator_ColumnPropNameInRow="PresentName" msprop:Generator_ColumnPropNameInTable="PresentNameColumn" msprop:Generator_UserColumnName="PresentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shortcharacter" msprop:Generator_ColumnVarNameInTable="columnShortcharacter" msprop:Generator_ColumnPropNameInRow="Shortcharacter" msprop:Generator_ColumnPropNameInTable="ShortcharacterColumn" msprop:Generator_UserColumnName="Shortcharacter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMONumber" msprop:Generator_ColumnVarNameInTable="columnIMONumber" msprop:Generator_ColumnPropNameInRow="IMONumber" msprop:Generator_ColumnPropNameInTable="IMONumberColumn" msprop:Generator_UserColumnName="IMONumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FBBtelephone" msprop:Generator_ColumnVarNameInTable="columnFBBtelephone" msprop:Generator_ColumnPropNameInRow="FBBtelephone" msprop:Generator_ColumnPropNameInTable="FBBtelephoneColumn" msprop:Generator_UserColumnName="FBBtelephone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FBBtelephoneShort" msprop:Generator_ColumnVarNameInTable="columnFBBtelephoneShort" msprop:Generator_ColumnPropNameInRow="FBBtelephoneShort" msprop:Generator_ColumnPropNameInTable="FBBtelephoneShortColumn" msprop:Generator_UserColumnName="FBBtelephoneShort" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FBBfacsimile" msprop:Generator_ColumnVarNameInTable="columnFBBfacsimile" msprop:Generator_ColumnPropNameInRow="FBBfacsimile" msprop:Generator_ColumnPropNameInTable="FBBfacsimileColumn" msprop:Generator_UserColumnName="FBBfacsimile" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InmFtelephone1" msprop:Generator_ColumnVarNameInTable="columnInmFtelephone1" msprop:Generator_ColumnPropNameInRow="InmFtelephone1" msprop:Generator_ColumnPropNameInTable="InmFtelephone1Column" msprop:Generator_UserColumnName="InmFtelephone1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InmFtelephone2" msprop:Generator_ColumnVarNameInTable="columnInmFtelephone2" msprop:Generator_ColumnPropNameInRow="InmFtelephone2" msprop:Generator_ColumnPropNameInTable="InmFtelephone2Column" msprop:Generator_UserColumnName="InmFtelephone2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InmFfacsimile" msprop:Generator_ColumnVarNameInTable="columnInmFfacsimile" msprop:Generator_ColumnPropNameInRow="InmFfacsimile" msprop:Generator_ColumnPropNameInTable="InmFfacsimileColumn" msprop:Generator_UserColumnName="InmFfacsimile" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InmCSATmail1" msprop:Generator_ColumnVarNameInTable="columnInmCSATmail1" msprop:Generator_ColumnPropNameInRow="InmCSATmail1" msprop:Generator_ColumnPropNameInTable="InmCSATmail1Column" msprop:Generator_UserColumnName="InmCSATmail1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InmCSATmail2" msprop:Generator_ColumnVarNameInTable="columnInmCSATmail2" msprop:Generator_ColumnPropNameInRow="InmCSATmail2" msprop:Generator_ColumnPropNameInTable="InmCSATmail2Column" msprop:Generator_UserColumnName="InmCSATmail2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email1" msprop:Generator_ColumnVarNameInTable="columnemail1" msprop:Generator_ColumnPropNameInRow="email1" msprop:Generator_ColumnPropNameInTable="email1Column" msprop:Generator_UserColumnName="email1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email2" msprop:Generator_ColumnVarNameInTable="columnemail2" msprop:Generator_ColumnPropNameInRow="email2" msprop:Generator_ColumnPropNameInTable="email2Column" msprop:Generator_UserColumnName="email2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastUpdateforContacts" msprop:Generator_ColumnVarNameInTable="columnLastUpdateforContacts" msprop:Generator_ColumnPropNameInRow="LastUpdateforContacts" msprop:Generator_ColumnPropNameInTable="LastUpdateforContactsColumn" msprop:Generator_UserColumnName="LastUpdateforContacts" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PreviousName" msprop:Generator_ColumnVarNameInTable="columnPreviousName" msprop:Generator_ColumnPropNameInRow="PreviousName" msprop:Generator_ColumnPropNameInTable="PreviousNameColumn" msprop:Generator_UserColumnName="PreviousName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExOwner" msprop:Generator_ColumnVarNameInTable="columnExOwner" msprop:Generator_ColumnPropNameInRow="ExOwner" msprop:Generator_ColumnPropNameInTable="ExOwnerColumn" msprop:Generator_UserColumnName="ExOwner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Builder" msprop:Generator_ColumnVarNameInTable="columnBuilder" msprop:Generator_ColumnPropNameInRow="Builder" msprop:Generator_ColumnPropNameInTable="BuilderColumn" msprop:Generator_UserColumnName="Builder" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuldersShipNumber" msprop:Generator_ColumnVarNameInTable="columnBuldersShipNumber" msprop:Generator_ColumnPropNameInRow="BuldersShipNumber" msprop:Generator_ColumnPropNameInTable="BuldersShipNumberColumn" msprop:Generator_UserColumnName="BuldersShipNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuildYear" msprop:Generator_ColumnVarNameInTable="columnBuildYear" msprop:Generator_ColumnPropNameInRow="BuildYear" msprop:Generator_ColumnPropNameInTable="BuildYearColumn" msprop:Generator_UserColumnName="BuildYear" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Flag" msprop:Generator_ColumnVarNameInTable="columnFlag" msprop:Generator_ColumnPropNameInRow="Flag" msprop:Generator_ColumnPropNameInTable="FlagColumn" msprop:Generator_UserColumnName="Flag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Classification" msprop:Generator_ColumnVarNameInTable="columnClassification" msprop:Generator_ColumnPropNameInRow="Classification" msprop:Generator_ColumnPropNameInTable="ClassificationColumn" msprop:Generator_UserColumnName="Classification" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoA" msprop:Generator_ColumnVarNameInTable="columnLoA" msprop:Generator_ColumnPropNameInRow="LoA" msprop:Generator_ColumnPropNameInTable="LoAColumn" msprop:Generator_UserColumnName="LoA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BTH" msprop:Generator_ColumnVarNameInTable="columnBTH" msprop:Generator_ColumnPropNameInRow="BTH" msprop:Generator_ColumnPropNameInTable="BTHColumn" msprop:Generator_UserColumnName="BTH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DWT" msprop:Generator_ColumnVarNameInTable="columnDWT" msprop:Generator_ColumnPropNameInRow="DWT" msprop:Generator_ColumnPropNameInTable="DWTColumn" msprop:Generator_UserColumnName="DWT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sold" msprop:Generator_ColumnVarNameInTable="columnSold" msprop:Generator_ColumnPropNameInRow="Sold" msprop:Generator_ColumnPropNameInTable="SoldColumn" msprop:Generator_UserColumnName="Sold" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROwner" msprop:Generator_ColumnVarNameInTable="columnPROwner" msprop:Generator_ColumnPropNameInRow="PROwner" msprop:Generator_ColumnPropNameInTable="PROwnerColumn" msprop:Generator_UserColumnName="PROwner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Photofilename1" msprop:Generator_ColumnVarNameInTable="columnPhotofilename1" msprop:Generator_ColumnPropNameInRow="Photofilename1" msprop:Generator_ColumnPropNameInTable="Photofilename1Column" msprop:Generator_UserColumnName="Photofilename1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Photofilename2" msprop:Generator_ColumnVarNameInTable="columnPhotofilename2" msprop:Generator_ColumnPropNameInRow="Photofilename2" msprop:Generator_ColumnPropNameInTable="Photofilename2Column" msprop:Generator_UserColumnName="Photofilename2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PICID" msprop:Generator_ColumnVarNameInTable="columnPICID" msprop:Generator_ColumnPropNameInRow="PICID" msprop:Generator_ColumnPropNameInTable="PICIDColumn" msprop:Generator_UserColumnName="PICID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Validity_attach" msprop:Generator_TableClassName="Validity_attachDataTable" msprop:Generator_TableVarName="tableValidity_attach" msprop:Generator_TablePropName="Validity_attach" msprop:Generator_RowDeletingName="Validity_attachRowDeleting" msprop:Generator_RowChangingName="Validity_attachRowChanging" msprop:Generator_RowEvHandlerName="Validity_attachRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_attachRowDeleted" msprop:Generator_UserTableName="Validity_attach" msprop:Generator_RowChangedName="Validity_attachRowChanged" msprop:Generator_RowEvArgName="Validity_attachRowChangeEvent" msprop:Generator_RowClassName="Validity_attachRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AttachID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAttachID" msprop:Generator_ColumnPropNameInRow="AttachID" msprop:Generator_ColumnPropNameInTable="AttachIDColumn" msprop:Generator_UserColumnName="AttachID" type="xs:int" />
+              <xs:element name="itemID" msprop:Generator_ColumnVarNameInTable="columnitemID" msprop:Generator_ColumnPropNameInRow="itemID" msprop:Generator_ColumnPropNameInTable="itemIDColumn" msprop:Generator_UserColumnName="itemID" type="xs:int" minOccurs="0" />
+              <xs:element name="Type_x0020_of_x0020_file" msprop:Generator_ColumnVarNameInTable="columnType_of_file" msprop:Generator_ColumnPropNameInRow="Type_of_file" msprop:Generator_ColumnPropNameInTable="Type_of_fileColumn" msprop:Generator_UserColumnName="Type of file" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fileName" msprop:Generator_ColumnVarNameInTable="columnfileName" msprop:Generator_ColumnPropNameInRow="fileName" msprop:Generator_ColumnPropNameInTable="fileNameColumn" msprop:Generator_UserColumnName="fileName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="filepath" msprop:Generator_ColumnVarNameInTable="columnfilepath" msprop:Generator_ColumnPropNameInRow="filepath" msprop:Generator_ColumnPropNameInTable="filepathColumn" msprop:Generator_UserColumnName="filepath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BitSpare" msprop:Generator_ColumnVarNameInTable="columnBitSpare" msprop:Generator_ColumnPropNameInRow="BitSpare" msprop:Generator_ColumnPropNameInTable="BitSpareColumn" msprop:Generator_UserColumnName="BitSpare" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Update" msprop:Generator_ColumnVarNameInTable="columnUpdate" msprop:Generator_ColumnPropNameInRow="Update" msprop:Generator_ColumnPropNameInTable="UpdateColumn" msprop:Generator_UserColumnName="Update" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nverSpare" msprop:Generator_ColumnVarNameInTable="columnnverSpare" msprop:Generator_ColumnPropNameInRow="nverSpare" msprop:Generator_ColumnPropNameInTable="nverSpareColumn" msprop:Generator_UserColumnName="nverSpare" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Validity_Items" msprop:Generator_TableClassName="Validity_ItemsDataTable" msprop:Generator_TableVarName="tableValidity_Items" msprop:Generator_TablePropName="Validity_Items" msprop:Generator_RowDeletingName="Validity_ItemsRowDeleting" msprop:Generator_RowChangingName="Validity_ItemsRowChanging" msprop:Generator_RowEvHandlerName="Validity_ItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_ItemsRowDeleted" msprop:Generator_UserTableName="Validity_Items" msprop:Generator_RowChangedName="Validity_ItemsRowChanged" msprop:Generator_RowEvArgName="Validity_ItemsRowChangeEvent" msprop:Generator_RowClassName="Validity_ItemsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnitemID" msprop:Generator_ColumnPropNameInRow="itemID" msprop:Generator_ColumnPropNameInTable="itemIDColumn" msprop:Generator_UserColumnName="itemID" type="xs:int" />
+              <xs:element name="ValidityID" msprop:Generator_ColumnVarNameInTable="columnValidityID" msprop:Generator_ColumnPropNameInRow="ValidityID" msprop:Generator_ColumnPropNameInTable="ValidityIDColumn" msprop:Generator_UserColumnName="ValidityID" type="xs:int" minOccurs="0" />
+              <xs:element name="Maker" msprop:Generator_ColumnVarNameInTable="columnMaker" msprop:Generator_ColumnPropNameInRow="Maker" msprop:Generator_ColumnPropNameInTable="MakerColumn" msprop:Generator_UserColumnName="Maker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Accessory" msprop:Generator_ColumnVarNameInTable="columnAccessory" msprop:Generator_ColumnPropNameInRow="Accessory" msprop:Generator_ColumnPropNameInTable="AccessoryColumn" msprop:Generator_UserColumnName="Accessory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Accessory_x0020_Remark" msprop:Generator_ColumnVarNameInTable="columnAccessory_Remark" msprop:Generator_ColumnPropNameInRow="Accessory_Remark" msprop:Generator_ColumnPropNameInTable="Accessory_RemarkColumn" msprop:Generator_UserColumnName="Accessory Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supply_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnSupply_Date" msprop:Generator_ColumnPropNameInRow="Supply_Date" msprop:Generator_ColumnPropNameInTable="Supply_DateColumn" msprop:Generator_UserColumnName="Supply Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Next_x0020_due_x0020_date" msprop:Generator_ColumnVarNameInTable="columnNext_due_date" msprop:Generator_ColumnPropNameInRow="Next_due_date" msprop:Generator_ColumnPropNameInTable="Next_due_dateColumn" msprop:Generator_UserColumnName="Next due date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Update" msprop:Generator_ColumnVarNameInTable="columnUpdate" msprop:Generator_ColumnPropNameInRow="Update" msprop:Generator_ColumnPropNameInTable="UpdateColumn" msprop:Generator_UserColumnName="Update" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark_x0020_for_x0020_next_x0020_service" msprop:Generator_ColumnVarNameInTable="columnRemark_for_next_service" msprop:Generator_ColumnPropNameInRow="Remark_for_next_service" msprop:Generator_ColumnPropNameInTable="Remark_for_next_serviceColumn" msprop:Generator_UserColumnName="Remark for next service" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark2" msprop:Generator_ColumnVarNameInTable="columnRemark2" msprop:Generator_ColumnPropNameInRow="Remark2" msprop:Generator_ColumnPropNameInTable="Remark2Column" msprop:Generator_UserColumnName="Remark2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="shipID" msprop:Generator_ColumnVarNameInTable="columnshipID" msprop:Generator_ColumnPropNameInRow="shipID" msprop:Generator_ColumnPropNameInTable="shipIDColumn" msprop:Generator_UserColumnName="shipID" type="xs:int" minOccurs="0" />
+              <xs:element name="varSpare" msprop:Generator_ColumnVarNameInTable="columnvarSpare" msprop:Generator_ColumnPropNameInRow="varSpare" msprop:Generator_ColumnPropNameInTable="varSpareColumn" msprop:Generator_UserColumnName="varSpare" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Validity_Master" msprop:Generator_TableClassName="Validity_MasterDataTable" msprop:Generator_TableVarName="tableValidity_Master" msprop:Generator_TablePropName="Validity_Master" msprop:Generator_RowDeletingName="Validity_MasterRowDeleting" msprop:Generator_RowChangingName="Validity_MasterRowChanging" msprop:Generator_RowEvHandlerName="Validity_MasterRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_MasterRowDeleted" msprop:Generator_UserTableName="Validity_Master" msprop:Generator_RowChangedName="Validity_MasterRowChanged" msprop:Generator_RowEvArgName="Validity_MasterRowChangeEvent" msprop:Generator_RowClassName="Validity_MasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValidityID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnValidityID" msprop:Generator_ColumnPropNameInRow="ValidityID" msprop:Generator_ColumnPropNameInTable="ValidityIDColumn" msprop:Generator_UserColumnName="ValidityID" type="xs:int" />
+              <xs:element name="CategolyName" msprop:Generator_ColumnVarNameInTable="columnCategolyName" msprop:Generator_ColumnPropNameInRow="CategolyName" msprop:Generator_ColumnPropNameInTable="CategolyNameColumn" msprop:Generator_UserColumnName="CategolyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_x002F_Equipment" msprop:Generator_ColumnVarNameInTable="_columnItem_Equipment" msprop:Generator_ColumnPropNameInRow="_Item_Equipment" msprop:Generator_ColumnPropNameInTable="_Item_EquipmentColumn" msprop:Generator_UserColumnName="Item/Equipment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Period" msprop:Generator_ColumnVarNameInTable="columnPeriod" msprop:Generator_ColumnPropNameInRow="Period" msprop:Generator_ColumnPropNameInTable="PeriodColumn" msprop:Generator_UserColumnName="Period" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipID" msprop:Generator_ColumnVarNameInTable="columnShipID" msprop:Generator_ColumnPropNameInRow="ShipID" msprop:Generator_ColumnPropNameInTable="ShipIDColumn" msprop:Generator_UserColumnName="ShipID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Ship_Master_TB" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Validity_attach_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Validity_attach" />
+      <xs:field xpath="mstns:AttachID" />
+    </xs:unique>
+    <xs:unique name="Validity_Items_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Validity_Items" />
+      <xs:field xpath="mstns:itemID" />
+    </xs:unique>
+    <xs:unique name="Validity_Master_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Validity_Master" />
+      <xs:field xpath="mstns:ValidityID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Validity_attach_Validity_Items" msdata:parent="Validity_Items" msdata:child="Validity_attach" msdata:parentkey="itemID" msdata:childkey="itemID" msprop:Generator_UserChildTable="Validity_attach" msprop:Generator_ChildPropName="GetValidity_attachRows" msprop:Generator_UserRelationName="FK_Validity_attach_Validity_Items" msprop:Generator_RelationVarName="relationFK_Validity_attach_Validity_Items" msprop:Generator_UserParentTable="Validity_Items" msprop:Generator_ParentPropName="Validity_ItemsRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

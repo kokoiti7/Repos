@@ -39,43 +39,7 @@ namespace PhotoView
 
         }
 
-        private void Upload_Click(object sender, EventArgs e)
-        {
-            rowcnt = iMPA4thED_ItemDataGridView.RowCount;
 
-
-
-          /*  for (int i = 0; i < rowcnt - 1; i++)
-            {
-
-
-                iMPA4thED_ItemDataGridView.CurrentCell = iMPA4thED_ItemDataGridView[5, i];
-
-                if (iMPA4thED_ItemDataGridView[5, i].Value.ToString() != null)
-                {
-
-                    var filenameget = Path.GetFileName(iMPA4thED_ItemDataGridView[5, i].Value.ToString());
-
-
-                    var filenamecut = dir + "\\" + filenameget;
-
-
-                    if (System.IO.File.Exists(filenamecut))
-                    {
-
-
-                        iMPA4thED_ItemDataGridView.CurrentCell = iMPA4thED_ItemDataGridView[4, 3];
-                        iMPA4thED_ItemDataGridView[4, i].Value = new Bitmap(filenamecut);
-
-                    }
-                    else
-                    {
-
-
-                    }*/
-                
-            
-        }
 
         private void iMPA4thED_SectionDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -86,15 +50,42 @@ namespace PhotoView
 
         private void Update_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.iMPA4thED_ItemBindingSource.EndEdit();
-            this.iMPA4thED_ItemTableAdapter.Update(this.aZUREDBDataSet.IMPA4thED_Item);
+            rowcnt = iMPA4thED_ItemDataGridView.RowCount;
+
+            //ボタンを押したらprntscreen？をしたやつを入れるnew bitmap 3/12
+
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            //複数のファイルを選択できるようにするXX
+            ofd.Multiselect = false;
+
+
+            //ダイアログを表示する
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                //OKボタンがクリックされたとき、選択されたファイル名をすべて表示する
+                foreach (string fn in ofd.FileNames)
+                {
+
+                    var fileStream = System.IO.File.OpenRead(fn);
+                    var filenamefn = System.IO.Path.GetFileName(fn);
+                    
+                    iMPA4thED_ItemBindingSource.AddNew();
+    
+                    this.Validate();
+                    this.iMPA4thED_ItemBindingSource.EndEdit();
+                    this.iMPA4thED_ItemTableAdapter.Update(this.aZUREDBDataSet.IMPA4thED_Item);
+                }
+            }
         }
+
 
         private void Refresh_Click(object sender, EventArgs e)
         {
             this.iMPA4thED_ItemTableAdapter.Fill(this.aZUREDBDataSet.IMPA4thED_Item);
             this.iMPA4thED_SectionTableAdapter.Fill(this.aZUREDBDataSet.IMPA4thED_Section);
         }
+
+
     }
 }
