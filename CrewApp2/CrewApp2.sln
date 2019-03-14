@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrewApp2", "CrewApp2\CrewApp2.csproj", "{0CE5BC29-6179-4A2C-AC46-DF805D03AC1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CE5BC29-6179-4A2C-AC46-DF805D03AC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE5BC29-6179-4A2C-AC46-DF805D03AC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE5BC29-6179-4A2C-AC46-DF805D03AC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE5BC29-6179-4A2C-AC46-DF805D03AC1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66DFD9AF-6DE2-4548-86D7-AFA98A2D54D5}
+	EndGlobalSection
+EndGlobal
