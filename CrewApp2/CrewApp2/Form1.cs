@@ -141,10 +141,10 @@ namespace CrewApp2
 
             this.Validate();
             this.crew_ApplicationBindingSource.EndEdit();
-            this.crew_ApplicationTableAdapter.Update(aZUREDBDataSet.Crew_Application);
-
-            this.Validate();
+            this.crew_MasterBindingSource.EndEdit();
             this.crew_ConfidencialReportBindingSource.EndEdit();
+            this.crew_MasterTableAdapter.Update(aZUREDBDataSet.Crew_Master);
+            this.crew_ApplicationTableAdapter.Update(aZUREDBDataSet.Crew_Application);
             this.crew_ConfidencialReportTableAdapter.Update(aZUREDBDataSet.Crew_ConfidencialReport);
 
 
