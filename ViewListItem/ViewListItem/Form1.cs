@@ -22,6 +22,8 @@ namespace ViewListItem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'aZUREDBDataSet.DataTable1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+           
             // TODO: このコード行はデータを 'aZUREDBDataSet1.Ship_Master_TB' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet1.Ship_Master_TB);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Validity_attach' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -35,11 +37,20 @@ namespace ViewListItem
 
         private void Update_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.validity_MasterBindingSource.EndEdit();
-            this.validity_ItemsBindingSource.EndEdit();
-            this.validity_attachBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+            try
+            {
+                this.Validate();
+                this.validity_MasterBindingSource.EndEdit();
+                this.validity_ItemsBindingSource.EndEdit();
+                this.validity_attachBindingSource.EndEdit();
+                this.validity_attachTableAdapter.Update(aZUREDBDataSet.Validity_attach);
+                this.validity_ItemsTableAdapter.Update(aZUREDBDataSet.Validity_Items);
+                this.validity_MasterTableAdapter.Update(aZUREDBDataSet.Validity_Master);
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("First Delete attached girdview Cell contents");
+            }
 
         }
 
@@ -55,6 +66,7 @@ namespace ViewListItem
 
         private void FileNameListBox_DragDrop(object sender, DragEventArgs e)
         {
+
             string[] fileName = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
             if (fileName.Length <= 0)
@@ -70,23 +82,23 @@ namespace ViewListItem
 
             var fileStream = System.IO.File.OpenRead(fileName[0]);
 
-            validity_attachBindingSource.AddNew();
+            
+
+           // validity_attachBindingSource.AddNew();
 
             fileNameTextBox.Text = filenamefn;
 
             CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(filenamefn);
             blockBlob_upload.UploadFromStream(fileStream);
 
-            MessageBox.Show("追加しました",validity_attachDataGridView.CurrentRow.IsNewRow.ToString());
-
-         
-
             // save 
             this.Validate();
             this.validity_MasterBindingSource.EndEdit();
             this.validity_ItemsBindingSource.EndEdit();
             this.validity_attachBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+            this.validity_attachTableAdapter.Update(aZUREDBDataSet.Validity_attach);
+            this.validity_ItemsTableAdapter.Update(aZUREDBDataSet.Validity_Items);
+            this.validity_MasterTableAdapter.Update(aZUREDBDataSet.Validity_Master);
         }
 
         private void FileNameListBox_DragEnter(object sender, DragEventArgs e)
@@ -157,6 +169,36 @@ namespace ViewListItem
          
           
         }
+
+      private void Validity_MasterDataGridView_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Validate();
+            this.validity_MasterBindingSource.EndEdit();
+            this.validity_ItemsBindingSource.EndEdit();
+            this.validity_attachBindingSource.EndEdit();
+            this.validity_attachTableAdapter.Update(aZUREDBDataSet.Validity_attach);
+            this.validity_ItemsTableAdapter.Update(aZUREDBDataSet.Validity_Items);
+            this.validity_MasterTableAdapter.Update(aZUREDBDataSet.Validity_Master);
+        }
+
+       private void Validity_ItemsDataGridView_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Validate();
+            this.validity_MasterBindingSource.EndEdit();
+            this.validity_ItemsBindingSource.EndEdit();
+            this.validity_attachBindingSource.EndEdit();
+            this.validity_attachTableAdapter.Update(aZUREDBDataSet.Validity_attach);
+            this.validity_ItemsTableAdapter.Update(aZUREDBDataSet.Validity_Items);
+            this.validity_MasterTableAdapter.Update(aZUREDBDataSet.Validity_Master);
+        }
+
+        private void validity_attachDataGridView_Leave(object sender, EventArgs e)
+        {
+           // MessageBox.Show(validity_attachDataGridView.NewRowIndex.ToString());
+            int test = validity_attachDataGridView.CurrentCell.RowIndex;
+
+            MessageBox.Show(validity_attachDataGridView.Rows[test].Cells[0].Value.ToString());
+
+        }
     }
 }
-

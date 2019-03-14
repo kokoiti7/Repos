@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label presentNameLabel;
             System.Windows.Forms.Label iDLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.validity_MasterBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.validity_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,8 +47,21 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.validity_MasterBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.validity_MasterDataGridView = new System.Windows.Forms.DataGridView();
             this.validity_ItemsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validity_ItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.validity_attachDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,11 +78,11 @@
             this.Refresh = new System.Windows.Forms.Button();
             this.ShowAllGrid = new System.Windows.Forms.Button();
             this.validity_MasterTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_MasterTableAdapter();
-            this.tableAdapterManager = new ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.validity_attachTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_attachTableAdapter();
             this.validity_ItemsTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_ItemsTableAdapter();
             this.fileNameTextBox = new System.Windows.Forms.TextBox();
             this.fileNameListBox = new System.Windows.Forms.ListBox();
+            this.fKValidityattachValidityItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -96,53 +109,58 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.Delete = new System.Windows.Forms.Button();
+            this.aZUREDBDataSet1 = new ViewListItem.AZUREDBDataSet1();
+            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ship_Master_TBTableAdapter = new ViewListItem.AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter();
+            this.tableAdapterManager1 = new ViewListItem.AZUREDBDataSet1TableAdapters.TableAdapterManager();
+            this.tableAdapterManager = new ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager();
+            this.validity_MasterDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKValidityattachValidityItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Delete = new System.Windows.Forms.Button();
-            this.aZUREDBDataSet1 = new ViewListItem.AZUREDBDataSet1();
-            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ship_Master_TBTableAdapter = new ViewListItem.AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter();
-            this.tableAdapterManager1 = new ViewListItem.AZUREDBDataSet1TableAdapters.TableAdapterManager();
-            this.presentNameComboBox = new System.Windows.Forms.ComboBox();
-            this.iDTextBox = new System.Windows.Forms.TextBox();
             presentNameLabel = new System.Windows.Forms.Label();
             iDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingNavigator)).BeginInit();
             this.validity_MasterBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_attachDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_attachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKValidityattachValidityItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKValidityattachValidityItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // presentNameLabel
+            // 
+            presentNameLabel.AutoSize = true;
+            presentNameLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            presentNameLabel.Location = new System.Drawing.Point(298, 44);
+            presentNameLabel.Name = "presentNameLabel";
+            presentNameLabel.Size = new System.Drawing.Size(150, 28);
+            presentNameLabel.TabIndex = 13;
+            presentNameLabel.Text = "Present Name:";
+            // 
+            // iDLabel
+            // 
+            iDLabel.AutoSize = true;
+            iDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            iDLabel.Location = new System.Drawing.Point(577, 44);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(42, 28);
+            iDLabel.TabIndex = 14;
+            iDLabel.Text = "ID:";
             // 
             // validity_MasterBindingNavigator
             // 
@@ -279,24 +297,6 @@
             this.validity_MasterBindingNavigatorSaveItem.Text = "データの保存";
             this.validity_MasterBindingNavigatorSaveItem.Click += new System.EventHandler(this.Validity_MasterBindingNavigatorSaveItem_Click);
             // 
-            // validity_MasterDataGridView
-            // 
-            this.validity_MasterDataGridView.AutoGenerateColumns = false;
-            this.validity_MasterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.validity_MasterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.validity_MasterDataGridView.DataSource = this.validity_MasterBindingSource;
-            this.validity_MasterDataGridView.Location = new System.Drawing.Point(0, 75);
-            this.validity_MasterDataGridView.Name = "validity_MasterDataGridView";
-            this.validity_MasterDataGridView.RowTemplate.Height = 21;
-            this.validity_MasterDataGridView.Size = new System.Drawing.Size(839, 220);
-            this.validity_MasterDataGridView.TabIndex = 1;
-            // 
             // validity_ItemsDataGridView
             // 
             this.validity_ItemsDataGridView.AutoGenerateColumns = false;
@@ -322,6 +322,100 @@
             this.validity_ItemsDataGridView.RowTemplate.Height = 21;
             this.validity_ItemsDataGridView.Size = new System.Drawing.Size(839, 234);
             this.validity_ItemsDataGridView.TabIndex = 2;
+            this.validity_ItemsDataGridView.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.Validity_ItemsDataGridView_CellLeave);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "itemID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "itemID";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 63;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ValidityID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ValidityID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Maker";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Maker";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 61;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Type";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Remark";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Remark";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Accessory";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Accessory";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Accessory Remark";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Accessory Remark";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Supply Date";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Supply Date";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Next due date";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Next due date";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Update";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Update";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Remark for next service";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Remark for next service";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Remark2";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Remark2";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "shipID";
+            this.dataGridViewTextBoxColumn19.HeaderText = "shipID";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "varSpare";
+            this.dataGridViewTextBoxColumn20.HeaderText = "varSpare";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
             // validity_ItemsBindingSource
             // 
@@ -348,6 +442,7 @@
             this.validity_attachDataGridView.RowTemplate.Height = 21;
             this.validity_attachDataGridView.Size = new System.Drawing.Size(839, 220);
             this.validity_attachDataGridView.TabIndex = 3;
+            this.validity_attachDataGridView.Leave += new System.EventHandler(this.validity_attachDataGridView_Leave);
             // 
             // dataGridViewTextBoxColumn21
             // 
@@ -446,14 +541,6 @@
             // 
             this.validity_MasterTableAdapter.ClearBeforeFill = true;
             // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Validity_attachTableAdapter = this.validity_attachTableAdapter;
-            this.tableAdapterManager.Validity_ItemsTableAdapter = this.validity_ItemsTableAdapter;
-            this.tableAdapterManager.Validity_MasterTableAdapter = this.validity_MasterTableAdapter;
-            // 
             // validity_attachTableAdapter
             // 
             this.validity_attachTableAdapter.ClearBeforeFill = true;
@@ -488,6 +575,11 @@
             this.fileNameListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragDrop);
             this.fileNameListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragEnter);
             this.fileNameListBox.DoubleClick += new System.EventHandler(this.FileNameListBox_DoubleClick);
+            // 
+            // fKValidityattachValidityItemsBindingSource
+            // 
+            this.fKValidityattachValidityItemsBindingSource.DataMember = "FK_Validity_attach_Validity_Items";
+            this.fKValidityattachValidityItemsBindingSource.DataSource = this.validity_ItemsBindingSource;
             // 
             // bindingNavigator1
             // 
@@ -737,153 +829,6 @@
             this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton14.Text = "データの保存";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ValidityID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ValidityID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategolyName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CategolyName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 104;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Item/Equipment";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Item/Equipment";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 111;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Period";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Period";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 62;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Remark";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 69;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ShipID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ShipID";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 63;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "itemID";
-            this.dataGridViewTextBoxColumn7.HeaderText = "itemID";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 63;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ValidityID";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ValidityID";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Maker";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Maker";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 61;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Type";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 55;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Remark";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Accessory";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Accessory";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Accessory Remark";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Accessory Remark";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Supply Date";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Supply Date";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Next due date";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Next due date";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Update";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Update";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Remark for next service";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Remark for next service";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Remark2";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Remark2";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "shipID";
-            this.dataGridViewTextBoxColumn19.HeaderText = "shipID";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "varSpare";
-            this.dataGridViewTextBoxColumn20.HeaderText = "varSpare";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // fKValidityattachValidityItemsBindingSource
-            // 
-            this.fKValidityattachValidityItemsBindingSource.DataMember = "FK_Validity_attach_Validity_Items";
-            this.fKValidityattachValidityItemsBindingSource.DataSource = this.validity_ItemsBindingSource;
-            // 
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
@@ -915,58 +860,78 @@
             this.tableAdapterManager1.Ship_Master_TBTableAdapter = this.ship_Master_TBTableAdapter;
             this.tableAdapterManager1.UpdateOrder = ViewListItem.AZUREDBDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // presentNameLabel
+            // tableAdapterManager
             // 
-            presentNameLabel.AutoSize = true;
-            presentNameLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
-            presentNameLabel.Location = new System.Drawing.Point(361, -1);
-            presentNameLabel.Name = "presentNameLabel";
-            presentNameLabel.Size = new System.Drawing.Size(150, 28);
-            presentNameLabel.TabIndex = 13;
-            presentNameLabel.Text = "Present Name:";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Validity_attachTableAdapter = null;
+            this.tableAdapterManager.Validity_ItemsTableAdapter = null;
+            this.tableAdapterManager.Validity_MasterTableAdapter = null;
             // 
-            // presentNameComboBox
+            // validity_MasterDataGridView
             // 
-            this.presentNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ship_Master_TBBindingSource, "PresentName", true));
-            this.presentNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ship_Master_TBBindingSource, "ID", true));
-            this.presentNameComboBox.DataSource = this.ship_Master_TBBindingSource;
-            this.presentNameComboBox.DisplayMember = "PresentName";
-            this.presentNameComboBox.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
-            this.presentNameComboBox.FormattingEnabled = true;
-            this.presentNameComboBox.Location = new System.Drawing.Point(366, 31);
-            this.presentNameComboBox.Name = "presentNameComboBox";
-            this.presentNameComboBox.Size = new System.Drawing.Size(211, 36);
-            this.presentNameComboBox.TabIndex = 14;
+            this.validity_MasterDataGridView.AutoGenerateColumns = false;
+            this.validity_MasterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.validity_MasterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.validity_MasterDataGridView.DataSource = this.validity_MasterBindingSource;
+            this.validity_MasterDataGridView.Location = new System.Drawing.Point(0, 75);
+            this.validity_MasterDataGridView.Name = "validity_MasterDataGridView";
+            this.validity_MasterDataGridView.RowTemplate.Height = 21;
+            this.validity_MasterDataGridView.Size = new System.Drawing.Size(839, 220);
+            this.validity_MasterDataGridView.TabIndex = 14;
             // 
-            // iDLabel
+            // dataGridViewTextBoxColumn1
             // 
-            iDLabel.AutoSize = true;
-            iDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
-            iDLabel.Location = new System.Drawing.Point(640, -1);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(42, 28);
-            iDLabel.TabIndex = 14;
-            iDLabel.Text = "ID:";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ValidityID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ValidityID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // iDTextBox
+            // dataGridViewTextBoxColumn2
             // 
-            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ship_Master_TBBindingSource, "ID", true));
-            this.iDTextBox.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
-            this.iDTextBox.Location = new System.Drawing.Point(645, 30);
-            this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.ReadOnly = true;
-            this.iDTextBox.Size = new System.Drawing.Size(194, 36);
-            this.iDTextBox.TabIndex = 15;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategolyName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CategolyName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Item/Equipment";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Item/Equipment";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Period";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Period";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Remark";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Remark";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ShipID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ShipID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 845);
+            this.Controls.Add(this.validity_MasterDataGridView);
             this.Controls.Add(iDLabel);
-            this.Controls.Add(this.iDTextBox);
             this.Controls.Add(presentNameLabel);
-            this.Controls.Add(this.presentNameComboBox);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.bindingNavigator2);
             this.Controls.Add(this.bindingNavigator1);
@@ -977,7 +942,6 @@
             this.Controls.Add(this.Update);
             this.Controls.Add(this.validity_attachDataGridView);
             this.Controls.Add(this.validity_ItemsDataGridView);
-            this.Controls.Add(this.validity_MasterDataGridView);
             this.Controls.Add(this.validity_MasterBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -987,20 +951,20 @@
             this.validity_MasterBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_attachDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_attachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKValidityattachValidityItemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKValidityattachValidityItemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1026,7 +990,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton validity_MasterBindingNavigatorSaveItem;
         private AZUREDBDataSetTableAdapters.Validity_ItemsTableAdapter validity_ItemsTableAdapter;
-        private System.Windows.Forms.DataGridView validity_MasterDataGridView;
         private System.Windows.Forms.BindingSource validity_ItemsBindingSource;
         private AZUREDBDataSetTableAdapters.Validity_attachTableAdapter validity_attachTableAdapter;
         private System.Windows.Forms.DataGridView validity_ItemsDataGridView;
@@ -1072,12 +1035,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton13;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -1098,8 +1055,13 @@
         private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
         private AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter;
         private AZUREDBDataSet1TableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.ComboBox presentNameComboBox;
-        private System.Windows.Forms.TextBox iDTextBox;
+        private System.Windows.Forms.DataGridView validity_MasterDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
 
