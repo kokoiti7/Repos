@@ -34,6 +34,7 @@
             System.Windows.Forms.Label mRNNoteLabel;
             System.Windows.Forms.Label tECHNoteLabel;
             System.Windows.Forms.Label gENNoteLabel;
+            System.Windows.Forms.Label shipNameLabel;
             this.aZUREDBDataSet = new CrewApp2.AZUREDBDataSet();
             this.crew_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crew_MasterTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter();
@@ -99,10 +100,13 @@
             this.mRNNoteTextBox = new System.Windows.Forms.TextBox();
             this.tECHNoteTextBox = new System.Windows.Forms.TextBox();
             this.gENNoteTextBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.shipNameComboBox = new System.Windows.Forms.ComboBox();
             cREWINGNoteLabel = new System.Windows.Forms.Label();
             mRNNoteLabel = new System.Windows.Forms.Label();
             tECHNoteLabel = new System.Windows.Forms.Label();
             gENNoteLabel = new System.Windows.Forms.Label();
+            shipNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingNavigator)).BeginInit();
@@ -389,7 +393,7 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
             this.crew_MasterDataGridView.DataSource = this.crew_MasterBindingSource;
-            this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 37);
+            this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 61);
             this.crew_MasterDataGridView.Name = "crew_MasterDataGridView";
             this.crew_MasterDataGridView.RowTemplate.Height = 21;
             this.crew_MasterDataGridView.Size = new System.Drawing.Size(1283, 220);
@@ -414,7 +418,7 @@
             this.fileNameListBox.ItemHeight = 12;
             this.fileNameListBox.Location = new System.Drawing.Point(14, 640);
             this.fileNameListBox.Name = "fileNameListBox";
-            this.fileNameListBox.Size = new System.Drawing.Size(290, 136);
+            this.fileNameListBox.Size = new System.Drawing.Size(605, 136);
             this.fileNameListBox.TabIndex = 5;
             this.fileNameListBox.ValueMember = "FileName";
             this.fileNameListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragDrop);
@@ -432,9 +436,9 @@
             this.fileNameListBox1.DisplayMember = "FileName";
             this.fileNameListBox1.FormattingEnabled = true;
             this.fileNameListBox1.ItemHeight = 12;
-            this.fileNameListBox1.Location = new System.Drawing.Point(364, 640);
+            this.fileNameListBox1.Location = new System.Drawing.Point(660, 640);
             this.fileNameListBox1.Name = "fileNameListBox1";
-            this.fileNameListBox1.Size = new System.Drawing.Size(290, 136);
+            this.fileNameListBox1.Size = new System.Drawing.Size(648, 136);
             this.fileNameListBox1.TabIndex = 7;
             this.fileNameListBox1.ValueMember = "FileName";
             this.fileNameListBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox1_DragDrop);
@@ -451,16 +455,16 @@
             this.fileNameTextBox.Location = new System.Drawing.Point(14, 615);
             this.fileNameTextBox.Name = "fileNameTextBox";
             this.fileNameTextBox.ReadOnly = true;
-            this.fileNameTextBox.Size = new System.Drawing.Size(290, 19);
+            this.fileNameTextBox.Size = new System.Drawing.Size(605, 19);
             this.fileNameTextBox.TabIndex = 9;
             // 
             // fileNameTextBox1
             // 
             this.fileNameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_ApplicationBindingSource, "FileName", true));
-            this.fileNameTextBox1.Location = new System.Drawing.Point(364, 615);
+            this.fileNameTextBox1.Location = new System.Drawing.Point(657, 615);
             this.fileNameTextBox1.Name = "fileNameTextBox1";
             this.fileNameTextBox1.ReadOnly = true;
-            this.fileNameTextBox1.Size = new System.Drawing.Size(290, 19);
+            this.fileNameTextBox1.Size = new System.Drawing.Size(652, 19);
             this.fileNameTextBox1.TabIndex = 11;
             // 
             // fKCrewApplicationCrewApplicationBindingSource1
@@ -471,7 +475,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(991, 263);
+            this.button1.Location = new System.Drawing.Point(979, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 43);
             this.button1.TabIndex = 14;
@@ -482,7 +486,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(1157, 263);
+            this.button2.Location = new System.Drawing.Point(1154, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 43);
             this.button2.TabIndex = 15;
@@ -646,7 +650,7 @@
             // cREWINGNoteLabel
             // 
             cREWINGNoteLabel.AutoSize = true;
-            cREWINGNoteLabel.Location = new System.Drawing.Point(714, 300);
+            cREWINGNoteLabel.Location = new System.Drawing.Point(7, 311);
             cREWINGNoteLabel.Name = "cREWINGNoteLabel";
             cREWINGNoteLabel.Size = new System.Drawing.Size(82, 12);
             cREWINGNoteLabel.TabIndex = 15;
@@ -655,16 +659,16 @@
             // cREWINGNoteTextBox
             // 
             this.cREWINGNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "CREWINGNote", true));
-            this.cREWINGNoteTextBox.Location = new System.Drawing.Point(716, 315);
+            this.cREWINGNoteTextBox.Location = new System.Drawing.Point(657, 326);
             this.cREWINGNoteTextBox.Multiline = true;
             this.cREWINGNoteTextBox.Name = "cREWINGNoteTextBox";
-            this.cREWINGNoteTextBox.Size = new System.Drawing.Size(216, 266);
+            this.cREWINGNoteTextBox.Size = new System.Drawing.Size(652, 122);
             this.cREWINGNoteTextBox.TabIndex = 16;
             // 
             // mRNNoteLabel
             // 
             mRNNoteLabel.AutoSize = true;
-            mRNNoteLabel.Location = new System.Drawing.Point(12, 300);
+            mRNNoteLabel.Location = new System.Drawing.Point(12, 470);
             mRNNoteLabel.Name = "mRNNoteLabel";
             mRNNoteLabel.Size = new System.Drawing.Size(56, 12);
             mRNNoteLabel.TabIndex = 16;
@@ -673,16 +677,16 @@
             // mRNNoteTextBox
             // 
             this.mRNNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "MRNNote", true));
-            this.mRNNoteTextBox.Location = new System.Drawing.Point(12, 315);
+            this.mRNNoteTextBox.Location = new System.Drawing.Point(657, 487);
             this.mRNNoteTextBox.Multiline = true;
             this.mRNNoteTextBox.Name = "mRNNoteTextBox";
-            this.mRNNoteTextBox.Size = new System.Drawing.Size(216, 266);
+            this.mRNNoteTextBox.Size = new System.Drawing.Size(652, 122);
             this.mRNNoteTextBox.TabIndex = 17;
             // 
             // tECHNoteLabel
             // 
             tECHNoteLabel.AutoSize = true;
-            tECHNoteLabel.Location = new System.Drawing.Point(240, 300);
+            tECHNoteLabel.Location = new System.Drawing.Point(655, 472);
             tECHNoteLabel.Name = "tECHNoteLabel";
             tECHNoteLabel.Size = new System.Drawing.Size(61, 12);
             tECHNoteLabel.TabIndex = 17;
@@ -691,16 +695,16 @@
             // tECHNoteTextBox
             // 
             this.tECHNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "TECHNote", true));
-            this.tECHNoteTextBox.Location = new System.Drawing.Point(477, 315);
+            this.tECHNoteTextBox.Location = new System.Drawing.Point(9, 326);
             this.tECHNoteTextBox.Multiline = true;
             this.tECHNoteTextBox.Name = "tECHNoteTextBox";
-            this.tECHNoteTextBox.Size = new System.Drawing.Size(216, 266);
+            this.tECHNoteTextBox.Size = new System.Drawing.Size(610, 122);
             this.tECHNoteTextBox.TabIndex = 18;
             // 
             // gENNoteLabel
             // 
             gENNoteLabel.AutoSize = true;
-            gENNoteLabel.Location = new System.Drawing.Point(475, 300);
+            gENNoteLabel.Location = new System.Drawing.Point(655, 300);
             gENNoteLabel.Name = "gENNoteLabel";
             gENNoteLabel.Size = new System.Drawing.Size(54, 12);
             gENNoteLabel.TabIndex = 18;
@@ -709,17 +713,47 @@
             // gENNoteTextBox
             // 
             this.gENNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "GENNote", true));
-            this.gENNoteTextBox.Location = new System.Drawing.Point(242, 315);
+            this.gENNoteTextBox.Location = new System.Drawing.Point(9, 485);
             this.gENNoteTextBox.Multiline = true;
             this.gENNoteTextBox.Name = "gENNoteTextBox";
-            this.gENNoteTextBox.Size = new System.Drawing.Size(216, 266);
+            this.gENNoteTextBox.Size = new System.Drawing.Size(610, 122);
             this.gENNoteTextBox.TabIndex = 19;
+            // 
+            // textBox1
+            // 
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "FullName", true));
+            this.textBox1.Location = new System.Drawing.Point(750, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(187, 19);
+            this.textBox1.TabIndex = 20;
+            // 
+            // shipNameLabel
+            // 
+            shipNameLabel.AutoSize = true;
+            shipNameLabel.Location = new System.Drawing.Point(507, 20);
+            shipNameLabel.Name = "shipNameLabel";
+            shipNameLabel.Size = new System.Drawing.Size(62, 12);
+            shipNameLabel.TabIndex = 20;
+            shipNameLabel.Text = "Ship Name:";
+            // 
+            // shipNameComboBox
+            // 
+            this.shipNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "ShipName", true));
+            this.shipNameComboBox.FormattingEnabled = true;
+            this.shipNameComboBox.Location = new System.Drawing.Point(509, 35);
+            this.shipNameComboBox.Name = "shipNameComboBox";
+            this.shipNameComboBox.Size = new System.Drawing.Size(169, 20);
+            this.shipNameComboBox.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 788);
+            this.ClientSize = new System.Drawing.Size(1317, 796);
+            this.Controls.Add(shipNameLabel);
+            this.Controls.Add(this.shipNameComboBox);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(gENNoteLabel);
             this.Controls.Add(this.gENNoteTextBox);
             this.Controls.Add(tECHNoteLabel);
@@ -822,6 +856,8 @@
         private System.Windows.Forms.TextBox mRNNoteTextBox;
         private System.Windows.Forms.TextBox tECHNoteTextBox;
         private System.Windows.Forms.TextBox gENNoteTextBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox shipNameComboBox;
     }
 }
 
