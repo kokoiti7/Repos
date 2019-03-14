@@ -23,5 +23,11 @@ namespace ViewListItem
             this.dataTable1TableAdapter.Fill(this.aZUREDBDataSet.DataTable1);
 
         }
+
+        private void dataTable1DataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form Form1 = new Form1();
+
+        }
     }
 }

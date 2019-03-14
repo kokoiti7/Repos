@@ -30,29 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.Label fileNameLabel;
-            System.Windows.Forms.Label fileNameLabel1;
             this.validity_MasterBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.validity_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aZUREDBDataSet = new ViewListItem.AZUREDBDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.validity_MasterBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.validity_MasterDataGridView = new System.Windows.Forms.DataGridView();
             this.validity_ItemsDataGridView = new System.Windows.Forms.DataGridView();
-            this.validity_attachDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.validity_attachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.validity_ItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.validity_attachDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +58,48 @@
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validity_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aZUREDBDataSet = new ViewListItem.AZUREDBDataSet();
+            this.validity_attachBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Update = new System.Windows.Forms.Button();
+            this.Refresh = new System.Windows.Forms.Button();
+            this.ShowAllGrid = new System.Windows.Forms.Button();
+            this.validity_MasterTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_MasterTableAdapter();
+            this.tableAdapterManager = new ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager();
+            this.validity_attachTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_attachTableAdapter();
+            this.validity_ItemsTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_ItemsTableAdapter();
+            this.fileNameTextBox = new System.Windows.Forms.TextBox();
+            this.fileNameListBox = new System.Windows.Forms.ListBox();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,29 +114,19 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validity_MasterTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_MasterTableAdapter();
-            this.tableAdapterManager = new ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager();
-            this.validity_attachTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_attachTableAdapter();
-            this.validity_ItemsTableAdapter = new ViewListItem.AZUREDBDataSetTableAdapters.Validity_ItemsTableAdapter();
-            this.fileNameTextBox = new System.Windows.Forms.TextBox();
-            this.fileNameListBox = new System.Windows.Forms.ListBox();
-            fileNameLabel = new System.Windows.Forms.Label();
-            fileNameLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingNavigator)).BeginInit();
             this.validity_MasterBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_attachDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_attachBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_attachDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_attachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
+            this.bindingNavigator2.SuspendLayout();
             this.SuspendLayout();
             // 
             // validity_MasterBindingNavigator
@@ -109,6 +135,7 @@
             this.validity_MasterBindingNavigator.BindingSource = this.validity_MasterBindingSource;
             this.validity_MasterBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.validity_MasterBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.validity_MasterBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.validity_MasterBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -122,16 +149,51 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.validity_MasterBindingNavigatorSaveItem});
-            this.validity_MasterBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.validity_MasterBindingNavigator.Location = new System.Drawing.Point(0, 47);
             this.validity_MasterBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.validity_MasterBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.validity_MasterBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.validity_MasterBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.validity_MasterBindingNavigator.Name = "validity_MasterBindingNavigator";
             this.validity_MasterBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.validity_MasterBindingNavigator.Size = new System.Drawing.Size(1234, 25);
+            this.validity_MasterBindingNavigator.Size = new System.Drawing.Size(281, 25);
             this.validity_MasterBindingNavigator.TabIndex = 0;
             this.validity_MasterBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "新規追加";
+            // 
+            // validity_MasterBindingSource
+            // 
+            this.validity_MasterBindingSource.DataMember = "Validity_Master";
+            this.validity_MasterBindingSource.DataSource = this.aZUREDBDataSet;
+            // 
+            // aZUREDBDataSet
+            // 
+            this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
+            this.aZUREDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(38, 22);
+            this.bindingNavigatorCountItem.Text = "/ {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "削除";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -165,16 +227,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "現在の場所";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(38, 22);
-            this.bindingNavigatorCountItem.Text = "/ {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -197,26 +252,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "新規追加";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "削除";
             // 
             // validity_MasterBindingNavigatorSaveItem
             // 
@@ -225,7 +262,7 @@
             this.validity_MasterBindingNavigatorSaveItem.Name = "validity_MasterBindingNavigatorSaveItem";
             this.validity_MasterBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.validity_MasterBindingNavigatorSaveItem.Text = "データの保存";
-            this.validity_MasterBindingNavigatorSaveItem.Click += new System.EventHandler(this.validity_MasterBindingNavigatorSaveItem_Click);
+            this.validity_MasterBindingNavigatorSaveItem.Click += new System.EventHandler(this.Validity_MasterBindingNavigatorSaveItem_Click);
             // 
             // validity_MasterDataGridView
             // 
@@ -239,10 +276,10 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.validity_MasterDataGridView.DataSource = this.validity_MasterBindingSource;
-            this.validity_MasterDataGridView.Location = new System.Drawing.Point(0, 28);
+            this.validity_MasterDataGridView.Location = new System.Drawing.Point(0, 75);
             this.validity_MasterDataGridView.Name = "validity_MasterDataGridView";
             this.validity_MasterDataGridView.RowTemplate.Height = 21;
-            this.validity_MasterDataGridView.Size = new System.Drawing.Size(764, 220);
+            this.validity_MasterDataGridView.Size = new System.Drawing.Size(839, 220);
             this.validity_MasterDataGridView.TabIndex = 1;
             // 
             // validity_ItemsDataGridView
@@ -265,11 +302,16 @@
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
             this.validity_ItemsDataGridView.DataSource = this.validity_ItemsBindingSource;
-            this.validity_ItemsDataGridView.Location = new System.Drawing.Point(0, 254);
+            this.validity_ItemsDataGridView.Location = new System.Drawing.Point(0, 326);
             this.validity_ItemsDataGridView.Name = "validity_ItemsDataGridView";
             this.validity_ItemsDataGridView.RowTemplate.Height = 21;
-            this.validity_ItemsDataGridView.Size = new System.Drawing.Size(764, 220);
+            this.validity_ItemsDataGridView.Size = new System.Drawing.Size(839, 234);
             this.validity_ItemsDataGridView.TabIndex = 2;
+            // 
+            // validity_ItemsBindingSource
+            // 
+            this.validity_ItemsBindingSource.DataMember = "FK_Validity_Items_Validity_Master1";
+            this.validity_ItemsBindingSource.DataSource = this.validity_MasterBindingSource;
             // 
             // validity_attachDataGridView
             // 
@@ -286,48 +328,11 @@
             this.dataGridViewTextBoxColumn27,
             this.dataGridViewTextBoxColumn28});
             this.validity_attachDataGridView.DataSource = this.validity_attachBindingSource;
-            this.validity_attachDataGridView.Location = new System.Drawing.Point(0, 480);
+            this.validity_attachDataGridView.Location = new System.Drawing.Point(0, 591);
             this.validity_attachDataGridView.Name = "validity_attachDataGridView";
             this.validity_attachDataGridView.RowTemplate.Height = 21;
-            this.validity_attachDataGridView.Size = new System.Drawing.Size(764, 220);
+            this.validity_attachDataGridView.Size = new System.Drawing.Size(839, 220);
             this.validity_attachDataGridView.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(780, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(875, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(969, 110);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // validity_attachBindingSource
-            // 
-            this.validity_attachBindingSource.DataMember = "FK_Validity_attach_Validity_Items";
-            this.validity_attachBindingSource.DataSource = this.validity_ItemsBindingSource;
-            // 
-            // validity_ItemsBindingSource
-            // 
-            this.validity_ItemsBindingSource.DataMember = "FK_Validity_Items_Validity_Master1";
-            this.validity_ItemsBindingSource.DataSource = this.validity_MasterBindingSource;
             // 
             // dataGridViewTextBoxColumn21
             // 
@@ -384,40 +389,418 @@
             this.dataGridViewTextBoxColumn28.HeaderText = "nverSpare";
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             // 
-            // validity_MasterBindingSource
+            // validity_attachBindingSource
             // 
-            this.validity_MasterBindingSource.DataMember = "Validity_Master";
-            this.validity_MasterBindingSource.DataSource = this.aZUREDBDataSet;
+            this.validity_attachBindingSource.DataMember = "FK_Validity_attach_Validity_Items";
+            this.validity_attachBindingSource.DataSource = this.validity_ItemsBindingSource;
             // 
-            // aZUREDBDataSet
+            // Update
             // 
-            this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
-            this.aZUREDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Update.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Update.Location = new System.Drawing.Point(845, 75);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(346, 44);
+            this.Update.TabIndex = 4;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // Refresh
+            // 
+            this.Refresh.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Refresh.Location = new System.Drawing.Point(845, 166);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(346, 44);
+            this.Refresh.TabIndex = 5;
+            this.Refresh.Text = "Refresh";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
+            // ShowAllGrid
+            // 
+            this.ShowAllGrid.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ShowAllGrid.Location = new System.Drawing.Point(845, 251);
+            this.ShowAllGrid.Name = "ShowAllGrid";
+            this.ShowAllGrid.Size = new System.Drawing.Size(346, 44);
+            this.ShowAllGrid.TabIndex = 6;
+            this.ShowAllGrid.Text = "ShowAllGrid";
+            this.ShowAllGrid.UseVisualStyleBackColor = true;
+            this.ShowAllGrid.Click += new System.EventHandler(this.ShowAllGrid_Click);
+            // 
+            // validity_MasterTableAdapter
+            // 
+            this.validity_MasterTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Validity_attachTableAdapter = this.validity_attachTableAdapter;
+            this.tableAdapterManager.Validity_ItemsTableAdapter = this.validity_ItemsTableAdapter;
+            this.tableAdapterManager.Validity_MasterTableAdapter = this.validity_MasterTableAdapter;
+            // 
+            // validity_attachTableAdapter
+            // 
+            this.validity_attachTableAdapter.ClearBeforeFill = true;
+            // 
+            // validity_ItemsTableAdapter
+            // 
+            this.validity_ItemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // fileNameTextBox
+            // 
+            this.fileNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.validity_attachBindingSource, "fileName", true));
+            this.fileNameTextBox.Location = new System.Drawing.Point(845, 792);
+            this.fileNameTextBox.Name = "fileNameTextBox";
+            this.fileNameTextBox.ReadOnly = true;
+            this.fileNameTextBox.Size = new System.Drawing.Size(346, 19);
+            this.fileNameTextBox.TabIndex = 9;
+            // 
+            // fileNameListBox
+            // 
+            this.fileNameListBox.AllowDrop = true;
+            this.fileNameListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.validity_attachBindingSource, "fileName", true));
+            this.fileNameListBox.DataSource = this.validity_attachBindingSource;
+            this.fileNameListBox.DisplayMember = "fileName";
+            this.fileNameListBox.FormattingEnabled = true;
+            this.fileNameListBox.ItemHeight = 12;
+            this.fileNameListBox.Location = new System.Drawing.Point(845, 326);
+            this.fileNameListBox.Name = "fileNameListBox";
+            this.fileNameListBox.Size = new System.Drawing.Size(346, 460);
+            this.fileNameListBox.TabIndex = 10;
+            this.fileNameListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragDrop);
+            this.fileNameListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragEnter);
+            this.fileNameListBox.DoubleClick += new System.EventHandler(this.FileNameListBox_DoubleClick);
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.toolStripButton1;
+            this.bindingNavigator1.BindingSource = this.validity_ItemsBindingSource;
+            this.bindingNavigator1.CountItem = this.toolStripLabel1;
+            this.bindingNavigator1.DeleteItem = this.toolStripButton2;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton7});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 298);
+            this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
+            this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
+            this.bindingNavigator1.MoveNextItem = this.toolStripButton5;
+            this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigator1.Size = new System.Drawing.Size(281, 25);
+            this.bindingNavigator1.TabIndex = 11;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "新規追加";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel1.Text = "/ {0}";
+            this.toolStripLabel1.ToolTipText = "項目の総数";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "削除";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "最初に移動";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "前に戻る";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "位置";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 25);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "現在の場所";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "次に移動";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "最後に移動";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "データの保存";
+            // 
+            // bindingNavigator2
+            // 
+            this.bindingNavigator2.AddNewItem = this.toolStripButton8;
+            this.bindingNavigator2.BindingSource = this.validity_attachBindingSource;
+            this.bindingNavigator2.CountItem = this.toolStripLabel2;
+            this.bindingNavigator2.DeleteItem = this.toolStripButton9;
+            this.bindingNavigator2.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton10,
+            this.toolStripButton11,
+            this.toolStripSeparator4,
+            this.toolStripTextBox2,
+            this.toolStripLabel2,
+            this.toolStripSeparator5,
+            this.toolStripButton12,
+            this.toolStripButton13,
+            this.toolStripSeparator6,
+            this.toolStripButton8,
+            this.toolStripButton9,
+            this.toolStripButton14});
+            this.bindingNavigator2.Location = new System.Drawing.Point(0, 563);
+            this.bindingNavigator2.MoveFirstItem = this.toolStripButton10;
+            this.bindingNavigator2.MoveLastItem = this.toolStripButton13;
+            this.bindingNavigator2.MoveNextItem = this.toolStripButton12;
+            this.bindingNavigator2.MovePreviousItem = this.toolStripButton11;
+            this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.PositionItem = this.toolStripTextBox2;
+            this.bindingNavigator2.Size = new System.Drawing.Size(281, 25);
+            this.bindingNavigator2.TabIndex = 12;
+            this.bindingNavigator2.Text = "bindingNavigator1";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "新規追加";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel2.Text = "/ {0}";
+            this.toolStripLabel2.ToolTipText = "項目の総数";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "削除";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton10.Text = "最初に移動";
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "前に戻る";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.AccessibleName = "位置";
+            this.toolStripTextBox2.AutoSize = false;
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 25);
+            this.toolStripTextBox2.Text = "0";
+            this.toolStripTextBox2.ToolTipText = "現在の場所";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "次に移動";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "最後に移動";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton14
+            // 
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton14.Text = "データの保存";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ValidityID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ValidityID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategolyName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CategolyName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 104;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Item/Equipment";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Item/Equipment";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 111;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Period";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Period";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 62;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Remark";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Remark";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 69;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ShipID";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ShipID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 63;
             // 
             // dataGridViewTextBoxColumn7
             // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn7.DataPropertyName = "itemID";
             this.dataGridViewTextBoxColumn7.HeaderText = "itemID";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 63;
             // 
             // dataGridViewTextBoxColumn8
             // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ValidityID";
             this.dataGridViewTextBoxColumn8.HeaderText = "ValidityID";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 80;
             // 
             // dataGridViewTextBoxColumn9
             // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Maker";
             this.dataGridViewTextBoxColumn9.HeaderText = "Maker";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 61;
             // 
             // dataGridViewTextBoxColumn10
             // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Type";
             this.dataGridViewTextBoxColumn10.HeaderText = "Type";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 55;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -479,130 +862,41 @@
             this.dataGridViewTextBoxColumn20.HeaderText = "varSpare";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ValidityID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ValidityID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategolyName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CategolyName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Item/Equipment";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Item/Equipment";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Period";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Period";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Remark";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ShipID";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ShipID";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // validity_MasterTableAdapter
-            // 
-            this.validity_MasterTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = ViewListItem.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Validity_attachTableAdapter = this.validity_attachTableAdapter;
-            this.tableAdapterManager.Validity_ItemsTableAdapter = this.validity_ItemsTableAdapter;
-            this.tableAdapterManager.Validity_MasterTableAdapter = this.validity_MasterTableAdapter;
-            // 
-            // validity_attachTableAdapter
-            // 
-            this.validity_attachTableAdapter.ClearBeforeFill = true;
-            // 
-            // validity_ItemsTableAdapter
-            // 
-            this.validity_ItemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // fileNameLabel
-            // 
-            fileNameLabel.AutoSize = true;
-            fileNameLabel.Location = new System.Drawing.Point(882, 257);
-            fileNameLabel.Name = "fileNameLabel";
-            fileNameLabel.Size = new System.Drawing.Size(56, 12);
-            fileNameLabel.TabIndex = 8;
-            fileNameLabel.Text = "file Name:";
-            // 
-            // fileNameTextBox
-            // 
-            this.fileNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.validity_attachBindingSource, "fileName", true));
-            this.fileNameTextBox.Location = new System.Drawing.Point(944, 254);
-            this.fileNameTextBox.Name = "fileNameTextBox";
-            this.fileNameTextBox.Size = new System.Drawing.Size(100, 19);
-            this.fileNameTextBox.TabIndex = 9;
-            // 
-            // fileNameLabel1
-            // 
-            fileNameLabel1.AutoSize = true;
-            fileNameLabel1.Location = new System.Drawing.Point(783, 362);
-            fileNameLabel1.Name = "fileNameLabel1";
-            fileNameLabel1.Size = new System.Drawing.Size(56, 12);
-            fileNameLabel1.TabIndex = 9;
-            fileNameLabel1.Text = "file Name:";
-            // 
-            // fileNameListBox
-            // 
-            this.fileNameListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.validity_attachBindingSource, "fileName", true));
-            this.fileNameListBox.DataSource = this.validity_attachBindingSource;
-            this.fileNameListBox.DisplayMember = "fileName";
-            this.fileNameListBox.FormattingEnabled = true;
-            this.fileNameListBox.ItemHeight = 12;
-            this.fileNameListBox.Location = new System.Drawing.Point(845, 362);
-            this.fileNameListBox.Name = "fileNameListBox";
-            this.fileNameListBox.Size = new System.Drawing.Size(346, 340);
-            this.fileNameListBox.TabIndex = 10;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 881);
-            this.Controls.Add(fileNameLabel1);
+            this.ClientSize = new System.Drawing.Size(1207, 845);
+            this.Controls.Add(this.bindingNavigator2);
+            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.fileNameListBox);
-            this.Controls.Add(fileNameLabel);
             this.Controls.Add(this.fileNameTextBox);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ShowAllGrid);
+            this.Controls.Add(this.Refresh);
+            this.Controls.Add(this.Update);
             this.Controls.Add(this.validity_attachDataGridView);
             this.Controls.Add(this.validity_ItemsDataGridView);
             this.Controls.Add(this.validity_MasterDataGridView);
             this.Controls.Add(this.validity_MasterBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingNavigator)).EndInit();
             this.validity_MasterBindingNavigator.ResumeLayout(false);
             this.validity_MasterBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_attachDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_attachBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_MasterDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_ItemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_attachDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validity_attachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
+            this.bindingNavigator2.ResumeLayout(false);
+            this.bindingNavigator2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,15 +923,57 @@
         private System.Windows.Forms.ToolStripButton validity_MasterBindingNavigatorSaveItem;
         private AZUREDBDataSetTableAdapters.Validity_ItemsTableAdapter validity_ItemsTableAdapter;
         private System.Windows.Forms.DataGridView validity_MasterDataGridView;
+        private System.Windows.Forms.BindingSource validity_ItemsBindingSource;
+        private AZUREDBDataSetTableAdapters.Validity_attachTableAdapter validity_attachTableAdapter;
+        private System.Windows.Forms.DataGridView validity_ItemsDataGridView;
+        private System.Windows.Forms.BindingSource validity_attachBindingSource;
+        private System.Windows.Forms.DataGridView validity_attachDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.Button ShowAllGrid;
+        private System.Windows.Forms.TextBox fileNameTextBox;
+        private System.Windows.Forms.ListBox fileNameListBox;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.BindingNavigator bindingNavigator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.BindingSource validity_ItemsBindingSource;
-        private AZUREDBDataSetTableAdapters.Validity_attachTableAdapter validity_attachTableAdapter;
-        private System.Windows.Forms.DataGridView validity_ItemsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -652,22 +988,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.BindingSource validity_attachBindingSource;
-        private System.Windows.Forms.DataGridView validity_attachDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox fileNameTextBox;
-        private System.Windows.Forms.ListBox fileNameListBox;
     }
 }
 

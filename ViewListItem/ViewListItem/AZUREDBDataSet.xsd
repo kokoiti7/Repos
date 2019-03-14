@@ -245,11 +245,12 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT            Validity_Master.ValidityID, Validity_Master.CategolyName, Validity_Master.[Item/Equipment], Validity_Master.Period, Validity_Master.Remark, Validity_Master.ShipID, 
-                        Validity_Items.Maker, Validity_Items.Type, Validity_Items.[Update], Validity_attach.itemID, Validity_attach.[Type of file], Validity_attach.fileName, Validity_attach.BitSpare
+                    <CommandText>SELECT            Validity_Master.ValidityID, Validity_Master.CategolyName, Validity_Master.[Item/Equipment], Validity_Master.Period, Validity_Master.Remark, Validity_attach.itemID, 
+                        Validity_Items.shipID, Validity_Items.Accessory, Validity_Items.Maker, Validity_Items.Type, Validity_Items.[Update], Validity_attach.fileName, Validity_attach.[Type of file], 
+                        Validity_attach.BitSpare
 FROM              Validity_Master INNER JOIN
                         Validity_Items ON Validity_Master.ValidityID = Validity_Items.ValidityID INNER JOIN
                         Validity_attach ON Validity_Items.itemID = Validity_attach.itemID</CommandText>
@@ -264,7 +265,6 @@ FROM              Validity_Master INNER JOIN
               <Mapping SourceColumn="Item/Equipment" DataSetColumn="Item/Equipment" />
               <Mapping SourceColumn="Period" DataSetColumn="Period" />
               <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
-              <Mapping SourceColumn="ShipID" DataSetColumn="ShipID" />
               <Mapping SourceColumn="Maker" DataSetColumn="Maker" />
               <Mapping SourceColumn="Type" DataSetColumn="Type" />
               <Mapping SourceColumn="Update" DataSetColumn="Update" />
@@ -272,6 +272,8 @@ FROM              Validity_Master INNER JOIN
               <Mapping SourceColumn="Type of file" DataSetColumn="Type of file" />
               <Mapping SourceColumn="fileName" DataSetColumn="fileName" />
               <Mapping SourceColumn="BitSpare" DataSetColumn="BitSpare" />
+              <Mapping SourceColumn="Accessory" DataSetColumn="Accessory" />
+              <Mapping SourceColumn="shipID" DataSetColumn="shipID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -283,7 +285,7 @@ FROM              Validity_Master INNER JOIN
   <xs:element name="AZUREDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AZUREDBDataSet" msprop:Generator_UserDSName="AZUREDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Validity_attach" msprop:Generator_TableClassName="Validity_attachDataTable" msprop:Generator_TableVarName="tableValidity_attach" msprop:Generator_RowChangedName="Validity_attachRowChanged" msprop:Generator_TablePropName="Validity_attach" msprop:Generator_RowDeletingName="Validity_attachRowDeleting" msprop:Generator_RowChangingName="Validity_attachRowChanging" msprop:Generator_RowEvHandlerName="Validity_attachRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_attachRowDeleted" msprop:Generator_RowClassName="Validity_attachRow" msprop:Generator_UserTableName="Validity_attach" msprop:Generator_RowEvArgName="Validity_attachRowChangeEvent">
+        <xs:element name="Validity_attach" msprop:Generator_TableClassName="Validity_attachDataTable" msprop:Generator_TableVarName="tableValidity_attach" msprop:Generator_TablePropName="Validity_attach" msprop:Generator_RowDeletingName="Validity_attachRowDeleting" msprop:Generator_RowChangingName="Validity_attachRowChanging" msprop:Generator_RowEvHandlerName="Validity_attachRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_attachRowDeleted" msprop:Generator_UserTableName="Validity_attach" msprop:Generator_RowChangedName="Validity_attachRowChanged" msprop:Generator_RowEvArgName="Validity_attachRowChangeEvent" msprop:Generator_RowClassName="Validity_attachRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AttachID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAttachID" msprop:Generator_ColumnPropNameInRow="AttachID" msprop:Generator_ColumnPropNameInTable="AttachIDColumn" msprop:Generator_UserColumnName="AttachID" type="xs:int" />
@@ -334,7 +336,7 @@ FROM              Validity_Master INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Validity_Items" msprop:Generator_TableClassName="Validity_ItemsDataTable" msprop:Generator_TableVarName="tableValidity_Items" msprop:Generator_RowChangedName="Validity_ItemsRowChanged" msprop:Generator_TablePropName="Validity_Items" msprop:Generator_RowDeletingName="Validity_ItemsRowDeleting" msprop:Generator_RowChangingName="Validity_ItemsRowChanging" msprop:Generator_RowEvHandlerName="Validity_ItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_ItemsRowDeleted" msprop:Generator_RowClassName="Validity_ItemsRow" msprop:Generator_UserTableName="Validity_Items" msprop:Generator_RowEvArgName="Validity_ItemsRowChangeEvent">
+        <xs:element name="Validity_Items" msprop:Generator_TableClassName="Validity_ItemsDataTable" msprop:Generator_TableVarName="tableValidity_Items" msprop:Generator_TablePropName="Validity_Items" msprop:Generator_RowDeletingName="Validity_ItemsRowDeleting" msprop:Generator_RowChangingName="Validity_ItemsRowChanging" msprop:Generator_RowEvHandlerName="Validity_ItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_ItemsRowDeleted" msprop:Generator_UserTableName="Validity_Items" msprop:Generator_RowChangedName="Validity_ItemsRowChanged" msprop:Generator_RowEvArgName="Validity_ItemsRowChangeEvent" msprop:Generator_RowClassName="Validity_ItemsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnitemID" msprop:Generator_ColumnPropNameInRow="itemID" msprop:Generator_ColumnPropNameInTable="itemIDColumn" msprop:Generator_UserColumnName="itemID" type="xs:int" />
@@ -408,7 +410,7 @@ FROM              Validity_Master INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Validity_Master" msprop:Generator_TableClassName="Validity_MasterDataTable" msprop:Generator_TableVarName="tableValidity_Master" msprop:Generator_RowChangedName="Validity_MasterRowChanged" msprop:Generator_TablePropName="Validity_Master" msprop:Generator_RowDeletingName="Validity_MasterRowDeleting" msprop:Generator_RowChangingName="Validity_MasterRowChanging" msprop:Generator_RowEvHandlerName="Validity_MasterRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_MasterRowDeleted" msprop:Generator_RowClassName="Validity_MasterRow" msprop:Generator_UserTableName="Validity_Master" msprop:Generator_RowEvArgName="Validity_MasterRowChangeEvent">
+        <xs:element name="Validity_Master" msprop:Generator_TableClassName="Validity_MasterDataTable" msprop:Generator_TableVarName="tableValidity_Master" msprop:Generator_TablePropName="Validity_Master" msprop:Generator_RowDeletingName="Validity_MasterRowDeleting" msprop:Generator_RowChangingName="Validity_MasterRowChanging" msprop:Generator_RowEvHandlerName="Validity_MasterRowChangeEventHandler" msprop:Generator_RowDeletedName="Validity_MasterRowDeleted" msprop:Generator_UserTableName="Validity_Master" msprop:Generator_RowChangedName="Validity_MasterRowChanged" msprop:Generator_RowEvArgName="Validity_MasterRowChangeEvent" msprop:Generator_RowClassName="Validity_MasterRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ValidityID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnValidityID" msprop:Generator_ColumnPropNameInRow="ValidityID" msprop:Generator_ColumnPropNameInTable="ValidityIDColumn" msprop:Generator_UserColumnName="ValidityID" type="xs:int" />
@@ -444,7 +446,7 @@ FROM              Validity_Master INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ValidityID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnValidityID" msprop:Generator_ColumnPropNameInRow="ValidityID" msprop:Generator_ColumnPropNameInTable="ValidityIDColumn" msprop:Generator_UserColumnName="ValidityID" type="xs:int" />
@@ -476,7 +478,6 @@ FROM              Validity_Master INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ShipID" msprop:Generator_ColumnVarNameInTable="columnShipID" msprop:Generator_ColumnPropNameInRow="ShipID" msprop:Generator_ColumnPropNameInTable="ShipIDColumn" msprop:Generator_UserColumnName="ShipID" type="xs:int" minOccurs="0" />
               <xs:element name="Maker" msprop:Generator_ColumnVarNameInTable="columnMaker" msprop:Generator_ColumnPropNameInRow="Maker" msprop:Generator_ColumnPropNameInTable="MakerColumn" msprop:Generator_UserColumnName="Maker" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -514,6 +515,14 @@ FROM              Validity_Master INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="BitSpare" msprop:Generator_ColumnVarNameInTable="columnBitSpare" msprop:Generator_ColumnPropNameInRow="BitSpare" msprop:Generator_ColumnPropNameInTable="BitSpareColumn" msprop:Generator_UserColumnName="BitSpare" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Accessory" msprop:Generator_ColumnVarNameInTable="columnAccessory" msprop:Generator_ColumnPropNameInRow="Accessory" msprop:Generator_ColumnPropNameInTable="AccessoryColumn" msprop:Generator_UserColumnName="Accessory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="shipID" msprop:Generator_ColumnVarNameInTable="columnshipID" msprop:Generator_ColumnPropNameInRow="shipID" msprop:Generator_ColumnPropNameInTable="shipIDColumn" msprop:Generator_UserColumnName="shipID" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -538,10 +547,11 @@ FROM              Validity_Master INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Validity_attach_Validity_Items" msdata:parent="Validity_Items" msdata:child="Validity_attach" msdata:parentkey="itemID" msdata:childkey="itemID" msprop:Generator_UserChildTable="Validity_attach" msprop:Generator_ChildPropName="GetValidity_attachRows" msprop:Generator_UserRelationName="FK_Validity_attach_Validity_Items" msprop:Generator_ParentPropName="Validity_ItemsRow" msprop:Generator_RelationVarName="relationFK_Validity_attach_Validity_Items" msprop:Generator_UserParentTable="Validity_Items" />
-      <msdata:Relationship name="FK_Validity_Items_Validity_Master1" msdata:parent="Validity_Master" msdata:child="Validity_Items" msdata:parentkey="ValidityID" msdata:childkey="ValidityID" msprop:Generator_UserChildTable="Validity_Items" msprop:Generator_ChildPropName="GetValidity_ItemsRows" msprop:Generator_UserRelationName="FK_Validity_Items_Validity_Master1" msprop:Generator_ParentPropName="Validity_MasterRow" msprop:Generator_RelationVarName="relationFK_Validity_Items_Validity_Master1" msprop:Generator_UserParentTable="Validity_Master" />
-      <msdata:Relationship name="FK_Validity_attach_Validity_Items1" msdata:parent="DataTable1" msdata:child="Validity_attach" msdata:parentkey="itemID" msdata:childkey="itemID" msprop:Generator_UserChildTable="Validity_attach" msprop:Generator_ChildPropName="GetValidity_attachRows" msprop:Generator_UserRelationName="FK_Validity_attach_Validity_Items1" msprop:Generator_RelationVarName="relationFK_Validity_attach_Validity_Items1" msprop:Generator_UserParentTable="DataTable1" msprop:Generator_ParentPropName="DataTable1Row" />
-      <msdata:Relationship name="FK_Validity_Items_Validity_Master11" msdata:parent="Validity_Master" msdata:child="DataTable1" msdata:parentkey="ValidityID" msdata:childkey="ValidityID" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK_Validity_Items_Validity_Master11" msprop:Generator_ParentPropName="Validity_MasterRow" msprop:Generator_RelationVarName="relationFK_Validity_Items_Validity_Master11" msprop:Generator_UserParentTable="Validity_Master" />
+      <msdata:Relationship name="FK_Validity_attach_Validity_Items" msdata:parent="Validity_Items" msdata:child="Validity_attach" msdata:parentkey="itemID" msdata:childkey="itemID" msprop:Generator_UserChildTable="Validity_attach" msprop:Generator_ChildPropName="GetValidity_attachRows" msprop:Generator_UserRelationName="FK_Validity_attach_Validity_Items" msprop:Generator_RelationVarName="relationFK_Validity_attach_Validity_Items" msprop:Generator_UserParentTable="Validity_Items" msprop:Generator_ParentPropName="Validity_ItemsRow" />
+      <msdata:Relationship name="FK_Validity_Items_Validity_Master1" msdata:parent="Validity_Master" msdata:child="Validity_Items" msdata:parentkey="ValidityID" msdata:childkey="ValidityID" msprop:Generator_UserChildTable="Validity_Items" msprop:Generator_ChildPropName="GetValidity_ItemsRows" msprop:Generator_UserRelationName="FK_Validity_Items_Validity_Master1" msprop:Generator_RelationVarName="relationFK_Validity_Items_Validity_Master1" msprop:Generator_UserParentTable="Validity_Master" msprop:Generator_ParentPropName="Validity_MasterRow" />
+      <msdata:Relationship name="FK_Validity_attach_Validity_Items1" msdata:parent="DataTable1" msdata:child="Validity_attach" msdata:parentkey="itemID" msdata:childkey="itemID" msprop:Generator_UserChildTable="Validity_attach" msprop:Generator_ChildPropName="GetValidity_attachRows" msprop:Generator_UserRelationName="FK_Validity_attach_Validity_Items1" msprop:Generator_ParentPropName="DataTable1Row" msprop:Generator_RelationVarName="relationFK_Validity_attach_Validity_Items1" msprop:Generator_UserParentTable="DataTable1" />
+      <msdata:Relationship name="FK_Validity_Items_Validity_Master11" msdata:parent="Validity_Master" msdata:child="DataTable1" msdata:parentkey="ValidityID" msdata:childkey="ValidityID" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK_Validity_Items_Validity_Master11" msprop:Generator_RelationVarName="relationFK_Validity_Items_Validity_Master11" msprop:Generator_UserParentTable="Validity_Master" msprop:Generator_ParentPropName="Validity_MasterRow" />
+      <msdata:Relationship name="Validity_Items_DataTable1" msdata:parent="Validity_Items" msdata:child="DataTable1" msdata:parentkey="ValidityID" msdata:childkey="ValidityID" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="Validity_Items_DataTable1" msprop:Generator_ParentPropName="Validity_ItemsRow" msprop:Generator_RelationVarName="relationValidity_Items_DataTable1" msprop:Generator_UserParentTable="Validity_Items" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

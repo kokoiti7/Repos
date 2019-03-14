@@ -40,6 +40,8 @@ namespace ViewListItem {
         
         private global::System.Data.DataRelation relationFK_Validity_Items_Validity_Master11;
         
+        private global::System.Data.DataRelation relationValidity_Items_DataTable1;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -278,6 +280,7 @@ namespace ViewListItem {
             this.relationFK_Validity_Items_Validity_Master1 = this.Relations["FK_Validity_Items_Validity_Master1"];
             this.relationFK_Validity_attach_Validity_Items1 = this.Relations["FK_Validity_attach_Validity_Items1"];
             this.relationFK_Validity_Items_Validity_Master11 = this.Relations["FK_Validity_Items_Validity_Master11"];
+            this.relationValidity_Items_DataTable1 = this.Relations["Validity_Items_DataTable1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -312,6 +315,10 @@ namespace ViewListItem {
                         this.tableValidity_Master.ValidityIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableDataTable1.ValidityIDColumn}, false);
             this.Relations.Add(this.relationFK_Validity_Items_Validity_Master11);
+            this.relationValidity_Items_DataTable1 = new global::System.Data.DataRelation("Validity_Items_DataTable1", new global::System.Data.DataColumn[] {
+                        this.tableValidity_Items.ValidityIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDataTable1.ValidityIDColumn}, false);
+            this.Relations.Add(this.relationValidity_Items_DataTable1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1599,8 +1606,6 @@ namespace ViewListItem {
             
             private global::System.Data.DataColumn columnRemark;
             
-            private global::System.Data.DataColumn columnShipID;
-            
             private global::System.Data.DataColumn columnMaker;
             
             private global::System.Data.DataColumn columnType;
@@ -1614,6 +1619,10 @@ namespace ViewListItem {
             private global::System.Data.DataColumn columnfileName;
             
             private global::System.Data.DataColumn columnBitSpare;
+            
+            private global::System.Data.DataColumn columnAccessory;
+            
+            private global::System.Data.DataColumn columnshipID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1690,14 +1699,6 @@ namespace ViewListItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ShipIDColumn {
-                get {
-                    return this.columnShipID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn MakerColumn {
                 get {
                     return this.columnMaker;
@@ -1754,6 +1755,22 @@ namespace ViewListItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AccessoryColumn {
+                get {
+                    return this.columnAccessory;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn shipIDColumn {
+                get {
+                    return this.columnshipID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1789,7 +1806,7 @@ namespace ViewListItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string CategolyName, string _Item_Equipment, string Period, string Remark, int ShipID, string Maker, string Type, string Update, int itemID, string Type_of_file, string fileName, bool BitSpare) {
+            public DataTable1Row AddDataTable1Row(string CategolyName, string _Item_Equipment, string Period, string Remark, string Maker, string Type, string Update, int itemID, string Type_of_file, string fileName, bool BitSpare, string Accessory, int shipID) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1797,14 +1814,15 @@ namespace ViewListItem {
                         _Item_Equipment,
                         Period,
                         Remark,
-                        ShipID,
                         Maker,
                         Type,
                         Update,
                         itemID,
                         Type_of_file,
                         fileName,
-                        BitSpare};
+                        BitSpare,
+                        Accessory,
+                        shipID};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -1839,7 +1857,6 @@ namespace ViewListItem {
                 this._columnItem_Equipment = base.Columns["Item/Equipment"];
                 this.columnPeriod = base.Columns["Period"];
                 this.columnRemark = base.Columns["Remark"];
-                this.columnShipID = base.Columns["ShipID"];
                 this.columnMaker = base.Columns["Maker"];
                 this.columnType = base.Columns["Type"];
                 this.columnUpdate = base.Columns["Update"];
@@ -1847,6 +1864,8 @@ namespace ViewListItem {
                 this.columnType_of_file = base.Columns["Type of file"];
                 this.columnfileName = base.Columns["fileName"];
                 this.columnBitSpare = base.Columns["BitSpare"];
+                this.columnAccessory = base.Columns["Accessory"];
+                this.columnshipID = base.Columns["shipID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1864,8 +1883,6 @@ namespace ViewListItem {
                 base.Columns.Add(this.columnPeriod);
                 this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRemark);
-                this.columnShipID = new global::System.Data.DataColumn("ShipID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShipID);
                 this.columnMaker = new global::System.Data.DataColumn("Maker", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaker);
                 this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1880,6 +1897,10 @@ namespace ViewListItem {
                 base.Columns.Add(this.columnfileName);
                 this.columnBitSpare = new global::System.Data.DataColumn("BitSpare", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBitSpare);
+                this.columnAccessory = new global::System.Data.DataColumn("Accessory", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccessory);
+                this.columnshipID = new global::System.Data.DataColumn("shipID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnshipID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnValidityID}, true));
                 this.columnValidityID.AutoIncrement = true;
@@ -1897,6 +1918,7 @@ namespace ViewListItem {
                 this.columnUpdate.MaxLength = 2147483647;
                 this.columnType_of_file.MaxLength = 2147483647;
                 this.columnfileName.MaxLength = 2147483647;
+                this.columnAccessory.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2705,6 +2727,17 @@ namespace ViewListItem {
                     return ((Validity_attachRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Validity_attach_Validity_Items"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DataTable1Row[] GetDataTable1Rows() {
+                if ((this.Table.ChildRelations["Validity_Items_DataTable1"] == null)) {
+                    return new DataTable1Row[0];
+                }
+                else {
+                    return ((DataTable1Row[])(base.GetChildRows(this.Table.ChildRelations["Validity_Items_DataTable1"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2986,22 +3019,6 @@ namespace ViewListItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ShipID {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable1.ShipIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'ShipID\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.ShipIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Maker {
                 get {
                     try {
@@ -3114,12 +3131,55 @@ namespace ViewListItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Accessory {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.AccessoryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'Accessory\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.AccessoryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int shipID {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.shipIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'DataTable1\' にある列 \'shipID\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.shipIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Validity_MasterRow Validity_MasterRow {
                 get {
                     return ((Validity_MasterRow)(this.GetParentRow(this.Table.ParentRelations["FK_Validity_Items_Validity_Master11"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Validity_Items_Validity_Master11"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Validity_ItemsRow Validity_ItemsRow {
+                get {
+                    return ((Validity_ItemsRow)(this.GetParentRow(this.Table.ParentRelations["Validity_Items_DataTable1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Validity_Items_DataTable1"]);
                 }
             }
             
@@ -3169,18 +3229,6 @@ namespace ViewListItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetRemarkNull() {
                 this[this.tableDataTable1.RemarkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsShipIDNull() {
-                return this.IsNull(this.tableDataTable1.ShipIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetShipIDNull() {
-                this[this.tableDataTable1.ShipIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3265,6 +3313,30 @@ namespace ViewListItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetBitSpareNull() {
                 this[this.tableDataTable1.BitSpareColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAccessoryNull() {
+                return this.IsNull(this.tableDataTable1.AccessoryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAccessoryNull() {
+                this[this.tableDataTable1.AccessoryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsshipIDNull() {
+                return this.IsNull(this.tableDataTable1.shipIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetshipIDNull() {
+                this[this.tableDataTable1.shipIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5000,7 +5072,6 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
             tableMapping.ColumnMappings.Add("Item/Equipment", "Item/Equipment");
             tableMapping.ColumnMappings.Add("Period", "Period");
             tableMapping.ColumnMappings.Add("Remark", "Remark");
-            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
             tableMapping.ColumnMappings.Add("Maker", "Maker");
             tableMapping.ColumnMappings.Add("Type", "Type");
             tableMapping.ColumnMappings.Add("Update", "Update");
@@ -5008,6 +5079,8 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
             tableMapping.ColumnMappings.Add("Type of file", "Type of file");
             tableMapping.ColumnMappings.Add("fileName", "fileName");
             tableMapping.ColumnMappings.Add("BitSpare", "BitSpare");
+            tableMapping.ColumnMappings.Add("Accessory", "Accessory");
+            tableMapping.ColumnMappings.Add("shipID", "shipID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5024,8 +5097,9 @@ SELECT ValidityID, CategolyName, [Item/Equipment], Period, Remark, ShipID FROM V
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT            Validity_Master.ValidityID, Validity_Master.CategolyName, Validity_Master.[Item/Equipment], Validity_Master.Period, Validity_Master.Remark, Validity_Master.ShipID, 
-                        Validity_Items.Maker, Validity_Items.Type, Validity_Items.[Update], Validity_attach.itemID, Validity_attach.[Type of file], Validity_attach.fileName, Validity_attach.BitSpare
+            this._commandCollection[0].CommandText = @"SELECT            Validity_Master.ValidityID, Validity_Master.CategolyName, Validity_Master.[Item/Equipment], Validity_Master.Period, Validity_Master.Remark, Validity_attach.itemID, 
+                        Validity_Items.shipID, Validity_Items.Accessory, Validity_Items.Maker, Validity_Items.Type, Validity_Items.[Update], Validity_attach.fileName, Validity_attach.[Type of file], 
+                        Validity_attach.BitSpare
 FROM              Validity_Master INNER JOIN
                         Validity_Items ON Validity_Master.ValidityID = Validity_Items.ValidityID INNER JOIN
                         Validity_attach ON Validity_Items.itemID = Validity_attach.itemID";
