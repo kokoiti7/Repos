@@ -22,6 +22,8 @@ namespace ViewListItem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'aZUREDBDataSet1.Ship_Master_TB' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet1.Ship_Master_TB);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Validity_attach' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.validity_attachTableAdapter.Fill(this.aZUREDBDataSet.Validity_attach);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Validity_Items' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -100,6 +102,9 @@ namespace ViewListItem
 
         private void FileNameListBox_DoubleClick(object sender, EventArgs e)
         {
+
+           // MessageBox.Show(fileNameListBox.SelectedValue.ToString());
+
             try
             {
                 CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ViewListItem.Properties.Settings.Default.accesskey);
@@ -145,6 +150,12 @@ namespace ViewListItem
             Form AllView = new AllView();
             AllView.Show();
 
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+         
+          
         }
     }
 }

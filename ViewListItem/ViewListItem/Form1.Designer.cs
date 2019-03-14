@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.Label presentNameLabel;
+            System.Windows.Forms.Label iDLabel;
             this.validity_MasterBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.validity_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -114,6 +116,16 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKValidityattachValidityItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Delete = new System.Windows.Forms.Button();
+            this.aZUREDBDataSet1 = new ViewListItem.AZUREDBDataSet1();
+            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ship_Master_TBTableAdapter = new ViewListItem.AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter();
+            this.tableAdapterManager1 = new ViewListItem.AZUREDBDataSet1TableAdapters.TableAdapterManager();
+            this.presentNameComboBox = new System.Windows.Forms.ComboBox();
+            this.iDTextBox = new System.Windows.Forms.TextBox();
+            presentNameLabel = new System.Windows.Forms.Label();
+            iDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingNavigator)).BeginInit();
             this.validity_MasterBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validity_MasterBindingSource)).BeginInit();
@@ -127,6 +139,9 @@
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fKValidityattachValidityItemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // validity_MasterBindingNavigator
@@ -408,7 +423,7 @@
             // Refresh
             // 
             this.Refresh.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Refresh.Location = new System.Drawing.Point(845, 166);
+            this.Refresh.Location = new System.Drawing.Point(845, 201);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(346, 44);
             this.Refresh.TabIndex = 5;
@@ -460,14 +475,16 @@
             // 
             this.fileNameListBox.AllowDrop = true;
             this.fileNameListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.validity_attachBindingSource, "fileName", true));
-            this.fileNameListBox.DataSource = this.validity_attachBindingSource;
+            this.fileNameListBox.DataSource = this.fKValidityattachValidityItemsBindingSource;
             this.fileNameListBox.DisplayMember = "fileName";
+            this.fileNameListBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.fileNameListBox.FormattingEnabled = true;
-            this.fileNameListBox.ItemHeight = 12;
+            this.fileNameListBox.ItemHeight = 24;
             this.fileNameListBox.Location = new System.Drawing.Point(845, 326);
             this.fileNameListBox.Name = "fileNameListBox";
             this.fileNameListBox.Size = new System.Drawing.Size(346, 460);
             this.fileNameListBox.TabIndex = 10;
+            this.fileNameListBox.ValueMember = "fileName";
             this.fileNameListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragDrop);
             this.fileNameListBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragEnter);
             this.fileNameListBox.DoubleClick += new System.EventHandler(this.FileNameListBox_DoubleClick);
@@ -862,11 +879,95 @@
             this.dataGridViewTextBoxColumn20.HeaderText = "varSpare";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
+            // fKValidityattachValidityItemsBindingSource
+            // 
+            this.fKValidityattachValidityItemsBindingSource.DataMember = "FK_Validity_attach_Validity_Items";
+            this.fKValidityattachValidityItemsBindingSource.DataSource = this.validity_ItemsBindingSource;
+            // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            this.Delete.Location = new System.Drawing.Point(845, 125);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(346, 44);
+            this.Delete.TabIndex = 13;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // aZUREDBDataSet1
+            // 
+            this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet1";
+            this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ship_Master_TBBindingSource
+            // 
+            this.ship_Master_TBBindingSource.DataMember = "Ship_Master_TB";
+            this.ship_Master_TBBindingSource.DataSource = this.aZUREDBDataSet1;
+            // 
+            // ship_Master_TBTableAdapter
+            // 
+            this.ship_Master_TBTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Ship_Master_TBTableAdapter = this.ship_Master_TBTableAdapter;
+            this.tableAdapterManager1.UpdateOrder = ViewListItem.AZUREDBDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // presentNameLabel
+            // 
+            presentNameLabel.AutoSize = true;
+            presentNameLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            presentNameLabel.Location = new System.Drawing.Point(361, -1);
+            presentNameLabel.Name = "presentNameLabel";
+            presentNameLabel.Size = new System.Drawing.Size(150, 28);
+            presentNameLabel.TabIndex = 13;
+            presentNameLabel.Text = "Present Name:";
+            // 
+            // presentNameComboBox
+            // 
+            this.presentNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ship_Master_TBBindingSource, "PresentName", true));
+            this.presentNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ship_Master_TBBindingSource, "ID", true));
+            this.presentNameComboBox.DataSource = this.ship_Master_TBBindingSource;
+            this.presentNameComboBox.DisplayMember = "PresentName";
+            this.presentNameComboBox.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            this.presentNameComboBox.FormattingEnabled = true;
+            this.presentNameComboBox.Location = new System.Drawing.Point(366, 31);
+            this.presentNameComboBox.Name = "presentNameComboBox";
+            this.presentNameComboBox.Size = new System.Drawing.Size(211, 36);
+            this.presentNameComboBox.TabIndex = 14;
+            // 
+            // iDLabel
+            // 
+            iDLabel.AutoSize = true;
+            iDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            iDLabel.Location = new System.Drawing.Point(640, -1);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(42, 28);
+            iDLabel.TabIndex = 14;
+            iDLabel.Text = "ID:";
+            // 
+            // iDTextBox
+            // 
+            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ship_Master_TBBindingSource, "ID", true));
+            this.iDTextBox.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Italic);
+            this.iDTextBox.Location = new System.Drawing.Point(645, 30);
+            this.iDTextBox.Name = "iDTextBox";
+            this.iDTextBox.ReadOnly = true;
+            this.iDTextBox.Size = new System.Drawing.Size(194, 36);
+            this.iDTextBox.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 845);
+            this.ClientSize = new System.Drawing.Size(1211, 845);
+            this.Controls.Add(iDLabel);
+            this.Controls.Add(this.iDTextBox);
+            this.Controls.Add(presentNameLabel);
+            this.Controls.Add(this.presentNameComboBox);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.bindingNavigator2);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.fileNameListBox);
@@ -897,6 +998,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fKValidityattachValidityItemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -988,6 +1092,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.BindingSource fKValidityattachValidityItemsBindingSource;
+        private System.Windows.Forms.Button Delete;
+        private AZUREDBDataSet1 aZUREDBDataSet1;
+        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
+        private AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter;
+        private AZUREDBDataSet1TableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.ComboBox presentNameComboBox;
+        private System.Windows.Forms.TextBox iDTextBox;
     }
 }
 
