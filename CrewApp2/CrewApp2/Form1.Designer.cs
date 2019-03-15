@@ -33,31 +33,17 @@
             System.Windows.Forms.Label mRNNoteLabel;
             System.Windows.Forms.Label tECHNoteLabel;
             System.Windows.Forms.Label gENNoteLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.aZUREDBDataSet = new CrewApp2.AZUREDBDataSet();
             this.crew_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crew_MasterTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter();
             this.tableAdapterManager = new CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.crew_ApplicationTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_ApplicationTableAdapter();
             this.crew_ConfidencialReportTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_ConfidencialReportTableAdapter();
-            this.crew_MasterBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.crew_MasterBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.新規作成NToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.開くOToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.上書き保存SToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.crew_MasterDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,10 +75,10 @@
             this.fileNameTextBox1 = new System.Windows.Forms.TextBox();
             this.fKCrewApplicationCrewApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Save = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Refresh = new System.Windows.Forms.Button();
             this.cREWINGNoteTextBox = new System.Windows.Forms.TextBox();
             this.mRNNoteTextBox = new System.Windows.Forms.TextBox();
-            this.tECHNoteTextBox = new System.Windows.Forms.TextBox();
+            this.TECHNoteTextBox = new System.Windows.Forms.TextBox();
             this.gENNoteTextBox = new System.Windows.Forms.TextBox();
             this.shipNameComboBox = new System.Windows.Forms.ComboBox();
             this.crewMaster2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -103,14 +89,16 @@
             this.aZUREDBDataSet1 = new CrewApp2.AZUREDBDataSet();
             this.crew_Master1TableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_Master1TableAdapter();
             this.crew_Master2TableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter();
+            this.SaveNote = new System.Windows.Forms.Button();
+            this.username = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             cREWINGNoteLabel = new System.Windows.Forms.Label();
             mRNNoteLabel = new System.Windows.Forms.Label();
             tECHNoteLabel = new System.Windows.Forms.Label();
             gENNoteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingNavigator)).BeginInit();
-            this.crew_MasterBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_ApplicationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_ConfidencialReportBindingSource)).BeginInit();
@@ -126,36 +114,44 @@
             // cREWINGNoteLabel
             // 
             cREWINGNoteLabel.AutoSize = true;
-            cREWINGNoteLabel.Location = new System.Drawing.Point(7, 311);
+            cREWINGNoteLabel.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            cREWINGNoteLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            cREWINGNoteLabel.Location = new System.Drawing.Point(1184, 68);
             cREWINGNoteLabel.Name = "cREWINGNoteLabel";
-            cREWINGNoteLabel.Size = new System.Drawing.Size(82, 12);
+            cREWINGNoteLabel.Size = new System.Drawing.Size(131, 24);
             cREWINGNoteLabel.TabIndex = 15;
             cREWINGNoteLabel.Text = "CREWINGNote:";
             // 
             // mRNNoteLabel
             // 
             mRNNoteLabel.AutoSize = true;
-            mRNNoteLabel.Location = new System.Drawing.Point(12, 470);
+            mRNNoteLabel.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            mRNNoteLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            mRNNoteLabel.Location = new System.Drawing.Point(1226, 488);
             mRNNoteLabel.Name = "mRNNoteLabel";
-            mRNNoteLabel.Size = new System.Drawing.Size(56, 12);
+            mRNNoteLabel.Size = new System.Drawing.Size(89, 24);
             mRNNoteLabel.TabIndex = 16;
             mRNNoteLabel.Text = "MRNNote:";
             // 
             // tECHNoteLabel
             // 
             tECHNoteLabel.AutoSize = true;
-            tECHNoteLabel.Location = new System.Drawing.Point(655, 472);
+            tECHNoteLabel.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            tECHNoteLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            tECHNoteLabel.Location = new System.Drawing.Point(1220, 391);
             tECHNoteLabel.Name = "tECHNoteLabel";
-            tECHNoteLabel.Size = new System.Drawing.Size(61, 12);
+            tECHNoteLabel.Size = new System.Drawing.Size(97, 24);
             tECHNoteLabel.TabIndex = 17;
             tECHNoteLabel.Text = "TECHNote:";
             // 
             // gENNoteLabel
             // 
             gENNoteLabel.AutoSize = true;
-            gENNoteLabel.Location = new System.Drawing.Point(655, 300);
+            gENNoteLabel.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            gENNoteLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            gENNoteLabel.Location = new System.Drawing.Point(1230, 580);
             gENNoteLabel.Name = "gENNoteLabel";
-            gENNoteLabel.Size = new System.Drawing.Size(54, 12);
+            gENNoteLabel.Size = new System.Drawing.Size(87, 24);
             gENNoteLabel.TabIndex = 18;
             gENNoteLabel.Text = "GENNote:";
             // 
@@ -178,7 +174,6 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Crew_ApplicationTableAdapter = this.crew_ApplicationTableAdapter;
             this.tableAdapterManager.Crew_ConfidencialReportTableAdapter = this.crew_ConfidencialReportTableAdapter;
-            this.tableAdapterManager.Crew_Master1TableAdapter = null;
             this.tableAdapterManager.Crew_MasterTableAdapter = this.crew_MasterTableAdapter;
             this.tableAdapterManager.Ship_Master_TBTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -191,176 +186,21 @@
             // 
             this.crew_ConfidencialReportTableAdapter.ClearBeforeFill = true;
             // 
-            // crew_MasterBindingNavigator
-            // 
-            this.crew_MasterBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.crew_MasterBindingNavigator.BindingSource = this.crew_MasterBindingSource;
-            this.crew_MasterBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.crew_MasterBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.crew_MasterBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
-            this.crew_MasterBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.crew_MasterBindingNavigatorSaveItem,
-            this.新規作成NToolStripButton,
-            this.開くOToolStripButton,
-            this.上書き保存SToolStripButton,
-            this.toolStripSeparator,
-            this.toolStripSeparator7});
-            this.crew_MasterBindingNavigator.Location = new System.Drawing.Point(9, 9);
-            this.crew_MasterBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.crew_MasterBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.crew_MasterBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.crew_MasterBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.crew_MasterBindingNavigator.Name = "crew_MasterBindingNavigator";
-            this.crew_MasterBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.crew_MasterBindingNavigator.Size = new System.Drawing.Size(362, 25);
-            this.crew_MasterBindingNavigator.TabIndex = 0;
-            this.crew_MasterBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "新規追加";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(38, 22);
-            this.bindingNavigatorCountItem.Text = "/ {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "削除";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "最初に移動";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "前に戻る";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "位置";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 25);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "現在の場所";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "次に移動";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "最後に移動";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // crew_MasterBindingNavigatorSaveItem
-            // 
-            this.crew_MasterBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.crew_MasterBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("crew_MasterBindingNavigatorSaveItem.Image")));
-            this.crew_MasterBindingNavigatorSaveItem.Name = "crew_MasterBindingNavigatorSaveItem";
-            this.crew_MasterBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.crew_MasterBindingNavigatorSaveItem.Text = "データの保存";
-            this.crew_MasterBindingNavigatorSaveItem.Click += new System.EventHandler(this.Crew_MasterBindingNavigatorSaveItem_Click);
-            // 
-            // 新規作成NToolStripButton
-            // 
-            this.新規作成NToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.新規作成NToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("新規作成NToolStripButton.Image")));
-            this.新規作成NToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.新規作成NToolStripButton.Name = "新規作成NToolStripButton";
-            this.新規作成NToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.新規作成NToolStripButton.Text = "新規作成(&N)";
-            // 
-            // 開くOToolStripButton
-            // 
-            this.開くOToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.開くOToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("開くOToolStripButton.Image")));
-            this.開くOToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.開くOToolStripButton.Name = "開くOToolStripButton";
-            this.開くOToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.開くOToolStripButton.Text = "開く(&O)";
-            // 
-            // 上書き保存SToolStripButton
-            // 
-            this.上書き保存SToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.上書き保存SToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("上書き保存SToolStripButton.Image")));
-            this.上書き保存SToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.上書き保存SToolStripButton.Name = "上書き保存SToolStripButton";
-            this.上書き保存SToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.上書き保存SToolStripButton.Text = "上書き保存(&S)";
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
             // crew_MasterDataGridView
             // 
+            this.crew_MasterDataGridView.AllowUserToAddRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.crew_MasterDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.crew_MasterDataGridView.AutoGenerateColumns = false;
+            this.crew_MasterDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.crew_MasterDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.crew_MasterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.crew_MasterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -384,10 +224,33 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
             this.crew_MasterDataGridView.DataSource = this.crew_MasterBindingSource;
-            this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 61);
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.crew_MasterDataGridView.DefaultCellStyle = dataGridViewCellStyle18;
+            this.crew_MasterDataGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 95);
             this.crew_MasterDataGridView.Name = "crew_MasterDataGridView";
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.crew_MasterDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            this.crew_MasterDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.Window;
             this.crew_MasterDataGridView.RowTemplate.Height = 21;
-            this.crew_MasterDataGridView.Size = new System.Drawing.Size(1283, 220);
+            this.crew_MasterDataGridView.Size = new System.Drawing.Size(664, 347);
             this.crew_MasterDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -436,7 +299,7 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Licence";
             this.dataGridViewTextBoxColumn6.HeaderText = "Licence";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 69;
+            this.dataGridViewTextBoxColumn6.Visible = false;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -452,7 +315,7 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "ShipName";
             this.dataGridViewTextBoxColumn8.HeaderText = "ShipName";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 81;
+            this.dataGridViewTextBoxColumn8.Visible = false;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -460,7 +323,7 @@
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Emberk";
             this.dataGridViewTextBoxColumn9.HeaderText = "Emberk";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 68;
+            this.dataGridViewTextBoxColumn9.Visible = false;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -468,7 +331,7 @@
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Dismberk";
             this.dataGridViewTextBoxColumn10.HeaderText = "Dismberk";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 78;
+            this.dataGridViewTextBoxColumn10.Visible = false;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -476,7 +339,7 @@
             this.dataGridViewTextBoxColumn11.DataPropertyName = "NextAvailability";
             this.dataGridViewTextBoxColumn11.HeaderText = "NextAvailability";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 111;
+            this.dataGridViewTextBoxColumn11.Visible = false;
             // 
             // dataGridViewCheckBoxColumn1
             // 
@@ -556,13 +419,16 @@
             // fileNameListBox
             // 
             this.fileNameListBox.AllowDrop = true;
+            this.fileNameListBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.fileNameListBox.DataSource = this.crew_ApplicationBindingSource;
             this.fileNameListBox.DisplayMember = "FileName";
+            this.fileNameListBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.fileNameListBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.fileNameListBox.FormattingEnabled = true;
-            this.fileNameListBox.ItemHeight = 12;
-            this.fileNameListBox.Location = new System.Drawing.Point(14, 640);
+            this.fileNameListBox.ItemHeight = 24;
+            this.fileNameListBox.Location = new System.Drawing.Point(9, 469);
             this.fileNameListBox.Name = "fileNameListBox";
-            this.fileNameListBox.Size = new System.Drawing.Size(605, 136);
+            this.fileNameListBox.Size = new System.Drawing.Size(340, 196);
             this.fileNameListBox.TabIndex = 5;
             this.fileNameListBox.ValueMember = "FileName";
             this.fileNameListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragDrop);
@@ -577,13 +443,16 @@
             // fileNameListBox1
             // 
             this.fileNameListBox1.AllowDrop = true;
+            this.fileNameListBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.fileNameListBox1.DataSource = this.crew_ConfidencialReportBindingSource;
             this.fileNameListBox1.DisplayMember = "FileName";
+            this.fileNameListBox1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.fileNameListBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.fileNameListBox1.FormattingEnabled = true;
-            this.fileNameListBox1.ItemHeight = 12;
-            this.fileNameListBox1.Location = new System.Drawing.Point(660, 640);
+            this.fileNameListBox1.ItemHeight = 24;
+            this.fileNameListBox1.Location = new System.Drawing.Point(367, 469);
             this.fileNameListBox1.Name = "fileNameListBox1";
-            this.fileNameListBox1.Size = new System.Drawing.Size(648, 136);
+            this.fileNameListBox1.Size = new System.Drawing.Size(306, 196);
             this.fileNameListBox1.TabIndex = 7;
             this.fileNameListBox1.ValueMember = "FileName";
             this.fileNameListBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox1_DragDrop);
@@ -597,21 +466,29 @@
             // 
             // fileNameTextBox
             // 
+            this.fileNameTextBox.BackColor = System.Drawing.SystemColors.Highlight;
             this.fileNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_ConfidencialReportBindingSource, "FileName", true));
-            this.fileNameTextBox.Location = new System.Drawing.Point(14, 615);
+            this.fileNameTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.fileNameTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.fileNameTextBox.Location = new System.Drawing.Point(422, 260);
             this.fileNameTextBox.Name = "fileNameTextBox";
             this.fileNameTextBox.ReadOnly = true;
-            this.fileNameTextBox.Size = new System.Drawing.Size(605, 19);
+            this.fileNameTextBox.Size = new System.Drawing.Size(26, 31);
             this.fileNameTextBox.TabIndex = 9;
+            this.fileNameTextBox.TabStop = false;
             // 
             // fileNameTextBox1
             // 
+            this.fileNameTextBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.fileNameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_ApplicationBindingSource, "FileName", true));
-            this.fileNameTextBox1.Location = new System.Drawing.Point(657, 615);
+            this.fileNameTextBox1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.fileNameTextBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.fileNameTextBox1.Location = new System.Drawing.Point(422, 223);
             this.fileNameTextBox1.Name = "fileNameTextBox1";
             this.fileNameTextBox1.ReadOnly = true;
-            this.fileNameTextBox1.Size = new System.Drawing.Size(652, 19);
+            this.fileNameTextBox1.Size = new System.Drawing.Size(26, 31);
             this.fileNameTextBox1.TabIndex = 11;
+            this.fileNameTextBox1.TabStop = false;
             // 
             // fKCrewApplicationCrewApplicationBindingSource1
             // 
@@ -620,75 +497,111 @@
             // 
             // Save
             // 
+            this.Save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Save.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Save.Location = new System.Drawing.Point(979, 12);
+            this.Save.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Save.Location = new System.Drawing.Point(300, 8);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(135, 43);
             this.Save.TabIndex = 14;
             this.Save.Text = "Save";
-            this.Save.UseVisualStyleBackColor = true;
+            this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // button2
+            // Refresh
             // 
-            this.button2.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(1154, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 43);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Refresh.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Refresh.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Refresh.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Refresh.Location = new System.Drawing.Point(538, 8);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(135, 43);
+            this.Refresh.TabIndex = 15;
+            this.Refresh.Text = "Refresh";
+            this.Refresh.UseVisualStyleBackColor = false;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // cREWINGNoteTextBox
             // 
+            this.cREWINGNoteTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cREWINGNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "CREWINGNote", true));
-            this.cREWINGNoteTextBox.Location = new System.Drawing.Point(657, 326);
+            this.cREWINGNoteTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.cREWINGNoteTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cREWINGNoteTextBox.Location = new System.Drawing.Point(699, 107);
             this.cREWINGNoteTextBox.Multiline = true;
             this.cREWINGNoteTextBox.Name = "cREWINGNoteTextBox";
-            this.cREWINGNoteTextBox.Size = new System.Drawing.Size(652, 122);
+            this.cREWINGNoteTextBox.Size = new System.Drawing.Size(612, 281);
             this.cREWINGNoteTextBox.TabIndex = 16;
             // 
             // mRNNoteTextBox
             // 
+            this.mRNNoteTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mRNNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "MRNNote", true));
-            this.mRNNoteTextBox.Location = new System.Drawing.Point(657, 487);
+            this.mRNNoteTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.mRNNoteTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.mRNNoteTextBox.Location = new System.Drawing.Point(705, 515);
             this.mRNNoteTextBox.Multiline = true;
             this.mRNNoteTextBox.Name = "mRNNoteTextBox";
-            this.mRNNoteTextBox.Size = new System.Drawing.Size(652, 122);
+            this.mRNNoteTextBox.Size = new System.Drawing.Size(612, 58);
             this.mRNNoteTextBox.TabIndex = 17;
             // 
-            // tECHNoteTextBox
+            // TECHNoteTextBox
             // 
-            this.tECHNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "TECHNote", true));
-            this.tECHNoteTextBox.Location = new System.Drawing.Point(9, 326);
-            this.tECHNoteTextBox.Multiline = true;
-            this.tECHNoteTextBox.Name = "tECHNoteTextBox";
-            this.tECHNoteTextBox.Size = new System.Drawing.Size(610, 122);
-            this.tECHNoteTextBox.TabIndex = 18;
+            this.TECHNoteTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TECHNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "TECHNote", true));
+            this.TECHNoteTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TECHNoteTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.TECHNoteTextBox.Location = new System.Drawing.Point(701, 418);
+            this.TECHNoteTextBox.Multiline = true;
+            this.TECHNoteTextBox.Name = "TECHNoteTextBox";
+            this.TECHNoteTextBox.Size = new System.Drawing.Size(614, 58);
+            this.TECHNoteTextBox.TabIndex = 18;
+            this.TECHNoteTextBox.TextChanged += new System.EventHandler(this.TECHNoteTextBox_TextChanged);
             // 
             // gENNoteTextBox
             // 
+            this.gENNoteTextBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gENNoteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "GENNote", true));
-            this.gENNoteTextBox.Location = new System.Drawing.Point(9, 485);
+            this.gENNoteTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.gENNoteTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.gENNoteTextBox.Location = new System.Drawing.Point(703, 607);
             this.gENNoteTextBox.Multiline = true;
             this.gENNoteTextBox.Name = "gENNoteTextBox";
-            this.gENNoteTextBox.Size = new System.Drawing.Size(610, 122);
+            this.gENNoteTextBox.Size = new System.Drawing.Size(614, 58);
             this.gENNoteTextBox.TabIndex = 19;
             // 
             // shipNameComboBox
             // 
             this.shipNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "ShipName", true));
-            this.shipNameComboBox.DataSource = this.crewMaster2BindingSource1;
-            this.shipNameComboBox.DisplayMember = "ShipName";
+            this.shipNameComboBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
             this.shipNameComboBox.FormattingEnabled = true;
-            this.shipNameComboBox.Location = new System.Drawing.Point(390, 30);
+            this.shipNameComboBox.Items.AddRange(new object[] {
+            "Master",
+            "C/O",
+            "2/O",
+            "3/O",
+            "C/E",
+            "1AE",
+            "2AE",
+            "3AE",
+            "BSN",
+            "AB",
+            "OS",
+            "OLR",
+            "WPR",
+            "C/CK",
+            "M/M",
+            "D/C",
+            "E/C"});
+            this.shipNameComboBox.Location = new System.Drawing.Point(300, 57);
             this.shipNameComboBox.Name = "shipNameComboBox";
-            this.shipNameComboBox.Size = new System.Drawing.Size(169, 20);
+            this.shipNameComboBox.Size = new System.Drawing.Size(373, 32);
             this.shipNameComboBox.TabIndex = 21;
+            this.shipNameComboBox.SelectedIndexChanged += new System.EventHandler(this.ShipNameComboBox_SelectedIndexChanged);
             this.shipNameComboBox.SelectionChangeCommitted += new System.EventHandler(this.ShipNameComboBox_SelectionChangeCommitted);
             this.shipNameComboBox.DisplayMemberChanged += new System.EventHandler(this.ShipNameComboBox_DisplayMemberChanged);
             this.shipNameComboBox.SelectedValueChanged += new System.EventHandler(this.ShipNameComboBox_SelectedValueChanged);
-            this.shipNameComboBox.Enter += new System.EventHandler(this.shipNameComboBox_Enter);
+            this.shipNameComboBox.Enter += new System.EventHandler(this.ShipNameComboBox_Enter);
             this.shipNameComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ShipNameComboBox_KeyDown);
             // 
             // crewMaster2BindingSource1
@@ -703,23 +616,26 @@
             // 
             // RemoveFilter
             // 
+            this.RemoveFilter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.RemoveFilter.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RemoveFilter.Location = new System.Drawing.Point(791, 12);
+            this.RemoveFilter.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RemoveFilter.Location = new System.Drawing.Point(9, 8);
             this.RemoveFilter.Name = "RemoveFilter";
-            this.RemoveFilter.Size = new System.Drawing.Size(167, 43);
+            this.RemoveFilter.Size = new System.Drawing.Size(197, 43);
             this.RemoveFilter.TabIndex = 26;
             this.RemoveFilter.Text = "RemoveFilter";
-            this.RemoveFilter.UseVisualStyleBackColor = true;
+            this.RemoveFilter.UseVisualStyleBackColor = false;
             this.RemoveFilter.Click += new System.EventHandler(this.RemoveFilter_Click);
             // 
             // FullNamecomboBox
             // 
             this.FullNamecomboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.FullNamecomboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.FullNamecomboBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
             this.FullNamecomboBox.FormattingEnabled = true;
-            this.FullNamecomboBox.Location = new System.Drawing.Point(581, 30);
+            this.FullNamecomboBox.Location = new System.Drawing.Point(12, 57);
             this.FullNamecomboBox.Name = "FullNamecomboBox";
-            this.FullNamecomboBox.Size = new System.Drawing.Size(194, 20);
+            this.FullNamecomboBox.Size = new System.Drawing.Size(194, 32);
             this.FullNamecomboBox.TabIndex = 27;
             this.FullNamecomboBox.SelectionChangeCommitted += new System.EventHandler(this.FullName_SelectionChangeCommitted);
             this.FullNamecomboBox.SelectedValueChanged += new System.EventHandler(this.FullNamecomboBox_SelectedValueChanged);
@@ -746,38 +662,83 @@
             // 
             this.crew_Master2TableAdapter.ClearBeforeFill = true;
             // 
+            // SaveNote
+            // 
+            this.SaveNote.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SaveNote.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SaveNote.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveNote.Location = new System.Drawing.Point(699, 8);
+            this.SaveNote.Name = "SaveNote";
+            this.SaveNote.Size = new System.Drawing.Size(135, 43);
+            this.SaveNote.TabIndex = 28;
+            this.SaveNote.Text = "SaveNote";
+            this.SaveNote.UseVisualStyleBackColor = false;
+            this.SaveNote.Click += new System.EventHandler(this.SaveNote_Click);
+            // 
+            // username
+            // 
+            this.username.AutoSize = true;
+            this.username.Font = new System.Drawing.Font("メイリオ", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.username.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.username.Location = new System.Drawing.Point(816, 68);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(94, 24);
+            this.username.TabIndex = 29;
+            this.username.Text = "username";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label1.Location = new System.Drawing.Point(699, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "username；";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 796);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(1329, 682);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.username);
+            this.Controls.Add(this.SaveNote);
             this.Controls.Add(this.FullNamecomboBox);
             this.Controls.Add(this.RemoveFilter);
             this.Controls.Add(this.shipNameComboBox);
             this.Controls.Add(gENNoteLabel);
             this.Controls.Add(this.gENNoteTextBox);
             this.Controls.Add(tECHNoteLabel);
-            this.Controls.Add(this.tECHNoteTextBox);
+            this.Controls.Add(this.TECHNoteTextBox);
             this.Controls.Add(mRNNoteLabel);
             this.Controls.Add(this.mRNNoteTextBox);
             this.Controls.Add(cREWINGNoteLabel);
             this.Controls.Add(this.cREWINGNoteTextBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Refresh);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.fileNameTextBox1);
-            this.Controls.Add(this.fileNameTextBox);
             this.Controls.Add(this.fileNameListBox1);
             this.Controls.Add(this.fileNameListBox);
             this.Controls.Add(this.crew_MasterDataGridView);
-            this.Controls.Add(this.crew_MasterBindingNavigator);
+            this.Controls.Add(this.fileNameTextBox1);
+            this.Controls.Add(this.fileNameTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Enter += new System.EventHandler(this.Form1_Enter);
+            this.MouseEnter += new System.EventHandler(this.Form1_MouseEnter);
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingNavigator)).EndInit();
-            this.crew_MasterBindingNavigator.ResumeLayout(false);
-            this.crew_MasterBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_ApplicationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_ConfidencialReportBindingSource)).EndInit();
@@ -799,19 +760,6 @@
         private System.Windows.Forms.BindingSource crew_MasterBindingSource;
         private AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter crew_MasterTableAdapter;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator crew_MasterBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton crew_MasterBindingNavigatorSaveItem;
         private AZUREDBDataSetTableAdapters.Crew_ApplicationTableAdapter crew_ApplicationTableAdapter;
         private System.Windows.Forms.DataGridView crew_MasterDataGridView;
         private System.Windows.Forms.BindingSource crew_ApplicationBindingSource;
@@ -824,13 +772,19 @@
         private System.Windows.Forms.BindingSource fKCrewApplicationCrewApplicationBindingSource;
         private System.Windows.Forms.BindingSource fKCrewConfidencialReportCrewMasterBindingSource;
         private System.Windows.Forms.BindingSource fKCrewApplicationCrewApplicationBindingSource1;
-        private System.Windows.Forms.ToolStripButton 新規作成NToolStripButton;
-        private System.Windows.Forms.ToolStripButton 開くOToolStripButton;
-        private System.Windows.Forms.ToolStripButton 上書き保存SToolStripButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.TextBox mRNNoteTextBox;
+        private System.Windows.Forms.TextBox gENNoteTextBox;
+        private System.Windows.Forms.ComboBox shipNameComboBox;
+        private System.Windows.Forms.Button RemoveFilter;
+        private System.Windows.Forms.ComboBox FullNamecomboBox;
+        private AZUREDBDataSet aZUREDBDataSet1;
+        private System.Windows.Forms.BindingSource crewMaster1BindingSource;
+        private AZUREDBDataSetTableAdapters.Crew_Master1TableAdapter crew_Master1TableAdapter;
+        private System.Windows.Forms.BindingSource crewMaster2BindingSource;
+        private AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter crew_Master2TableAdapter;
+        private System.Windows.Forms.BindingSource crewMaster2BindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -851,19 +805,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.TextBox cREWINGNoteTextBox;
-        private System.Windows.Forms.TextBox mRNNoteTextBox;
-        private System.Windows.Forms.TextBox tECHNoteTextBox;
-        private System.Windows.Forms.TextBox gENNoteTextBox;
-        private System.Windows.Forms.ComboBox shipNameComboBox;
-        private System.Windows.Forms.Button RemoveFilter;
-        private System.Windows.Forms.ComboBox FullNamecomboBox;
-        private AZUREDBDataSet aZUREDBDataSet1;
-        private System.Windows.Forms.BindingSource crewMaster1BindingSource;
-        private AZUREDBDataSetTableAdapters.Crew_Master1TableAdapter crew_Master1TableAdapter;
-        private System.Windows.Forms.BindingSource crewMaster2BindingSource;
-        private AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter crew_Master2TableAdapter;
-        private System.Windows.Forms.BindingSource crewMaster2BindingSource1;
+        private System.Windows.Forms.Button SaveNote;
+        public System.Windows.Forms.TextBox TECHNoteTextBox;
+        public System.Windows.Forms.TextBox cREWINGNoteTextBox;
+        private System.Windows.Forms.Label username;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

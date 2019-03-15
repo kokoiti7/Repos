@@ -2486,6 +2486,8 @@ namespace CrewApp2 {
             
             private global::System.Data.DataColumn columnMasterID;
             
+            private global::System.Data.DataColumn columnPresentRANK;
+            
             private global::System.Data.DataColumn columnFullName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2526,6 +2528,14 @@ namespace CrewApp2 {
             public global::System.Data.DataColumn MasterIDColumn {
                 get {
                     return this.columnMasterID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PresentRANKColumn {
+                get {
+                    return this.columnPresentRANK;
                 }
             }
             
@@ -2574,10 +2584,11 @@ namespace CrewApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Crew_Master1Row AddCrew_Master1Row(string FullName) {
+            public Crew_Master1Row AddCrew_Master1Row(string PresentRANK, string FullName) {
                 Crew_Master1Row rowCrew_Master1Row = ((Crew_Master1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        PresentRANK,
                         FullName};
                 rowCrew_Master1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCrew_Master1Row);
@@ -2609,6 +2620,7 @@ namespace CrewApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnMasterID = base.Columns["MasterID"];
+                this.columnPresentRANK = base.Columns["PresentRANK"];
                 this.columnFullName = base.Columns["FullName"];
             }
             
@@ -2617,6 +2629,8 @@ namespace CrewApp2 {
             private void InitClass() {
                 this.columnMasterID = new global::System.Data.DataColumn("MasterID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMasterID);
+                this.columnPresentRANK = new global::System.Data.DataColumn("PresentRANK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPresentRANK);
                 this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFullName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -2627,6 +2641,7 @@ namespace CrewApp2 {
                 this.columnMasterID.AllowDBNull = false;
                 this.columnMasterID.ReadOnly = true;
                 this.columnMasterID.Unique = true;
+                this.columnPresentRANK.MaxLength = 50;
                 this.columnFullName.MaxLength = 255;
             }
             
@@ -4921,6 +4936,22 @@ namespace CrewApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string PresentRANK {
+                get {
+                    try {
+                        return ((string)(this[this.tableCrew_Master1.PresentRANKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Crew_Master1\' にある列 \'PresentRANK\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableCrew_Master1.PresentRANKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string FullName {
                 get {
                     try {
@@ -4933,6 +4964,18 @@ namespace CrewApp2 {
                 set {
                     this[this.tableCrew_Master1.FullNameColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPresentRANKNull() {
+                return this.IsNull(this.tableCrew_Master1.PresentRANKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPresentRANKNull() {
+                this[this.tableCrew_Master1.PresentRANKColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8863,34 +8906,9 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Crew_Master1";
             tableMapping.ColumnMappings.Add("MasterID", "MasterID");
+            tableMapping.ColumnMappings.Add("PresentRANK", "PresentRANK");
             tableMapping.ColumnMappings.Add("FullName", "FullName");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Crew_Master] WHERE (([MasterID] = @Original_MasterID) AND ((@IsNull_" +
-                "FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MasterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MasterID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Crew_Master] ([FullName]) VALUES (@FullName);\r\nSELECT MasterID, Full" +
-                "Name FROM Crew_Master WHERE (MasterID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Crew_Master] SET [FullName] = @FullName WHERE (([MasterID] = @Original_Ma" +
-                "sterID) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Ori" +
-                "ginal_FullName)));\r\nSELECT MasterID, FullName FROM Crew_Master WHERE (MasterID =" +
-                " @MasterID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MasterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MasterID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MasterID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MasterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8906,7 +8924,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT            MasterID, FullName\r\nFROM              Crew_Master";
+            this._commandCollection[0].CommandText = "SELECT DISTINCT PresentRANK, MasterID, FullName\r\nFROM              Crew_Master";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8932,137 +8950,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             AZUREDBDataSet.Crew_Master1DataTable dataTable = new AZUREDBDataSet.Crew_Master1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet.Crew_Master1DataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Crew_Master1");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_MasterID, string Original_FullName) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MasterID));
-            if ((Original_FullName == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FullName));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FullName) {
-            if ((FullName == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(FullName));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FullName, int Original_MasterID, string Original_FullName, int MasterID) {
-            if ((FullName == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(FullName));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_MasterID));
-            if ((Original_FullName == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_FullName));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(MasterID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FullName, int Original_MasterID, string Original_FullName) {
-            return this.Update(FullName, Original_MasterID, Original_FullName, Original_MasterID);
         }
     }
     
@@ -9254,8 +9141,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         
         private Ship_Master_TBTableAdapter _ship_Master_TBTableAdapter;
         
-        private Crew_Master1TableAdapter _crew_Master1TableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -9329,20 +9214,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public Crew_Master1TableAdapter Crew_Master1TableAdapter {
-            get {
-                return this._crew_Master1TableAdapter;
-            }
-            set {
-                this._crew_Master1TableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -9376,10 +9247,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                             && (this._ship_Master_TBTableAdapter.Connection != null))) {
                     return this._ship_Master_TBTableAdapter.Connection;
                 }
-                if (((this._crew_Master1TableAdapter != null) 
-                            && (this._crew_Master1TableAdapter.Connection != null))) {
-                    return this._crew_Master1TableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -9405,9 +9272,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 if ((this._ship_Master_TBTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._crew_Master1TableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -9425,15 +9289,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._crew_MasterTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._crew_Master1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Crew_Master1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._crew_Master1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9479,14 +9334,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._crew_MasterTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._crew_Master1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Crew_Master1.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._crew_Master1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9545,14 +9392,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._crew_ApplicationTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._crew_Master1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Crew_Master1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._crew_Master1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9617,10 +9456,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             }
             if (((this._ship_Master_TBTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._ship_Master_TBTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
-            }
-            if (((this._crew_Master1TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._crew_Master1TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -9688,15 +9523,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                     if (this._ship_Master_TBTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._ship_Master_TBTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._ship_Master_TBTableAdapter.Adapter);
-                    }
-                }
-                if ((this._crew_Master1TableAdapter != null)) {
-                    revertConnections.Add(this._crew_Master1TableAdapter, this._crew_Master1TableAdapter.Connection);
-                    this._crew_Master1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._crew_Master1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._crew_Master1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._crew_Master1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._crew_Master1TableAdapter.Adapter);
                     }
                 }
                 // 
@@ -9772,10 +9598,6 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 if ((this._ship_Master_TBTableAdapter != null)) {
                     this._ship_Master_TBTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ship_Master_TBTableAdapter]));
                     this._ship_Master_TBTableAdapter.Transaction = null;
-                }
-                if ((this._crew_Master1TableAdapter != null)) {
-                    this._crew_Master1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._crew_Master1TableAdapter]));
-                    this._crew_Master1TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

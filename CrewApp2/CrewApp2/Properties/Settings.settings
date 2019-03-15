@@ -19,10 +19,10 @@
     <Setting Name="UserName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Mito</Value>
     </Setting>
-    <Setting Name="cREWINGNote" Type="System.String" Scope="User">
+    <Setting Name="CREWINGNote" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="gENNote" Type="System.String" Scope="User">
+    <Setting Name="CrewinNote" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
