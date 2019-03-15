@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace CrewApp2
             InitializeComponent();
         }
 
-        private void crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void Crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.crew_MasterBindingSource.EndEdit();
@@ -27,8 +28,108 @@ namespace CrewApp2
 
         }
 
+        private void FileNameListBox1_DoubleClick(object sender, EventArgs e)
+        {
+            // MessageBox.Show(fileNameListBox.SelectedValue.ToString());
+
+            try
+            {
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
+
+                CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+
+                CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+
+                CloudBlockBlob blob = container.GetBlockBlobReference(fileNameListBox.SelectedValue.ToString());
+
+                SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy
+                {
+                    SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5),
+                    SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24),
+                    Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write
+                };
+
+                string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
+
+                Process.Start(blob.Uri + sasBlobToken);
+
+
+            }
+
+            catch
+            {
+
+                MessageBox.Show("Select file");
+
+            }
+        }
+
+        private void FileNameListBox_DoubleClick(object sender, EventArgs e)
+        {
+            // MessageBox.Show(fileNameListBox.SelectedValue.ToString());
+
+            try
+            {
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.accesskey);
+
+                CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+
+                CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+
+                CloudBlockBlob blob = container.GetBlockBlobReference(fileNameListBox.SelectedValue.ToString());
+
+                SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy
+                {
+                    SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5),
+                    SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24),
+                    Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write
+                };
+
+                string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
+
+                Process.Start(blob.Uri + sasBlobToken);
+
+
+            }
+
+            catch
+            {
+
+                MessageBox.Show("Select file");
+
+            }
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.crew_ApplicationBindingSource.EndEdit();
+            this.crew_MasterBindingSource.EndEdit();
+            this.crew_ConfidencialReportBindingSource.EndEdit();
+            this.crew_MasterTableAdapter.Update(aZUREDBDataSet.Crew_Master);
+            this.crew_ApplicationTableAdapter.Update(aZUREDBDataSet.Crew_Application);
+            this.crew_ConfidencialReportTableAdapter.Update(aZUREDBDataSet.Crew_ConfidencialReport);
+
+        }
+
+        private void Filter_Click(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", shipNameComboBox.Text);
+        }
+
+        private void RemoveFilter_Click(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.RemoveFilter();
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master2' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.crew_Master2TableAdapter.Fill(this.aZUREDBDataSet.Crew_Master2);
+            // TODO: このコード行はデータを 'aZUREDBDataSet1.Crew_Master1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.crew_Master1TableAdapter.Fill(this.aZUREDBDataSet1.Crew_Master1);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -41,8 +142,10 @@ namespace CrewApp2
             this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+            crew_MasterBindingSource.RemoveFilter();
 
         }
+
 
         private void FileNameListBox_DragDrop(object sender, DragEventArgs e)
         {
@@ -77,7 +180,6 @@ namespace CrewApp2
 
         }
 
-
         private void FileNameListBox_DragEnter(object sender, DragEventArgs e)
         {
             //コントロール内にドラッグされたとき実行される
@@ -87,11 +189,6 @@ namespace CrewApp2
             else
                 //ファイル以外は受け付けない
                 e.Effect = DragDropEffects.None;
-        }
-
-        private void BindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
         }
 
         private void FileNameListBox1_DragDrop(object sender, DragEventArgs e)
@@ -125,7 +222,7 @@ namespace CrewApp2
 
         }
 
-        private void fileNameListBox1_DragEnter(object sender, DragEventArgs e)
+        private void FileNameListBox1_DragEnter(object sender, DragEventArgs e)
         {
             //コントロール内にドラッグされたとき実行される
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -136,18 +233,70 @@ namespace CrewApp2
                 e.Effect = DragDropEffects.None;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void ShipNameComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
+          crew_MasterBindingSource.Filter = string.Format("ShipName like '{0:s}'", shipNameComboBox.Text);
+        }
 
-            this.Validate();
-            this.crew_ApplicationBindingSource.EndEdit();
-            this.crew_MasterBindingSource.EndEdit();
-            this.crew_ConfidencialReportBindingSource.EndEdit();
-            this.crew_MasterTableAdapter.Update(aZUREDBDataSet.Crew_Master);
-            this.crew_ApplicationTableAdapter.Update(aZUREDBDataSet.Crew_Application);
-            this.crew_ConfidencialReportTableAdapter.Update(aZUREDBDataSet.Crew_ConfidencialReport);
+        private void ShipNameComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("ShipName like '%{0}%'", shipNameComboBox.Text);
+        }
+
+        private void ShipNameComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+           // crew_MasterBindingSource.Filter = string.Format("ShipName like '%{0}%'", shipNameComboBox.Text);
+        }
+
+        private void ShipNameComboBox_DisplayMemberChanged(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("ShipName like '%{0}%'", shipNameComboBox.Text);
+        }
 
 
+        private void FullName_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
+        }
+
+        private void FullNamecomboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
+        }
+
+        private void FullName_KeyDown(object sender, KeyEventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
+        }
+
+        private void FullNamecomboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FullNamecomboBox.DataSource = crewMaster1BindingSource;
+            FullNamecomboBox.DisplayMember = "FullName";
+        }
+
+        private void FullNamecomboBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            FullNamecomboBox.DataSource = crewMaster1BindingSource;
+            FullNamecomboBox.DisplayMember = "FullName";
+
+        }
+
+        private void FullNamecomboBox_MouseEnter(object sender, EventArgs e)
+        {
+            FullNamecomboBox.DataSource = crewMaster1BindingSource;
+            FullNamecomboBox.DisplayMember = "FullName";
+        }
+
+        private void FullNamecomboBox_MouseLeave(object sender, EventArgs e)
+        {
+           // crew_MasterBindingSource.RemoveFilter();
+        }
+
+        private void shipNameComboBox_Enter(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.RemoveFilter();
         }
     }
 }

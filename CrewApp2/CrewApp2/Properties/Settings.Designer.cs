@@ -71,5 +71,29 @@ namespace CrewApp2.Properties {
                 this["UserName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string cREWINGNote {
+            get {
+                return ((string)(this["cREWINGNote"]));
+            }
+            set {
+                this["cREWINGNote"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gENNote {
+            get {
+                return ((string)(this["gENNote"]));
+            }
+            set {
+                this["gENNote"] = value;
+            }
+        }
     }
 }
