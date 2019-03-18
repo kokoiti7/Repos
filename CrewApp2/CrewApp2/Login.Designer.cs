@@ -37,6 +37,7 @@
             this.crew_MasterTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter();
             this.tableAdapterManager = new CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.PasswordText = new System.Windows.Forms.TextBox();
+            this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.PleaseInputName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PleaseInputName.Name = "PleaseInputName";
             this.PleaseInputName.Size = new System.Drawing.Size(196, 24);
-            this.PleaseInputName.TabIndex = 2;
+            this.PleaseInputName.TabIndex = 3;
             this.PleaseInputName.Text = "Please Your Input Name";
             // 
             // Logi
@@ -69,10 +70,10 @@
             this.Logi.Location = new System.Drawing.Point(335, 219);
             this.Logi.Name = "Logi";
             this.Logi.Size = new System.Drawing.Size(135, 62);
-            this.Logi.TabIndex = 17;
+            this.Logi.TabIndex = 2;
             this.Logi.Text = "Login";
             this.Logi.UseVisualStyleBackColor = false;
-            this.Logi.Click += new System.EventHandler(this.Logi_Click);
+            this.Logi.Click += new System.EventHandler(this.Login_Click);
             // 
             // aZUREDBDataSet
             // 
@@ -103,7 +104,20 @@
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.PasswordChar = '*';
             this.PasswordText.Size = new System.Drawing.Size(451, 30);
-            this.PasswordText.TabIndex = 18;
+            this.PasswordText.TabIndex = 1;
+            // 
+            // Cancel
+            // 
+            this.Cancel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Cancel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Cancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Cancel.Location = new System.Drawing.Point(182, 219);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(135, 62);
+            this.Cancel.TabIndex = 4;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Login
             // 
@@ -111,6 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(486, 293);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.PasswordText);
             this.Controls.Add(this.Logi);
             this.Controls.Add(this.PleaseInputName);
@@ -120,6 +135,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "Login";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).EndInit();
@@ -138,5 +154,6 @@
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button Logi;
         private System.Windows.Forms.TextBox PasswordText;
+        private System.Windows.Forms.Button Cancel;
     }
 }

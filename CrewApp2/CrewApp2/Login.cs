@@ -18,6 +18,8 @@ namespace CrewApp2
 
     public partial class Login : Form
     {
+        
+        public string flag;
 
         public Login()
         {
@@ -34,16 +36,18 @@ namespace CrewApp2
 
         private void Login_Load(object sender, EventArgs e)
         {
+            this.ControlBox = !this.ControlBox;
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
 
         }
 
 
-        private void Logi_Click(object sender, EventArgs e)
+        public  void Login_Click(object sender, EventArgs e)
         {
 
             string SqlConnectionstring = @"Data Source=temmazure.database.windows.net;Initial Catalog=AZUREDB;Persist Security Info=True;User ID=kmito;Password=Kk310pom;";
+           
 
           
                 SqlConnection sqlCon = new SqlConnection(SqlConnectionstring);
@@ -64,11 +68,12 @@ namespace CrewApp2
                     {
 
                         Form1 Form1 = new Form1();
+
                         Properties.Settings.Default.UserNames = LoginUserName.Text;
 
                         Properties.Settings.Default.Save();
 
-                        Form1.logname = LoginUserName.Text;
+                        Form1.logname = "["+LoginUserName.Text+"]";
 
                         this.Close();
                     }
@@ -96,8 +101,16 @@ namespace CrewApp2
                 }
          }
 
-            
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
 
+
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

@@ -28,33 +28,39 @@ namespace CrewApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             Login login = new Login();
             login.ShowDialog(this);
+
+
             
 
-          
-            // TODO: このコード行はデータを 'aZUREDBDataSet1.Crew_Master1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_Master1TableAdapter.Fill(this.aZUREDBDataSet1.Crew_Master1);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
-
-            cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
 
-            username.Text = Properties.Settings.Default.UserNames;
+
+                // TODO: このコード行はデータを 'aZUREDBDataSet1.Crew_Master1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_Master1TableAdapter.Fill(this.aZUREDBDataSet1.Crew_Master1);
+                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
+                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
+                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+                this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+
+                cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
 
-            crew_MasterBindingSource.RemoveFilter();
+                username.Text = Properties.Settings.Default.UserNames;
+
+
+                crew_MasterBindingSource.RemoveFilter();
+            
 
         }
 
