@@ -42,10 +42,10 @@
             // 
             // CrewwingText
             // 
-            this.CrewwingText.Location = new System.Drawing.Point(3, 78);
+            this.CrewwingText.Location = new System.Drawing.Point(3, 56);
             this.CrewwingText.Multiline = true;
             this.CrewwingText.Name = "CrewwingText";
-            this.CrewwingText.Size = new System.Drawing.Size(537, 148);
+            this.CrewwingText.Size = new System.Drawing.Size(533, 148);
             this.CrewwingText.TabIndex = 1;
             // 
             // dateTimePicker1

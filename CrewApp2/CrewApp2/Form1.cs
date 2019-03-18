@@ -13,23 +13,26 @@ using System.Windows.Forms;
 
 namespace CrewApp2
 {
+
     public partial class Form1 : Form
     { 
         public string logname;
         public string savenote;
-  
-
+        public string crewtxt;
 
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
+            login.ShowDialog(this);
+            
 
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master2' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.crew_Master2TableAdapter.Fill(this.aZUREDBDataSet.Crew_Master2);
+          
             // TODO: このコード行はデータを 'aZUREDBDataSet1.Crew_Master1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_Master1TableAdapter.Fill(this.aZUREDBDataSet1.Crew_Master1);
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -45,57 +48,33 @@ namespace CrewApp2
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
 
-            cREWINGNoteTextBox.Text = Properties.Settings.Default.CREWINGNote;
+            cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
-            username.Text = logname;
+
+            username.Text = Properties.Settings.Default.UserNames;
+
 
             crew_MasterBindingSource.RemoveFilter();
 
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
 
-           
+        private void TECHNoteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Form InputNote = new Form();
 
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Login Login = new Login();
-            Properties.Settings.Default.CREWINGNote = cREWINGNoteTextBox.Text;
-            Properties.Settings.Default.Save();
-            Login.Close();
-        }
-
-        private void Form1_Activated(object sender, EventArgs e)
+        private void CREWINGNoteTextBox_MouseEnter(object sender, EventArgs e)
         {
 
-        }
-
-        private void Form1_Enter(object sender, EventArgs e)
-        {
-            cREWINGNoteTextBox.Text = savenote;
-        }
-
-        private void Form1_MouseEnter(object sender, EventArgs e)
-        {
-            cREWINGNoteTextBox.Text = Properties.Settings.Default.CrewinNote;
-
-            Properties.Settings.Default.CrewinNote = cREWINGNoteTextBox.Text;
-            Properties.Settings.Default.Save();
+            cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
             this.Validate();
-            this.crew_ApplicationBindingSource.EndEdit();
             this.crew_MasterBindingSource.EndEdit();
-            this.crew_ConfidencialReportBindingSource.EndEdit();
-            this.crew_MasterTableAdapter.Update(aZUREDBDataSet.Crew_Master);
-            this.crew_ApplicationTableAdapter.Update(aZUREDBDataSet.Crew_Application);
-            this.crew_ConfidencialReportTableAdapter.Update(aZUREDBDataSet.Crew_ConfidencialReport);
-
-
+            this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
+            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
         }
-
 
 
 
@@ -194,7 +173,7 @@ namespace CrewApp2
         private void Filter_Click(object sender, EventArgs e)
         {
             crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
-            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", shipNameComboBox.Text);
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", RankComboBox.Text);
         }
 
         private void Refresh_Click(object sender, EventArgs e)
@@ -211,8 +190,17 @@ namespace CrewApp2
         private void SaveNote_Click(object sender, EventArgs e)
         {
             InputNote InputNote = new InputNote();
+
+            InputNote.inputform= cREWINGNoteTextBox.Text;
+
             InputNote.Show();
 
+        }
+
+        private void AddPerson_Click(object sender, EventArgs e)
+        {
+            AddPerson Addperson = new AddPerson();
+            Addperson.Show();
         }
 
 
@@ -302,34 +290,19 @@ namespace CrewApp2
                 e.Effect = DragDropEffects.None;
         }
 
-
-        private void ShipNameComboBox_SelectedValueChanged(object sender, EventArgs e)
+        private void RankComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-          crew_MasterBindingSource.Filter = string.Format("PresentRANK like '{0:s}'", shipNameComboBox.Text);
+            crew_MasterBindingSource.Filter = string.Format("PresentRANK like '{0:s}'", RankComboBox.Text);
         }
 
-        private void ShipNameComboBox_KeyDown(object sender, KeyEventArgs e)
+        private void RankComboBox_KeyDown(object sender, KeyEventArgs e)
         {
-            crew_MasterBindingSource.Filter = string.Format("PresentRANK like '%{0}%'", shipNameComboBox.Text);
+            crew_MasterBindingSource.Filter = string.Format("PresentRANK like '%{0}%'", RankComboBox.Text);
         }
 
-        private void ShipNameComboBox_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-           // crew_MasterBindingSource.Filter = string.Format("ShipName like '%{0}%'", shipNameComboBox.Text);
-        }
-
-        private void ShipNameComboBox_DisplayMemberChanged(object sender, EventArgs e)
-        {
-            crew_MasterBindingSource.Filter = string.Format("PresentRANK like '%{0}%'", shipNameComboBox.Text);
-        }
-
-        private void ShipNameComboBox_Enter(object sender, EventArgs e)
+        private void RankComboBox_Enter(object sender, EventArgs e)
         {
             crew_MasterBindingSource.RemoveFilter();
-        }
-
-        private void ShipNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -371,12 +344,6 @@ namespace CrewApp2
         private void FullNamecomboBox_MouseLeave(object sender, EventArgs e)
         {
            // crew_MasterBindingSource.RemoveFilter();
-        }
-
-        private void TECHNoteTextBox_TextChanged(object sender, EventArgs e)
-        {
-            Form InputNote = new Form();
-
         }
 
 

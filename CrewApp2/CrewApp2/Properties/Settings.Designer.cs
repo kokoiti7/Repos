@@ -95,5 +95,52 @@ namespace CrewApp2.Properties {
                 this["CrewinNote"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserNames {
+            get {
+                return ((string)(this["UserNames"]));
+            }
+            set {
+                this["UserNames"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BackupCrewwingNote {
+            get {
+                return ((string)(this["BackupCrewwingNote"]));
+            }
+            set {
+                this["BackupCrewwingNote"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LoginUsername {
+            get {
+                return ((string)(this["LoginUsername"]));
+            }
+            set {
+                this["LoginUsername"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public char LoginPassword {
+            get {
+                return ((char)(this["LoginPassword"]));
+            }
+            set {
+                this["LoginPassword"] = value;
+            }
+        }
     }
 }

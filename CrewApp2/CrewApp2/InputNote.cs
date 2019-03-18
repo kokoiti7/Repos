@@ -13,6 +13,7 @@ namespace CrewApp2
     public partial class InputNote : Form
     {
         public string form1st;
+        public string inputform;
 
         public InputNote()
         {
@@ -38,19 +39,20 @@ namespace CrewApp2
         private void Savetxt_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
+           
 
-            Properties.Settings.Default.CrewinNote = CrewwingText.Text + ";" + DateTime.Now.ToString("G");
+            string newtxt = "["+DateTime.Now.ToString("G") +"]"+"["+ Properties.Settings.Default.UserNames +"]"+"["+ CrewwingText.Text + "]" ;
+
+            string oldtxt = Environment.NewLine + Properties.Settings.Default.BackupCrewwingNote;
+
+            Properties.Settings.Default.BackupCrewwingNote = newtxt+oldtxt;
             Properties.Settings.Default.Save();
-            
 
-            Form1.cREWINGNoteTextBox.Text = CrewwingText.Text +";"+ DateTime.Now.ToString("G");
-
-          
-            this.Validate();
-            this.crew_MasterBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
-            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
-            this.Close();
+           this.Validate();
+           this.crew_MasterBindingSource.EndEdit();
+           this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
+           this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+           this.Close();
 
           
         }

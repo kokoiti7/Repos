@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.LoginUserName = new System.Windows.Forms.TextBox();
             this.PleaseInputName = new System.Windows.Forms.Label();
+            this.Logi = new System.Windows.Forms.Button();
             this.aZUREDBDataSet = new CrewApp2.AZUREDBDataSet();
             this.crew_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crew_MasterTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter();
             this.tableAdapterManager = new CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager();
-            this.Logi = new System.Windows.Forms.Button();
+            this.PasswordText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +54,25 @@
             // 
             this.PleaseInputName.AutoSize = true;
             this.PleaseInputName.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PleaseInputName.Location = new System.Drawing.Point(13, 33);
+            this.PleaseInputName.Location = new System.Drawing.Point(15, 30);
             this.PleaseInputName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PleaseInputName.Name = "PleaseInputName";
             this.PleaseInputName.Size = new System.Drawing.Size(196, 24);
             this.PleaseInputName.TabIndex = 2;
             this.PleaseInputName.Text = "Please Your Input Name";
+            // 
+            // Logi
+            // 
+            this.Logi.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Logi.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Logi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Logi.Location = new System.Drawing.Point(335, 219);
+            this.Logi.Name = "Logi";
+            this.Logi.Size = new System.Drawing.Size(135, 62);
+            this.Logi.TabIndex = 17;
+            this.Logi.Text = "Login";
+            this.Logi.UseVisualStyleBackColor = false;
+            this.Logi.Click += new System.EventHandler(this.Logi_Click);
             // 
             // aZUREDBDataSet
             // 
@@ -83,25 +97,21 @@
             this.tableAdapterManager.Ship_Master_TBTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // Logi
+            // PasswordText
             // 
-            this.Logi.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Logi.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Logi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Logi.Location = new System.Drawing.Point(335, 146);
-            this.Logi.Name = "Logi";
-            this.Logi.Size = new System.Drawing.Size(135, 62);
-            this.Logi.TabIndex = 17;
-            this.Logi.Text = "Login";
-            this.Logi.UseVisualStyleBackColor = false;
-            this.Logi.Click += new System.EventHandler(this.Logi_Click);
+            this.PasswordText.Location = new System.Drawing.Point(19, 146);
+            this.PasswordText.Name = "PasswordText";
+            this.PasswordText.PasswordChar = '*';
+            this.PasswordText.Size = new System.Drawing.Size(451, 30);
+            this.PasswordText.TabIndex = 18;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(486, 232);
+            this.ClientSize = new System.Drawing.Size(486, 293);
+            this.Controls.Add(this.PasswordText);
             this.Controls.Add(this.Logi);
             this.Controls.Add(this.PleaseInputName);
             this.Controls.Add(this.LoginUserName);
@@ -110,9 +120,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "Login";
             this.Text = "Login";
-
             this.Load += new System.EventHandler(this.Login_Load);
-    
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -129,5 +137,6 @@
         private AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter crew_MasterTableAdapter;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button Logi;
+        private System.Windows.Forms.TextBox PasswordText;
     }
 }
