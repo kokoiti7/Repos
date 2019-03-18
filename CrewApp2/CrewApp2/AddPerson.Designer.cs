@@ -75,6 +75,61 @@
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // masterIDLabel
+            // 
+            masterIDLabel.AutoSize = true;
+            masterIDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
+            masterIDLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            masterIDLabel.Location = new System.Drawing.Point(3, 27);
+            masterIDLabel.Name = "masterIDLabel";
+            masterIDLabel.Size = new System.Drawing.Size(119, 28);
+            masterIDLabel.TabIndex = 0;
+            masterIDLabel.Text = "Master ID:";
+            // 
+            // topeverIDLabel
+            // 
+            topeverIDLabel.AutoSize = true;
+            topeverIDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
+            topeverIDLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            topeverIDLabel.Location = new System.Drawing.Point(3, 74);
+            topeverIDLabel.Name = "topeverIDLabel";
+            topeverIDLabel.Size = new System.Drawing.Size(132, 28);
+            topeverIDLabel.TabIndex = 2;
+            topeverIDLabel.Text = "Topever ID:";
+            // 
+            // fullNameLabel
+            // 
+            fullNameLabel.AutoSize = true;
+            fullNameLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
+            fullNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            fullNameLabel.Location = new System.Drawing.Point(3, 126);
+            fullNameLabel.Name = "fullNameLabel";
+            fullNameLabel.Size = new System.Drawing.Size(122, 28);
+            fullNameLabel.TabIndex = 4;
+            fullNameLabel.Text = "Full Name:";
+            // 
+            // dOBLabel
+            // 
+            dOBLabel.AutoSize = true;
+            dOBLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
+            dOBLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dOBLabel.Location = new System.Drawing.Point(3, 177);
+            dOBLabel.Name = "dOBLabel";
+            dOBLabel.Size = new System.Drawing.Size(64, 28);
+            dOBLabel.TabIndex = 6;
+            dOBLabel.Text = "DOB:";
+            // 
+            // presentRANKLabel
+            // 
+            presentRANKLabel.AutoSize = true;
+            presentRANKLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
+            presentRANKLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            presentRANKLabel.Location = new System.Drawing.Point(3, 229);
+            presentRANKLabel.Name = "presentRANKLabel";
+            presentRANKLabel.Size = new System.Drawing.Size(160, 28);
+            presentRANKLabel.TabIndex = 41;
+            presentRANKLabel.Text = "Present RANK:";
+            // 
             // aZUREDBDataSet
             // 
             this.aZUREDBDataSet.DataSetName = "AZUREDBDataSet";
@@ -98,74 +153,30 @@
             this.tableAdapterManager.Ship_Master_TBTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // masterIDLabel
-            // 
-            masterIDLabel.AutoSize = true;
-            masterIDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
-            masterIDLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            masterIDLabel.Location = new System.Drawing.Point(0, 41);
-            masterIDLabel.Name = "masterIDLabel";
-            masterIDLabel.Size = new System.Drawing.Size(119, 28);
-            masterIDLabel.TabIndex = 0;
-            masterIDLabel.Text = "Master ID:";
-            // 
             // masterIDTextBox
             // 
             this.masterIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "MasterID", true));
             this.masterIDTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.masterIDTextBox.Location = new System.Drawing.Point(166, 38);
+            this.masterIDTextBox.Location = new System.Drawing.Point(169, 24);
             this.masterIDTextBox.Name = "masterIDTextBox";
             this.masterIDTextBox.Size = new System.Drawing.Size(200, 31);
             this.masterIDTextBox.TabIndex = 1;
             this.masterIDTextBox.Visible = false;
             // 
-            // topeverIDLabel
-            // 
-            topeverIDLabel.AutoSize = true;
-            topeverIDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
-            topeverIDLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            topeverIDLabel.Location = new System.Drawing.Point(0, 88);
-            topeverIDLabel.Name = "topeverIDLabel";
-            topeverIDLabel.Size = new System.Drawing.Size(132, 28);
-            topeverIDLabel.TabIndex = 2;
-            topeverIDLabel.Text = "Topever ID:";
-            // 
             // topeverIDTextBox
             // 
             this.topeverIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "TopeverID", true));
             this.topeverIDTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.topeverIDTextBox.Location = new System.Drawing.Point(166, 85);
+            this.topeverIDTextBox.Location = new System.Drawing.Point(169, 71);
             this.topeverIDTextBox.Name = "topeverIDTextBox";
             this.topeverIDTextBox.Size = new System.Drawing.Size(200, 31);
             this.topeverIDTextBox.TabIndex = 3;
-            // 
-            // fullNameLabel
-            // 
-            fullNameLabel.AutoSize = true;
-            fullNameLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
-            fullNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            fullNameLabel.Location = new System.Drawing.Point(0, 140);
-            fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(122, 28);
-            fullNameLabel.TabIndex = 4;
-            fullNameLabel.Text = "Full Name:";
-            // 
-            // dOBLabel
-            // 
-            dOBLabel.AutoSize = true;
-            dOBLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
-            dOBLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dOBLabel.Location = new System.Drawing.Point(0, 191);
-            dOBLabel.Name = "dOBLabel";
-            dOBLabel.Size = new System.Drawing.Size(64, 28);
-            dOBLabel.TabIndex = 6;
-            dOBLabel.Text = "DOB:";
             // 
             // dOBDateTimePicker
             // 
             this.dOBDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.crew_MasterBindingSource, "DOB", true));
             this.dOBDateTimePicker.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.dOBDateTimePicker.Location = new System.Drawing.Point(166, 188);
+            this.dOBDateTimePicker.Location = new System.Drawing.Point(169, 174);
             this.dOBDateTimePicker.Name = "dOBDateTimePicker";
             this.dOBDateTimePicker.Size = new System.Drawing.Size(200, 31);
             this.dOBDateTimePicker.TabIndex = 7;
@@ -175,24 +186,13 @@
             this.AddPersonName.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.AddPersonName.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.AddPersonName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddPersonName.Location = new System.Drawing.Point(231, 281);
+            this.AddPersonName.Location = new System.Drawing.Point(169, 281);
             this.AddPersonName.Name = "AddPersonName";
-            this.AddPersonName.Size = new System.Drawing.Size(135, 62);
+            this.AddPersonName.Size = new System.Drawing.Size(200, 62);
             this.AddPersonName.TabIndex = 41;
             this.AddPersonName.Text = "AddName";
             this.AddPersonName.UseVisualStyleBackColor = false;
             this.AddPersonName.Click += new System.EventHandler(this.AddPersonName_Click);
-            // 
-            // presentRANKLabel
-            // 
-            presentRANKLabel.AutoSize = true;
-            presentRANKLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
-            presentRANKLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            presentRANKLabel.Location = new System.Drawing.Point(0, 243);
-            presentRANKLabel.Name = "presentRANKLabel";
-            presentRANKLabel.Size = new System.Drawing.Size(160, 28);
-            presentRANKLabel.TabIndex = 41;
-            presentRANKLabel.Text = "Present RANK:";
             // 
             // presentRANKComboBox
             // 
@@ -219,7 +219,7 @@
             "E/C",
             "ELC",
             "R/O"});
-            this.presentRANKComboBox.Location = new System.Drawing.Point(166, 239);
+            this.presentRANKComboBox.Location = new System.Drawing.Point(169, 225);
             this.presentRANKComboBox.Name = "presentRANKComboBox";
             this.presentRANKComboBox.Size = new System.Drawing.Size(200, 32);
             this.presentRANKComboBox.TabIndex = 42;
@@ -382,7 +382,7 @@
             // 
             this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "FullName", true));
             this.fullNameTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.fullNameTextBox.Location = new System.Drawing.Point(166, 140);
+            this.fullNameTextBox.Location = new System.Drawing.Point(169, 126);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(200, 31);
             this.fullNameTextBox.TabIndex = 43;
