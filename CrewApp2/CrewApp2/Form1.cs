@@ -201,7 +201,18 @@ namespace CrewApp2
 
             InputNote.inputform= cREWINGNoteTextBox.Text;
 
-            InputNote.Show();
+            InputNote.ShowDialog();
+
+            
+            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
+
+            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+
+            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+
+            this.crew_MasterBindingSource.RemoveFilter();
+      
+            crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
 
         }
 
@@ -324,14 +335,7 @@ namespace CrewApp2
         private void Form1_Activated(object sender, EventArgs e)
         {
 
-            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
-
-            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-
-            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
-
-            crew_MasterBindingSource.RemoveFilter();
-            crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
+       
         }
 
         private void Crew_MasterDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
