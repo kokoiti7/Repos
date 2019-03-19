@@ -36,16 +36,17 @@
             this.crew_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crew_MasterTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter();
             this.tableAdapterManager = new CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager();
+            this.OldTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CrewwingText
             // 
-            this.CrewwingText.Location = new System.Drawing.Point(3, 56);
+            this.CrewwingText.Location = new System.Drawing.Point(3, 117);
             this.CrewwingText.Multiline = true;
             this.CrewwingText.Name = "CrewwingText";
-            this.CrewwingText.Size = new System.Drawing.Size(533, 148);
+            this.CrewwingText.Size = new System.Drawing.Size(533, 109);
             this.CrewwingText.TabIndex = 1;
             // 
             // dateTimePicker1
@@ -93,12 +94,24 @@
             this.tableAdapterManager.Ship_Master_TBTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = CrewApp2.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // OldTextBox
+            // 
+            this.OldTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "CREWINGNote", true));
+            this.OldTextBox.Location = new System.Drawing.Point(3, 47);
+            this.OldTextBox.Multiline = true;
+            this.OldTextBox.Name = "OldTextBox";
+            this.OldTextBox.ReadOnly = true;
+            this.OldTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.OldTextBox.Size = new System.Drawing.Size(533, 64);
+            this.OldTextBox.TabIndex = 17;
+            // 
             // InputNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(548, 306);
+            this.Controls.Add(this.OldTextBox);
             this.Controls.Add(this.SaveTxt);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.CrewwingText);
@@ -120,5 +133,6 @@
         private System.Windows.Forms.BindingSource crew_MasterBindingSource;
         private AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter crew_MasterTableAdapter;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        public System.Windows.Forms.TextBox OldTextBox;
     }
 }

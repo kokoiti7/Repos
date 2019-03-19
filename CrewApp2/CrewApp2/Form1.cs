@@ -29,37 +29,21 @@ namespace CrewApp2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            TableFill();
+
+            FullNameComboBox.DataSource = aZUREDBDataSet.Crew_Master;
+            FullNameComboBox.DisplayMember = "FullName";
+
             Login login = new Login();
+
             login.ShowDialog(this);
 
 
-            
+            cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
+            username.Text = Properties.Settings.Default.UserNames;
 
-
-
-                // TODO: このコード行はデータを 'aZUREDBDataSet1.Crew_Master1' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_Master1TableAdapter.Fill(this.aZUREDBDataSet1.Crew_Master1);
-                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
-                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_ConfidencialReport' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
-                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Application' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
-                // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-                this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
-
-                cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
-
-
-                username.Text = Properties.Settings.Default.UserNames;
-
-
-                crew_MasterBindingSource.RemoveFilter();
+            crew_MasterBindingSource.RemoveFilter();
             
 
         }
@@ -74,15 +58,24 @@ namespace CrewApp2
         private void CREWINGNoteTextBox_MouseEnter(object sender, EventArgs e)
         {
 
-            cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
+          //  cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
-            this.Validate();
-            this.crew_MasterBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
-            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+          //  this.Validate();
+          //  this.crew_MasterBindingSource.EndEdit();
+          //  this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
+           // this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
         }
 
+        public void  TableFill()
+        {
+           
 
+            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
+          
+            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+   
+            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+        }
 
         private void Crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -178,14 +171,21 @@ namespace CrewApp2
 
         private void Filter_Click(object sender, EventArgs e)
         {
-            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
+            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNameComboBox.Text);
             crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", RankComboBox.Text);
         }
 
         private void Refresh_Click(object sender, EventArgs e)
         {
 
+            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
+
+            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+
+            crew_MasterBindingSource.RemoveFilter();
+
         }
 
         private void RemoveFilter_Click(object sender, EventArgs e)
@@ -296,6 +296,7 @@ namespace CrewApp2
                 e.Effect = DragDropEffects.None;
         }
 
+
         private void RankComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             crew_MasterBindingSource.Filter = string.Format("PresentRANK like '{0:s}'", RankComboBox.Text);
@@ -308,50 +309,26 @@ namespace CrewApp2
 
         private void RankComboBox_Enter(object sender, EventArgs e)
         {
+           
+
+        }
+
+
+        private void FullNameComboBox_TextChanged(object sender, EventArgs e)
+        {
+            crew_MasterBindingSource.Filter = string.Format("FullName like '{0:s}'", FullNameComboBox.Text);
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+
+            this.crew_ConfidencialReportTableAdapter.Fill(this.aZUREDBDataSet.Crew_ConfidencialReport);
+
+            this.crew_ApplicationTableAdapter.Fill(this.aZUREDBDataSet.Crew_Application);
+
+            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+
             crew_MasterBindingSource.RemoveFilter();
-
         }
-
-
-        private void FullName_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
-        }
-
-        private void FullNamecomboBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
-        }
-
-        private void FullName_KeyDown(object sender, KeyEventArgs e)
-        {
-            crew_MasterBindingSource.Filter = string.Format("FullName like '%{0}%'", FullNamecomboBox.Text);
-        }
-
-        private void FullNamecomboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            FullNamecomboBox.DataSource = crewMaster1BindingSource;
-            FullNamecomboBox.DisplayMember = "FullName";
-        }
-
-        private void FullNamecomboBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            FullNamecomboBox.DataSource = crewMaster1BindingSource;
-            FullNamecomboBox.DisplayMember = "FullName";
-
-        }
-
-        private void FullNamecomboBox_MouseEnter(object sender, EventArgs e)
-        {
-            FullNamecomboBox.DataSource = crewMaster1BindingSource;
-            FullNamecomboBox.DisplayMember = "FullName";
-        }
-
-        private void FullNamecomboBox_MouseLeave(object sender, EventArgs e)
-        {
-           // crew_MasterBindingSource.RemoveFilter();
-        }
-
-
     }
 }

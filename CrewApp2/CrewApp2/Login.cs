@@ -36,9 +36,13 @@ namespace CrewApp2
 
         private void Login_Load(object sender, EventArgs e)
         {
+            LoginUserName.Text= Properties.Settings.Default.UserNames;
+            PasswordText.Text=  Properties.Settings.Default.PasswordSave;
+
             this.ControlBox = !this.ControlBox;
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+
 
         }
 
@@ -46,11 +50,9 @@ namespace CrewApp2
         public  void Login_Click(object sender, EventArgs e)
         {
 
-            string SqlConnectionstring = @"Data Source=temmazure.database.windows.net;Initial Catalog=AZUREDB;Persist Security Info=True;User ID=kmito;Password=Kk310pom;";
-           
+            //  string SqlConnectionstring = @"Data Source=temmazure.database.windows.net;Initial Catalog=AZUREDB;Persist Security Info=True;User ID=kmito;Password=Kk310pom;";
 
-          
-                SqlConnection sqlCon = new SqlConnection(SqlConnectionstring);
+                SqlConnection sqlCon = new SqlConnection(Properties.Settings.Default.AZUREDBConnectionString);
                 try
                 {
                     if (sqlCon.State == System.Data.ConnectionState.Closed) sqlCon.Open();
@@ -74,6 +76,18 @@ namespace CrewApp2
                         Properties.Settings.Default.Save();
 
                         Form1.logname = "["+LoginUserName.Text+"]";
+
+                    if (RememberMe.Checked ==true)
+                    {
+
+                        Properties.Settings.Default.PasswordSave = PasswordText.Text;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.PasswordSave = "";
+                        Properties.Settings.Default.Save();
+                    }
 
                         this.Close();
                     }

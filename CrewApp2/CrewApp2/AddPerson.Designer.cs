@@ -80,18 +80,19 @@
             masterIDLabel.AutoSize = true;
             masterIDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
             masterIDLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            masterIDLabel.Location = new System.Drawing.Point(3, 27);
+            masterIDLabel.Location = new System.Drawing.Point(59, 355);
             masterIDLabel.Name = "masterIDLabel";
             masterIDLabel.Size = new System.Drawing.Size(119, 28);
             masterIDLabel.TabIndex = 0;
             masterIDLabel.Text = "Master ID:";
+            masterIDLabel.Visible = false;
             // 
             // topeverIDLabel
             // 
             topeverIDLabel.AutoSize = true;
             topeverIDLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
             topeverIDLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            topeverIDLabel.Location = new System.Drawing.Point(3, 74);
+            topeverIDLabel.Location = new System.Drawing.Point(46, 28);
             topeverIDLabel.Name = "topeverIDLabel";
             topeverIDLabel.Size = new System.Drawing.Size(132, 28);
             topeverIDLabel.TabIndex = 2;
@@ -102,7 +103,7 @@
             fullNameLabel.AutoSize = true;
             fullNameLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
             fullNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            fullNameLabel.Location = new System.Drawing.Point(3, 126);
+            fullNameLabel.Location = new System.Drawing.Point(46, 110);
             fullNameLabel.Name = "fullNameLabel";
             fullNameLabel.Size = new System.Drawing.Size(122, 28);
             fullNameLabel.TabIndex = 4;
@@ -113,7 +114,7 @@
             dOBLabel.AutoSize = true;
             dOBLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
             dOBLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dOBLabel.Location = new System.Drawing.Point(3, 177);
+            dOBLabel.Location = new System.Drawing.Point(46, 187);
             dOBLabel.Name = "dOBLabel";
             dOBLabel.Size = new System.Drawing.Size(64, 28);
             dOBLabel.TabIndex = 6;
@@ -124,7 +125,7 @@
             presentRANKLabel.AutoSize = true;
             presentRANKLabel.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold);
             presentRANKLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            presentRANKLabel.Location = new System.Drawing.Point(3, 229);
+            presentRANKLabel.Location = new System.Drawing.Point(46, 270);
             presentRANKLabel.Name = "presentRANKLabel";
             presentRANKLabel.Size = new System.Drawing.Size(160, 28);
             presentRANKLabel.TabIndex = 41;
@@ -157,36 +158,37 @@
             // 
             this.masterIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "MasterID", true));
             this.masterIDTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.masterIDTextBox.Location = new System.Drawing.Point(169, 24);
+            this.masterIDTextBox.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.masterIDTextBox.Location = new System.Drawing.Point(220, 403);
             this.masterIDTextBox.Name = "masterIDTextBox";
-            this.masterIDTextBox.Size = new System.Drawing.Size(200, 31);
-            this.masterIDTextBox.TabIndex = 1;
+            this.masterIDTextBox.Size = new System.Drawing.Size(28, 31);
+            this.masterIDTextBox.TabIndex = 36;
             this.masterIDTextBox.Visible = false;
             // 
             // topeverIDTextBox
             // 
-            this.topeverIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "TopeverID", true));
+            this.topeverIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "TopeverID", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0"));
             this.topeverIDTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.topeverIDTextBox.Location = new System.Drawing.Point(169, 71);
+            this.topeverIDTextBox.Location = new System.Drawing.Point(51, 59);
             this.topeverIDTextBox.Name = "topeverIDTextBox";
             this.topeverIDTextBox.Size = new System.Drawing.Size(200, 31);
-            this.topeverIDTextBox.TabIndex = 3;
+            this.topeverIDTextBox.TabIndex = 37;
             // 
             // dOBDateTimePicker
             // 
             this.dOBDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.crew_MasterBindingSource, "DOB", true));
             this.dOBDateTimePicker.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.dOBDateTimePicker.Location = new System.Drawing.Point(169, 174);
+            this.dOBDateTimePicker.Location = new System.Drawing.Point(51, 218);
             this.dOBDateTimePicker.Name = "dOBDateTimePicker";
             this.dOBDateTimePicker.Size = new System.Drawing.Size(200, 31);
-            this.dOBDateTimePicker.TabIndex = 7;
+            this.dOBDateTimePicker.TabIndex = 39;
             // 
             // AddPersonName
             // 
             this.AddPersonName.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.AddPersonName.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.AddPersonName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddPersonName.Location = new System.Drawing.Point(169, 281);
+            this.AddPersonName.Location = new System.Drawing.Point(48, 386);
             this.AddPersonName.Name = "AddPersonName";
             this.AddPersonName.Size = new System.Drawing.Size(200, 62);
             this.AddPersonName.TabIndex = 41;
@@ -219,10 +221,10 @@
             "E/C",
             "ELC",
             "R/O"});
-            this.presentRANKComboBox.Location = new System.Drawing.Point(169, 225);
+            this.presentRANKComboBox.Location = new System.Drawing.Point(51, 301);
             this.presentRANKComboBox.Name = "presentRANKComboBox";
             this.presentRANKComboBox.Size = new System.Drawing.Size(200, 32);
-            this.presentRANKComboBox.TabIndex = 42;
+            this.presentRANKComboBox.TabIndex = 40;
             // 
             // crew_MasterDataGridView
             // 
@@ -250,11 +252,12 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
             this.crew_MasterDataGridView.DataSource = this.crew_MasterBindingSource;
-            this.crew_MasterDataGridView.Location = new System.Drawing.Point(107, 358);
+            this.crew_MasterDataGridView.Location = new System.Drawing.Point(220, 438);
             this.crew_MasterDataGridView.Name = "crew_MasterDataGridView";
             this.crew_MasterDataGridView.RowTemplate.Height = 21;
-            this.crew_MasterDataGridView.Size = new System.Drawing.Size(262, 159);
+            this.crew_MasterDataGridView.Size = new System.Drawing.Size(28, 10);
             this.crew_MasterDataGridView.TabIndex = 42;
+            this.crew_MasterDataGridView.TabStop = false;
             this.crew_MasterDataGridView.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
@@ -382,17 +385,17 @@
             // 
             this.fullNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.crew_MasterBindingSource, "FullName", true));
             this.fullNameTextBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.fullNameTextBox.Location = new System.Drawing.Point(169, 126);
+            this.fullNameTextBox.Location = new System.Drawing.Point(51, 141);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(200, 31);
-            this.fullNameTextBox.TabIndex = 43;
+            this.fullNameTextBox.TabIndex = 38;
             // 
             // AddPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(381, 355);
+            this.ClientSize = new System.Drawing.Size(261, 468);
             this.Controls.Add(this.fullNameTextBox);
             this.Controls.Add(this.crew_MasterDataGridView);
             this.Controls.Add(presentRANKLabel);

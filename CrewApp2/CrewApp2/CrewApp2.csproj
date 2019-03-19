@@ -111,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AZUREDBDataSet.xsc">
       <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
@@ -149,6 +150,21 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ダウンロード.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\テムマリタイム.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\テムマリタイム1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\テムマリタイム2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

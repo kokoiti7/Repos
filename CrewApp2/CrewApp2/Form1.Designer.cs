@@ -80,20 +80,19 @@
             this.mRNNoteTextBox = new System.Windows.Forms.TextBox();
             this.TECHNoteTextBox = new System.Windows.Forms.TextBox();
             this.gENNoteTextBox = new System.Windows.Forms.TextBox();
-            this.crewMaster2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.crewMaster2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RemoveFilter = new System.Windows.Forms.Button();
-            this.FullNamecomboBox = new System.Windows.Forms.ComboBox();
             this.crewMaster1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet1 = new CrewApp2.AZUREDBDataSet();
             this.crew_Master1TableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_Master1TableAdapter();
-            this.crew_Master2TableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter();
             this.SaveNote = new System.Windows.Forms.Button();
             this.username = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.RankComboBox = new System.Windows.Forms.ComboBox();
             this.AddPerson = new System.Windows.Forms.Button();
+            this.FullNameComboBox = new System.Windows.Forms.ComboBox();
+            this.crewMaster2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.crew_Master2TableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter();
+            this.crewMaster2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             cREWINGNoteLabel = new System.Windows.Forms.Label();
             mRNNoteLabel = new System.Windows.Forms.Label();
             tECHNoteLabel = new System.Windows.Forms.Label();
@@ -106,10 +105,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKCrewApplicationCrewApplicationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKCrewConfidencialReportCrewMasterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKCrewApplicationCrewApplicationBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewMaster1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cREWINGNoteLabel
@@ -234,7 +233,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.crew_MasterDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.crew_MasterDataGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 95);
+            this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 98);
             this.crew_MasterDataGridView.Name = "crew_MasterDataGridView";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -251,7 +250,7 @@
             this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.Window;
             this.crew_MasterDataGridView.RowTemplate.Height = 21;
-            this.crew_MasterDataGridView.Size = new System.Drawing.Size(664, 347);
+            this.crew_MasterDataGridView.Size = new System.Drawing.Size(664, 278);
             this.crew_MasterDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -427,10 +426,10 @@
             this.fileNameListBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.fileNameListBox.FormattingEnabled = true;
             this.fileNameListBox.ItemHeight = 24;
-            this.fileNameListBox.Location = new System.Drawing.Point(9, 469);
+            this.fileNameListBox.Location = new System.Drawing.Point(9, 421);
             this.fileNameListBox.Name = "fileNameListBox";
             this.fileNameListBox.ScrollAlwaysVisible = true;
-            this.fileNameListBox.Size = new System.Drawing.Size(340, 196);
+            this.fileNameListBox.Size = new System.Drawing.Size(340, 244);
             this.fileNameListBox.TabIndex = 5;
             this.fileNameListBox.ValueMember = "FileName";
             this.fileNameListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox_DragDrop);
@@ -452,10 +451,10 @@
             this.fileNameListBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.fileNameListBox1.FormattingEnabled = true;
             this.fileNameListBox1.ItemHeight = 24;
-            this.fileNameListBox1.Location = new System.Drawing.Point(367, 469);
+            this.fileNameListBox1.Location = new System.Drawing.Point(367, 421);
             this.fileNameListBox1.Name = "fileNameListBox1";
             this.fileNameListBox1.ScrollAlwaysVisible = true;
-            this.fileNameListBox1.Size = new System.Drawing.Size(306, 196);
+            this.fileNameListBox1.Size = new System.Drawing.Size(306, 244);
             this.fileNameListBox1.TabIndex = 7;
             this.fileNameListBox1.ValueMember = "FileName";
             this.fileNameListBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.FileNameListBox1_DragDrop);
@@ -503,10 +502,10 @@
             this.Save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Save.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Save.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Save.Location = new System.Drawing.Point(401, 11);
+            this.Save.Location = new System.Drawing.Point(1039, 8);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(135, 43);
-            this.Save.TabIndex = 14;
+            this.Save.TabIndex = 6;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
@@ -516,10 +515,10 @@
             this.Refresh.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Refresh.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Refresh.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Refresh.Location = new System.Drawing.Point(542, 11);
+            this.Refresh.Location = new System.Drawing.Point(1188, 8);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(135, 43);
-            this.Refresh.TabIndex = 15;
+            this.Refresh.TabIndex = 7;
             this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = false;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
@@ -579,16 +578,6 @@
             this.gENNoteTextBox.Size = new System.Drawing.Size(614, 58);
             this.gENNoteTextBox.TabIndex = 19;
             // 
-            // crewMaster2BindingSource1
-            // 
-            this.crewMaster2BindingSource1.DataMember = "Crew_Master2";
-            this.crewMaster2BindingSource1.DataSource = this.aZUREDBDataSet;
-            // 
-            // crewMaster2BindingSource
-            // 
-            this.crewMaster2BindingSource.DataMember = "Crew_Master2";
-            this.crewMaster2BindingSource.DataSource = this.aZUREDBDataSet;
-            // 
             // RemoveFilter
             // 
             this.RemoveFilter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -596,28 +585,11 @@
             this.RemoveFilter.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.RemoveFilter.Location = new System.Drawing.Point(174, 11);
             this.RemoveFilter.Name = "RemoveFilter";
-            this.RemoveFilter.Size = new System.Drawing.Size(195, 43);
-            this.RemoveFilter.TabIndex = 26;
+            this.RemoveFilter.Size = new System.Drawing.Size(195, 78);
+            this.RemoveFilter.TabIndex = 2;
             this.RemoveFilter.Text = "RemoveFilter";
             this.RemoveFilter.UseVisualStyleBackColor = false;
             this.RemoveFilter.Click += new System.EventHandler(this.RemoveFilter_Click);
-            // 
-            // FullNamecomboBox
-            // 
-            this.FullNamecomboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.FullNamecomboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.FullNamecomboBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
-            this.FullNamecomboBox.FormattingEnabled = true;
-            this.FullNamecomboBox.Location = new System.Drawing.Point(177, 60);
-            this.FullNamecomboBox.Name = "FullNamecomboBox";
-            this.FullNamecomboBox.Size = new System.Drawing.Size(194, 32);
-            this.FullNamecomboBox.TabIndex = 27;
-            this.FullNamecomboBox.SelectionChangeCommitted += new System.EventHandler(this.FullName_SelectionChangeCommitted);
-            this.FullNamecomboBox.SelectedValueChanged += new System.EventHandler(this.FullNamecomboBox_SelectedValueChanged);
-            this.FullNamecomboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FullName_KeyDown);
-            this.FullNamecomboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FullNamecomboBox_KeyPress);
-            this.FullNamecomboBox.MouseEnter += new System.EventHandler(this.FullNamecomboBox_MouseEnter);
-            this.FullNamecomboBox.MouseLeave += new System.EventHandler(this.FullNamecomboBox_MouseLeave);
             // 
             // crewMaster1BindingSource
             // 
@@ -633,10 +605,6 @@
             // 
             this.crew_Master1TableAdapter.ClearBeforeFill = true;
             // 
-            // crew_Master2TableAdapter
-            // 
-            this.crew_Master2TableAdapter.ClearBeforeFill = true;
-            // 
             // SaveNote
             // 
             this.SaveNote.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -645,7 +613,7 @@
             this.SaveNote.Location = new System.Drawing.Point(699, 8);
             this.SaveNote.Name = "SaveNote";
             this.SaveNote.Size = new System.Drawing.Size(211, 43);
-            this.SaveNote.TabIndex = 28;
+            this.SaveNote.TabIndex = 5;
             this.SaveNote.Text = "NewNote";
             this.SaveNote.UseVisualStyleBackColor = false;
             this.SaveNote.Click += new System.EventHandler(this.SaveNote_Click);
@@ -672,15 +640,11 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "[username]";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // RankComboBox
             // 
             this.RankComboBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
             this.RankComboBox.FormattingEnabled = true;
+            this.RankComboBox.ItemHeight = 24;
             this.RankComboBox.Items.AddRange(new object[] {
             "Master",
             "C/O",
@@ -701,7 +665,7 @@
             "E/C",
             "ELC",
             "R/O"});
-            this.RankComboBox.Location = new System.Drawing.Point(401, 60);
+            this.RankComboBox.Location = new System.Drawing.Point(397, 53);
             this.RankComboBox.Name = "RankComboBox";
             this.RankComboBox.Size = new System.Drawing.Size(276, 32);
             this.RankComboBox.TabIndex = 30;
@@ -716,24 +680,91 @@
             this.AddPerson.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.AddPerson.Location = new System.Drawing.Point(12, 12);
             this.AddPerson.Name = "AddPerson";
-            this.AddPerson.Size = new System.Drawing.Size(135, 43);
-            this.AddPerson.TabIndex = 31;
+            this.AddPerson.Size = new System.Drawing.Size(156, 77);
+            this.AddPerson.TabIndex = 1;
             this.AddPerson.Text = "AddPerson";
             this.AddPerson.UseVisualStyleBackColor = false;
             this.AddPerson.Click += new System.EventHandler(this.AddPerson_Click);
+            // 
+            // FullNameComboBox
+            // 
+            this.FullNameComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "CONRADO B. MEDRIANO",
+            "LEO S. SALON",
+            "VIRGEL A. BARAOIDAN",
+            "IAN R. PALACIO",
+            "RODOLFO M. ROBLES",
+            "LAURO N. NEJAR",
+            "RICKY M. RAQUIN",
+            "FRANCIS A. TEMANIL",
+            "EDMUND R. ANDRADE",
+            "DAVE A. BACOMO",
+            "MARVIN C. ARRIENDA",
+            "JAYSON B. PANALIGAN",
+            "LORETO E. DUHAY-LONGSOD III",
+            "GENE GLEMIE III C. DELOS REYES",
+            "ROLAN V. ROSAS",
+            "ROGELIO C. SARONA JR.",
+            "REY M. DELOS REYES",
+            "MARBON D. MANALASTAS",
+            "HUBERTO T. OMPOC",
+            "JULIANNE RHOFER S. MAPUTE",
+            "SEAN NICOLE G. LLACUNA",
+            "DENNIS F. BATAYOLA",
+            "ANTHONY C. PERIGO",
+            "JEFFERSON G. FRACE",
+            "JEFFERSON G. FRACE",
+            "REYNALDO S. PAA",
+            "REYNALDO A. SOLTIS",
+            "ROMULO P. VIVAS JR.",
+            "NOEL P. BACALSO",
+            "MICHAEL C. CAWALING",
+            "JERBY M. BRITANIA",
+            "RODERICK C. ESTANIEL",
+            "HERMINIO B. TEMPLANZA JR.",
+            "RALP LESTER M. BUGUIS",
+            "CARLO U. GALLA",
+            "DOROTEO T. TUMAGAN",
+            "DEMBER M. GEREZ",
+            "GERARDO S. ROMARES"});
+            this.FullNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.FullNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.FullNameComboBox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Bold);
+            this.FullNameComboBox.FormattingEnabled = true;
+            this.FullNameComboBox.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.FullNameComboBox.ItemHeight = 24;
+            this.FullNameComboBox.Location = new System.Drawing.Point(397, 15);
+            this.FullNameComboBox.Name = "FullNameComboBox";
+            this.FullNameComboBox.Size = new System.Drawing.Size(276, 32);
+            this.FullNameComboBox.TabIndex = 32;
+            this.FullNameComboBox.TextChanged += new System.EventHandler(this.FullNameComboBox_TextChanged);
+            // 
+            // crewMaster2BindingSource1
+            // 
+            this.crewMaster2BindingSource1.DataMember = "Crew_Master2";
+            this.crewMaster2BindingSource1.DataSource = this.aZUREDBDataSet;
+            // 
+            // crew_Master2TableAdapter
+            // 
+            this.crew_Master2TableAdapter.ClearBeforeFill = true;
+            // 
+            // crewMaster2BindingSource
+            // 
+            this.crewMaster2BindingSource.DataMember = "Crew_Master2";
+            this.crewMaster2BindingSource.DataSource = this.aZUREDBDataSet;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1329, 682);
+            this.ClientSize = new System.Drawing.Size(1343, 685);
+            this.Controls.Add(this.FullNameComboBox);
             this.Controls.Add(this.AddPerson);
             this.Controls.Add(this.RankComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.username);
             this.Controls.Add(this.SaveNote);
-            this.Controls.Add(this.FullNamecomboBox);
             this.Controls.Add(this.RemoveFilter);
             this.Controls.Add(gENNoteLabel);
             this.Controls.Add(this.gENNoteTextBox);
@@ -752,6 +783,7 @@
             this.Controls.Add(this.fileNameTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crew_MasterBindingSource)).EndInit();
@@ -761,10 +793,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKCrewApplicationCrewApplicationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKCrewConfidencialReportCrewMasterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKCrewApplicationCrewApplicationBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewMaster1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.crewMaster2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,13 +825,9 @@
         private System.Windows.Forms.TextBox mRNNoteTextBox;
         private System.Windows.Forms.TextBox gENNoteTextBox;
         private System.Windows.Forms.Button RemoveFilter;
-        private System.Windows.Forms.ComboBox FullNamecomboBox;
         private AZUREDBDataSet aZUREDBDataSet1;
         private System.Windows.Forms.BindingSource crewMaster1BindingSource;
         private AZUREDBDataSetTableAdapters.Crew_Master1TableAdapter crew_Master1TableAdapter;
-        private System.Windows.Forms.BindingSource crewMaster2BindingSource;
-        private AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter crew_Master2TableAdapter;
-        private System.Windows.Forms.BindingSource crewMaster2BindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -825,9 +853,12 @@
         public System.Windows.Forms.TextBox cREWINGNoteTextBox;
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox RankComboBox;
         private System.Windows.Forms.Button AddPerson;
+        private System.Windows.Forms.ComboBox FullNameComboBox;
+        private System.Windows.Forms.BindingSource crewMaster2BindingSource1;
+        private AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter crew_Master2TableAdapter;
+        private System.Windows.Forms.BindingSource crewMaster2BindingSource;
     }
 }
 

@@ -17,7 +17,7 @@ namespace CrewApp2
             InitializeComponent();
         }
 
-        private void crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void Crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.crew_MasterBindingSource.EndEdit();
@@ -36,25 +36,44 @@ namespace CrewApp2
 
         private void AddPersonName_Click(object sender, EventArgs e)
         {
+           // MessageBox.Show(crew_MasterBindingSource.Count.ToString());
+           // MessageBox.Show(crew_MasterDataGridView.Rows.Count.ToString());
 
-            MessageBox.Show(crew_MasterDataGridView[1, 0].Value.ToString());
 
-            for (var i = 0;i < crew_MasterDataGridView.Rows.Count;i++)
+            int k = 0;
+
+            for (var i = 0 ; i < crew_MasterBindingSource.Count - 1 ; i++)
             {
-                if (topeverIDTextBox.Text == crew_MasterDataGridView[1, i].Value.ToString())
+
+                string serchno = topeverIDTextBox.Text;
+
+               // MessageBox.Show(crew_MasterDataGridView[1, i].Value.ToString());
+
+                if (serchno == crew_MasterDataGridView[1, i].Value.ToString())
                 {
-                    MessageBox.Show("RetryEnterNumber");
-                    break;
+                    k++;
+
                 }
+
 
             }
 
-            this.Validate();
-            this.crew_MasterBindingSource.EndEdit();
-            this.crew_MasterTableAdapter.Update(aZUREDBDataSet.Crew_Master);
-            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+         
+            if (k == 0)
+            {
+                
+                this.Validate();
+                this.crew_MasterBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+                this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Retry input ID");
+                return;
+            }
 
-            this.Close();
         }
     }
 }

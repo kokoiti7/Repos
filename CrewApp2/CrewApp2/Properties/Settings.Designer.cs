@@ -142,5 +142,17 @@ namespace CrewApp2.Properties {
                 this["LoginPassword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PasswordSave {
+            get {
+                return ((string)(this["PasswordSave"]));
+            }
+            set {
+                this["PasswordSave"] = value;
+            }
+        }
     }
 }

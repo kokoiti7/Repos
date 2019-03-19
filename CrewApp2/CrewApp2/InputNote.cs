@@ -38,23 +38,23 @@ namespace CrewApp2
 
         private void Savetxt_Click(object sender, EventArgs e)
         {
+
             Form1 Form1 = new Form1();
            
 
             string newtxt = "["+DateTime.Now.ToString("G") +"]"+"["+ Properties.Settings.Default.UserNames +"]"+"["+ CrewwingText.Text + "]" ;
 
-            string oldtxt = Environment.NewLine + Properties.Settings.Default.BackupCrewwingNote;
+            string oldtxt = OldTextBox.Text;
 
-            Properties.Settings.Default.BackupCrewwingNote = newtxt+oldtxt;
-            Properties.Settings.Default.Save();
+            OldTextBox.Text = newtxt + Environment.NewLine + oldtxt;
 
-           this.Validate();
-           this.crew_MasterBindingSource.EndEdit();
-           this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
-           this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
-           this.Close();
+            this.Validate();
+            this.crew_MasterBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+            this.Close();
 
-          
+       
         }
     }
 }
