@@ -154,5 +154,17 @@ namespace CrewApp2.Properties {
                 this["PasswordSave"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int tradeint {
+            get {
+                return ((int)(this["tradeint"]));
+            }
+            set {
+                this["tradeint"] = value;
+            }
+        }
     }
 }

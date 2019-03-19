@@ -14,7 +14,7 @@ namespace CrewApp2
     {
         public string form1st;
         public string inputform;
-
+        public int grid;
         public InputNote()
         {
             InitializeComponent();
@@ -25,7 +25,16 @@ namespace CrewApp2
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
 
+            //  crew_MasterDataGridView.SelectedRows = crew_MasterDataGridView[0, gird];
+            MessageBox.Show(Properties.Settings.Default.tradeint.ToString());
+            // crew_MasterBindingSource.MoveNext();
+            //crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID",10011);
+            MessageBox.Show(crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint).ToString());
+            crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
+
+        
         }
+
 
 
         private void Crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -41,20 +50,24 @@ namespace CrewApp2
 
             Form1 Form1 = new Form1();
            
-
             string newtxt = "["+DateTime.Now.ToString("G") +"]"+"["+ Properties.Settings.Default.UserNames +"]"+"["+ CrewwingText.Text + "]" ;
 
             string oldtxt = OldTextBox.Text;
 
+            
+
             OldTextBox.Text = newtxt + Environment.NewLine + oldtxt;
+
 
             this.Validate();
             this.crew_MasterBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
-            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
+            this.crew_MasterTableAdapter.Update(aZUREDBDataSet.Crew_Master);
+           
             this.Close();
 
        
         }
+
+
     }
 }

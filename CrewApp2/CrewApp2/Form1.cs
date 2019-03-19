@@ -19,7 +19,7 @@ namespace CrewApp2
         public string logname;
         public string savenote;
         public string crewtxt;
-
+        string gird;
         public Form1()
         {
             InitializeComponent();
@@ -55,16 +55,7 @@ namespace CrewApp2
 
         }
 
-        private void CREWINGNoteTextBox_MouseEnter(object sender, EventArgs e)
-        {
 
-          //  cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
-
-          //  this.Validate();
-          //  this.crew_MasterBindingSource.EndEdit();
-          //  this.tableAdapterManager.UpdateAll(aZUREDBDataSet);
-           // this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
-        }
 
         public void  TableFill()
         {
@@ -195,7 +186,18 @@ namespace CrewApp2
 
         private void SaveNote_Click(object sender, EventArgs e)
         {
+            var persentposi= crew_MasterBindingSource.Position;
+
+           // MessageBox.Show(crew_MasterBindingSource.Position.ToString());
+
+            MessageBox.Show(crew_MasterDataGridView[0, persentposi].Value.ToString());
+            int hensu = int.Parse(crew_MasterDataGridView[0, persentposi].Value.ToString());
+            //MessageBox.Show(crew_MasterBindingSource.Find("PresentRANK", ).ToString());
+
             InputNote InputNote = new InputNote();
+
+            Properties.Settings.Default.tradeint = hensu;
+            Properties.Settings.Default.Save();
 
             InputNote.inputform= cREWINGNoteTextBox.Text;
 
@@ -329,6 +331,13 @@ namespace CrewApp2
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
 
             crew_MasterBindingSource.RemoveFilter();
+            crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
+        }
+
+        private void Crew_MasterDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+          
         }
     }
 }
