@@ -16,7 +16,7 @@ namespace testuser
         {
             InitializeComponent();
             this.dataExchange_CommentTableAdapter.Fill(aZUREDBDataSet.DataExchange_Comment);
-            this.dataExchange_feeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_fee);
+            this.dataExchange_feeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_fee1);
             this.dataExchangeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange);
         }
 

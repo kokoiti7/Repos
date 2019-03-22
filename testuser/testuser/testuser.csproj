@@ -52,6 +52,9 @@
     <Compile Include="AllGridView.Designer.cs">
       <DependentUpon>AllGridView.cs</DependentUpon>
     </Compile>
+    <Compile Include="AZUREDBDataSet.cs">
+      <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AZUREDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -118,7 +118,7 @@ namespace testuser {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataExchange_feeDataTable DataExchange_fee {
+        public DataExchange_feeDataTable DataExchange_fee1 {
             get {
                 return this.tableDataExchange_fee;
             }
@@ -9068,7 +9068,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 }
             }
             if ((this._dataExchange_feeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DataExchange_fee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.DataExchange_fee1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -9111,7 +9111,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
                 }
             }
             if ((this._dataExchange_feeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DataExchange_fee.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.DataExchange_fee1.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._dataExchange_feeTableAdapter.Update(addedRows));
@@ -9129,7 +9129,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         private int UpdateDeletedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._dataExchange_feeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DataExchange_fee.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.DataExchange_fee1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._dataExchange_feeTableAdapter.Update(deletedRows));

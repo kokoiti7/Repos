@@ -1,4 +1,5 @@
 ﻿namespace testuser
+
 {
     partial class Form1
     {

@@ -35,7 +35,7 @@
             this.tableAdapterManager = new testuser.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.ship_Master_TBTableAdapter = new testuser.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataExchangeGridView = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shipIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shipnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,12 +97,12 @@
             this.ship_Master_TBBindingSource.DataMember = "Ship_Master_TB";
             this.ship_Master_TBBindingSource.DataSource = this.aZUREDBDataSet;
             // 
-            // dataGridView1
+            // dataExchangeGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataExchangeGridView.AllowUserToAddRows = false;
+            this.dataExchangeGridView.AutoGenerateColumns = false;
+            this.dataExchangeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataExchangeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.shipIDDataGridViewTextBoxColumn,
             this.shipnameDataGridViewTextBoxColumn,
@@ -124,12 +124,12 @@
             this.spareDate1DataGridViewTextBoxColumn,
             this.spareBit1DataGridViewCheckBoxColumn,
             this.spareBit2DataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.dataExchangeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(759, 579);
-            this.dataGridView1.TabIndex = 3;
+            this.dataExchangeGridView.DataSource = this.dataExchangeBindingSource;
+            this.dataExchangeGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataExchangeGridView.Name = "dataExchangeGridView";
+            this.dataExchangeGridView.RowTemplate.Height = 21;
+            this.dataExchangeGridView.Size = new System.Drawing.Size(759, 579);
+            this.dataExchangeGridView.TabIndex = 3;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -267,14 +267,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataExchangeGridView);
             this.Name = "UserControl2";
             this.Size = new System.Drawing.Size(759, 579);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataExchangeGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -288,7 +288,7 @@
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter;
         private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataExchangeGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource fKDataExchangeShipMasterTBBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn shipIDDataGridViewTextBoxColumn;
