@@ -138,4 +138,7 @@
   <metadata name="fKDataExchangeShipMasterTBBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>245, 58</value>
   </metadata>
+  <metadata name="aZUREDBDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>564, 58</value>
+  </metadata>
 </root>

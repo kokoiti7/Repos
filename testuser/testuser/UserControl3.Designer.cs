@@ -105,6 +105,7 @@
             this.dataExchange_CommentDataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataExchange_CommentDataGridView.Name = "dataExchange_CommentDataGridView";
             this.dataExchange_CommentDataGridView.RowTemplate.Height = 21;
+            this.dataExchange_CommentDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataExchange_CommentDataGridView.Size = new System.Drawing.Size(725, 579);
             this.dataExchange_CommentDataGridView.TabIndex = 1;
             // 

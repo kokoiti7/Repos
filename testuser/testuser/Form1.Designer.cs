@@ -34,14 +34,14 @@
             this.dataExchange_feeButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.datagirdfee = new testuser.UserControl1();
+            this.GridViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.SelectedRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RemoveFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datacomentgird = new testuser.UserControl3();
             this.ComentcontextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addComentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeComentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataexchange = new testuser.UserControl2();
-            this.GridViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.SelectedRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RemoveFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataExchange_Comment = new System.Windows.Forms.Button();
             this.CommentAdd = new System.Windows.Forms.Button();
             this.CommentRemoveButton = new System.Windows.Forms.Button();
@@ -65,8 +65,8 @@
             this.MonthTextBox = new System.Windows.Forms.TextBox();
             this.ship_Master_TBTableAdapter = new testuser.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.panel1.SuspendLayout();
-            this.ComentcontextMenu.SuspendLayout();
             this.GridViewContextMenu.SuspendLayout();
+            this.ComentcontextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource)).BeginInit();
@@ -113,10 +113,34 @@
             // 
             // datagirdfee
             // 
+            this.datagirdfee.ContextMenuStrip = this.GridViewContextMenu;
             this.datagirdfee.Location = new System.Drawing.Point(0, 0);
             this.datagirdfee.Name = "datagirdfee";
             this.datagirdfee.Size = new System.Drawing.Size(723, 577);
             this.datagirdfee.TabIndex = 3;
+            // 
+            // GridViewContextMenu
+            // 
+            this.GridViewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SelectedRemoveToolStripMenuItem,
+            this.RemoveFilterToolStripMenuItem});
+            this.GridViewContextMenu.Name = "contextMenuStrip1";
+            this.GridViewContextMenu.Size = new System.Drawing.Size(175, 48);
+       
+            // 
+            // SelectedRemoveToolStripMenuItem
+            // 
+            this.SelectedRemoveToolStripMenuItem.Name = "SelectedRemoveToolStripMenuItem";
+            this.SelectedRemoveToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.SelectedRemoveToolStripMenuItem.Text = "SelectedRemove";
+            this.SelectedRemoveToolStripMenuItem.Click += new System.EventHandler(this.SelectedRemmoveToolStripMenuItem_Click);
+            // 
+            // RemoveFilterToolStripMenuItem
+            // 
+            this.RemoveFilterToolStripMenuItem.Name = "RemoveFilterToolStripMenuItem";
+            this.RemoveFilterToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.RemoveFilterToolStripMenuItem.Text = "RemoveFilter";
+            this.RemoveFilterToolStripMenuItem.Click += new System.EventHandler(this.RemoveFilterToolStripMenuItem_Click);
             // 
             // datacomentgird
             // 
@@ -136,19 +160,18 @@
             this.addComentToolStripMenuItem,
             this.removeComentToolStripMenuItem});
             this.ComentcontextMenu.Name = "contextMenuStrip1";
-            this.ComentcontextMenu.Size = new System.Drawing.Size(171, 48);
-            this.ComentcontextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ComentcontextMenu_Opening);
+            this.ComentcontextMenu.Size = new System.Drawing.Size(181, 70);
             // 
             // addComentToolStripMenuItem
             // 
             this.addComentToolStripMenuItem.Name = "addComentToolStripMenuItem";
-            this.addComentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.addComentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addComentToolStripMenuItem.Text = "AddComent";
             // 
             // removeComentToolStripMenuItem
             // 
             this.removeComentToolStripMenuItem.Name = "removeComentToolStripMenuItem";
-            this.removeComentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.removeComentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removeComentToolStripMenuItem.Text = "RemoveComent";
             // 
             // dataexchange
@@ -162,29 +185,6 @@
             this.dataexchange.Name = "dataexchange";
             this.dataexchange.Size = new System.Drawing.Size(721, 574);
             this.dataexchange.TabIndex = 1;
-            // 
-            // GridViewContextMenu
-            // 
-            this.GridViewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SelectedRemoveToolStripMenuItem,
-            this.RemoveFilterToolStripMenuItem});
-            this.GridViewContextMenu.Name = "contextMenuStrip1";
-            this.GridViewContextMenu.Size = new System.Drawing.Size(175, 48);
-            this.GridViewContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening);
-            // 
-            // SelectedRemoveToolStripMenuItem
-            // 
-            this.SelectedRemoveToolStripMenuItem.Name = "SelectedRemoveToolStripMenuItem";
-            this.SelectedRemoveToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.SelectedRemoveToolStripMenuItem.Text = "SelectedRemove";
-            this.SelectedRemoveToolStripMenuItem.Click += new System.EventHandler(this.SelectedRemmoveToolStripMenuItem_Click);
-            // 
-            // RemoveFilterToolStripMenuItem
-            // 
-            this.RemoveFilterToolStripMenuItem.Name = "RemoveFilterToolStripMenuItem";
-            this.RemoveFilterToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.RemoveFilterToolStripMenuItem.Text = "RemoveFilter";
-            this.RemoveFilterToolStripMenuItem.Click += new System.EventHandler(this.RemoveFilterToolStripMenuItem_Click);
             // 
             // dataExchange_Comment
             // 
@@ -401,8 +401,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.ComentcontextMenu.ResumeLayout(false);
             this.GridViewContextMenu.ResumeLayout(false);
+            this.ComentcontextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource)).EndInit();
@@ -447,9 +447,9 @@
         private System.Windows.Forms.ContextMenuStrip ComentcontextMenu;
         private System.Windows.Forms.ToolStripMenuItem addComentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeComentToolStripMenuItem;
-        private UserControl3 datacomentgird;
-        private UserControl2 dataexchange;
         private UserControl1 datagirdfee;
+        public UserControl3 datacomentgird;
+        public UserControl2 dataexchange;
     }
 }
 

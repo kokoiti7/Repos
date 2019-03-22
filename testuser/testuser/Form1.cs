@@ -12,6 +12,10 @@ namespace testuser
 {
     public partial class Form1 : Form
     {
+
+        public string Shipnamestring;
+        public string Monthstring;
+
         public Form1()
         {
             InitializeComponent();
@@ -20,20 +24,17 @@ namespace testuser
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Ship_Master_TB' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange_fee' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.dataExchange_feeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_fee1);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange_Comment' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_Comment);
-            // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.dataExchangeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange);
+            AllFill();
 
-            datacomentgird.Visible = true;
+            UserControl2 UserControl2 = new UserControl2();
+            UserControl2.Sorting();
+
+            datagirdfee.Visible = true;
             datacomentgird.Dock = DockStyle.Fill;
 
             dataexchange.Visible = false;
-            datagirdfee.Visible = false;
+            datacomentgird.Visible = false;
+
             DateTime dtToday = DateTime.Today;
 
             DateTime dateTimeFirstDay = new DateTime(dtToday.Year, dtToday.Month, 1);
@@ -53,6 +54,18 @@ namespace testuser
             //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
             dataExchangeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
             dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
+        }
+
+        public void AllFill()
+        {
+            // TODO: このコード行はデータを 'aZUREDBDataSet.Ship_Master_TB' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
+            // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange_fee' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.dataExchange_feeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_fee1);
+            // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange_Comment' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_Comment);
+            // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.dataExchangeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange);
         }
 
         private void DataExchange_Comment_Click(object sender, EventArgs e)
@@ -99,11 +112,6 @@ namespace testuser
 
         }
 
-        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void SelectedRemmoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -118,7 +126,6 @@ namespace testuser
 
         private void BackMonthButton_Click(object sender, EventArgs e)
         {
-
             //textboxをDatetimeに変換してdatetime型の変数にADDして年月、月の初めを設定している
             DateTime dt = System.DateTime.Parse(MonthTextBox.Text);
             DateTime dtadd = dt.AddDays(-3);
@@ -131,9 +138,15 @@ namespace testuser
             UserControl1 UserControl1 = new UserControl1();
             UserControl2 UserControl2 = new UserControl2();
 
-            UserControl1.Sorting();
-            UserControl2.Sorting();
+            UserControl1.Shipnamestring = ShipcomboBox.Text;
+            UserControl1.Monthstring = MonthTextBox.Text;
+          //  UserControl2.Shipnamestring = ShipcomboBox.Text;
+          //  UserControl2.Monthstring = MonthTextBox.Text;
 
+            //MessageBox.Show(UserControl2.Monthstring);
+            //MessageBox.Show(UserControl1.Shipnamestring);
+            UserControl1.Sorting();
+           // UserControl2.Sorting();
 
         }
 
@@ -150,13 +163,23 @@ namespace testuser
             UserControl1 UserControl1 = new UserControl1();
             UserControl2 UserControl2 = new UserControl2();
 
-            UserControl1.Sorting();
-            UserControl2.Sorting();
+            UserControl1.Shipnamestring = ShipcomboBox.Text;
+            UserControl1.Monthstring = MonthTextBox.Text;
+
+            dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
+            //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
+
+            dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
+
+            //    UserControl2.Shipnamestring = ShipcomboBox.Text;
+            //  UserControl2.Monthstring = MonthTextBox.Text;
+
+            //UserControl1.Sorting();
+           // UserControl2.Sorting();
+
+
         }
 
-        private void ComentcontextMenu_Opening(object sender, CancelEventArgs e)
-        {
 
-        }
     }
 }

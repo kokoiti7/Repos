@@ -58,11 +58,18 @@
             this.spareBit1DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.spareBit2DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.fKDataExchangeShipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BackMonthButton = new System.Windows.Forms.Button();
+            this.NextMonthButton = new System.Windows.Forms.Button();
+            this.ShipcomboBox = new System.Windows.Forms.ComboBox();
+            this.MonthTextBox = new System.Windows.Forms.TextBox();
+            this.aZUREDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RemoveFilterbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // aZUREDBDataSet
@@ -125,10 +132,11 @@
             this.spareBit1DataGridViewCheckBoxColumn,
             this.spareBit2DataGridViewCheckBoxColumn});
             this.dataExchangeGridView.DataSource = this.dataExchangeBindingSource;
-            this.dataExchangeGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataExchangeGridView.Location = new System.Drawing.Point(0, 71);
             this.dataExchangeGridView.Name = "dataExchangeGridView";
             this.dataExchangeGridView.RowTemplate.Height = 21;
-            this.dataExchangeGridView.Size = new System.Drawing.Size(759, 579);
+            this.dataExchangeGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataExchangeGridView.Size = new System.Drawing.Size(759, 508);
             this.dataExchangeGridView.TabIndex = 3;
             // 
             // iDDataGridViewTextBoxColumn
@@ -263,10 +271,79 @@
             this.fKDataExchangeShipMasterTBBindingSource.DataMember = "FK_DataExchange_Ship_Master_TB";
             this.fKDataExchangeShipMasterTBBindingSource.DataSource = this.ship_Master_TBBindingSource;
             // 
+            // BackMonthButton
+            // 
+            this.BackMonthButton.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackMonthButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackMonthButton.Location = new System.Drawing.Point(154, 37);
+            this.BackMonthButton.Name = "BackMonthButton";
+            this.BackMonthButton.Size = new System.Drawing.Size(35, 28);
+            this.BackMonthButton.TabIndex = 15;
+            this.BackMonthButton.TabStop = false;
+            this.BackMonthButton.Text = "<";
+            this.BackMonthButton.UseVisualStyleBackColor = true;
+            this.BackMonthButton.Click += new System.EventHandler(this.BackMonthButton_Click);
+            // 
+            // NextMonthButton
+            // 
+            this.NextMonthButton.Font = new System.Drawing.Font("Meiryo UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextMonthButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.NextMonthButton.Location = new System.Drawing.Point(193, 37);
+            this.NextMonthButton.Name = "NextMonthButton";
+            this.NextMonthButton.Size = new System.Drawing.Size(35, 28);
+            this.NextMonthButton.TabIndex = 16;
+            this.NextMonthButton.TabStop = false;
+            this.NextMonthButton.Text = ">";
+            this.NextMonthButton.UseVisualStyleBackColor = true;
+            this.NextMonthButton.Click += new System.EventHandler(this.NextMonthButton_Click);
+            // 
+            // ShipcomboBox
+            // 
+            this.ShipcomboBox.DataSource = this.ship_Master_TBBindingSource;
+            this.ShipcomboBox.DisplayMember = "PresentName";
+            this.ShipcomboBox.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ShipcomboBox.FormattingEnabled = true;
+            this.ShipcomboBox.Location = new System.Drawing.Point(3, 3);
+            this.ShipcomboBox.Name = "ShipcomboBox";
+            this.ShipcomboBox.Size = new System.Drawing.Size(229, 28);
+            this.ShipcomboBox.TabIndex = 13;
+            this.ShipcomboBox.SelectedValueChanged += new System.EventHandler(this.ShipcomboBox_SelectedValueChanged);
+            // 
+            // MonthTextBox
+            // 
+            this.MonthTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MonthTextBox.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.MonthTextBox.Location = new System.Drawing.Point(3, 37);
+            this.MonthTextBox.Name = "MonthTextBox";
+            this.MonthTextBox.Size = new System.Drawing.Size(145, 28);
+            this.MonthTextBox.TabIndex = 14;
+            this.MonthTextBox.TabStop = false;
+            this.MonthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // aZUREDBDataSetBindingSource
+            // 
+            this.aZUREDBDataSetBindingSource.DataSource = this.aZUREDBDataSet;
+            this.aZUREDBDataSetBindingSource.Position = 0;
+            // 
+            // RemoveFilterbutton
+            // 
+            this.RemoveFilterbutton.Location = new System.Drawing.Point(238, 3);
+            this.RemoveFilterbutton.Name = "RemoveFilterbutton";
+            this.RemoveFilterbutton.Size = new System.Drawing.Size(153, 62);
+            this.RemoveFilterbutton.TabIndex = 18;
+            this.RemoveFilterbutton.Text = "RemoveFilter";
+            this.RemoveFilterbutton.UseVisualStyleBackColor = true;
+            this.RemoveFilterbutton.Click += new System.EventHandler(this.RemoveFilterbutton_Click);
+            // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.RemoveFilterbutton);
+            this.Controls.Add(this.BackMonthButton);
+            this.Controls.Add(this.NextMonthButton);
+            this.Controls.Add(this.ShipcomboBox);
+            this.Controls.Add(this.MonthTextBox);
             this.Controls.Add(this.dataExchangeGridView);
             this.Name = "UserControl2";
             this.Size = new System.Drawing.Size(759, 579);
@@ -276,7 +353,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -311,5 +390,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn spareDate1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn spareBit1DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn spareBit2DataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button BackMonthButton;
+        private System.Windows.Forms.Button NextMonthButton;
+        public System.Windows.Forms.ComboBox ShipcomboBox;
+        public System.Windows.Forms.TextBox MonthTextBox;
+        private System.Windows.Forms.BindingSource aZUREDBDataSetBindingSource;
+        private System.Windows.Forms.Button RemoveFilterbutton;
     }
 }

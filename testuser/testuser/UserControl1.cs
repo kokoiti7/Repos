@@ -12,30 +12,80 @@ namespace testuser
 {
     public partial class UserControl1 : UserControl
     {
+        public string Shipnamestring;
+        public string Monthstring;
+
         public UserControl1()
         {
             InitializeComponent();
             this.dataExchange_feeTableAdapter.Fill(aZUREDBDataSet.DataExchange_fee1);
+
+            this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
+
+            DateTime dtToday = DateTime.Today;
+
+            DateTime dateTimeFirstDay = new DateTime(dtToday.Year, dtToday.Month, 1);
+
+            string firstday = dateTimeFirstDay.ToString();
+
+            string firstdayrem = firstday.Remove(10, 8);
+
+            MonthTextBox.Text = firstdayrem;
+
+            dataExchange_feeBindingSource.RemoveFilter();
         }
 
         public void Sorting()
         {
-            Form1 Form1 = new Form1();
             //datachenagebindingsorceをソートして日付降順
 
-            dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
+            //dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
             //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
 
-            dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", Form1.ShipcomboBox.Text) +
-                                                   "AND MonthGroup = '" + Form1.MonthTextBox.Text + "'";
+             dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) +"AND MonthGroup = '" + MonthTextBox.Text + "'";
+
         }
 
-        private void dataExchange_feeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void dataExchange_feeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Validate();
-            this.dataExchange_feeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
 
+        }
+
+        private void BackMonthButton_Click(object sender, EventArgs e)
+        {
+            //textboxをDatetimeに変換してdatetime型の変数にADDして年月、月の初めを設定している
+            DateTime dt = System.DateTime.Parse(MonthTextBox.Text);
+            DateTime dtadd = dt.AddDays(-3);
+            DateTime dtadd2 = new DateTime(dtadd.Year, dtadd.Month, 1);
+
+            //秒を消してる
+            string dtrem = dtadd2.ToString().Remove(10, 8);
+            MonthTextBox.Text = dtrem;
+            Sorting();
+
+        }
+
+        private void NextMonthButton_Click(object sender, EventArgs e)
+        {
+            DateTime dt = System.DateTime.Parse(MonthTextBox.Text);
+            DateTime dtadd = dt.AddDays(35);
+            DateTime dtadd2 = new DateTime(dtadd.Year, dtadd.Month, 1);
+
+            //秒を消してる０から１０番目そのあと８文字すべて
+            string dtrem = dtadd2.ToString().Remove(10, 8);
+            MonthTextBox.Text = dtrem;
+            Sorting();
+
+        }
+
+        private void RemoveFilterbutton_Click(object sender, EventArgs e)
+        {
+            dataExchange_feeBindingSource.RemoveFilter();
+        }
+
+        private void ShipcomboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
         }
     }
 }
