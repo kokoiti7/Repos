@@ -64,12 +64,17 @@
             this.MonthTextBox = new System.Windows.Forms.TextBox();
             this.aZUREDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RemoveFilterbutton = new System.Windows.Forms.Button();
+            this.exchangestrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.removeFitlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSetBindingSource)).BeginInit();
+            this.exchangestrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // aZUREDBDataSet
@@ -327,18 +332,56 @@
             // 
             // RemoveFilterbutton
             // 
+            this.RemoveFilterbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RemoveFilterbutton.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RemoveFilterbutton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.RemoveFilterbutton.Location = new System.Drawing.Point(238, 3);
             this.RemoveFilterbutton.Name = "RemoveFilterbutton";
             this.RemoveFilterbutton.Size = new System.Drawing.Size(153, 62);
             this.RemoveFilterbutton.TabIndex = 18;
             this.RemoveFilterbutton.Text = "RemoveFilter";
-            this.RemoveFilterbutton.UseVisualStyleBackColor = true;
+            this.RemoveFilterbutton.UseVisualStyleBackColor = false;
             this.RemoveFilterbutton.Click += new System.EventHandler(this.RemoveFilterbutton_Click);
+            // 
+            // exchangestrip
+            // 
+            this.exchangestrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeFitlerToolStripMenuItem,
+            this.itemAddToolStripMenuItem});
+            this.exchangestrip.Name = "exchangestrip";
+            this.exchangestrip.Size = new System.Drawing.Size(155, 48);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(397, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 62);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "ItemAdd";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // removeFitlerToolStripMenuItem
+            // 
+            this.removeFitlerToolStripMenuItem.Name = "removeFitlerToolStripMenuItem";
+            this.removeFitlerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeFitlerToolStripMenuItem.Text = "RemoveFitler";
+            this.removeFitlerToolStripMenuItem.Click += new System.EventHandler(this.removeFitlerToolStripMenuItem_Click);
+            // 
+            // itemAddToolStripMenuItem
+            // 
+            this.itemAddToolStripMenuItem.Name = "itemAddToolStripMenuItem";
+            this.itemAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.itemAddToolStripMenuItem.Text = "ItemAdd";
             // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ContextMenuStrip = this.exchangestrip;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RemoveFilterbutton);
             this.Controls.Add(this.BackMonthButton);
             this.Controls.Add(this.NextMonthButton);
@@ -354,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataExchangeGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDataExchangeShipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSetBindingSource)).EndInit();
+            this.exchangestrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +440,9 @@
         public System.Windows.Forms.TextBox MonthTextBox;
         private System.Windows.Forms.BindingSource aZUREDBDataSetBindingSource;
         private System.Windows.Forms.Button RemoveFilterbutton;
+        private System.Windows.Forms.ContextMenuStrip exchangestrip;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem removeFitlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemAddToolStripMenuItem;
     }
 }

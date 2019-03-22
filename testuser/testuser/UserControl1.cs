@@ -87,5 +87,10 @@ namespace testuser
         {
             dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
         }
+
+        private void removeFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataExchange_feeBindingSource.RemoveFilter();
+        }
     }
 }

@@ -35,25 +35,7 @@ namespace testuser
             dataexchange.Visible = false;
             datacomentgird.Visible = false;
 
-            DateTime dtToday = DateTime.Today;
 
-            DateTime dateTimeFirstDay = new DateTime(dtToday.Year, dtToday.Month, 1);
-
-            string firstday = dateTimeFirstDay.ToString();
-
-            string firstdayrem = firstday.Remove(10, 8);
-
-            MonthTextBox.Text = firstdayrem;
-        }
-
-        public void Sorting()
-        {
-            //datachenagebindingsorceをソートして日付降順
-            dataExchangeBindingSource.Sort = "MonthGroup";
-            dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
-            //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
-            dataExchangeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
-            dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
         }
 
         public void AllFill()
@@ -104,12 +86,26 @@ namespace testuser
 
         private void CommentRemoveButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                this.dataExchange_CommentBindingSource.RemoveCurrent();
+                this.dataExchange_CommentBindingSource.EndEdit();
+                this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet.DataExchange_Comment);
+                MessageBox.Show("Deleted");
+            }
 
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("NotSelectedCell");
+            }
         }
 
         private void CommentAdd_Click(object sender, EventArgs e)
         {
-
+            this.Validate();
+            this.dataExchange_CommentBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+            this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet.DataExchange_Comment);
         }
 
         private void SelectedRemmoveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,62 +120,8 @@ namespace testuser
             
         }
 
-        private void BackMonthButton_Click(object sender, EventArgs e)
-        {
-            //textboxをDatetimeに変換してdatetime型の変数にADDして年月、月の初めを設定している
-            DateTime dt = System.DateTime.Parse(MonthTextBox.Text);
-            DateTime dtadd = dt.AddDays(-3);
-            DateTime dtadd2 = new DateTime(dtadd.Year, dtadd.Month, 1);
 
-            //秒を消してる
-            string dtrem = dtadd2.ToString().Remove(10, 8);
-            MonthTextBox.Text = dtrem;
-
-            UserControl1 UserControl1 = new UserControl1();
-            UserControl2 UserControl2 = new UserControl2();
-
-            UserControl1.Shipnamestring = ShipcomboBox.Text;
-            UserControl1.Monthstring = MonthTextBox.Text;
-          //  UserControl2.Shipnamestring = ShipcomboBox.Text;
-          //  UserControl2.Monthstring = MonthTextBox.Text;
-
-            //MessageBox.Show(UserControl2.Monthstring);
-            //MessageBox.Show(UserControl1.Shipnamestring);
-            UserControl1.Sorting();
-           // UserControl2.Sorting();
-
-        }
-
-        private void NextMonthButton_Click(object sender, EventArgs e)
-        {
-            DateTime dt = System.DateTime.Parse(MonthTextBox.Text);
-            DateTime dtadd = dt.AddDays(35);
-            DateTime dtadd2 = new DateTime(dtadd.Year, dtadd.Month, 1);
-
-            //秒を消してる０から１０番目そのあと８文字すべて
-            string dtrem = dtadd2.ToString().Remove(10, 8);
-            MonthTextBox.Text = dtrem;
-
-            UserControl1 UserControl1 = new UserControl1();
-            UserControl2 UserControl2 = new UserControl2();
-
-            UserControl1.Shipnamestring = ShipcomboBox.Text;
-            UserControl1.Monthstring = MonthTextBox.Text;
-
-            dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
-            //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
-
-            dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
-
-            //    UserControl2.Shipnamestring = ShipcomboBox.Text;
-            //  UserControl2.Monthstring = MonthTextBox.Text;
-
-            //UserControl1.Sorting();
-           // UserControl2.Sorting();
-
-
-        }
-
+   
 
     }
 }

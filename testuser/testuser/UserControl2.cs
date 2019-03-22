@@ -93,5 +93,10 @@ namespace testuser
         {
             dataExchangeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + " AND MonthGroup = '" + MonthTextBox.Text + "'";
         }
+
+        private void removeFitlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataExchangeBindingSource.RemoveFilter();
+        }
     }
 }

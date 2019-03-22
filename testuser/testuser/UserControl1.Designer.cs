@@ -60,11 +60,15 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exchange_feestrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.removeFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource1)).BeginInit();
+            this.exchange_feestrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // aZUREDBDataSet
@@ -188,12 +192,15 @@
             // 
             // RemoveFilterbutton
             // 
+            this.RemoveFilterbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RemoveFilterbutton.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RemoveFilterbutton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.RemoveFilterbutton.Location = new System.Drawing.Point(238, 3);
             this.RemoveFilterbutton.Name = "RemoveFilterbutton";
             this.RemoveFilterbutton.Size = new System.Drawing.Size(153, 62);
             this.RemoveFilterbutton.TabIndex = 17;
             this.RemoveFilterbutton.Text = "RemoveFilter";
-            this.RemoveFilterbutton.UseVisualStyleBackColor = true;
+            this.RemoveFilterbutton.UseVisualStyleBackColor = false;
             this.RemoveFilterbutton.Click += new System.EventHandler(this.RemoveFilterbutton_Click);
             // 
             // dataGridViewTextBoxColumn16
@@ -305,10 +312,38 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // exchange_feestrip
+            // 
+            this.exchange_feestrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeFilterToolStripMenuItem});
+            this.exchange_feestrip.Name = "exchange_feestrip";
+            this.exchange_feestrip.Size = new System.Drawing.Size(155, 26);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(397, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 62);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "ItemAdd";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // removeFilterToolStripMenuItem
+            // 
+            this.removeFilterToolStripMenuItem.Name = "removeFilterToolStripMenuItem";
+            this.removeFilterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeFilterToolStripMenuItem.Text = "RemoveFilter";
+            this.removeFilterToolStripMenuItem.Click += new System.EventHandler(this.removeFilterToolStripMenuItem_Click);
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ContextMenuStrip = this.exchange_feestrip;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RemoveFilterbutton);
             this.Controls.Add(this.BackMonthButton);
             this.Controls.Add(this.NextMonthButton);
@@ -322,6 +357,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataExchange_feeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource1)).EndInit();
+            this.exchange_feestrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +396,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.ContextMenuStrip exchange_feestrip;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem removeFilterToolStripMenuItem;
     }
 }

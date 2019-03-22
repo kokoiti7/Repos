@@ -33,7 +33,19 @@ namespace testuser
 
         private void RemoveComentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                this.dataExchange_CommentBindingSource.RemoveCurrent();
+                this.dataExchange_CommentBindingSource.EndEdit();
+                this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet.DataExchange_Comment);
+                MessageBox.Show("Deleted");
+                this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_Comment);
+            }
 
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("NotSelectedCell");
+            }
         }
     }
 }
