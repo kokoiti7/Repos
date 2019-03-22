@@ -207,6 +207,8 @@
             this.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.MaximumSize = new System.Drawing.Size(595, 433);
+            this.MinimumSize = new System.Drawing.Size(595, 433);
             this.Name = "Login";
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);

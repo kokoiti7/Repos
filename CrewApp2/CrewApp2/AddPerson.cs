@@ -39,7 +39,6 @@ namespace CrewApp2
            // MessageBox.Show(crew_MasterBindingSource.Count.ToString());
            // MessageBox.Show(crew_MasterDataGridView.Rows.Count.ToString());
 
-
             int k = 0;
 
             for (var i = 0 ; i < crew_MasterBindingSource.Count - 1 ; i++)
@@ -61,12 +60,14 @@ namespace CrewApp2
          
             if (k == 0)
             {
-                
+
+               
+
                 this.Validate();
                 this.crew_MasterBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
-                this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
                 this.Close();
+                this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
             }
             else
             {
@@ -74,6 +75,22 @@ namespace CrewApp2
                 return;
             }
 
+        }
+
+        private void topeverIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddPerson_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          
+            this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
         }
     }
 }

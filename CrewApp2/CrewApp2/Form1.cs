@@ -20,6 +20,7 @@ namespace CrewApp2
         public string savenote;
         public string crewtxt;
         string gird;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,20 +43,19 @@ namespace CrewApp2
             cREWINGNoteTextBox.Text = Properties.Settings.Default.BackupCrewwingNote;
 
             username.Text = Properties.Settings.Default.UserNames;
+        
 
             crew_MasterBindingSource.RemoveFilter();
-            
 
+            
+          
         }
 
 
         private void TECHNoteTextBox_TextChanged(object sender, EventArgs e)
         {
-            Form InputNote = new Form();
-
+            new Form();
         }
-
-
 
         public void  TableFill()
         {
@@ -175,7 +175,7 @@ namespace CrewApp2
 
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
 
-            crew_MasterBindingSource.RemoveFilter();
+                 crew_MasterBindingSource.RemoveFilter();
 
         }
 
@@ -190,8 +190,10 @@ namespace CrewApp2
 
            // MessageBox.Show(crew_MasterBindingSource.Position.ToString());
 
-            MessageBox.Show(crew_MasterDataGridView[0, persentposi].Value.ToString());
+           // MessageBox.Show(crew_MasterDataGridView[0, persentposi].Value.ToString());
+
             int hensu = int.Parse(crew_MasterDataGridView[0, persentposi].Value.ToString());
+
             //MessageBox.Show(crew_MasterBindingSource.Find("PresentRANK", ).ToString());
 
             InputNote InputNote = new InputNote();
@@ -326,7 +328,6 @@ namespace CrewApp2
 
         }
 
-
         private void FullNameComboBox_TextChanged(object sender, EventArgs e)
         {
             crew_MasterBindingSource.Filter = string.Format("FullName like '{0:s}'", FullNameComboBox.Text);
@@ -334,14 +335,23 @@ namespace CrewApp2
 
         private void Form1_Activated(object sender, EventArgs e)
         {
+            TableFill();
+            crew_MasterBindingSource.RemoveFilter();
+            crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
+      
 
-       
         }
 
         private void Crew_MasterDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
           
+        }
+
+        private void ZoomGrid_Click(object sender, EventArgs e)
+        {
+            zommgrid zommgrid = new zommgrid();
+            zommgrid.Show();
         }
     }
 }

@@ -2486,9 +2486,9 @@ namespace CrewApp2 {
             
             private global::System.Data.DataColumn columnMasterID;
             
-            private global::System.Data.DataColumn columnPresentRANK;
-            
             private global::System.Data.DataColumn columnFullName;
+            
+            private global::System.Data.DataColumn columnCREWINGNote;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -2533,17 +2533,17 @@ namespace CrewApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PresentRANKColumn {
+            public global::System.Data.DataColumn FullNameColumn {
                 get {
-                    return this.columnPresentRANK;
+                    return this.columnFullName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FullNameColumn {
+            public global::System.Data.DataColumn CREWINGNoteColumn {
                 get {
-                    return this.columnFullName;
+                    return this.columnCREWINGNote;
                 }
             }
             
@@ -2584,12 +2584,12 @@ namespace CrewApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Crew_Master1Row AddCrew_Master1Row(string PresentRANK, string FullName) {
+            public Crew_Master1Row AddCrew_Master1Row(string FullName, string CREWINGNote) {
                 Crew_Master1Row rowCrew_Master1Row = ((Crew_Master1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        PresentRANK,
-                        FullName};
+                        FullName,
+                        CREWINGNote};
                 rowCrew_Master1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCrew_Master1Row);
                 return rowCrew_Master1Row;
@@ -2620,8 +2620,8 @@ namespace CrewApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnMasterID = base.Columns["MasterID"];
-                this.columnPresentRANK = base.Columns["PresentRANK"];
                 this.columnFullName = base.Columns["FullName"];
+                this.columnCREWINGNote = base.Columns["CREWINGNote"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2629,10 +2629,10 @@ namespace CrewApp2 {
             private void InitClass() {
                 this.columnMasterID = new global::System.Data.DataColumn("MasterID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMasterID);
-                this.columnPresentRANK = new global::System.Data.DataColumn("PresentRANK", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPresentRANK);
                 this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFullName);
+                this.columnCREWINGNote = new global::System.Data.DataColumn("CREWINGNote", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCREWINGNote);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMasterID}, true));
                 this.columnMasterID.AutoIncrement = true;
@@ -2641,8 +2641,8 @@ namespace CrewApp2 {
                 this.columnMasterID.AllowDBNull = false;
                 this.columnMasterID.ReadOnly = true;
                 this.columnMasterID.Unique = true;
-                this.columnPresentRANK.MaxLength = 50;
                 this.columnFullName.MaxLength = 255;
+                this.columnCREWINGNote.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4936,22 +4936,6 @@ namespace CrewApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PresentRANK {
-                get {
-                    try {
-                        return ((string)(this[this.tableCrew_Master1.PresentRANKColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'Crew_Master1\' にある列 \'PresentRANK\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableCrew_Master1.PresentRANKColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string FullName {
                 get {
                     try {
@@ -4968,14 +4952,18 @@ namespace CrewApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPresentRANKNull() {
-                return this.IsNull(this.tableCrew_Master1.PresentRANKColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPresentRANKNull() {
-                this[this.tableCrew_Master1.PresentRANKColumn] = global::System.Convert.DBNull;
+            public string CREWINGNote {
+                get {
+                    try {
+                        return ((string)(this[this.tableCrew_Master1.CREWINGNoteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Crew_Master1\' にある列 \'CREWINGNote\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableCrew_Master1.CREWINGNoteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4988,6 +4976,18 @@ namespace CrewApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFullNameNull() {
                 this[this.tableCrew_Master1.FullNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCREWINGNoteNull() {
+                return this.IsNull(this.tableCrew_Master1.CREWINGNoteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCREWINGNoteNull() {
+                this[this.tableCrew_Master1.CREWINGNoteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8906,8 +8906,8 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Crew_Master1";
             tableMapping.ColumnMappings.Add("MasterID", "MasterID");
-            tableMapping.ColumnMappings.Add("PresentRANK", "PresentRANK");
             tableMapping.ColumnMappings.Add("FullName", "FullName");
+            tableMapping.ColumnMappings.Add("CREWINGNote", "CREWINGNote");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8924,7 +8924,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DISTINCT PresentRANK, MasterID, FullName\r\nFROM              Crew_Master";
+            this._commandCollection[0].CommandText = "SELECT DISTINCT MasterID, FullName, CREWINGNote\r\nFROM              Crew_Master";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

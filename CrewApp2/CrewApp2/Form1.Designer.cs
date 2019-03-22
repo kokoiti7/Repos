@@ -33,11 +33,11 @@
             System.Windows.Forms.Label mRNNoteLabel;
             System.Windows.Forms.Label tECHNoteLabel;
             System.Windows.Forms.Label gENNoteLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.aZUREDBDataSet = new CrewApp2.AZUREDBDataSet();
             this.crew_MasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crew_MasterTableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_MasterTableAdapter();
@@ -93,6 +93,7 @@
             this.crewMaster2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.crew_Master2TableAdapter = new CrewApp2.AZUREDBDataSetTableAdapters.Crew_Master2TableAdapter();
             this.crewMaster2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ZoomGrid = new System.Windows.Forms.Button();
             cREWINGNoteLabel = new System.Windows.Forms.Label();
             mRNNoteLabel = new System.Windows.Forms.Label();
             tECHNoteLabel = new System.Windows.Forms.Label();
@@ -189,18 +190,18 @@
             // crew_MasterDataGridView
             // 
             this.crew_MasterDataGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.crew_MasterDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.crew_MasterDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.crew_MasterDataGridView.AutoGenerateColumns = false;
             this.crew_MasterDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.crew_MasterDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.crew_MasterDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.crew_MasterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.crew_MasterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -224,28 +225,28 @@
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
             this.crew_MasterDataGridView.DataSource = this.crew_MasterBindingSource;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.crew_MasterDataGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.crew_MasterDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.crew_MasterDataGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.crew_MasterDataGridView.Location = new System.Drawing.Point(9, 98);
             this.crew_MasterDataGridView.Name = "crew_MasterDataGridView";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.crew_MasterDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            this.crew_MasterDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.crew_MasterDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.crew_MasterDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.crew_MasterDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.Window;
@@ -503,7 +504,7 @@
             this.Save.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Save.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Save.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Save.Location = new System.Drawing.Point(1039, 8);
+            this.Save.Location = new System.Drawing.Point(1047, 11);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(135, 43);
             this.Save.TabIndex = 6;
@@ -516,7 +517,7 @@
             this.Refresh.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Refresh.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Refresh.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Refresh.Location = new System.Drawing.Point(1188, 8);
+            this.Refresh.Location = new System.Drawing.Point(1182, 11);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(135, 43);
             this.Refresh.TabIndex = 7;
@@ -610,7 +611,7 @@
             this.SaveNote.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SaveNote.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.SaveNote.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.SaveNote.Location = new System.Drawing.Point(699, 8);
+            this.SaveNote.Location = new System.Drawing.Point(699, 11);
             this.SaveNote.Name = "SaveNote";
             this.SaveNote.Size = new System.Drawing.Size(211, 43);
             this.SaveNote.TabIndex = 5;
@@ -753,12 +754,26 @@
             this.crewMaster2BindingSource.DataMember = "Crew_Master2";
             this.crewMaster2BindingSource.DataSource = this.aZUREDBDataSet;
             // 
+            // ZoomGrid
+            // 
+            this.ZoomGrid.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ZoomGrid.Font = new System.Drawing.Font("メイリオ", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ZoomGrid.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ZoomGrid.Location = new System.Drawing.Point(462, 381);
+            this.ZoomGrid.Name = "ZoomGrid";
+            this.ZoomGrid.Size = new System.Drawing.Size(211, 34);
+            this.ZoomGrid.TabIndex = 33;
+            this.ZoomGrid.Text = "ZoomGrid";
+            this.ZoomGrid.UseVisualStyleBackColor = false;
+            this.ZoomGrid.Click += new System.EventHandler(this.ZoomGrid_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1343, 685);
+            this.Controls.Add(this.ZoomGrid);
             this.Controls.Add(this.FullNameComboBox);
             this.Controls.Add(this.AddPerson);
             this.Controls.Add(this.RankComboBox);
@@ -859,6 +874,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.Button ZoomGrid;
     }
 }
 

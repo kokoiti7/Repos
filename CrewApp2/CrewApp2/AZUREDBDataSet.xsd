@@ -568,7 +568,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
               <DbSource ConnectionRef="AZUREDBConnectionString (Settings)" DbObjectName="AZUREDB.dbo.Crew_Master" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT DISTINCT PresentRANK, MasterID, FullName
+                    <CommandText>SELECT DISTINCT MasterID, FullName, CREWINGNote
 FROM              Crew_Master</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -577,8 +577,8 @@ FROM              Crew_Master</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="MasterID" DataSetColumn="MasterID" />
-              <Mapping SourceColumn="PresentRANK" DataSetColumn="PresentRANK" />
               <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+              <Mapping SourceColumn="CREWINGNote" DataSetColumn="CREWINGNote" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -608,7 +608,7 @@ FROM              Crew_Master</CommandText>
   <xs:element name="AZUREDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AZUREDBDataSet" msprop:Generator_UserDSName="AZUREDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Crew_Application" msprop:Generator_TableClassName="Crew_ApplicationDataTable" msprop:Generator_TableVarName="tableCrew_Application" msprop:Generator_TablePropName="Crew_Application" msprop:Generator_RowDeletingName="Crew_ApplicationRowDeleting" msprop:Generator_RowChangingName="Crew_ApplicationRowChanging" msprop:Generator_RowEvHandlerName="Crew_ApplicationRowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_ApplicationRowDeleted" msprop:Generator_UserTableName="Crew_Application" msprop:Generator_RowChangedName="Crew_ApplicationRowChanged" msprop:Generator_RowEvArgName="Crew_ApplicationRowChangeEvent" msprop:Generator_RowClassName="Crew_ApplicationRow">
+        <xs:element name="Crew_Application" msprop:Generator_TableClassName="Crew_ApplicationDataTable" msprop:Generator_TableVarName="tableCrew_Application" msprop:Generator_RowChangedName="Crew_ApplicationRowChanged" msprop:Generator_TablePropName="Crew_Application" msprop:Generator_RowDeletingName="Crew_ApplicationRowDeleting" msprop:Generator_RowChangingName="Crew_ApplicationRowChanging" msprop:Generator_RowEvHandlerName="Crew_ApplicationRowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_ApplicationRowDeleted" msprop:Generator_RowClassName="Crew_ApplicationRow" msprop:Generator_UserTableName="Crew_Application" msprop:Generator_RowEvArgName="Crew_ApplicationRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ApplicationID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApplicationID" msprop:Generator_ColumnPropNameInRow="ApplicationID" msprop:Generator_ColumnPropNameInTable="ApplicationIDColumn" msprop:Generator_UserColumnName="ApplicationID" type="xs:int" />
@@ -644,7 +644,7 @@ FROM              Crew_Master</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Crew_ConfidencialReport" msprop:Generator_TableClassName="Crew_ConfidencialReportDataTable" msprop:Generator_TableVarName="tableCrew_ConfidencialReport" msprop:Generator_TablePropName="Crew_ConfidencialReport" msprop:Generator_RowDeletingName="Crew_ConfidencialReportRowDeleting" msprop:Generator_RowChangingName="Crew_ConfidencialReportRowChanging" msprop:Generator_RowEvHandlerName="Crew_ConfidencialReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_ConfidencialReportRowDeleted" msprop:Generator_UserTableName="Crew_ConfidencialReport" msprop:Generator_RowChangedName="Crew_ConfidencialReportRowChanged" msprop:Generator_RowEvArgName="Crew_ConfidencialReportRowChangeEvent" msprop:Generator_RowClassName="Crew_ConfidencialReportRow">
+        <xs:element name="Crew_ConfidencialReport" msprop:Generator_TableClassName="Crew_ConfidencialReportDataTable" msprop:Generator_TableVarName="tableCrew_ConfidencialReport" msprop:Generator_RowChangedName="Crew_ConfidencialReportRowChanged" msprop:Generator_TablePropName="Crew_ConfidencialReport" msprop:Generator_RowDeletingName="Crew_ConfidencialReportRowDeleting" msprop:Generator_RowChangingName="Crew_ConfidencialReportRowChanging" msprop:Generator_RowEvHandlerName="Crew_ConfidencialReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_ConfidencialReportRowDeleted" msprop:Generator_RowClassName="Crew_ConfidencialReportRow" msprop:Generator_UserTableName="Crew_ConfidencialReport" msprop:Generator_RowEvArgName="Crew_ConfidencialReportRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ConfidencialD" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnConfidencialD" msprop:Generator_ColumnPropNameInRow="ConfidencialD" msprop:Generator_ColumnPropNameInTable="ConfidencialDColumn" msprop:Generator_UserColumnName="ConfidencialD" type="xs:int" />
@@ -680,7 +680,7 @@ FROM              Crew_Master</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Crew_Master" msprop:Generator_TableClassName="Crew_MasterDataTable" msprop:Generator_TableVarName="tableCrew_Master" msprop:Generator_TablePropName="Crew_Master" msprop:Generator_RowDeletingName="Crew_MasterRowDeleting" msprop:Generator_RowChangingName="Crew_MasterRowChanging" msprop:Generator_RowEvHandlerName="Crew_MasterRowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_MasterRowDeleted" msprop:Generator_UserTableName="Crew_Master" msprop:Generator_RowChangedName="Crew_MasterRowChanged" msprop:Generator_RowEvArgName="Crew_MasterRowChangeEvent" msprop:Generator_RowClassName="Crew_MasterRow">
+        <xs:element name="Crew_Master" msprop:Generator_TableClassName="Crew_MasterDataTable" msprop:Generator_TableVarName="tableCrew_Master" msprop:Generator_RowChangedName="Crew_MasterRowChanged" msprop:Generator_TablePropName="Crew_Master" msprop:Generator_RowDeletingName="Crew_MasterRowDeleting" msprop:Generator_RowChangingName="Crew_MasterRowChanging" msprop:Generator_RowEvHandlerName="Crew_MasterRowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_MasterRowDeleted" msprop:Generator_RowClassName="Crew_MasterRow" msprop:Generator_UserTableName="Crew_Master" msprop:Generator_RowEvArgName="Crew_MasterRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MasterID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMasterID" msprop:Generator_ColumnPropNameInRow="MasterID" msprop:Generator_ColumnPropNameInTable="MasterIDColumn" msprop:Generator_UserColumnName="MasterID" type="xs:int" />
@@ -760,7 +760,7 @@ FROM              Crew_Master</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ship_Master_TB" msprop:Generator_TableClassName="Ship_Master_TBDataTable" msprop:Generator_TableVarName="tableShip_Master_TB" msprop:Generator_TablePropName="Ship_Master_TB" msprop:Generator_RowDeletingName="Ship_Master_TBRowDeleting" msprop:Generator_RowChangingName="Ship_Master_TBRowChanging" msprop:Generator_RowEvHandlerName="Ship_Master_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Ship_Master_TBRowDeleted" msprop:Generator_UserTableName="Ship_Master_TB" msprop:Generator_RowChangedName="Ship_Master_TBRowChanged" msprop:Generator_RowEvArgName="Ship_Master_TBRowChangeEvent" msprop:Generator_RowClassName="Ship_Master_TBRow">
+        <xs:element name="Ship_Master_TB" msprop:Generator_TableClassName="Ship_Master_TBDataTable" msprop:Generator_TableVarName="tableShip_Master_TB" msprop:Generator_RowChangedName="Ship_Master_TBRowChanged" msprop:Generator_TablePropName="Ship_Master_TB" msprop:Generator_RowDeletingName="Ship_Master_TBRowDeleting" msprop:Generator_RowChangingName="Ship_Master_TBRowChanging" msprop:Generator_RowEvHandlerName="Ship_Master_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Ship_Master_TBRowDeleted" msprop:Generator_RowClassName="Ship_Master_TBRow" msprop:Generator_UserTableName="Ship_Master_TB" msprop:Generator_RowEvArgName="Ship_Master_TBRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -973,17 +973,10 @@ FROM              Crew_Master</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Crew_Master1" msprop:Generator_TableClassName="Crew_Master1DataTable" msprop:Generator_TableVarName="tableCrew_Master1" msprop:Generator_RowChangedName="Crew_Master1RowChanged" msprop:Generator_TablePropName="Crew_Master1" msprop:Generator_RowDeletingName="Crew_Master1RowDeleting" msprop:Generator_RowChangingName="Crew_Master1RowChanging" msprop:Generator_RowEvHandlerName="Crew_Master1RowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_Master1RowDeleted" msprop:Generator_RowClassName="Crew_Master1Row" msprop:Generator_UserTableName="Crew_Master1" msprop:Generator_RowEvArgName="Crew_Master1RowChangeEvent">
+        <xs:element name="Crew_Master1" msprop:Generator_TableClassName="Crew_Master1DataTable" msprop:Generator_TableVarName="tableCrew_Master1" msprop:Generator_TablePropName="Crew_Master1" msprop:Generator_RowDeletingName="Crew_Master1RowDeleting" msprop:Generator_RowChangingName="Crew_Master1RowChanging" msprop:Generator_RowEvHandlerName="Crew_Master1RowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_Master1RowDeleted" msprop:Generator_UserTableName="Crew_Master1" msprop:Generator_RowChangedName="Crew_Master1RowChanged" msprop:Generator_RowEvArgName="Crew_Master1RowChangeEvent" msprop:Generator_RowClassName="Crew_Master1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MasterID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMasterID" msprop:Generator_ColumnPropNameInRow="MasterID" msprop:Generator_ColumnPropNameInTable="MasterIDColumn" msprop:Generator_UserColumnName="MasterID" type="xs:int" />
-              <xs:element name="PresentRANK" msprop:Generator_ColumnVarNameInTable="columnPresentRANK" msprop:Generator_ColumnPropNameInRow="PresentRANK" msprop:Generator_ColumnPropNameInTable="PresentRANKColumn" msprop:Generator_UserColumnName="PresentRANK" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -991,10 +984,17 @@ FROM              Crew_Master</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="CREWINGNote" msprop:Generator_ColumnVarNameInTable="columnCREWINGNote" msprop:Generator_ColumnPropNameInRow="CREWINGNote" msprop:Generator_ColumnPropNameInTable="CREWINGNoteColumn" msprop:Generator_UserColumnName="CREWINGNote" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Crew_Master2" msprop:Generator_TableClassName="Crew_Master2DataTable" msprop:Generator_TableVarName="tableCrew_Master2" msprop:Generator_RowChangedName="Crew_Master2RowChanged" msprop:Generator_TablePropName="Crew_Master2" msprop:Generator_RowDeletingName="Crew_Master2RowDeleting" msprop:Generator_RowChangingName="Crew_Master2RowChanging" msprop:Generator_RowEvHandlerName="Crew_Master2RowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_Master2RowDeleted" msprop:Generator_RowClassName="Crew_Master2Row" msprop:Generator_UserTableName="Crew_Master2" msprop:Generator_RowEvArgName="Crew_Master2RowChangeEvent">
+        <xs:element name="Crew_Master2" msprop:Generator_TableClassName="Crew_Master2DataTable" msprop:Generator_TableVarName="tableCrew_Master2" msprop:Generator_TablePropName="Crew_Master2" msprop:Generator_RowDeletingName="Crew_Master2RowDeleting" msprop:Generator_RowChangingName="Crew_Master2RowChanging" msprop:Generator_RowEvHandlerName="Crew_Master2RowChangeEventHandler" msprop:Generator_RowDeletedName="Crew_Master2RowDeleted" msprop:Generator_UserTableName="Crew_Master2" msprop:Generator_RowChangedName="Crew_Master2RowChanged" msprop:Generator_RowEvArgName="Crew_Master2RowChangeEvent" msprop:Generator_RowClassName="Crew_Master2Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ShipName" msprop:Generator_ColumnVarNameInTable="columnShipName" msprop:Generator_ColumnPropNameInRow="ShipName" msprop:Generator_ColumnPropNameInTable="ShipNameColumn" msprop:Generator_UserColumnName="ShipName" minOccurs="0">
@@ -1033,10 +1033,10 @@ FROM              Crew_Master</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Crew_Application_Crew_Application" msdata:parent="Crew_Master" msdata:child="Crew_Application" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_Application" msprop:Generator_ChildPropName="GetCrew_ApplicationRows" msprop:Generator_UserRelationName="FK_Crew_Application_Crew_Application" msprop:Generator_RelationVarName="relationFK_Crew_Application_Crew_Application" msprop:Generator_UserParentTable="Crew_Master" msprop:Generator_ParentPropName="Crew_MasterRow" />
-      <msdata:Relationship name="FK_Crew_ConfidencialReport_Crew_Master" msdata:parent="Crew_Master" msdata:child="Crew_ConfidencialReport" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_ConfidencialReport" msprop:Generator_ChildPropName="GetCrew_ConfidencialReportRows" msprop:Generator_UserRelationName="FK_Crew_ConfidencialReport_Crew_Master" msprop:Generator_RelationVarName="relationFK_Crew_ConfidencialReport_Crew_Master" msprop:Generator_UserParentTable="Crew_Master" msprop:Generator_ParentPropName="Crew_MasterRow" />
-      <msdata:Relationship name="FK_Crew_Application_Crew_Application1" msdata:parent="Crew_Master1" msdata:child="Crew_Application" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_Application" msprop:Generator_ChildPropName="GetCrew_ApplicationRows" msprop:Generator_UserRelationName="FK_Crew_Application_Crew_Application1" msprop:Generator_ParentPropName="Crew_Master1Row" msprop:Generator_RelationVarName="relationFK_Crew_Application_Crew_Application1" msprop:Generator_UserParentTable="Crew_Master1" />
-      <msdata:Relationship name="FK_Crew_ConfidencialReport_Crew_Master1" msdata:parent="Crew_Master1" msdata:child="Crew_ConfidencialReport" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_ConfidencialReport" msprop:Generator_ChildPropName="GetCrew_ConfidencialReportRows" msprop:Generator_UserRelationName="FK_Crew_ConfidencialReport_Crew_Master1" msprop:Generator_ParentPropName="Crew_Master1Row" msprop:Generator_RelationVarName="relationFK_Crew_ConfidencialReport_Crew_Master1" msprop:Generator_UserParentTable="Crew_Master1" />
+      <msdata:Relationship name="FK_Crew_Application_Crew_Application" msdata:parent="Crew_Master" msdata:child="Crew_Application" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_Application" msprop:Generator_ChildPropName="GetCrew_ApplicationRows" msprop:Generator_UserRelationName="FK_Crew_Application_Crew_Application" msprop:Generator_ParentPropName="Crew_MasterRow" msprop:Generator_RelationVarName="relationFK_Crew_Application_Crew_Application" msprop:Generator_UserParentTable="Crew_Master" />
+      <msdata:Relationship name="FK_Crew_ConfidencialReport_Crew_Master" msdata:parent="Crew_Master" msdata:child="Crew_ConfidencialReport" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_ConfidencialReport" msprop:Generator_ChildPropName="GetCrew_ConfidencialReportRows" msprop:Generator_UserRelationName="FK_Crew_ConfidencialReport_Crew_Master" msprop:Generator_ParentPropName="Crew_MasterRow" msprop:Generator_RelationVarName="relationFK_Crew_ConfidencialReport_Crew_Master" msprop:Generator_UserParentTable="Crew_Master" />
+      <msdata:Relationship name="FK_Crew_Application_Crew_Application1" msdata:parent="Crew_Master1" msdata:child="Crew_Application" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_Application" msprop:Generator_ChildPropName="GetCrew_ApplicationRows" msprop:Generator_UserRelationName="FK_Crew_Application_Crew_Application1" msprop:Generator_RelationVarName="relationFK_Crew_Application_Crew_Application1" msprop:Generator_UserParentTable="Crew_Master1" msprop:Generator_ParentPropName="Crew_Master1Row" />
+      <msdata:Relationship name="FK_Crew_ConfidencialReport_Crew_Master1" msdata:parent="Crew_Master1" msdata:child="Crew_ConfidencialReport" msdata:parentkey="MasterID" msdata:childkey="MasterID" msprop:Generator_UserChildTable="Crew_ConfidencialReport" msprop:Generator_ChildPropName="GetCrew_ConfidencialReportRows" msprop:Generator_UserRelationName="FK_Crew_ConfidencialReport_Crew_Master1" msprop:Generator_RelationVarName="relationFK_Crew_ConfidencialReport_Crew_Master1" msprop:Generator_UserParentTable="Crew_Master1" msprop:Generator_ParentPropName="Crew_Master1Row" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

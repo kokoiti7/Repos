@@ -142,7 +142,7 @@
     <value>598, 17</value>
   </metadata>
   <metadata name="crew_ApplicationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1184, 17</value>
+    <value>999, 23</value>
   </metadata>
   <metadata name="crew_ConfidencialReportTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 58</value>
@@ -151,7 +151,7 @@
     <value>786, 18</value>
   </metadata>
   <metadata name="crew_ConfidencialReportBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1418, 17</value>
+    <value>887, 102</value>
   </metadata>
   <metadata name="fKCrewApplicationCrewApplicationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>298, 58</value>
@@ -163,13 +163,13 @@
     <value>17, 149</value>
   </metadata>
   <metadata name="crewMaster1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1523, 58</value>
+    <value>996, 62</value>
   </metadata>
   <metadata name="aZUREDBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1358, 58</value>
+    <value>362, 151</value>
   </metadata>
   <metadata name="aZUREDBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1358, 58</value>
+    <value>362, 151</value>
   </metadata>
   <metadata name="crew_Master1TableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 99</value>
@@ -184,6 +184,6 @@
     <value>233, 99</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>316</value>
+    <value>228</value>
   </metadata>
 </root>

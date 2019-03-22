@@ -25,17 +25,8 @@ namespace CrewApp2
             // TODO: このコード行はデータを 'aZUREDBDataSet.Crew_Master' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.crew_MasterTableAdapter.Fill(this.aZUREDBDataSet.Crew_Master);
 
-            //  crew_MasterDataGridView.SelectedRows = crew_MasterDataGridView[0, gird];
-            MessageBox.Show(Properties.Settings.Default.tradeint.ToString());
-            // crew_MasterBindingSource.MoveNext();
-            //crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID",10011);
-            MessageBox.Show(crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint).ToString());
-            crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
-
-        
+            this.crew_MasterBindingSource.Position = crew_MasterBindingSource.Find("MasterID", Properties.Settings.Default.tradeint);
         }
-
-
 
         private void Crew_MasterBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
