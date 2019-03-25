@@ -57,9 +57,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ship_Master_TBTableAdapter = new testuser.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
-            this.datagirdfee = new testuser.UserControl1();
             this.datacomentgird = new testuser.UserControl3();
-            this.dataexchange = new testuser.UserControl2();
+            this.dataexchangefee1 = new testuser.UserControl2();
+            this.dataexchange1 = new testuser.UserControl1();
             this.panel1.SuspendLayout();
             this.GridViewContextMenu.SuspendLayout();
             this.ComentcontextMenu.SuspendLayout();
@@ -99,9 +99,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.datagirdfee);
             this.panel1.Controls.Add(this.datacomentgird);
-            this.panel1.Controls.Add(this.dataexchange);
+            this.panel1.Controls.Add(this.dataexchangefee1);
+            this.panel1.Controls.Add(this.dataexchange1);
             this.panel1.Location = new System.Drawing.Point(238, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(723, 574);
@@ -290,36 +290,26 @@
             // 
             this.ship_Master_TBTableAdapter.ClearBeforeFill = true;
             // 
-            // datagirdfee
-            // 
-            this.datagirdfee.Location = new System.Drawing.Point(0, 0);
-            this.datagirdfee.Name = "datagirdfee";
-            this.datagirdfee.Size = new System.Drawing.Size(723, 577);
-            this.datagirdfee.TabIndex = 3;
-            // 
             // datacomentgird
             // 
-            this.datacomentgird.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.datacomentgird.ContextMenuStrip = this.ComentcontextMenu;
-            this.datacomentgird.Location = new System.Drawing.Point(0, 0);
-            this.datacomentgird.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.datacomentgird.Location = new System.Drawing.Point(-5, 0);
             this.datacomentgird.Name = "datacomentgird";
-            this.datacomentgird.Size = new System.Drawing.Size(721, 574);
-            this.datacomentgird.TabIndex = 2;
+            this.datacomentgird.Size = new System.Drawing.Size(728, 579);
+            this.datacomentgird.TabIndex = 5;
             // 
-            // dataexchange
+            // dataexchangefee1
             // 
-            this.dataexchange.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataexchange.ContextMenuStrip = this.GridViewContextMenu;
-            this.dataexchange.Location = new System.Drawing.Point(0, 0);
-            this.dataexchange.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.dataexchange.Name = "dataexchange";
-            this.dataexchange.Size = new System.Drawing.Size(721, 574);
-            this.dataexchange.TabIndex = 1;
+            this.dataexchangefee1.Location = new System.Drawing.Point(0, 3);
+            this.dataexchangefee1.Name = "dataexchangefee1";
+            this.dataexchangefee1.Size = new System.Drawing.Size(723, 579);
+            this.dataexchangefee1.TabIndex = 2;
+            // 
+            // dataexchange1
+            // 
+            this.dataexchange1.Location = new System.Drawing.Point(-5, 3);
+            this.dataexchange1.Name = "dataexchange1";
+            this.dataexchange1.Size = new System.Drawing.Size(756, 579);
+            this.dataexchange1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -386,8 +376,10 @@
         private System.Windows.Forms.ToolStripMenuItem addComentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeComentToolStripMenuItem;
         private UserControl1 datagirdfee;
-        public UserControl3 datacomentgird;
         public UserControl2 dataexchange;
+        private UserControl2 dataexchangefee1;
+        private UserControl1 dataexchange1;
+        private UserControl3 datacomentgird;
     }
 }
 

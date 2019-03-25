@@ -8,34 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace testuser
+namespace NonBajetItem
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-
-        public string Shipnamestring;
-        public string Monthstring;
-
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
+
             AllFill();
 
             UserControl2 UserControl2 = new UserControl2();
             UserControl2.Sorting();
 
-            datagirdfee.Visible = true;
-            datacomentgird.Dock = DockStyle.Fill;
+            dataexchange.Visible = true;
+            dataexchange.Dock = DockStyle.Fill;
 
-            dataexchange.Visible = false;
-             datacomentgird.Visible = false;
-
-
+            datagirdfee.Visible = false;
+            datacomentgird.Visible = false;
+          
         }
 
         public void AllFill()
@@ -48,40 +43,6 @@ namespace testuser
             this.dataExchange_CommentTableAdapter.Fill(this.aZUREDBDataSet.DataExchange_Comment);
             // TODO: このコード行はデータを 'aZUREDBDataSet.DataExchange' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.dataExchangeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange);
-        }
-
-        private void DataExchange_Comment_Click(object sender, EventArgs e)
-        {
-            datacomentgird.Visible = true;
-            datacomentgird.Dock = DockStyle.Fill;
-
-            dataexchange1.Visible = false;
-            dataexchangefee1.Visible = false;
-        }
-
-        private void DataExchange_feeButton_Click(object sender, EventArgs e)
-        {
-            dataexchangefee1.Visible = true;
-            dataexchangefee1.Dock = DockStyle.Fill;
-
-           datacomentgird.Visible = false;
-           dataexchange1.Visible = false;
-        }
-
-        private void DataExchangeButton_Click(object sender, EventArgs e)
-        {
-            dataexchange1.Visible = true;
-            dataexchange1.Dock = DockStyle.Fill;
-
-            dataexchangefee1.Visible = false;
-            datacomentgird.Visible = false;
-        }
-
-        private void AllDataGridViewShowbutton_Click(object sender, EventArgs e)
-        {
-            AllGridView AllGridView = new AllGridView();
-            AllGridView.Show();
-
         }
 
         private void CommentRemoveButton_Click(object sender, EventArgs e)
@@ -104,24 +65,48 @@ namespace testuser
         {
             this.Validate();
             this.dataExchange_CommentBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
             this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet.DataExchange_Comment);
         }
 
-        private void SelectedRemmoveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AllDataGridViewShow_button_Click(object sender, EventArgs e)
         {
+          AllGridView AllGridView = new AllGridView();
+          AllGridView.Show();
 
+
+            datagirdfee.Visible = false;
+            datacomentgird.Visible = true;
+            dataexchange.Visible = false;
         }
 
-        private void RemoveFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void dataExchangeButton_Click(object sender, EventArgs e)
         {
-            dataExchangeBindingSource.RemoveFilter();
-            dataExchange_feeBindingSource.RemoveFilter();
+            dataexchange.Visible = true;
+            dataexchange.Dock = DockStyle.Fill;
+
             
+            datagirdfee.Visible = false;
+            datacomentgird.Visible = false;
         }
 
+        private void dataExchange_feeButton_Click(object sender, EventArgs e)
+        {
+            datagirdfee.Visible = true;
+            datagirdfee.Dock = DockStyle.Fill;
+          
+            datacomentgird.Visible = false;
+            dataexchange.Visible = false;
+        }
 
-   
+        private void dataExchange_Comment_Click(object sender, EventArgs e)
+        {
+            datacomentgird.Visible = true;
+            datacomentgird.Dock = DockStyle.Fill;
+           
+            dataexchange.Visible = false;
+            datagirdfee.Visible = false;
+        }
+
 
     }
 }

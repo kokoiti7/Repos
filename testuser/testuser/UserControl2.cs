@@ -22,10 +22,8 @@ namespace testuser
         {
             InitializeComponent();
 
-            // TODO: このコード行はデータを 'aZUREDBDataSet.Ship_Master_TB' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
-
-            this.dataExchangeTableAdapter.Fill(this.aZUREDBDataSet.DataExchange);
+            this.dataExchangeTableAdapter1.Fill(aZUREDBDataSet1.DataExchange);
+          
 
             DateTime dtToday = DateTime.Today;
 
@@ -94,9 +92,22 @@ namespace testuser
             dataExchangeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + " AND MonthGroup = '" + MonthTextBox.Text + "'";
         }
 
-        private void removeFitlerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RemoveFitlerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dataExchangeBindingSource.RemoveFilter();
+        }
+
+        private void dataExchangeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.dataExchangeBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
+
+        }
+
+        private void dataExchangeBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

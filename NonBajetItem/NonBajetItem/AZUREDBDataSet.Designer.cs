@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace testuser {
+namespace NonBajetItem {
     
     
     /// <summary>
@@ -4847,7 +4847,7 @@ namespace testuser {
         }
     }
 }
-namespace testuser.AZUREDBDataSetTableAdapters {
+namespace NonBajetItem.AZUREDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -5169,7 +5169,7 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::testuser.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6080,7 +6080,7 @@ SELECT ID, EditdateTime, Comment, CommnetSpare FROM DataExchange_Comment WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::testuser.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6549,7 +6549,7 @@ SELECT ID, MonthGroup, ShipID, shipname, budjetbalance, Managementfee, PaymentDa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::testuser.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7643,7 +7643,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::testuser.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

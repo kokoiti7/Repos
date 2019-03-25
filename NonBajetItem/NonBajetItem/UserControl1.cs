@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace testuser
+namespace NonBajetItem
 {
     public partial class UserControl1 : UserControl
     {
-        public string Shipnamestring;
-        public string Monthstring;
-
         public UserControl1()
         {
             InitializeComponent();
 
-            this.dataExchange_feeTableAdapter1.Fill(aZUREDBDataSet1.DataExchange_fee);
+            this.dataExchange_feeTableAdapter.Fill(aZUREDBDataSet.DataExchange_fee);
+            this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
 
             DateTime dtToday = DateTime.Today;
 
@@ -31,22 +29,17 @@ namespace testuser
 
             MonthTextBox.Text = firstdayrem;
 
-            dataExchange_feeBindingSource.RemoveFilter();
+            dataExchange_feeBindingSource1.RemoveFilter();
         }
 
         public void Sorting()
         {
             //datachenagebindingsorceをソートして日付降順
 
-            //dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
+            // dataExchange_feeBindingSource.Sort = "MonthGroup"; //test
             //バインディングソースをフィルターかけて船名かつデータピッカーで選んだ日付をstringに変換
 
-             dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) +"AND MonthGroup = '" + MonthTextBox.Text + "'";
-
-        }
-
-        private void dataExchange_feeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            dataExchange_feeBindingSource1.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
 
         }
 
@@ -61,7 +54,6 @@ namespace testuser
             string dtrem = dtadd2.ToString().Remove(10, 8);
             MonthTextBox.Text = dtrem;
             Sorting();
-
         }
 
         private void NextMonthButton_Click(object sender, EventArgs e)
@@ -74,29 +66,23 @@ namespace testuser
             string dtrem = dtadd2.ToString().Remove(10, 8);
             MonthTextBox.Text = dtrem;
             Sorting();
-
         }
 
         private void RemoveFilterbutton_Click(object sender, EventArgs e)
         {
-            dataExchange_feeBindingSource.RemoveFilter();
+            dataExchange_feeBindingSource1.RemoveFilter();
         }
 
         private void ShipcomboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            dataExchange_feeBindingSource.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
+            dataExchange_feeBindingSource1.Filter = string.Format("Shipname like '{0:s}'", ShipcomboBox.Text) + "AND MonthGroup = '" + MonthTextBox.Text + "'";
         }
 
-        private void removeFilterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ItemAdd_Click(object sender, EventArgs e)
         {
-            dataExchange_feeBindingSource.RemoveFilter();
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         
+        }
+
     }
 }
+

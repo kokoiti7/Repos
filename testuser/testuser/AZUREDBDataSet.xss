@@ -9,7 +9,7 @@
     <Shape ID="DesignTable:DataExchange" ZOrder="6" X="400" Y="70" Height="335" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="280" />
     <Shape ID="DesignTable:DataExchange_Comment" ZOrder="5" X="746" Y="70" Height="167" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="112" />
     <Shape ID="DesignTable:DataExchange_fee" ZOrder="4" X="400" Y="475" Height="335" Width="276" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="280" />
-    <Shape ID="DesignTable:Ship_Master_TB" ZOrder="3" X="70" Y="70" Height="755" Width="260" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="681" />
+    <Shape ID="DesignTable:Ship_Master_TB" ZOrder="3" X="70" Y="70" Height="335" Width="260" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="280" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_DataExchange_Ship_Master_TB" ZOrder="2" LineWidth="11">
@@ -27,12 +27,16 @@
     <Connector ID="DesignRelation:FK_DataExchange_fee_Ship_Master_TB" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>330</X>
-          <Y>642</Y>
+          <X>313</X>
+          <Y>405</Y>
+        </Point>
+        <Point>
+          <X>313</X>
+          <Y>492</Y>
         </Point>
         <Point>
           <X>400</X>
-          <Y>642</Y>
+          <Y>492</Y>
         </Point>
       </RoutePoints>
     </Connector>
