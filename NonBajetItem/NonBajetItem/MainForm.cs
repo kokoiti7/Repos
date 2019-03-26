@@ -63,6 +63,10 @@ namespace NonBajetItem
 
         private void CommentAdd_Click(object sender, EventArgs e)
         {
+            DialogResult dr = new DialogResult();
+            CommentAdd CommentAdd = new CommentAdd();
+            dr = CommentAdd.ShowDialog();
+
             this.Validate();
             this.dataExchange_CommentBindingSource.EndEdit();
             this.dataExchange_CommentTableAdapter.Update(this.aZUREDBDataSet.DataExchange_Comment);

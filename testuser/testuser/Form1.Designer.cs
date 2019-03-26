@@ -292,9 +292,9 @@
             // 
             // datacomentgird
             // 
-            this.datacomentgird.Location = new System.Drawing.Point(-5, 0);
+            this.datacomentgird.Location = new System.Drawing.Point(0, 0);
             this.datacomentgird.Name = "datacomentgird";
-            this.datacomentgird.Size = new System.Drawing.Size(728, 579);
+            this.datacomentgird.Size = new System.Drawing.Size(723, 579);
             this.datacomentgird.TabIndex = 5;
             // 
             // dataexchangefee1

@@ -19,6 +19,7 @@ namespace NonBajetItem
             this.dataExchangeTableAdapter.Fill(aZUREDBDataSet.DataExchange);
             this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
 
+            this.dataExchangeBindingSource.AddNew();
 
             DateTime dtToday = DateTime.Today;
 
@@ -52,8 +53,11 @@ namespace NonBajetItem
 
         private void ItemAdd_Click(object sender, EventArgs e)
         {
-            Control_1_ItemAdd Control_1_ItemAdd = new Control_1_ItemAdd();
-            Control_1_ItemAdd.Show();
+            DialogResult dr = new DialogResult();
+
+            Control_2_ItemAdd Control_2_ItemAdd = new Control_2_ItemAdd();
+
+            dr=Control_2_ItemAdd.ShowDialog();
 
         }
 

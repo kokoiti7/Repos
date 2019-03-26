@@ -43,9 +43,6 @@
             this.SelectedRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GridViewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.datacomentgird = new NonBajetItem.UserControl3();
-            this.dataexchange = new NonBajetItem.UserControl2();
-            this.datagirdfee = new NonBajetItem.UserControl1();
             this.dataExchange_feeButton = new System.Windows.Forms.Button();
             this.dataExchangeButton = new System.Windows.Forms.Button();
             this.aZUREDBDataSet = new NonBajetItem.AZUREDBDataSet();
@@ -59,6 +56,9 @@
             this.dataExchange_feeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataExchange_CommentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataExchangeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datacomentgird = new NonBajetItem.UserControl3();
+            this.dataexchange = new NonBajetItem.UserControl2();
+            this.datagirdfee = new NonBajetItem.UserControl1();
             this.ComentcontextMenu.SuspendLayout();
             this.GridViewContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -203,29 +203,6 @@
             this.panel1.Size = new System.Drawing.Size(770, 574);
             this.panel1.TabIndex = 68;
             // 
-            // datacomentgird
-            // 
-            this.datacomentgird.Location = new System.Drawing.Point(0, 0);
-            this.datacomentgird.Name = "datacomentgird";
-            this.datacomentgird.Size = new System.Drawing.Size(770, 574);
-            this.datacomentgird.TabIndex = 2;
-            // 
-            // dataexchange
-            // 
-            this.dataexchange.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataexchange.Location = new System.Drawing.Point(0, 0);
-            this.dataexchange.Name = "dataexchange";
-            this.dataexchange.Size = new System.Drawing.Size(767, 582);
-            this.dataexchange.TabIndex = 1;
-            // 
-            // datagirdfee
-            // 
-            this.datagirdfee.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.datagirdfee.Location = new System.Drawing.Point(0, 0);
-            this.datagirdfee.Name = "datagirdfee";
-            this.datagirdfee.Size = new System.Drawing.Size(770, 574);
-            this.datagirdfee.TabIndex = 0;
-            // 
             // dataExchange_feeButton
             // 
             this.dataExchange_feeButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -303,6 +280,29 @@
             // dataExchangeBindingSource
             // 
             this.dataExchangeBindingSource.DataMember = "DataExchange";
+            // 
+            // datacomentgird
+            // 
+            this.datacomentgird.Location = new System.Drawing.Point(0, 0);
+            this.datacomentgird.Name = "datacomentgird";
+            this.datacomentgird.Size = new System.Drawing.Size(770, 574);
+            this.datacomentgird.TabIndex = 2;
+            // 
+            // dataexchange
+            // 
+            this.dataexchange.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataexchange.Location = new System.Drawing.Point(0, 0);
+            this.dataexchange.Name = "dataexchange";
+            this.dataexchange.Size = new System.Drawing.Size(767, 582);
+            this.dataexchange.TabIndex = 1;
+            // 
+            // datagirdfee
+            // 
+            this.datagirdfee.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.datagirdfee.Location = new System.Drawing.Point(0, 0);
+            this.datagirdfee.Name = "datagirdfee";
+            this.datagirdfee.Size = new System.Drawing.Size(770, 574);
+            this.datagirdfee.TabIndex = 0;
             // 
             // MainForm
             // 

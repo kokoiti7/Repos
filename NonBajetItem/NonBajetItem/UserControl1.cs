@@ -19,6 +19,8 @@ namespace NonBajetItem
             this.dataExchange_feeTableAdapter.Fill(aZUREDBDataSet.DataExchange_fee);
             this.ship_Master_TBTableAdapter.Fill(this.aZUREDBDataSet.Ship_Master_TB);
 
+            this.dataExchange_feeBindingSource.AddNew();
+
             DateTime dtToday = DateTime.Today;
 
             DateTime dateTimeFirstDay = new DateTime(dtToday.Year, dtToday.Month, 1);
@@ -80,7 +82,10 @@ namespace NonBajetItem
 
         private void ItemAdd_Click(object sender, EventArgs e)
         {
-        
+            DialogResult dr = new DialogResult();
+            Control_1_ItemAdd Control_1_ItemAdd = new Control_1_ItemAdd();
+
+            dr= Control_1_ItemAdd.ShowDialog();
         }
 
     }
