@@ -32,7 +32,7 @@ namespace NonBajetItem
             this.Validate();
             this.dataExchangeBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.aZUREDBDataSet);
-
+            this.Close();
         }
     }
 }

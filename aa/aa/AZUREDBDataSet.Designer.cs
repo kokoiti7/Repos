@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace NonBajetItem {
+namespace aa {
     
     
     /// <summary>
@@ -24,25 +24,17 @@ namespace NonBajetItem {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class AZUREDBDataSet : global::System.Data.DataSet {
         
-        private DataExchangeDataTable tableDataExchange;
+        private Quoatation_FileNameDataTable tableQuoatation_FileName;
         
-        private DataExchange_CommentDataTable tableDataExchange_Comment;
-        
-        private DataExchange_feeDataTable tableDataExchange_fee;
+        private Quotation_DocumentDataTable tableQuotation_Document;
         
         private Ship_Master_TBDataTable tableShip_Master_TB;
         
-        private Ship_Master_TB1DataTable tableShip_Master_TB1;
+        private Quoatation_FileName1DataTable tableQuoatation_FileName1;
         
-        private global::System.Data.DataRelation relationFK_DataExchange_Ship_Master_TB;
+        private global::System.Data.DataRelation relationQuotation_Document_Quoatation_FileName;
         
-        private global::System.Data.DataRelation relationFK_DataExchange_fee_Ship_Master_TB1;
-        
-        private global::System.Data.DataRelation relationFK_DataExchange_Ship_Master_TB1;
-        
-        private global::System.Data.DataRelation relationFK_DataExchange_fee_Ship_Master_TB2;
-        
-        private global::System.Data.DataRelation relationFK_DataExchange_fee_Ship_Master_TB;
+        private global::System.Data.DataRelation relationFK_Quoatation_FileName_Quotation_Document;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -72,20 +64,17 @@ namespace NonBajetItem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataExchange"] != null)) {
-                    base.Tables.Add(new DataExchangeDataTable(ds.Tables["DataExchange"]));
+                if ((ds.Tables["Quoatation_FileName"] != null)) {
+                    base.Tables.Add(new Quoatation_FileNameDataTable(ds.Tables["Quoatation_FileName"]));
                 }
-                if ((ds.Tables["DataExchange_Comment"] != null)) {
-                    base.Tables.Add(new DataExchange_CommentDataTable(ds.Tables["DataExchange_Comment"]));
-                }
-                if ((ds.Tables["DataExchange_fee"] != null)) {
-                    base.Tables.Add(new DataExchange_feeDataTable(ds.Tables["DataExchange_fee"]));
+                if ((ds.Tables["Quotation_Document"] != null)) {
+                    base.Tables.Add(new Quotation_DocumentDataTable(ds.Tables["Quotation_Document"]));
                 }
                 if ((ds.Tables["Ship_Master_TB"] != null)) {
                     base.Tables.Add(new Ship_Master_TBDataTable(ds.Tables["Ship_Master_TB"]));
                 }
-                if ((ds.Tables["Ship_Master_TB1"] != null)) {
-                    base.Tables.Add(new Ship_Master_TB1DataTable(ds.Tables["Ship_Master_TB1"]));
+                if ((ds.Tables["Quoatation_FileName1"] != null)) {
+                    base.Tables.Add(new Quoatation_FileName1DataTable(ds.Tables["Quoatation_FileName1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +98,9 @@ namespace NonBajetItem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataExchangeDataTable DataExchange {
+        public Quoatation_FileNameDataTable Quoatation_FileName {
             get {
-                return this.tableDataExchange;
+                return this.tableQuoatation_FileName;
             }
         }
         
@@ -119,19 +108,9 @@ namespace NonBajetItem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataExchange_CommentDataTable DataExchange_Comment {
+        public Quotation_DocumentDataTable Quotation_Document {
             get {
-                return this.tableDataExchange_Comment;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataExchange_feeDataTable DataExchange_fee {
-            get {
-                return this.tableDataExchange_fee;
+                return this.tableQuotation_Document;
             }
         }
         
@@ -149,9 +128,9 @@ namespace NonBajetItem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Ship_Master_TB1DataTable Ship_Master_TB1 {
+        public Quoatation_FileName1DataTable Quoatation_FileName1 {
             get {
-                return this.tableShip_Master_TB1;
+                return this.tableQuoatation_FileName1;
             }
         }
         
@@ -222,20 +201,17 @@ namespace NonBajetItem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataExchange"] != null)) {
-                    base.Tables.Add(new DataExchangeDataTable(ds.Tables["DataExchange"]));
+                if ((ds.Tables["Quoatation_FileName"] != null)) {
+                    base.Tables.Add(new Quoatation_FileNameDataTable(ds.Tables["Quoatation_FileName"]));
                 }
-                if ((ds.Tables["DataExchange_Comment"] != null)) {
-                    base.Tables.Add(new DataExchange_CommentDataTable(ds.Tables["DataExchange_Comment"]));
-                }
-                if ((ds.Tables["DataExchange_fee"] != null)) {
-                    base.Tables.Add(new DataExchange_feeDataTable(ds.Tables["DataExchange_fee"]));
+                if ((ds.Tables["Quotation_Document"] != null)) {
+                    base.Tables.Add(new Quotation_DocumentDataTable(ds.Tables["Quotation_Document"]));
                 }
                 if ((ds.Tables["Ship_Master_TB"] != null)) {
                     base.Tables.Add(new Ship_Master_TBDataTable(ds.Tables["Ship_Master_TB"]));
                 }
-                if ((ds.Tables["Ship_Master_TB1"] != null)) {
-                    base.Tables.Add(new Ship_Master_TB1DataTable(ds.Tables["Ship_Master_TB1"]));
+                if ((ds.Tables["Quoatation_FileName1"] != null)) {
+                    base.Tables.Add(new Quoatation_FileName1DataTable(ds.Tables["Quoatation_FileName1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -270,22 +246,16 @@ namespace NonBajetItem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataExchange = ((DataExchangeDataTable)(base.Tables["DataExchange"]));
+            this.tableQuoatation_FileName = ((Quoatation_FileNameDataTable)(base.Tables["Quoatation_FileName"]));
             if ((initTable == true)) {
-                if ((this.tableDataExchange != null)) {
-                    this.tableDataExchange.InitVars();
+                if ((this.tableQuoatation_FileName != null)) {
+                    this.tableQuoatation_FileName.InitVars();
                 }
             }
-            this.tableDataExchange_Comment = ((DataExchange_CommentDataTable)(base.Tables["DataExchange_Comment"]));
+            this.tableQuotation_Document = ((Quotation_DocumentDataTable)(base.Tables["Quotation_Document"]));
             if ((initTable == true)) {
-                if ((this.tableDataExchange_Comment != null)) {
-                    this.tableDataExchange_Comment.InitVars();
-                }
-            }
-            this.tableDataExchange_fee = ((DataExchange_feeDataTable)(base.Tables["DataExchange_fee"]));
-            if ((initTable == true)) {
-                if ((this.tableDataExchange_fee != null)) {
-                    this.tableDataExchange_fee.InitVars();
+                if ((this.tableQuotation_Document != null)) {
+                    this.tableQuotation_Document.InitVars();
                 }
             }
             this.tableShip_Master_TB = ((Ship_Master_TBDataTable)(base.Tables["Ship_Master_TB"]));
@@ -294,17 +264,14 @@ namespace NonBajetItem {
                     this.tableShip_Master_TB.InitVars();
                 }
             }
-            this.tableShip_Master_TB1 = ((Ship_Master_TB1DataTable)(base.Tables["Ship_Master_TB1"]));
+            this.tableQuoatation_FileName1 = ((Quoatation_FileName1DataTable)(base.Tables["Quoatation_FileName1"]));
             if ((initTable == true)) {
-                if ((this.tableShip_Master_TB1 != null)) {
-                    this.tableShip_Master_TB1.InitVars();
+                if ((this.tableQuoatation_FileName1 != null)) {
+                    this.tableQuoatation_FileName1.InitVars();
                 }
             }
-            this.relationFK_DataExchange_Ship_Master_TB = this.Relations["FK_DataExchange_Ship_Master_TB"];
-            this.relationFK_DataExchange_fee_Ship_Master_TB1 = this.Relations["FK_DataExchange_fee_Ship_Master_TB1"];
-            this.relationFK_DataExchange_Ship_Master_TB1 = this.Relations["FK_DataExchange_Ship_Master_TB1"];
-            this.relationFK_DataExchange_fee_Ship_Master_TB2 = this.Relations["FK_DataExchange_fee_Ship_Master_TB2"];
-            this.relationFK_DataExchange_fee_Ship_Master_TB = this.Relations["FK_DataExchange_fee_Ship_Master_TB"];
+            this.relationQuotation_Document_Quoatation_FileName = this.Relations["Quotation_Document_Quoatation_FileName"];
+            this.relationFK_Quoatation_FileName_Quotation_Document = this.Relations["FK_Quoatation_FileName_Quotation_Document"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -315,53 +282,33 @@ namespace NonBajetItem {
             this.Namespace = "http://tempuri.org/AZUREDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataExchange = new DataExchangeDataTable();
-            base.Tables.Add(this.tableDataExchange);
-            this.tableDataExchange_Comment = new DataExchange_CommentDataTable();
-            base.Tables.Add(this.tableDataExchange_Comment);
-            this.tableDataExchange_fee = new DataExchange_feeDataTable();
-            base.Tables.Add(this.tableDataExchange_fee);
+            this.tableQuoatation_FileName = new Quoatation_FileNameDataTable();
+            base.Tables.Add(this.tableQuoatation_FileName);
+            this.tableQuotation_Document = new Quotation_DocumentDataTable();
+            base.Tables.Add(this.tableQuotation_Document);
             this.tableShip_Master_TB = new Ship_Master_TBDataTable();
             base.Tables.Add(this.tableShip_Master_TB);
-            this.tableShip_Master_TB1 = new Ship_Master_TB1DataTable();
-            base.Tables.Add(this.tableShip_Master_TB1);
-            this.relationFK_DataExchange_Ship_Master_TB = new global::System.Data.DataRelation("FK_DataExchange_Ship_Master_TB", new global::System.Data.DataColumn[] {
-                        this.tableShip_Master_TB.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataExchange.ShipIDColumn}, false);
-            this.Relations.Add(this.relationFK_DataExchange_Ship_Master_TB);
-            this.relationFK_DataExchange_fee_Ship_Master_TB1 = new global::System.Data.DataRelation("FK_DataExchange_fee_Ship_Master_TB1", new global::System.Data.DataColumn[] {
-                        this.tableShip_Master_TB1.PresentNameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataExchange_fee.shipnameColumn}, false);
-            this.Relations.Add(this.relationFK_DataExchange_fee_Ship_Master_TB1);
-            this.relationFK_DataExchange_Ship_Master_TB1 = new global::System.Data.DataRelation("FK_DataExchange_Ship_Master_TB1", new global::System.Data.DataColumn[] {
-                        this.tableShip_Master_TB1.PresentNameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataExchange.ShipnameColumn}, false);
-            this.Relations.Add(this.relationFK_DataExchange_Ship_Master_TB1);
-            this.relationFK_DataExchange_fee_Ship_Master_TB2 = new global::System.Data.DataRelation("FK_DataExchange_fee_Ship_Master_TB2", new global::System.Data.DataColumn[] {
-                        this.tableShip_Master_TB1.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataExchange_fee.ShipIDColumn}, false);
-            this.Relations.Add(this.relationFK_DataExchange_fee_Ship_Master_TB2);
-            this.relationFK_DataExchange_fee_Ship_Master_TB = new global::System.Data.DataRelation("FK_DataExchange_fee_Ship_Master_TB", new global::System.Data.DataColumn[] {
-                        this.tableShip_Master_TB.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataExchange_fee.ShipIDColumn}, false);
-            this.Relations.Add(this.relationFK_DataExchange_fee_Ship_Master_TB);
+            this.tableQuoatation_FileName1 = new Quoatation_FileName1DataTable();
+            base.Tables.Add(this.tableQuoatation_FileName1);
+            this.relationQuotation_Document_Quoatation_FileName = new global::System.Data.DataRelation("Quotation_Document_Quoatation_FileName", new global::System.Data.DataColumn[] {
+                        this.tableQuotation_Document.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableQuoatation_FileName.QTNTBL_IDColumn}, false);
+            this.Relations.Add(this.relationQuotation_Document_Quoatation_FileName);
+            this.relationFK_Quoatation_FileName_Quotation_Document = new global::System.Data.DataRelation("FK_Quoatation_FileName_Quotation_Document", new global::System.Data.DataColumn[] {
+                        this.tableQuotation_Document.IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableQuoatation_FileName1.QTNTBL_IDColumn}, false);
+            this.Relations.Add(this.relationFK_Quoatation_FileName_Quotation_Document);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataExchange() {
+        private bool ShouldSerializeQuoatation_FileName() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataExchange_Comment() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataExchange_fee() {
+        private bool ShouldSerializeQuotation_Document() {
             return false;
         }
         
@@ -373,7 +320,7 @@ namespace NonBajetItem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeShip_Master_TB1() {
+        private bool ShouldSerializeQuoatation_FileName1() {
             return false;
         }
         
@@ -433,73 +380,36 @@ namespace NonBajetItem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataExchangeRowChangeEventHandler(object sender, DataExchangeRowChangeEvent e);
+        public delegate void Quoatation_FileNameRowChangeEventHandler(object sender, Quoatation_FileNameRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataExchange_CommentRowChangeEventHandler(object sender, DataExchange_CommentRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataExchange_feeRowChangeEventHandler(object sender, DataExchange_feeRowChangeEvent e);
+        public delegate void Quotation_DocumentRowChangeEventHandler(object sender, Quotation_DocumentRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void Ship_Master_TBRowChangeEventHandler(object sender, Ship_Master_TBRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void Ship_Master_TB1RowChangeEventHandler(object sender, Ship_Master_TB1RowChangeEvent e);
+        public delegate void Quoatation_FileName1RowChangeEventHandler(object sender, Quoatation_FileName1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataExchangeDataTable : global::System.Data.TypedTableBase<DataExchangeRow> {
+        public partial class Quoatation_FileNameDataTable : global::System.Data.TypedTableBase<Quoatation_FileNameRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnShipID;
+            private global::System.Data.DataColumn columnQTNTBL_ID;
             
-            private global::System.Data.DataColumn columnShipname;
+            private global::System.Data.DataColumn columnFileName;
             
-            private global::System.Data.DataColumn columnMonthGroup;
-            
-            private global::System.Data.DataColumn columnDescription;
-            
-            private global::System.Data.DataColumn columnAmountUSD;
-            
-            private global::System.Data.DataColumn columnAmountJPY;
-            
-            private global::System.Data.DataColumn columnexchangerate;
-            
-            private global::System.Data.DataColumn columnGrandTotalUSD;
-            
-            private global::System.Data.DataColumn columnPaymentDate;
-            
-            private global::System.Data.DataColumn columnProcess;
-            
-            private global::System.Data.DataColumn columnRemark;
-            
-            private global::System.Data.DataColumn columnUpdateremark255;
-            
-            private global::System.Data.DataColumn columnUpdateDatedate;
-            
-            private global::System.Data.DataColumn columnSupportDocks;
-            
-            private global::System.Data.DataColumn columnSpareMoney1;
-            
-            private global::System.Data.DataColumn columnSpareint1;
-            
-            private global::System.Data.DataColumn columnSparenver1;
-            
-            private global::System.Data.DataColumn columnSpareDate1;
-            
-            private global::System.Data.DataColumn columnSpareBit1;
-            
-            private global::System.Data.DataColumn columnSpareBit2;
+            private global::System.Data.DataColumn columnUpdateRemark;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeDataTable() {
-                this.TableName = "DataExchange";
+            public Quoatation_FileNameDataTable() {
+                this.TableName = "Quoatation_FileName";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -507,7 +417,7 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataExchangeDataTable(global::System.Data.DataTable table) {
+            internal Quoatation_FileNameDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -524,7 +434,7 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataExchangeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Quoatation_FileNameDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -539,161 +449,25 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ShipIDColumn {
+            public global::System.Data.DataColumn QTNTBL_IDColumn {
                 get {
-                    return this.columnShipID;
+                    return this.columnQTNTBL_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ShipnameColumn {
+            public global::System.Data.DataColumn FileNameColumn {
                 get {
-                    return this.columnShipname;
+                    return this.columnFileName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MonthGroupColumn {
+            public global::System.Data.DataColumn UpdateRemarkColumn {
                 get {
-                    return this.columnMonthGroup;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DescriptionColumn {
-                get {
-                    return this.columnDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AmountUSDColumn {
-                get {
-                    return this.columnAmountUSD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AmountJPYColumn {
-                get {
-                    return this.columnAmountJPY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn exchangerateColumn {
-                get {
-                    return this.columnexchangerate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn GrandTotalUSDColumn {
-                get {
-                    return this.columnGrandTotalUSD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PaymentDateColumn {
-                get {
-                    return this.columnPaymentDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ProcessColumn {
-                get {
-                    return this.columnProcess;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RemarkColumn {
-                get {
-                    return this.columnRemark;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Updateremark255Column {
-                get {
-                    return this.columnUpdateremark255;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UpdateDatedateColumn {
-                get {
-                    return this.columnUpdateDatedate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SupportDocksColumn {
-                get {
-                    return this.columnSupportDocks;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareMoney1Column {
-                get {
-                    return this.columnSpareMoney1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Spareint1Column {
-                get {
-                    return this.columnSpareint1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Sparenver1Column {
-                get {
-                    return this.columnSparenver1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareDate1Column {
-                get {
-                    return this.columnSpareDate1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareBit1Column {
-                get {
-                    return this.columnSpareBit1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareBit2Column {
-                get {
-                    return this.columnSpareBit2;
+                    return this.columnUpdateRemark;
                 }
             }
             
@@ -708,98 +482,55 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow this[int index] {
+            public Quoatation_FileNameRow this[int index] {
                 get {
-                    return ((DataExchangeRow)(this.Rows[index]));
+                    return ((Quoatation_FileNameRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchangeRowChangeEventHandler DataExchangeRowChanging;
+            public event Quoatation_FileNameRowChangeEventHandler Quoatation_FileNameRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchangeRowChangeEventHandler DataExchangeRowChanged;
+            public event Quoatation_FileNameRowChangeEventHandler Quoatation_FileNameRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchangeRowChangeEventHandler DataExchangeRowDeleting;
+            public event Quoatation_FileNameRowChangeEventHandler Quoatation_FileNameRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchangeRowChangeEventHandler DataExchangeRowDeleted;
+            public event Quoatation_FileNameRowChangeEventHandler Quoatation_FileNameRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataExchangeRow(DataExchangeRow row) {
+            public void AddQuoatation_FileNameRow(Quoatation_FileNameRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow AddDataExchangeRow(
-                        Ship_Master_TBRow parentShip_Master_TBRowByFK_DataExchange_Ship_Master_TB, 
-                        Ship_Master_TB1Row parentShip_Master_TB1RowByFK_DataExchange_Ship_Master_TB1, 
-                        System.DateTime MonthGroup, 
-                        string Description, 
-                        decimal AmountUSD, 
-                        decimal AmountJPY, 
-                        decimal exchangerate, 
-                        decimal GrandTotalUSD, 
-                        string PaymentDate, 
-                        string Process, 
-                        string Remark, 
-                        string Updateremark255, 
-                        System.DateTime UpdateDatedate, 
-                        string SupportDocks, 
-                        decimal SpareMoney1, 
-                        int Spareint1, 
-                        string Sparenver1, 
-                        System.DateTime SpareDate1, 
-                        bool SpareBit1, 
-                        bool SpareBit2) {
-                DataExchangeRow rowDataExchangeRow = ((DataExchangeRow)(this.NewRow()));
+            public Quoatation_FileNameRow AddQuoatation_FileNameRow(int ID, string FileName, string UpdateRemark) {
+                Quoatation_FileNameRow rowQuoatation_FileNameRow = ((Quoatation_FileNameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        ID,
                         null,
-                        null,
-                        null,
-                        MonthGroup,
-                        Description,
-                        AmountUSD,
-                        AmountJPY,
-                        exchangerate,
-                        GrandTotalUSD,
-                        PaymentDate,
-                        Process,
-                        Remark,
-                        Updateremark255,
-                        UpdateDatedate,
-                        SupportDocks,
-                        SpareMoney1,
-                        Spareint1,
-                        Sparenver1,
-                        SpareDate1,
-                        SpareBit1,
-                        SpareBit2};
-                if ((parentShip_Master_TBRowByFK_DataExchange_Ship_Master_TB != null)) {
-                    columnValuesArray[1] = parentShip_Master_TBRowByFK_DataExchange_Ship_Master_TB[0];
-                }
-                if ((parentShip_Master_TB1RowByFK_DataExchange_Ship_Master_TB1 != null)) {
-                    columnValuesArray[2] = parentShip_Master_TB1RowByFK_DataExchange_Ship_Master_TB1[1];
-                }
-                rowDataExchangeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataExchangeRow);
-                return rowDataExchangeRow;
+                        FileName,
+                        UpdateRemark};
+                rowQuoatation_FileNameRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowQuoatation_FileNameRow);
+                return rowQuoatation_FileNameRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow FindByID(int ID) {
-                return ((DataExchangeRow)(this.Rows.Find(new object[] {
+            public Quoatation_FileNameRow FindByID(int ID) {
+                return ((Quoatation_FileNameRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataExchangeDataTable cln = ((DataExchangeDataTable)(base.Clone()));
+                Quoatation_FileNameDataTable cln = ((Quoatation_FileNameDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -807,33 +538,16 @@ namespace NonBajetItem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataExchangeDataTable();
+                return new Quoatation_FileNameDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnShipID = base.Columns["ShipID"];
-                this.columnShipname = base.Columns["Shipname"];
-                this.columnMonthGroup = base.Columns["MonthGroup"];
-                this.columnDescription = base.Columns["Description"];
-                this.columnAmountUSD = base.Columns["AmountUSD"];
-                this.columnAmountJPY = base.Columns["AmountJPY"];
-                this.columnexchangerate = base.Columns["exchangerate"];
-                this.columnGrandTotalUSD = base.Columns["GrandTotalUSD"];
-                this.columnPaymentDate = base.Columns["PaymentDate"];
-                this.columnProcess = base.Columns["Process"];
-                this.columnRemark = base.Columns["Remark"];
-                this.columnUpdateremark255 = base.Columns["Updateremark255"];
-                this.columnUpdateDatedate = base.Columns["UpdateDatedate"];
-                this.columnSupportDocks = base.Columns["SupportDocks"];
-                this.columnSpareMoney1 = base.Columns["SpareMoney1"];
-                this.columnSpareint1 = base.Columns["Spareint1"];
-                this.columnSparenver1 = base.Columns["Sparenver1"];
-                this.columnSpareDate1 = base.Columns["SpareDate1"];
-                this.columnSpareBit1 = base.Columns["SpareBit1"];
-                this.columnSpareBit2 = base.Columns["SpareBit2"];
+                this.columnQTNTBL_ID = base.Columns["QTNTBL_ID"];
+                this.columnFileName = base.Columns["FileName"];
+                this.columnUpdateRemark = base.Columns["UpdateRemark"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -841,88 +555,49 @@ namespace NonBajetItem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnShipID = new global::System.Data.DataColumn("ShipID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShipID);
-                this.columnShipname = new global::System.Data.DataColumn("Shipname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShipname);
-                this.columnMonthGroup = new global::System.Data.DataColumn("MonthGroup", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonthGroup);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescription);
-                this.columnAmountUSD = new global::System.Data.DataColumn("AmountUSD", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmountUSD);
-                this.columnAmountJPY = new global::System.Data.DataColumn("AmountJPY", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmountJPY);
-                this.columnexchangerate = new global::System.Data.DataColumn("exchangerate", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnexchangerate);
-                this.columnGrandTotalUSD = new global::System.Data.DataColumn("GrandTotalUSD", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGrandTotalUSD);
-                this.columnPaymentDate = new global::System.Data.DataColumn("PaymentDate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPaymentDate);
-                this.columnProcess = new global::System.Data.DataColumn("Process", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProcess);
-                this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRemark);
-                this.columnUpdateremark255 = new global::System.Data.DataColumn("Updateremark255", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUpdateremark255);
-                this.columnUpdateDatedate = new global::System.Data.DataColumn("UpdateDatedate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUpdateDatedate);
-                this.columnSupportDocks = new global::System.Data.DataColumn("SupportDocks", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSupportDocks);
-                this.columnSpareMoney1 = new global::System.Data.DataColumn("SpareMoney1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareMoney1);
-                this.columnSpareint1 = new global::System.Data.DataColumn("Spareint1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareint1);
-                this.columnSparenver1 = new global::System.Data.DataColumn("Sparenver1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSparenver1);
-                this.columnSpareDate1 = new global::System.Data.DataColumn("SpareDate1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareDate1);
-                this.columnSpareBit1 = new global::System.Data.DataColumn("SpareBit1", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareBit1);
-                this.columnSpareBit2 = new global::System.Data.DataColumn("SpareBit2", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareBit2);
+                this.columnQTNTBL_ID = new global::System.Data.DataColumn("QTNTBL_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTNTBL_ID);
+                this.columnFileName = new global::System.Data.DataColumn("FileName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFileName);
+                this.columnUpdateRemark = new global::System.Data.DataColumn("UpdateRemark", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUpdateRemark);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnShipname.MaxLength = 255;
-                this.columnDescription.MaxLength = 2147483647;
-                this.columnPaymentDate.MaxLength = 255;
-                this.columnProcess.MaxLength = 255;
-                this.columnRemark.MaxLength = 2147483647;
-                this.columnUpdateremark255.MaxLength = 255;
-                this.columnSupportDocks.MaxLength = 2147483647;
-                this.columnSparenver1.MaxLength = 2147483647;
+                this.columnQTNTBL_ID.AutoIncrement = true;
+                this.columnQTNTBL_ID.AutoIncrementSeed = -1;
+                this.columnQTNTBL_ID.AutoIncrementStep = -1;
+                this.columnQTNTBL_ID.AllowDBNull = false;
+                this.columnQTNTBL_ID.ReadOnly = true;
+                this.columnFileName.MaxLength = 2147483647;
+                this.columnUpdateRemark.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow NewDataExchangeRow() {
-                return ((DataExchangeRow)(this.NewRow()));
+            public Quoatation_FileNameRow NewQuoatation_FileNameRow() {
+                return ((Quoatation_FileNameRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataExchangeRow(builder);
+                return new Quoatation_FileNameRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataExchangeRow);
+                return typeof(Quoatation_FileNameRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataExchangeRowChanged != null)) {
-                    this.DataExchangeRowChanged(this, new DataExchangeRowChangeEvent(((DataExchangeRow)(e.Row)), e.Action));
+                if ((this.Quoatation_FileNameRowChanged != null)) {
+                    this.Quoatation_FileNameRowChanged(this, new Quoatation_FileNameRowChangeEvent(((Quoatation_FileNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -930,8 +605,8 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataExchangeRowChanging != null)) {
-                    this.DataExchangeRowChanging(this, new DataExchangeRowChangeEvent(((DataExchangeRow)(e.Row)), e.Action));
+                if ((this.Quoatation_FileNameRowChanging != null)) {
+                    this.Quoatation_FileNameRowChanging(this, new Quoatation_FileNameRowChangeEvent(((Quoatation_FileNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -939,8 +614,8 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataExchangeRowDeleted != null)) {
-                    this.DataExchangeRowDeleted(this, new DataExchangeRowChangeEvent(((DataExchangeRow)(e.Row)), e.Action));
+                if ((this.Quoatation_FileNameRowDeleted != null)) {
+                    this.Quoatation_FileNameRowDeleted(this, new Quoatation_FileNameRowChangeEvent(((Quoatation_FileNameRow)(e.Row)), e.Action));
                 }
             }
             
@@ -948,14 +623,14 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataExchangeRowDeleting != null)) {
-                    this.DataExchangeRowDeleting(this, new DataExchangeRowChangeEvent(((DataExchangeRow)(e.Row)), e.Action));
+                if ((this.Quoatation_FileNameRowDeleting != null)) {
+                    this.Quoatation_FileNameRowDeleting(this, new Quoatation_FileNameRowChangeEvent(((Quoatation_FileNameRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataExchangeRow(DataExchangeRow row) {
+            public void RemoveQuoatation_FileNameRow(Quoatation_FileNameRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -982,7 +657,7 @@ namespace NonBajetItem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataExchangeDataTable";
+                attribute2.FixedValue = "Quoatation_FileNameDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1028,354 +703,58 @@ namespace NonBajetItem {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataExchange_CommentDataTable : global::System.Data.TypedTableBase<DataExchange_CommentRow> {
+        public partial class Quotation_DocumentDataTable : global::System.Data.TypedTableBase<Quotation_DocumentRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnEditdateTime;
+            private global::System.Data.DataColumn columnBLOBContainerPath;
             
-            private global::System.Data.DataColumn columnComment;
+            private global::System.Data.DataColumn columnContractor;
             
-            private global::System.Data.DataColumn columnCommnetSpare;
+            private global::System.Data.DataColumn columnContractorDetail;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentDataTable() {
-                this.TableName = "DataExchange_Comment";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
+            private global::System.Data.DataColumn columnContractorPIC;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataExchange_CommentDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
+            private global::System.Data.DataColumn columnContractorTarm;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataExchange_CommentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
+            private global::System.Data.DataColumn columnPONumber;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
-            }
+            private global::System.Data.DataColumn columnPOReference;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EditdateTimeColumn {
-                get {
-                    return this.columnEditdateTime;
-                }
-            }
+            private global::System.Data.DataColumn columnPlanedDate;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CommentColumn {
-                get {
-                    return this.columnComment;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CommnetSpareColumn {
-                get {
-                    return this.columnCommnetSpare;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentRow this[int index] {
-                get {
-                    return ((DataExchange_CommentRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_CommentRowChangeEventHandler DataExchange_CommentRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_CommentRowChangeEventHandler DataExchange_CommentRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_CommentRowChangeEventHandler DataExchange_CommentRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_CommentRowChangeEventHandler DataExchange_CommentRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataExchange_CommentRow(DataExchange_CommentRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentRow AddDataExchange_CommentRow(System.DateTime EditdateTime, string Comment, string CommnetSpare) {
-                DataExchange_CommentRow rowDataExchange_CommentRow = ((DataExchange_CommentRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        EditdateTime,
-                        Comment,
-                        CommnetSpare};
-                rowDataExchange_CommentRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataExchange_CommentRow);
-                return rowDataExchange_CommentRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentRow FindByID(int ID) {
-                return ((DataExchange_CommentRow)(this.Rows.Find(new object[] {
-                            ID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                DataExchange_CommentDataTable cln = ((DataExchange_CommentDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new DataExchange_CommentDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnEditdateTime = base.Columns["EditdateTime"];
-                this.columnComment = base.Columns["Comment"];
-                this.columnCommnetSpare = base.Columns["CommnetSpare"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnEditdateTime = new global::System.Data.DataColumn("EditdateTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEditdateTime);
-                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnComment);
-                this.columnCommnetSpare = new global::System.Data.DataColumn("CommnetSpare", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCommnetSpare);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
-                this.columnID.Unique = true;
-                this.columnComment.MaxLength = 2147483647;
-                this.columnCommnetSpare.MaxLength = 2147483647;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentRow NewDataExchange_CommentRow() {
-                return ((DataExchange_CommentRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataExchange_CommentRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(DataExchange_CommentRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.DataExchange_CommentRowChanged != null)) {
-                    this.DataExchange_CommentRowChanged(this, new DataExchange_CommentRowChangeEvent(((DataExchange_CommentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.DataExchange_CommentRowChanging != null)) {
-                    this.DataExchange_CommentRowChanging(this, new DataExchange_CommentRowChangeEvent(((DataExchange_CommentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.DataExchange_CommentRowDeleted != null)) {
-                    this.DataExchange_CommentRowDeleted(this, new DataExchange_CommentRowChangeEvent(((DataExchange_CommentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.DataExchange_CommentRowDeleting != null)) {
-                    this.DataExchange_CommentRowDeleting(this, new DataExchange_CommentRowChangeEvent(((DataExchange_CommentRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataExchange_CommentRow(DataExchange_CommentRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AZUREDBDataSet ds = new AZUREDBDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataExchange_CommentDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataExchange_feeDataTable : global::System.Data.TypedTableBase<DataExchange_feeRow> {
-            
-            private global::System.Data.DataColumn columnID;
-            
-            private global::System.Data.DataColumn columnMonthGroup;
+            private global::System.Data.DataColumn columnIsuueDate;
             
             private global::System.Data.DataColumn columnShipID;
             
-            private global::System.Data.DataColumn columnshipname;
+            private global::System.Data.DataColumn columnPresentName;
             
-            private global::System.Data.DataColumn columnbudjetbalance;
+            private global::System.Data.DataColumn columnPlanedPort;
             
-            private global::System.Data.DataColumn columnManagementfee;
+            private global::System.Data.DataColumn columnPlanedPortAgent;
             
-            private global::System.Data.DataColumn columnPaymentDate;
+            private global::System.Data.DataColumn columnPlanedPortETA;
+            
+            private global::System.Data.DataColumn columnPlanedPortRemark;
+            
+            private global::System.Data.DataColumn columnOrderer;
+            
+            private global::System.Data.DataColumn columnOrdererPIC;
+            
+            private global::System.Data.DataColumn columnOrdererDetail;
             
             private global::System.Data.DataColumn columnRemark;
             
-            private global::System.Data.DataColumn columnSapreRemark;
+            private global::System.Data.DataColumn columnDateSpeare;
             
-            private global::System.Data.DataColumn columnSpareDate1;
+            private global::System.Data.DataColumn columnIssuedDateSpeare;
             
-            private global::System.Data.DataColumn columnSpareDate2;
-            
-            private global::System.Data.DataColumn columnMonthbeginTotal;
-            
-            private global::System.Data.DataColumn columnSpareMoney1;
-            
-            private global::System.Data.DataColumn columnSpareMoney2;
-            
-            private global::System.Data.DataColumn columnSparevarch1;
-            
-            private global::System.Data.DataColumn columnSparebit1;
-            
-            private global::System.Data.DataColumn columnSparebit2;
-            
-            private global::System.Data.DataColumn columnSpareint1;
+            private global::System.Data.DataColumn columnIntDateSpeare;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeDataTable() {
-                this.TableName = "DataExchange_fee";
+            public Quotation_DocumentDataTable() {
+                this.TableName = "Quotation_Document";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1383,7 +762,7 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataExchange_feeDataTable(global::System.Data.DataTable table) {
+            internal Quotation_DocumentDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1400,7 +779,7 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataExchange_feeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Quotation_DocumentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1415,9 +794,73 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MonthGroupColumn {
+            public global::System.Data.DataColumn BLOBContainerPathColumn {
                 get {
-                    return this.columnMonthGroup;
+                    return this.columnBLOBContainerPath;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ContractorColumn {
+                get {
+                    return this.columnContractor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ContractorDetailColumn {
+                get {
+                    return this.columnContractorDetail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ContractorPICColumn {
+                get {
+                    return this.columnContractorPIC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ContractorTarmColumn {
+                get {
+                    return this.columnContractorTarm;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PONumberColumn {
+                get {
+                    return this.columnPONumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn POReferenceColumn {
+                get {
+                    return this.columnPOReference;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PlanedDateColumn {
+                get {
+                    return this.columnPlanedDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn IsuueDateColumn {
+                get {
+                    return this.columnIsuueDate;
                 }
             }
             
@@ -1431,33 +874,65 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn shipnameColumn {
+            public global::System.Data.DataColumn PresentNameColumn {
                 get {
-                    return this.columnshipname;
+                    return this.columnPresentName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn budjetbalanceColumn {
+            public global::System.Data.DataColumn PlanedPortColumn {
                 get {
-                    return this.columnbudjetbalance;
+                    return this.columnPlanedPort;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ManagementfeeColumn {
+            public global::System.Data.DataColumn PlanedPortAgentColumn {
                 get {
-                    return this.columnManagementfee;
+                    return this.columnPlanedPortAgent;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PaymentDateColumn {
+            public global::System.Data.DataColumn PlanedPortETAColumn {
                 get {
-                    return this.columnPaymentDate;
+                    return this.columnPlanedPortETA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PlanedPortRemarkColumn {
+                get {
+                    return this.columnPlanedPortRemark;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OrdererColumn {
+                get {
+                    return this.columnOrderer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OrdererPICColumn {
+                get {
+                    return this.columnOrdererPIC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OrdererDetailColumn {
+                get {
+                    return this.columnOrdererDetail;
                 }
             }
             
@@ -1471,81 +946,25 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SapreRemarkColumn {
+            public global::System.Data.DataColumn DateSpeareColumn {
                 get {
-                    return this.columnSapreRemark;
+                    return this.columnDateSpeare;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareDate1Column {
+            public global::System.Data.DataColumn IssuedDateSpeareColumn {
                 get {
-                    return this.columnSpareDate1;
+                    return this.columnIssuedDateSpeare;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareDate2Column {
+            public global::System.Data.DataColumn IntDateSpeareColumn {
                 get {
-                    return this.columnSpareDate2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MonthbeginTotalColumn {
-                get {
-                    return this.columnMonthbeginTotal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareMoney1Column {
-                get {
-                    return this.columnSpareMoney1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SpareMoney2Column {
-                get {
-                    return this.columnSpareMoney2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Sparevarch1Column {
-                get {
-                    return this.columnSparevarch1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Sparebit1Column {
-                get {
-                    return this.columnSparebit1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Sparebit2Column {
-                get {
-                    return this.columnSparebit2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Spareint1Column {
-                get {
-                    return this.columnSpareint1;
+                    return this.columnIntDateSpeare;
                 }
             }
             
@@ -1560,92 +979,96 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow this[int index] {
+            public Quotation_DocumentRow this[int index] {
                 get {
-                    return ((DataExchange_feeRow)(this.Rows[index]));
+                    return ((Quotation_DocumentRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_feeRowChangeEventHandler DataExchange_feeRowChanging;
+            public event Quotation_DocumentRowChangeEventHandler Quotation_DocumentRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_feeRowChangeEventHandler DataExchange_feeRowChanged;
+            public event Quotation_DocumentRowChangeEventHandler Quotation_DocumentRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_feeRowChangeEventHandler DataExchange_feeRowDeleting;
+            public event Quotation_DocumentRowChangeEventHandler Quotation_DocumentRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataExchange_feeRowChangeEventHandler DataExchange_feeRowDeleted;
+            public event Quotation_DocumentRowChangeEventHandler Quotation_DocumentRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataExchange_feeRow(DataExchange_feeRow row) {
+            public void AddQuotation_DocumentRow(Quotation_DocumentRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow AddDataExchange_feeRow(
-                        System.DateTime MonthGroup, 
-                        Ship_Master_TB1Row parentShip_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB2, 
-                        Ship_Master_TB1Row parentShip_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB1, 
-                        decimal budjetbalance, 
-                        decimal Managementfee, 
-                        System.DateTime PaymentDate, 
+            public Quotation_DocumentRow AddQuotation_DocumentRow(
+                        string BLOBContainerPath, 
+                        string Contractor, 
+                        string ContractorDetail, 
+                        string ContractorPIC, 
+                        string ContractorTarm, 
+                        int PONumber, 
+                        string POReference, 
+                        System.DateTime PlanedDate, 
+                        System.DateTime IsuueDate, 
+                        int ShipID, 
+                        string PresentName, 
+                        string PlanedPort, 
+                        string PlanedPortAgent, 
+                        System.DateTime PlanedPortETA, 
+                        string PlanedPortRemark, 
+                        string Orderer, 
+                        string OrdererPIC, 
+                        string OrdererDetail, 
                         string Remark, 
-                        string SapreRemark, 
-                        System.DateTime SpareDate1, 
-                        System.DateTime SpareDate2, 
-                        decimal MonthbeginTotal, 
-                        decimal SpareMoney1, 
-                        decimal SpareMoney2, 
-                        string Sparevarch1, 
-                        bool Sparebit1, 
-                        bool Sparebit2, 
-                        int Spareint1) {
-                DataExchange_feeRow rowDataExchange_feeRow = ((DataExchange_feeRow)(this.NewRow()));
+                        byte[] DateSpeare, 
+                        byte[] IssuedDateSpeare, 
+                        int IntDateSpeare) {
+                Quotation_DocumentRow rowQuotation_DocumentRow = ((Quotation_DocumentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        MonthGroup,
-                        null,
-                        null,
-                        budjetbalance,
-                        Managementfee,
-                        PaymentDate,
+                        BLOBContainerPath,
+                        Contractor,
+                        ContractorDetail,
+                        ContractorPIC,
+                        ContractorTarm,
+                        PONumber,
+                        POReference,
+                        PlanedDate,
+                        IsuueDate,
+                        ShipID,
+                        PresentName,
+                        PlanedPort,
+                        PlanedPortAgent,
+                        PlanedPortETA,
+                        PlanedPortRemark,
+                        Orderer,
+                        OrdererPIC,
+                        OrdererDetail,
                         Remark,
-                        SapreRemark,
-                        SpareDate1,
-                        SpareDate2,
-                        MonthbeginTotal,
-                        SpareMoney1,
-                        SpareMoney2,
-                        Sparevarch1,
-                        Sparebit1,
-                        Sparebit2,
-                        Spareint1};
-                if ((parentShip_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB2 != null)) {
-                    columnValuesArray[2] = parentShip_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB2[0];
-                }
-                if ((parentShip_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB1 != null)) {
-                    columnValuesArray[3] = parentShip_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB1[1];
-                }
-                rowDataExchange_feeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataExchange_feeRow);
-                return rowDataExchange_feeRow;
+                        DateSpeare,
+                        IssuedDateSpeare,
+                        IntDateSpeare};
+                rowQuotation_DocumentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowQuotation_DocumentRow);
+                return rowQuotation_DocumentRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow FindByID(int ID) {
-                return ((DataExchange_feeRow)(this.Rows.Find(new object[] {
+            public Quotation_DocumentRow FindByID(int ID) {
+                return ((Quotation_DocumentRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataExchange_feeDataTable cln = ((DataExchange_feeDataTable)(base.Clone()));
+                Quotation_DocumentDataTable cln = ((Quotation_DocumentDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1653,30 +1076,35 @@ namespace NonBajetItem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataExchange_feeDataTable();
+                return new Quotation_DocumentDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnMonthGroup = base.Columns["MonthGroup"];
+                this.columnBLOBContainerPath = base.Columns["BLOBContainerPath"];
+                this.columnContractor = base.Columns["Contractor"];
+                this.columnContractorDetail = base.Columns["ContractorDetail"];
+                this.columnContractorPIC = base.Columns["ContractorPIC"];
+                this.columnContractorTarm = base.Columns["ContractorTarm"];
+                this.columnPONumber = base.Columns["PONumber"];
+                this.columnPOReference = base.Columns["POReference"];
+                this.columnPlanedDate = base.Columns["PlanedDate"];
+                this.columnIsuueDate = base.Columns["IsuueDate"];
                 this.columnShipID = base.Columns["ShipID"];
-                this.columnshipname = base.Columns["shipname"];
-                this.columnbudjetbalance = base.Columns["budjetbalance"];
-                this.columnManagementfee = base.Columns["Managementfee"];
-                this.columnPaymentDate = base.Columns["PaymentDate"];
+                this.columnPresentName = base.Columns["PresentName"];
+                this.columnPlanedPort = base.Columns["PlanedPort"];
+                this.columnPlanedPortAgent = base.Columns["PlanedPortAgent"];
+                this.columnPlanedPortETA = base.Columns["PlanedPortETA"];
+                this.columnPlanedPortRemark = base.Columns["PlanedPortRemark"];
+                this.columnOrderer = base.Columns["Orderer"];
+                this.columnOrdererPIC = base.Columns["OrdererPIC"];
+                this.columnOrdererDetail = base.Columns["OrdererDetail"];
                 this.columnRemark = base.Columns["Remark"];
-                this.columnSapreRemark = base.Columns["SapreRemark"];
-                this.columnSpareDate1 = base.Columns["SpareDate1"];
-                this.columnSpareDate2 = base.Columns["SpareDate2"];
-                this.columnMonthbeginTotal = base.Columns["MonthbeginTotal"];
-                this.columnSpareMoney1 = base.Columns["SpareMoney1"];
-                this.columnSpareMoney2 = base.Columns["SpareMoney2"];
-                this.columnSparevarch1 = base.Columns["Sparevarch1"];
-                this.columnSparebit1 = base.Columns["Sparebit1"];
-                this.columnSparebit2 = base.Columns["Sparebit2"];
-                this.columnSpareint1 = base.Columns["Spareint1"];
+                this.columnDateSpeare = base.Columns["DateSpeare"];
+                this.columnIssuedDateSpeare = base.Columns["IssuedDateSpeare"];
+                this.columnIntDateSpeare = base.Columns["IntDateSpeare"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1684,40 +1112,50 @@ namespace NonBajetItem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnMonthGroup = new global::System.Data.DataColumn("MonthGroup", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonthGroup);
+                this.columnBLOBContainerPath = new global::System.Data.DataColumn("BLOBContainerPath", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBLOBContainerPath);
+                this.columnContractor = new global::System.Data.DataColumn("Contractor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContractor);
+                this.columnContractorDetail = new global::System.Data.DataColumn("ContractorDetail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContractorDetail);
+                this.columnContractorPIC = new global::System.Data.DataColumn("ContractorPIC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContractorPIC);
+                this.columnContractorTarm = new global::System.Data.DataColumn("ContractorTarm", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContractorTarm);
+                this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPONumber);
+                this.columnPOReference = new global::System.Data.DataColumn("POReference", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOReference);
+                this.columnPlanedDate = new global::System.Data.DataColumn("PlanedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlanedDate);
+                this.columnIsuueDate = new global::System.Data.DataColumn("IsuueDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsuueDate);
                 this.columnShipID = new global::System.Data.DataColumn("ShipID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShipID);
-                this.columnshipname = new global::System.Data.DataColumn("shipname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnshipname);
-                this.columnbudjetbalance = new global::System.Data.DataColumn("budjetbalance", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbudjetbalance);
-                this.columnManagementfee = new global::System.Data.DataColumn("Managementfee", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnManagementfee);
-                this.columnPaymentDate = new global::System.Data.DataColumn("PaymentDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPaymentDate);
+                this.columnPresentName = new global::System.Data.DataColumn("PresentName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPresentName);
+                this.columnPlanedPort = new global::System.Data.DataColumn("PlanedPort", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlanedPort);
+                this.columnPlanedPortAgent = new global::System.Data.DataColumn("PlanedPortAgent", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlanedPortAgent);
+                this.columnPlanedPortETA = new global::System.Data.DataColumn("PlanedPortETA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlanedPortETA);
+                this.columnPlanedPortRemark = new global::System.Data.DataColumn("PlanedPortRemark", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlanedPortRemark);
+                this.columnOrderer = new global::System.Data.DataColumn("Orderer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrderer);
+                this.columnOrdererPIC = new global::System.Data.DataColumn("OrdererPIC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrdererPIC);
+                this.columnOrdererDetail = new global::System.Data.DataColumn("OrdererDetail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrdererDetail);
                 this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRemark);
-                this.columnSapreRemark = new global::System.Data.DataColumn("SapreRemark", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSapreRemark);
-                this.columnSpareDate1 = new global::System.Data.DataColumn("SpareDate1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareDate1);
-                this.columnSpareDate2 = new global::System.Data.DataColumn("SpareDate2", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareDate2);
-                this.columnMonthbeginTotal = new global::System.Data.DataColumn("MonthbeginTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonthbeginTotal);
-                this.columnSpareMoney1 = new global::System.Data.DataColumn("SpareMoney1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareMoney1);
-                this.columnSpareMoney2 = new global::System.Data.DataColumn("SpareMoney2", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareMoney2);
-                this.columnSparevarch1 = new global::System.Data.DataColumn("Sparevarch1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSparevarch1);
-                this.columnSparebit1 = new global::System.Data.DataColumn("Sparebit1", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSparebit1);
-                this.columnSparebit2 = new global::System.Data.DataColumn("Sparebit2", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSparebit2);
-                this.columnSpareint1 = new global::System.Data.DataColumn("Spareint1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpareint1);
+                this.columnDateSpeare = new global::System.Data.DataColumn("DateSpeare", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateSpeare);
+                this.columnIssuedDateSpeare = new global::System.Data.DataColumn("IssuedDateSpeare", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIssuedDateSpeare);
+                this.columnIntDateSpeare = new global::System.Data.DataColumn("IntDateSpeare", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIntDateSpeare);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -1726,37 +1164,46 @@ namespace NonBajetItem {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnMonthGroup.AllowDBNull = false;
-                this.columnshipname.MaxLength = 50;
+                this.columnBLOBContainerPath.MaxLength = 2147483647;
+                this.columnContractor.MaxLength = 2147483647;
+                this.columnContractorDetail.MaxLength = 2147483647;
+                this.columnContractorPIC.MaxLength = 2147483647;
+                this.columnContractorTarm.MaxLength = 2147483647;
+                this.columnPOReference.MaxLength = 2147483647;
+                this.columnPresentName.MaxLength = 2147483647;
+                this.columnPlanedPort.MaxLength = 2147483647;
+                this.columnPlanedPortAgent.MaxLength = 2147483647;
+                this.columnPlanedPortRemark.MaxLength = 2147483647;
+                this.columnOrderer.MaxLength = 2147483647;
+                this.columnOrdererPIC.MaxLength = 2147483647;
+                this.columnOrdererDetail.MaxLength = 2147483647;
                 this.columnRemark.MaxLength = 2147483647;
-                this.columnSapreRemark.MaxLength = 2147483647;
-                this.columnSparevarch1.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow NewDataExchange_feeRow() {
-                return ((DataExchange_feeRow)(this.NewRow()));
+            public Quotation_DocumentRow NewQuotation_DocumentRow() {
+                return ((Quotation_DocumentRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataExchange_feeRow(builder);
+                return new Quotation_DocumentRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataExchange_feeRow);
+                return typeof(Quotation_DocumentRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataExchange_feeRowChanged != null)) {
-                    this.DataExchange_feeRowChanged(this, new DataExchange_feeRowChangeEvent(((DataExchange_feeRow)(e.Row)), e.Action));
+                if ((this.Quotation_DocumentRowChanged != null)) {
+                    this.Quotation_DocumentRowChanged(this, new Quotation_DocumentRowChangeEvent(((Quotation_DocumentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1764,8 +1211,8 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataExchange_feeRowChanging != null)) {
-                    this.DataExchange_feeRowChanging(this, new DataExchange_feeRowChangeEvent(((DataExchange_feeRow)(e.Row)), e.Action));
+                if ((this.Quotation_DocumentRowChanging != null)) {
+                    this.Quotation_DocumentRowChanging(this, new Quotation_DocumentRowChangeEvent(((Quotation_DocumentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1773,8 +1220,8 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataExchange_feeRowDeleted != null)) {
-                    this.DataExchange_feeRowDeleted(this, new DataExchange_feeRowChangeEvent(((DataExchange_feeRow)(e.Row)), e.Action));
+                if ((this.Quotation_DocumentRowDeleted != null)) {
+                    this.Quotation_DocumentRowDeleted(this, new Quotation_DocumentRowChangeEvent(((Quotation_DocumentRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1782,14 +1229,14 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataExchange_feeRowDeleting != null)) {
-                    this.DataExchange_feeRowDeleting(this, new DataExchange_feeRowChangeEvent(((DataExchange_feeRow)(e.Row)), e.Action));
+                if ((this.Quotation_DocumentRowDeleting != null)) {
+                    this.Quotation_DocumentRowDeleting(this, new Quotation_DocumentRowChangeEvent(((Quotation_DocumentRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataExchange_feeRow(DataExchange_feeRow row) {
+            public void RemoveQuotation_DocumentRow(Quotation_DocumentRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1816,7 +1263,7 @@ namespace NonBajetItem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataExchange_feeDataTable";
+                attribute2.FixedValue = "Quotation_DocumentDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2630,16 +2077,20 @@ namespace NonBajetItem {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Ship_Master_TB1DataTable : global::System.Data.TypedTableBase<Ship_Master_TB1Row> {
+        public partial class Quoatation_FileName1DataTable : global::System.Data.TypedTableBase<Quoatation_FileName1Row> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnPresentName;
+            private global::System.Data.DataColumn columnQTNTBL_ID;
+            
+            private global::System.Data.DataColumn columnFileName;
+            
+            private global::System.Data.DataColumn columnUpdateRemark;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1DataTable() {
-                this.TableName = "Ship_Master_TB1";
+            public Quoatation_FileName1DataTable() {
+                this.TableName = "Quoatation_FileName1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2647,7 +2098,7 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Ship_Master_TB1DataTable(global::System.Data.DataTable table) {
+            internal Quoatation_FileName1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2664,7 +2115,7 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected Ship_Master_TB1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Quoatation_FileName1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2679,9 +2130,25 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PresentNameColumn {
+            public global::System.Data.DataColumn QTNTBL_IDColumn {
                 get {
-                    return this.columnPresentName;
+                    return this.columnQTNTBL_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FileNameColumn {
+                get {
+                    return this.columnFileName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn UpdateRemarkColumn {
+                get {
+                    return this.columnUpdateRemark;
                 }
             }
             
@@ -2696,53 +2163,55 @@ namespace NonBajetItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row this[int index] {
+            public Quoatation_FileName1Row this[int index] {
                 get {
-                    return ((Ship_Master_TB1Row)(this.Rows[index]));
+                    return ((Quoatation_FileName1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Ship_Master_TB1RowChangeEventHandler Ship_Master_TB1RowChanging;
+            public event Quoatation_FileName1RowChangeEventHandler Quoatation_FileName1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Ship_Master_TB1RowChangeEventHandler Ship_Master_TB1RowChanged;
+            public event Quoatation_FileName1RowChangeEventHandler Quoatation_FileName1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Ship_Master_TB1RowChangeEventHandler Ship_Master_TB1RowDeleting;
+            public event Quoatation_FileName1RowChangeEventHandler Quoatation_FileName1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Ship_Master_TB1RowChangeEventHandler Ship_Master_TB1RowDeleted;
+            public event Quoatation_FileName1RowChangeEventHandler Quoatation_FileName1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddShip_Master_TB1Row(Ship_Master_TB1Row row) {
+            public void AddQuoatation_FileName1Row(Quoatation_FileName1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row AddShip_Master_TB1Row(int ID, string PresentName) {
-                Ship_Master_TB1Row rowShip_Master_TB1Row = ((Ship_Master_TB1Row)(this.NewRow()));
+            public Quoatation_FileName1Row AddQuoatation_FileName1Row(int ID, string FileName, string UpdateRemark) {
+                Quoatation_FileName1Row rowQuoatation_FileName1Row = ((Quoatation_FileName1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
-                        PresentName};
-                rowShip_Master_TB1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowShip_Master_TB1Row);
-                return rowShip_Master_TB1Row;
+                        null,
+                        FileName,
+                        UpdateRemark};
+                rowQuoatation_FileName1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowQuoatation_FileName1Row);
+                return rowQuoatation_FileName1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row FindByID(int ID) {
-                return ((Ship_Master_TB1Row)(this.Rows.Find(new object[] {
+            public Quoatation_FileName1Row FindByID(int ID) {
+                return ((Quoatation_FileName1Row)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Ship_Master_TB1DataTable cln = ((Ship_Master_TB1DataTable)(base.Clone()));
+                Quoatation_FileName1DataTable cln = ((Quoatation_FileName1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2750,14 +2219,16 @@ namespace NonBajetItem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Ship_Master_TB1DataTable();
+                return new Quoatation_FileName1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnPresentName = base.Columns["PresentName"];
+                this.columnQTNTBL_ID = base.Columns["QTNTBL_ID"];
+                this.columnFileName = base.Columns["FileName"];
+                this.columnUpdateRemark = base.Columns["UpdateRemark"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2765,39 +2236,49 @@ namespace NonBajetItem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnPresentName = new global::System.Data.DataColumn("PresentName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPresentName);
+                this.columnQTNTBL_ID = new global::System.Data.DataColumn("QTNTBL_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQTNTBL_ID);
+                this.columnFileName = new global::System.Data.DataColumn("FileName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFileName);
+                this.columnUpdateRemark = new global::System.Data.DataColumn("UpdateRemark", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUpdateRemark);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnPresentName.MaxLength = 50;
+                this.columnQTNTBL_ID.AutoIncrement = true;
+                this.columnQTNTBL_ID.AutoIncrementSeed = -1;
+                this.columnQTNTBL_ID.AutoIncrementStep = -1;
+                this.columnQTNTBL_ID.AllowDBNull = false;
+                this.columnQTNTBL_ID.ReadOnly = true;
+                this.columnFileName.MaxLength = 2147483647;
+                this.columnUpdateRemark.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row NewShip_Master_TB1Row() {
-                return ((Ship_Master_TB1Row)(this.NewRow()));
+            public Quoatation_FileName1Row NewQuoatation_FileName1Row() {
+                return ((Quoatation_FileName1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Ship_Master_TB1Row(builder);
+                return new Quoatation_FileName1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Ship_Master_TB1Row);
+                return typeof(Quoatation_FileName1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Ship_Master_TB1RowChanged != null)) {
-                    this.Ship_Master_TB1RowChanged(this, new Ship_Master_TB1RowChangeEvent(((Ship_Master_TB1Row)(e.Row)), e.Action));
+                if ((this.Quoatation_FileName1RowChanged != null)) {
+                    this.Quoatation_FileName1RowChanged(this, new Quoatation_FileName1RowChangeEvent(((Quoatation_FileName1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -2805,8 +2286,8 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Ship_Master_TB1RowChanging != null)) {
-                    this.Ship_Master_TB1RowChanging(this, new Ship_Master_TB1RowChangeEvent(((Ship_Master_TB1Row)(e.Row)), e.Action));
+                if ((this.Quoatation_FileName1RowChanging != null)) {
+                    this.Quoatation_FileName1RowChanging(this, new Quoatation_FileName1RowChangeEvent(((Quoatation_FileName1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -2814,8 +2295,8 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Ship_Master_TB1RowDeleted != null)) {
-                    this.Ship_Master_TB1RowDeleted(this, new Ship_Master_TB1RowChangeEvent(((Ship_Master_TB1Row)(e.Row)), e.Action));
+                if ((this.Quoatation_FileName1RowDeleted != null)) {
+                    this.Quoatation_FileName1RowDeleted(this, new Quoatation_FileName1RowChangeEvent(((Quoatation_FileName1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -2823,14 +2304,14 @@ namespace NonBajetItem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Ship_Master_TB1RowDeleting != null)) {
-                    this.Ship_Master_TB1RowDeleting(this, new Ship_Master_TB1RowChangeEvent(((Ship_Master_TB1Row)(e.Row)), e.Action));
+                if ((this.Quoatation_FileName1RowDeleting != null)) {
+                    this.Quoatation_FileName1RowDeleting(this, new Quoatation_FileName1RowChangeEvent(((Quoatation_FileName1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveShip_Master_TB1Row(Ship_Master_TB1Row row) {
+            public void RemoveQuoatation_FileName1Row(Quoatation_FileName1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -2857,7 +2338,7 @@ namespace NonBajetItem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Ship_Master_TB1DataTable";
+                attribute2.FixedValue = "Quoatation_FileName1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2901,25 +2382,273 @@ namespace NonBajetItem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataExchangeRow : global::System.Data.DataRow {
+        public partial class Quoatation_FileNameRow : global::System.Data.DataRow {
             
-            private DataExchangeDataTable tableDataExchange;
+            private Quoatation_FileNameDataTable tableQuoatation_FileName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataExchangeRow(global::System.Data.DataRowBuilder rb) : 
+            internal Quoatation_FileNameRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataExchange = ((DataExchangeDataTable)(this.Table));
+                this.tableQuoatation_FileName = ((Quoatation_FileNameDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableDataExchange.IDColumn]));
+                    return ((int)(this[this.tableQuoatation_FileName.IDColumn]));
                 }
                 set {
-                    this[this.tableDataExchange.IDColumn] = value;
+                    this[this.tableQuoatation_FileName.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int QTNTBL_ID {
+                get {
+                    return ((int)(this[this.tableQuoatation_FileName.QTNTBL_IDColumn]));
+                }
+                set {
+                    this[this.tableQuoatation_FileName.QTNTBL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FileName {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuoatation_FileName.FileNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quoatation_FileName\' にある列 \'FileName\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuoatation_FileName.FileNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string UpdateRemark {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuoatation_FileName.UpdateRemarkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quoatation_FileName\' にある列 \'UpdateRemark\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuoatation_FileName.UpdateRemarkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public Quotation_DocumentRow Quotation_DocumentRow {
+                get {
+                    return ((Quotation_DocumentRow)(this.GetParentRow(this.Table.ParentRelations["Quotation_Document_Quoatation_FileName"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Quotation_Document_Quoatation_FileName"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFileNameNull() {
+                return this.IsNull(this.tableQuoatation_FileName.FileNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFileNameNull() {
+                this[this.tableQuoatation_FileName.FileNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsUpdateRemarkNull() {
+                return this.IsNull(this.tableQuoatation_FileName.UpdateRemarkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetUpdateRemarkNull() {
+                this[this.tableQuoatation_FileName.UpdateRemarkColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Quotation_DocumentRow : global::System.Data.DataRow {
+            
+            private Quotation_DocumentDataTable tableQuotation_Document;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal Quotation_DocumentRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableQuotation_Document = ((Quotation_DocumentDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableQuotation_Document.IDColumn]));
+                }
+                set {
+                    this[this.tableQuotation_Document.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string BLOBContainerPath {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuotation_Document.BLOBContainerPathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'BLOBContainerPath\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.BLOBContainerPathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Contractor {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuotation_Document.ContractorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'Contractor\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.ContractorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ContractorDetail {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuotation_Document.ContractorDetailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'ContractorDetail\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.ContractorDetailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ContractorPIC {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuotation_Document.ContractorPICColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'ContractorPIC\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.ContractorPICColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ContractorTarm {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuotation_Document.ContractorTarmColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'ContractorTarm\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.ContractorTarmColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int PONumber {
+                get {
+                    try {
+                        return ((int)(this[this.tableQuotation_Document.PONumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PONumber\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.PONumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string POReference {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuotation_Document.POReferenceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'POReference\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.POReferenceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime PlanedDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableQuotation_Document.PlanedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PlanedDate\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.PlanedDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime IsuueDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableQuotation_Document.IsuueDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'IsuueDate\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableQuotation_Document.IsuueDateColumn] = value;
                 }
             }
             
@@ -2928,158 +2657,142 @@ namespace NonBajetItem {
             public int ShipID {
                 get {
                     try {
-                        return ((int)(this[this.tableDataExchange.ShipIDColumn]));
+                        return ((int)(this[this.tableQuotation_Document.ShipIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'ShipID\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'ShipID\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.ShipIDColumn] = value;
+                    this[this.tableQuotation_Document.ShipIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Shipname {
+            public string PresentName {
                 get {
                     try {
-                        return ((string)(this[this.tableDataExchange.ShipnameColumn]));
+                        return ((string)(this[this.tableQuotation_Document.PresentNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Shipname\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PresentName\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.ShipnameColumn] = value;
+                    this[this.tableQuotation_Document.PresentNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime MonthGroup {
+            public string PlanedPort {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange.MonthGroupColumn]));
+                        return ((string)(this[this.tableQuotation_Document.PlanedPortColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'MonthGroup\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PlanedPort\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.MonthGroupColumn] = value;
+                    this[this.tableQuotation_Document.PlanedPortColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Description {
+            public string PlanedPortAgent {
                 get {
                     try {
-                        return ((string)(this[this.tableDataExchange.DescriptionColumn]));
+                        return ((string)(this[this.tableQuotation_Document.PlanedPortAgentColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Description\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PlanedPortAgent\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.DescriptionColumn] = value;
+                    this[this.tableQuotation_Document.PlanedPortAgentColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal AmountUSD {
+            public System.DateTime PlanedPortETA {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataExchange.AmountUSDColumn]));
+                        return ((global::System.DateTime)(this[this.tableQuotation_Document.PlanedPortETAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'AmountUSD\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PlanedPortETA\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.AmountUSDColumn] = value;
+                    this[this.tableQuotation_Document.PlanedPortETAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal AmountJPY {
+            public string PlanedPortRemark {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataExchange.AmountJPYColumn]));
+                        return ((string)(this[this.tableQuotation_Document.PlanedPortRemarkColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'AmountJPY\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'PlanedPortRemark\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.AmountJPYColumn] = value;
+                    this[this.tableQuotation_Document.PlanedPortRemarkColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal exchangerate {
+            public string Orderer {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataExchange.exchangerateColumn]));
+                        return ((string)(this[this.tableQuotation_Document.OrdererColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'exchangerate\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'Orderer\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.exchangerateColumn] = value;
+                    this[this.tableQuotation_Document.OrdererColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal GrandTotalUSD {
+            public string OrdererPIC {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataExchange.GrandTotalUSDColumn]));
+                        return ((string)(this[this.tableQuotation_Document.OrdererPICColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'GrandTotalUSD\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'OrdererPIC\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.GrandTotalUSDColumn] = value;
+                    this[this.tableQuotation_Document.OrdererPICColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PaymentDate {
+            public string OrdererDetail {
                 get {
                     try {
-                        return ((string)(this[this.tableDataExchange.PaymentDateColumn]));
+                        return ((string)(this[this.tableQuotation_Document.OrdererDetailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'PaymentDate\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'OrdererDetail\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.PaymentDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Process {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange.ProcessColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Process\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.ProcessColumn] = value;
+                    this[this.tableQuotation_Document.OrdererDetailColumn] = value;
                 }
             }
             
@@ -3088,1049 +2801,349 @@ namespace NonBajetItem {
             public string Remark {
                 get {
                     try {
-                        return ((string)(this[this.tableDataExchange.RemarkColumn]));
+                        return ((string)(this[this.tableQuotation_Document.RemarkColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Remark\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'Remark\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.RemarkColumn] = value;
+                    this[this.tableQuotation_Document.RemarkColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Updateremark255 {
+            public byte[] DateSpeare {
                 get {
                     try {
-                        return ((string)(this[this.tableDataExchange.Updateremark255Column]));
+                        return ((byte[])(this[this.tableQuotation_Document.DateSpeareColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Updateremark255\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'DateSpeare\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.Updateremark255Column] = value;
+                    this[this.tableQuotation_Document.DateSpeareColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime UpdateDatedate {
+            public byte[] IssuedDateSpeare {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange.UpdateDatedateColumn]));
+                        return ((byte[])(this[this.tableQuotation_Document.IssuedDateSpeareColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'UpdateDatedate\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'IssuedDateSpeare\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.UpdateDatedateColumn] = value;
+                    this[this.tableQuotation_Document.IssuedDateSpeareColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string SupportDocks {
+            public int IntDateSpeare {
                 get {
                     try {
-                        return ((string)(this[this.tableDataExchange.SupportDocksColumn]));
+                        return ((int)(this[this.tableQuotation_Document.IntDateSpeareColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'SupportDocks\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Document\' にある列 \'IntDateSpeare\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableDataExchange.SupportDocksColumn] = value;
+                    this[this.tableQuotation_Document.IntDateSpeareColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal SpareMoney1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataExchange.SpareMoney1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'SpareMoney1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.SpareMoney1Column] = value;
-                }
+            public bool IsBLOBContainerPathNull() {
+                return this.IsNull(this.tableQuotation_Document.BLOBContainerPathColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Spareint1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataExchange.Spareint1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Spareint1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.Spareint1Column] = value;
-                }
+            public void SetBLOBContainerPathNull() {
+                this[this.tableQuotation_Document.BLOBContainerPathColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Sparenver1 {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange.Sparenver1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'Sparenver1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.Sparenver1Column] = value;
-                }
+            public bool IsContractorNull() {
+                return this.IsNull(this.tableQuotation_Document.ContractorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime SpareDate1 {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange.SpareDate1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'SpareDate1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.SpareDate1Column] = value;
-                }
+            public void SetContractorNull() {
+                this[this.tableQuotation_Document.ContractorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool SpareBit1 {
-                get {
-                    try {
-                        return ((bool)(this[this.tableDataExchange.SpareBit1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'SpareBit1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.SpareBit1Column] = value;
-                }
+            public bool IsContractorDetailNull() {
+                return this.IsNull(this.tableQuotation_Document.ContractorDetailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool SpareBit2 {
-                get {
-                    try {
-                        return ((bool)(this[this.tableDataExchange.SpareBit2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange\' にある列 \'SpareBit2\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange.SpareBit2Column] = value;
-                }
+            public void SetContractorDetailNull() {
+                this[this.tableQuotation_Document.ContractorDetailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TBRow Ship_Master_TBRow {
-                get {
-                    return ((Ship_Master_TBRow)(this.GetParentRow(this.Table.ParentRelations["FK_DataExchange_Ship_Master_TB"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataExchange_Ship_Master_TB"]);
-                }
+            public bool IsContractorPICNull() {
+                return this.IsNull(this.tableQuotation_Document.ContractorPICColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row Ship_Master_TB1Row {
-                get {
-                    return ((Ship_Master_TB1Row)(this.GetParentRow(this.Table.ParentRelations["FK_DataExchange_Ship_Master_TB1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataExchange_Ship_Master_TB1"]);
-                }
+            public void SetContractorPICNull() {
+                this[this.tableQuotation_Document.ContractorPICColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsContractorTarmNull() {
+                return this.IsNull(this.tableQuotation_Document.ContractorTarmColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetContractorTarmNull() {
+                this[this.tableQuotation_Document.ContractorTarmColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPONumberNull() {
+                return this.IsNull(this.tableQuotation_Document.PONumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPONumberNull() {
+                this[this.tableQuotation_Document.PONumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPOReferenceNull() {
+                return this.IsNull(this.tableQuotation_Document.POReferenceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPOReferenceNull() {
+                this[this.tableQuotation_Document.POReferenceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPlanedDateNull() {
+                return this.IsNull(this.tableQuotation_Document.PlanedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPlanedDateNull() {
+                this[this.tableQuotation_Document.PlanedDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsIsuueDateNull() {
+                return this.IsNull(this.tableQuotation_Document.IsuueDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetIsuueDateNull() {
+                this[this.tableQuotation_Document.IsuueDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsShipIDNull() {
-                return this.IsNull(this.tableDataExchange.ShipIDColumn);
+                return this.IsNull(this.tableQuotation_Document.ShipIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetShipIDNull() {
-                this[this.tableDataExchange.ShipIDColumn] = global::System.Convert.DBNull;
+                this[this.tableQuotation_Document.ShipIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsShipnameNull() {
-                return this.IsNull(this.tableDataExchange.ShipnameColumn);
+            public bool IsPresentNameNull() {
+                return this.IsNull(this.tableQuotation_Document.PresentNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetShipnameNull() {
-                this[this.tableDataExchange.ShipnameColumn] = global::System.Convert.DBNull;
+            public void SetPresentNameNull() {
+                this[this.tableQuotation_Document.PresentNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsMonthGroupNull() {
-                return this.IsNull(this.tableDataExchange.MonthGroupColumn);
+            public bool IsPlanedPortNull() {
+                return this.IsNull(this.tableQuotation_Document.PlanedPortColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetMonthGroupNull() {
-                this[this.tableDataExchange.MonthGroupColumn] = global::System.Convert.DBNull;
+            public void SetPlanedPortNull() {
+                this[this.tableQuotation_Document.PlanedPortColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDescriptionNull() {
-                return this.IsNull(this.tableDataExchange.DescriptionColumn);
+            public bool IsPlanedPortAgentNull() {
+                return this.IsNull(this.tableQuotation_Document.PlanedPortAgentColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDescriptionNull() {
-                this[this.tableDataExchange.DescriptionColumn] = global::System.Convert.DBNull;
+            public void SetPlanedPortAgentNull() {
+                this[this.tableQuotation_Document.PlanedPortAgentColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAmountUSDNull() {
-                return this.IsNull(this.tableDataExchange.AmountUSDColumn);
+            public bool IsPlanedPortETANull() {
+                return this.IsNull(this.tableQuotation_Document.PlanedPortETAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAmountUSDNull() {
-                this[this.tableDataExchange.AmountUSDColumn] = global::System.Convert.DBNull;
+            public void SetPlanedPortETANull() {
+                this[this.tableQuotation_Document.PlanedPortETAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAmountJPYNull() {
-                return this.IsNull(this.tableDataExchange.AmountJPYColumn);
+            public bool IsPlanedPortRemarkNull() {
+                return this.IsNull(this.tableQuotation_Document.PlanedPortRemarkColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAmountJPYNull() {
-                this[this.tableDataExchange.AmountJPYColumn] = global::System.Convert.DBNull;
+            public void SetPlanedPortRemarkNull() {
+                this[this.tableQuotation_Document.PlanedPortRemarkColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsexchangerateNull() {
-                return this.IsNull(this.tableDataExchange.exchangerateColumn);
+            public bool IsOrdererNull() {
+                return this.IsNull(this.tableQuotation_Document.OrdererColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetexchangerateNull() {
-                this[this.tableDataExchange.exchangerateColumn] = global::System.Convert.DBNull;
+            public void SetOrdererNull() {
+                this[this.tableQuotation_Document.OrdererColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsGrandTotalUSDNull() {
-                return this.IsNull(this.tableDataExchange.GrandTotalUSDColumn);
+            public bool IsOrdererPICNull() {
+                return this.IsNull(this.tableQuotation_Document.OrdererPICColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetGrandTotalUSDNull() {
-                this[this.tableDataExchange.GrandTotalUSDColumn] = global::System.Convert.DBNull;
+            public void SetOrdererPICNull() {
+                this[this.tableQuotation_Document.OrdererPICColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPaymentDateNull() {
-                return this.IsNull(this.tableDataExchange.PaymentDateColumn);
+            public bool IsOrdererDetailNull() {
+                return this.IsNull(this.tableQuotation_Document.OrdererDetailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPaymentDateNull() {
-                this[this.tableDataExchange.PaymentDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsProcessNull() {
-                return this.IsNull(this.tableDataExchange.ProcessColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetProcessNull() {
-                this[this.tableDataExchange.ProcessColumn] = global::System.Convert.DBNull;
+            public void SetOrdererDetailNull() {
+                this[this.tableQuotation_Document.OrdererDetailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsRemarkNull() {
-                return this.IsNull(this.tableDataExchange.RemarkColumn);
+                return this.IsNull(this.tableQuotation_Document.RemarkColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetRemarkNull() {
-                this[this.tableDataExchange.RemarkColumn] = global::System.Convert.DBNull;
+                this[this.tableQuotation_Document.RemarkColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUpdateremark255Null() {
-                return this.IsNull(this.tableDataExchange.Updateremark255Column);
+            public bool IsDateSpeareNull() {
+                return this.IsNull(this.tableQuotation_Document.DateSpeareColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUpdateremark255Null() {
-                this[this.tableDataExchange.Updateremark255Column] = global::System.Convert.DBNull;
+            public void SetDateSpeareNull() {
+                this[this.tableQuotation_Document.DateSpeareColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUpdateDatedateNull() {
-                return this.IsNull(this.tableDataExchange.UpdateDatedateColumn);
+            public bool IsIssuedDateSpeareNull() {
+                return this.IsNull(this.tableQuotation_Document.IssuedDateSpeareColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUpdateDatedateNull() {
-                this[this.tableDataExchange.UpdateDatedateColumn] = global::System.Convert.DBNull;
+            public void SetIssuedDateSpeareNull() {
+                this[this.tableQuotation_Document.IssuedDateSpeareColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSupportDocksNull() {
-                return this.IsNull(this.tableDataExchange.SupportDocksColumn);
+            public bool IsIntDateSpeareNull() {
+                return this.IsNull(this.tableQuotation_Document.IntDateSpeareColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSupportDocksNull() {
-                this[this.tableDataExchange.SupportDocksColumn] = global::System.Convert.DBNull;
+            public void SetIntDateSpeareNull() {
+                this[this.tableQuotation_Document.IntDateSpeareColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareMoney1Null() {
-                return this.IsNull(this.tableDataExchange.SpareMoney1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareMoney1Null() {
-                this[this.tableDataExchange.SpareMoney1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareint1Null() {
-                return this.IsNull(this.tableDataExchange.Spareint1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareint1Null() {
-                this[this.tableDataExchange.Spareint1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSparenver1Null() {
-                return this.IsNull(this.tableDataExchange.Sparenver1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSparenver1Null() {
-                this[this.tableDataExchange.Sparenver1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareDate1Null() {
-                return this.IsNull(this.tableDataExchange.SpareDate1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareDate1Null() {
-                this[this.tableDataExchange.SpareDate1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareBit1Null() {
-                return this.IsNull(this.tableDataExchange.SpareBit1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareBit1Null() {
-                this[this.tableDataExchange.SpareBit1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareBit2Null() {
-                return this.IsNull(this.tableDataExchange.SpareBit2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareBit2Null() {
-                this[this.tableDataExchange.SpareBit2Column] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class DataExchange_CommentRow : global::System.Data.DataRow {
-            
-            private DataExchange_CommentDataTable tableDataExchange_Comment;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataExchange_CommentRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableDataExchange_Comment = ((DataExchange_CommentDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableDataExchange_Comment.IDColumn]));
+            public Quoatation_FileNameRow[] GetQuoatation_FileNameRows() {
+                if ((this.Table.ChildRelations["Quotation_Document_Quoatation_FileName"] == null)) {
+                    return new Quoatation_FileNameRow[0];
                 }
-                set {
-                    this[this.tableDataExchange_Comment.IDColumn] = value;
+                else {
+                    return ((Quoatation_FileNameRow[])(base.GetChildRows(this.Table.ChildRelations["Quotation_Document_Quoatation_FileName"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime EditdateTime {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange_Comment.EditdateTimeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_Comment\' にある列 \'EditdateTime\' の値は DBNull です。", e);
-                    }
+            public Quoatation_FileName1Row[] GetQuoatation_FileName1Rows() {
+                if ((this.Table.ChildRelations["FK_Quoatation_FileName_Quotation_Document"] == null)) {
+                    return new Quoatation_FileName1Row[0];
                 }
-                set {
-                    this[this.tableDataExchange_Comment.EditdateTimeColumn] = value;
+                else {
+                    return ((Quoatation_FileName1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Quoatation_FileName_Quotation_Document"])));
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Comment {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange_Comment.CommentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_Comment\' にある列 \'Comment\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_Comment.CommentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CommnetSpare {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange_Comment.CommnetSpareColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_Comment\' にある列 \'CommnetSpare\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_Comment.CommnetSpareColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsEditdateTimeNull() {
-                return this.IsNull(this.tableDataExchange_Comment.EditdateTimeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetEditdateTimeNull() {
-                this[this.tableDataExchange_Comment.EditdateTimeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCommentNull() {
-                return this.IsNull(this.tableDataExchange_Comment.CommentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCommentNull() {
-                this[this.tableDataExchange_Comment.CommentColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCommnetSpareNull() {
-                return this.IsNull(this.tableDataExchange_Comment.CommnetSpareColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCommnetSpareNull() {
-                this[this.tableDataExchange_Comment.CommnetSpareColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class DataExchange_feeRow : global::System.Data.DataRow {
-            
-            private DataExchange_feeDataTable tableDataExchange_fee;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataExchange_feeRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableDataExchange_fee = ((DataExchange_feeDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableDataExchange_fee.IDColumn]));
-                }
-                set {
-                    this[this.tableDataExchange_fee.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime MonthGroup {
-                get {
-                    return ((global::System.DateTime)(this[this.tableDataExchange_fee.MonthGroupColumn]));
-                }
-                set {
-                    this[this.tableDataExchange_fee.MonthGroupColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ShipID {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataExchange_fee.ShipIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'ShipID\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.ShipIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string shipname {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange_fee.shipnameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'shipname\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.shipnameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal budjetbalance {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataExchange_fee.budjetbalanceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'budjetbalance\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.budjetbalanceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Managementfee {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataExchange_fee.ManagementfeeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'Managementfee\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.ManagementfeeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime PaymentDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange_fee.PaymentDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'PaymentDate\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.PaymentDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Remark {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange_fee.RemarkColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'Remark\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.RemarkColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string SapreRemark {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange_fee.SapreRemarkColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'SapreRemark\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.SapreRemarkColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime SpareDate1 {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange_fee.SpareDate1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'SpareDate1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.SpareDate1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime SpareDate2 {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataExchange_fee.SpareDate2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'SpareDate2\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.SpareDate2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal MonthbeginTotal {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataExchange_fee.MonthbeginTotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'MonthbeginTotal\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.MonthbeginTotalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal SpareMoney1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataExchange_fee.SpareMoney1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'SpareMoney1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.SpareMoney1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal SpareMoney2 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDataExchange_fee.SpareMoney2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'SpareMoney2\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.SpareMoney2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Sparevarch1 {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataExchange_fee.Sparevarch1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'Sparevarch1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.Sparevarch1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Sparebit1 {
-                get {
-                    try {
-                        return ((bool)(this[this.tableDataExchange_fee.Sparebit1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'Sparebit1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.Sparebit1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Sparebit2 {
-                get {
-                    try {
-                        return ((bool)(this[this.tableDataExchange_fee.Sparebit2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'Sparebit2\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.Sparebit2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Spareint1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataExchange_fee.Spareint1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'DataExchange_fee\' にある列 \'Spareint1\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableDataExchange_fee.Spareint1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row Ship_Master_TB1Row {
-                get {
-                    return ((Ship_Master_TB1Row)(this.GetParentRow(this.Table.ParentRelations["FK_DataExchange_fee_Ship_Master_TB1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataExchange_fee_Ship_Master_TB1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row Ship_Master_TB1RowByFK_DataExchange_fee_Ship_Master_TB2 {
-                get {
-                    return ((Ship_Master_TB1Row)(this.GetParentRow(this.Table.ParentRelations["FK_DataExchange_fee_Ship_Master_TB2"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataExchange_fee_Ship_Master_TB2"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TBRow Ship_Master_TBRow {
-                get {
-                    return ((Ship_Master_TBRow)(this.GetParentRow(this.Table.ParentRelations["FK_DataExchange_fee_Ship_Master_TB"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataExchange_fee_Ship_Master_TB"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsShipIDNull() {
-                return this.IsNull(this.tableDataExchange_fee.ShipIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetShipIDNull() {
-                this[this.tableDataExchange_fee.ShipIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsshipnameNull() {
-                return this.IsNull(this.tableDataExchange_fee.shipnameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetshipnameNull() {
-                this[this.tableDataExchange_fee.shipnameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsbudjetbalanceNull() {
-                return this.IsNull(this.tableDataExchange_fee.budjetbalanceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetbudjetbalanceNull() {
-                this[this.tableDataExchange_fee.budjetbalanceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsManagementfeeNull() {
-                return this.IsNull(this.tableDataExchange_fee.ManagementfeeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetManagementfeeNull() {
-                this[this.tableDataExchange_fee.ManagementfeeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPaymentDateNull() {
-                return this.IsNull(this.tableDataExchange_fee.PaymentDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPaymentDateNull() {
-                this[this.tableDataExchange_fee.PaymentDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsRemarkNull() {
-                return this.IsNull(this.tableDataExchange_fee.RemarkColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetRemarkNull() {
-                this[this.tableDataExchange_fee.RemarkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSapreRemarkNull() {
-                return this.IsNull(this.tableDataExchange_fee.SapreRemarkColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSapreRemarkNull() {
-                this[this.tableDataExchange_fee.SapreRemarkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareDate1Null() {
-                return this.IsNull(this.tableDataExchange_fee.SpareDate1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareDate1Null() {
-                this[this.tableDataExchange_fee.SpareDate1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareDate2Null() {
-                return this.IsNull(this.tableDataExchange_fee.SpareDate2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareDate2Null() {
-                this[this.tableDataExchange_fee.SpareDate2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsMonthbeginTotalNull() {
-                return this.IsNull(this.tableDataExchange_fee.MonthbeginTotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetMonthbeginTotalNull() {
-                this[this.tableDataExchange_fee.MonthbeginTotalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareMoney1Null() {
-                return this.IsNull(this.tableDataExchange_fee.SpareMoney1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareMoney1Null() {
-                this[this.tableDataExchange_fee.SpareMoney1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareMoney2Null() {
-                return this.IsNull(this.tableDataExchange_fee.SpareMoney2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareMoney2Null() {
-                this[this.tableDataExchange_fee.SpareMoney2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSparevarch1Null() {
-                return this.IsNull(this.tableDataExchange_fee.Sparevarch1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSparevarch1Null() {
-                this[this.tableDataExchange_fee.Sparevarch1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSparebit1Null() {
-                return this.IsNull(this.tableDataExchange_fee.Sparebit1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSparebit1Null() {
-                this[this.tableDataExchange_fee.Sparebit1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSparebit2Null() {
-                return this.IsNull(this.tableDataExchange_fee.Sparebit2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSparebit2Null() {
-                this[this.tableDataExchange_fee.Sparebit2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSpareint1Null() {
-                return this.IsNull(this.tableDataExchange_fee.Spareint1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSpareint1Null() {
-                this[this.tableDataExchange_fee.Spareint1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -5054,114 +4067,109 @@ namespace NonBajetItem {
             public void SetPICIDNull() {
                 this[this.tableShip_Master_TB.PICIDColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow[] GetDataExchangeRows() {
-                if ((this.Table.ChildRelations["FK_DataExchange_Ship_Master_TB"] == null)) {
-                    return new DataExchangeRow[0];
-                }
-                else {
-                    return ((DataExchangeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DataExchange_Ship_Master_TB"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow[] GetDataExchange_feeRows() {
-                if ((this.Table.ChildRelations["FK_DataExchange_fee_Ship_Master_TB"] == null)) {
-                    return new DataExchange_feeRow[0];
-                }
-                else {
-                    return ((DataExchange_feeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DataExchange_fee_Ship_Master_TB"])));
-                }
-            }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Ship_Master_TB1Row : global::System.Data.DataRow {
+        public partial class Quoatation_FileName1Row : global::System.Data.DataRow {
             
-            private Ship_Master_TB1DataTable tableShip_Master_TB1;
+            private Quoatation_FileName1DataTable tableQuoatation_FileName1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Ship_Master_TB1Row(global::System.Data.DataRowBuilder rb) : 
+            internal Quoatation_FileName1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableShip_Master_TB1 = ((Ship_Master_TB1DataTable)(this.Table));
+                this.tableQuoatation_FileName1 = ((Quoatation_FileName1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableShip_Master_TB1.IDColumn]));
+                    return ((int)(this[this.tableQuoatation_FileName1.IDColumn]));
                 }
                 set {
-                    this[this.tableShip_Master_TB1.IDColumn] = value;
+                    this[this.tableQuoatation_FileName1.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PresentName {
+            public int QTNTBL_ID {
+                get {
+                    return ((int)(this[this.tableQuoatation_FileName1.QTNTBL_IDColumn]));
+                }
+                set {
+                    this[this.tableQuoatation_FileName1.QTNTBL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FileName {
                 get {
                     try {
-                        return ((string)(this[this.tableShip_Master_TB1.PresentNameColumn]));
+                        return ((string)(this[this.tableQuoatation_FileName1.FileNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'Ship_Master_TB1\' にある列 \'PresentName\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quoatation_FileName1\' にある列 \'FileName\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableShip_Master_TB1.PresentNameColumn] = value;
+                    this[this.tableQuoatation_FileName1.FileNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPresentNameNull() {
-                return this.IsNull(this.tableShip_Master_TB1.PresentNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPresentNameNull() {
-                this[this.tableShip_Master_TB1.PresentNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow[] GetDataExchange_feeRows() {
-                if ((this.Table.ChildRelations["FK_DataExchange_fee_Ship_Master_TB1"] == null)) {
-                    return new DataExchange_feeRow[0];
+            public string UpdateRemark {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuoatation_FileName1.UpdateRemarkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'Quoatation_FileName1\' にある列 \'UpdateRemark\' の値は DBNull です。", e);
+                    }
                 }
-                else {
-                    return ((DataExchange_feeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DataExchange_fee_Ship_Master_TB1"])));
+                set {
+                    this[this.tableQuoatation_FileName1.UpdateRemarkColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow[] GetDataExchangeRows() {
-                if ((this.Table.ChildRelations["FK_DataExchange_Ship_Master_TB1"] == null)) {
-                    return new DataExchangeRow[0];
+            public Quotation_DocumentRow Quotation_DocumentRow {
+                get {
+                    return ((Quotation_DocumentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Quoatation_FileName_Quotation_Document"])));
                 }
-                else {
-                    return ((DataExchangeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DataExchange_Ship_Master_TB1"])));
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Quoatation_FileName_Quotation_Document"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow[] GetDataExchange_feeRowsByFK_DataExchange_fee_Ship_Master_TB2() {
-                if ((this.Table.ChildRelations["FK_DataExchange_fee_Ship_Master_TB2"] == null)) {
-                    return new DataExchange_feeRow[0];
-                }
-                else {
-                    return ((DataExchange_feeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DataExchange_fee_Ship_Master_TB2"])));
-                }
+            public bool IsFileNameNull() {
+                return this.IsNull(this.tableQuoatation_FileName1.FileNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFileNameNull() {
+                this[this.tableQuoatation_FileName1.FileNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsUpdateRemarkNull() {
+                return this.IsNull(this.tableQuoatation_FileName1.UpdateRemarkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetUpdateRemarkNull() {
+                this[this.tableQuoatation_FileName1.UpdateRemarkColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5169,22 +4177,22 @@ namespace NonBajetItem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataExchangeRowChangeEvent : global::System.EventArgs {
+        public class Quoatation_FileNameRowChangeEvent : global::System.EventArgs {
             
-            private DataExchangeRow eventRow;
+            private Quoatation_FileNameRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRowChangeEvent(DataExchangeRow row, global::System.Data.DataRowAction action) {
+            public Quoatation_FileNameRowChangeEvent(Quoatation_FileNameRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchangeRow Row {
+            public Quoatation_FileNameRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5203,56 +4211,22 @@ namespace NonBajetItem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataExchange_CommentRowChangeEvent : global::System.EventArgs {
+        public class Quotation_DocumentRowChangeEvent : global::System.EventArgs {
             
-            private DataExchange_CommentRow eventRow;
+            private Quotation_DocumentRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentRowChangeEvent(DataExchange_CommentRow row, global::System.Data.DataRowAction action) {
+            public Quotation_DocumentRowChangeEvent(Quotation_DocumentRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_CommentRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataExchange_feeRowChangeEvent : global::System.EventArgs {
-            
-            private DataExchange_feeRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRowChangeEvent(DataExchange_feeRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataExchange_feeRow Row {
+            public Quotation_DocumentRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5305,22 +4279,22 @@ namespace NonBajetItem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class Ship_Master_TB1RowChangeEvent : global::System.EventArgs {
+        public class Quoatation_FileName1RowChangeEvent : global::System.EventArgs {
             
-            private Ship_Master_TB1Row eventRow;
+            private Quoatation_FileName1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1RowChangeEvent(Ship_Master_TB1Row row, global::System.Data.DataRowAction action) {
+            public Quoatation_FileName1RowChangeEvent(Quoatation_FileName1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Ship_Master_TB1Row Row {
+            public Quoatation_FileName1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -5336,7 +4310,7 @@ namespace NonBajetItem {
         }
     }
 }
-namespace NonBajetItem.AZUREDBDataSetTableAdapters {
+namespace aa.AZUREDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -5348,7 +4322,7 @@ namespace NonBajetItem.AZUREDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataExchangeTableAdapter : global::System.ComponentModel.Component {
+    public partial class Quoatation_FileNameTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5362,7 +4336,7 @@ namespace NonBajetItem.AZUREDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataExchangeTableAdapter() {
+        public Quoatation_FileNameTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5459,206 +4433,45 @@ namespace NonBajetItem.AZUREDBDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataExchange";
+            tableMapping.DataSetTable = "Quoatation_FileName";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
-            tableMapping.ColumnMappings.Add("Shipname", "Shipname");
-            tableMapping.ColumnMappings.Add("MonthGroup", "MonthGroup");
-            tableMapping.ColumnMappings.Add("Description", "Description");
-            tableMapping.ColumnMappings.Add("AmountUSD", "AmountUSD");
-            tableMapping.ColumnMappings.Add("AmountJPY", "AmountJPY");
-            tableMapping.ColumnMappings.Add("exchangerate", "exchangerate");
-            tableMapping.ColumnMappings.Add("GrandTotalUSD", "GrandTotalUSD");
-            tableMapping.ColumnMappings.Add("PaymentDate", "PaymentDate");
-            tableMapping.ColumnMappings.Add("Process", "Process");
-            tableMapping.ColumnMappings.Add("Remark", "Remark");
-            tableMapping.ColumnMappings.Add("Updateremark255", "Updateremark255");
-            tableMapping.ColumnMappings.Add("UpdateDatedate", "UpdateDatedate");
-            tableMapping.ColumnMappings.Add("SupportDocks", "SupportDocks");
-            tableMapping.ColumnMappings.Add("SpareMoney1", "SpareMoney1");
-            tableMapping.ColumnMappings.Add("Spareint1", "Spareint1");
-            tableMapping.ColumnMappings.Add("Sparenver1", "Sparenver1");
-            tableMapping.ColumnMappings.Add("SpareDate1", "SpareDate1");
-            tableMapping.ColumnMappings.Add("SpareBit1", "SpareBit1");
-            tableMapping.ColumnMappings.Add("SpareBit2", "SpareBit2");
+            tableMapping.ColumnMappings.Add("QTNTBL_ID", "QTNTBL_ID");
+            tableMapping.ColumnMappings.Add("FileName", "FileName");
+            tableMapping.ColumnMappings.Add("UpdateRemark", "UpdateRemark");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[DataExchange] WHERE (([ID] = @Original_ID) AND ((@IsNull_ShipI" +
-                "D = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)) AND ((@IsNull_Ship" +
-                "name = 1 AND [Shipname] IS NULL) OR ([Shipname] = @Original_Shipname)) AND ((@Is" +
-                "Null_MonthGroup = 1 AND [MonthGroup] IS NULL) OR ([MonthGroup] = @Original_Month" +
-                "Group)) AND ((@IsNull_AmountUSD = 1 AND [AmountUSD] IS NULL) OR ([AmountUSD] = @" +
-                "Original_AmountUSD)) AND ((@IsNull_AmountJPY = 1 AND [AmountJPY] IS NULL) OR ([A" +
-                "mountJPY] = @Original_AmountJPY)) AND ((@IsNull_exchangerate = 1 AND [exchangera" +
-                "te] IS NULL) OR ([exchangerate] = @Original_exchangerate)) AND ((@IsNull_GrandTo" +
-                "talUSD = 1 AND [GrandTotalUSD] IS NULL) OR ([GrandTotalUSD] = @Original_GrandTot" +
-                "alUSD)) AND ((@IsNull_PaymentDate = 1 AND [PaymentDate] IS NULL) OR ([PaymentDat" +
-                "e] = @Original_PaymentDate)) AND ((@IsNull_Process = 1 AND [Process] IS NULL) OR" +
-                " ([Process] = @Original_Process)) AND ((@IsNull_Updateremark255 = 1 AND [Updater" +
-                "emark255] IS NULL) OR ([Updateremark255] = @Original_Updateremark255)) AND ((@Is" +
-                "Null_UpdateDatedate = 1 AND [UpdateDatedate] IS NULL) OR ([UpdateDatedate] = @Or" +
-                "iginal_UpdateDatedate)) AND ((@IsNull_SpareMoney1 = 1 AND [SpareMoney1] IS NULL)" +
-                " OR ([SpareMoney1] = @Original_SpareMoney1)) AND ((@IsNull_Spareint1 = 1 AND [Sp" +
-                "areint1] IS NULL) OR ([Spareint1] = @Original_Spareint1)) AND ((@IsNull_SpareDat" +
-                "e1 = 1 AND [SpareDate1] IS NULL) OR ([SpareDate1] = @Original_SpareDate1)) AND (" +
-                "(@IsNull_SpareBit1 = 1 AND [SpareBit1] IS NULL) OR ([SpareBit1] = @Original_Spar" +
-                "eBit1)) AND ((@IsNull_SpareBit2 = 1 AND [SpareBit2] IS NULL) OR ([SpareBit2] = @" +
-                "Original_SpareBit2)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Quoatation_FileName] WHERE (([ID] = @Original_ID) AND ([QTNTBL" +
+                "_ID] = @Original_QTNTBL_ID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Shipname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MonthGroup", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountUSD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountUSD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountUSD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountJPY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountJPY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountJPY", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountJPY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_exchangerate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangerate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchangerate", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangerate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GrandTotalUSD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrandTotalUSD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GrandTotalUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrandTotalUSD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Process", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Process", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Process", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Process", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Updateremark255", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updateremark255", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Updateremark255", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updateremark255", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UpdateDatedate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateDatedate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UpdateDatedate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateDatedate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareMoney1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareMoney1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareDate1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareBit1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareBit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareBit2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareBit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNTBL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNTBL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DataExchange] ([ShipID], [Shipname], [MonthGroup], [Description], [AmountUSD], [AmountJPY], [exchangerate], [GrandTotalUSD], [PaymentDate], [Process], [Remark], [Updateremark255], [UpdateDatedate], [SupportDocks], [SpareMoney1], [Spareint1], [Sparenver1], [SpareDate1], [SpareBit1], [SpareBit2]) VALUES (@ShipID, @Shipname, @MonthGroup, @Description, @AmountUSD, @AmountJPY, @exchangerate, @GrandTotalUSD, @PaymentDate, @Process, @Remark, @Updateremark255, @UpdateDatedate, @SupportDocks, @SpareMoney1, @Spareint1, @Sparenver1, @SpareDate1, @SpareBit1, @SpareBit2);
-SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exchangerate, GrandTotalUSD, PaymentDate, Process, Remark, Updateremark255, UpdateDatedate, SupportDocks, SpareMoney1, Spareint1, Sparenver1, SpareDate1, SpareBit1, SpareBit2 FROM DataExchange WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quoatation_FileName] ([ID], [FileName], [UpdateRemark]) VALUES" +
+                " (@ID, @FileName, @UpdateRemark);\r\nSELECT ID, QTNTBL_ID, FileName, UpdateRemark " +
+                "FROM Quoatation_FileName WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountUSD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountJPY", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountJPY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchangerate", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangerate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GrandTotalUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrandTotalUSD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Process", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Process", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Updateremark255", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updateremark255", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateDatedate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateDatedate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SupportDocks", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupportDocks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareMoney1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparenver1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparenver1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareBit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareBit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateRemark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[DataExchange] SET [ShipID] = @ShipID, [Shipname] = @Shipname, [Mont" +
-                "hGroup] = @MonthGroup, [Description] = @Description, [AmountUSD] = @AmountUSD, [" +
-                "AmountJPY] = @AmountJPY, [exchangerate] = @exchangerate, [GrandTotalUSD] = @Gran" +
-                "dTotalUSD, [PaymentDate] = @PaymentDate, [Process] = @Process, [Remark] = @Remar" +
-                "k, [Updateremark255] = @Updateremark255, [UpdateDatedate] = @UpdateDatedate, [Su" +
-                "pportDocks] = @SupportDocks, [SpareMoney1] = @SpareMoney1, [Spareint1] = @Sparei" +
-                "nt1, [Sparenver1] = @Sparenver1, [SpareDate1] = @SpareDate1, [SpareBit1] = @Spar" +
-                "eBit1, [SpareBit2] = @SpareBit2 WHERE (([ID] = @Original_ID) AND ((@IsNull_ShipI" +
-                "D = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)) AND ((@IsNull_Ship" +
-                "name = 1 AND [Shipname] IS NULL) OR ([Shipname] = @Original_Shipname)) AND ((@Is" +
-                "Null_MonthGroup = 1 AND [MonthGroup] IS NULL) OR ([MonthGroup] = @Original_Month" +
-                "Group)) AND ((@IsNull_AmountUSD = 1 AND [AmountUSD] IS NULL) OR ([AmountUSD] = @" +
-                "Original_AmountUSD)) AND ((@IsNull_AmountJPY = 1 AND [AmountJPY] IS NULL) OR ([A" +
-                "mountJPY] = @Original_AmountJPY)) AND ((@IsNull_exchangerate = 1 AND [exchangera" +
-                "te] IS NULL) OR ([exchangerate] = @Original_exchangerate)) AND ((@IsNull_GrandTo" +
-                "talUSD = 1 AND [GrandTotalUSD] IS NULL) OR ([GrandTotalUSD] = @Original_GrandTot" +
-                "alUSD)) AND ((@IsNull_PaymentDate = 1 AND [PaymentDate] IS NULL) OR ([PaymentDat" +
-                "e] = @Original_PaymentDate)) AND ((@IsNull_Process = 1 AND [Process] IS NULL) OR" +
-                " ([Process] = @Original_Process)) AND ((@IsNull_Updateremark255 = 1 AND [Updater" +
-                "emark255] IS NULL) OR ([Updateremark255] = @Original_Updateremark255)) AND ((@Is" +
-                "Null_UpdateDatedate = 1 AND [UpdateDatedate] IS NULL) OR ([UpdateDatedate] = @Or" +
-                "iginal_UpdateDatedate)) AND ((@IsNull_SpareMoney1 = 1 AND [SpareMoney1] IS NULL)" +
-                " OR ([SpareMoney1] = @Original_SpareMoney1)) AND ((@IsNull_Spareint1 = 1 AND [Sp" +
-                "areint1] IS NULL) OR ([Spareint1] = @Original_Spareint1)) AND ((@IsNull_SpareDat" +
-                "e1 = 1 AND [SpareDate1] IS NULL) OR ([SpareDate1] = @Original_SpareDate1)) AND (" +
-                "(@IsNull_SpareBit1 = 1 AND [SpareBit1] IS NULL) OR ([SpareBit1] = @Original_Spar" +
-                "eBit1)) AND ((@IsNull_SpareBit2 = 1 AND [SpareBit2] IS NULL) OR ([SpareBit2] = @" +
-                "Original_SpareBit2)));\r\nSELECT ID, ShipID, Shipname, MonthGroup, Description, Am" +
-                "ountUSD, AmountJPY, exchangerate, GrandTotalUSD, PaymentDate, Process, Remark, U" +
-                "pdateremark255, UpdateDatedate, SupportDocks, SpareMoney1, Spareint1, Sparenver1" +
-                ", SpareDate1, SpareBit1, SpareBit2 FROM DataExchange WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Quoatation_FileName] SET [ID] = @ID, [FileName] = @FileName, [UpdateRemark] = @UpdateRemark WHERE (([ID] = @Original_ID) AND ([QTNTBL_ID] = @Original_QTNTBL_ID));
+SELECT ID, QTNTBL_ID, FileName, UpdateRemark FROM Quoatation_FileName WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountUSD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AmountJPY", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountJPY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchangerate", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangerate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GrandTotalUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrandTotalUSD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Process", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Process", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Updateremark255", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updateremark255", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateDatedate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateDatedate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SupportDocks", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SupportDocks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareMoney1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparenver1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparenver1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareBit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareBit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateRemark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Shipname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MonthGroup", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountUSD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountUSD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountUSD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AmountJPY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountJPY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AmountJPY", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AmountJPY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_exchangerate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangerate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchangerate", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangerate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GrandTotalUSD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrandTotalUSD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GrandTotalUSD", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrandTotalUSD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentDate", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Process", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Process", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Process", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Process", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Updateremark255", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updateremark255", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Updateremark255", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updateremark255", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UpdateDatedate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateDatedate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UpdateDatedate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateDatedate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareMoney1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareMoney1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareDate1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareBit1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareBit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareBit2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareBit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareBit2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNTBL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNTBL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::aa.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5667,7 +4480,7 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exchangerate, GrandTotalUSD, PaymentDate, Process, Remark, Updateremark255, UpdateDatedate, SupportDocks, SpareMoney1, Spareint1, Sparenver1, SpareDate1, SpareBit1, SpareBit2 FROM dbo.DataExchange";
+            this._commandCollection[0].CommandText = "SELECT ID, QTNTBL_ID, FileName, UpdateRemark FROM dbo.Quoatation_FileName";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5675,7 +4488,7 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet.DataExchangeDataTable dataTable) {
+        public virtual int Fill(AZUREDBDataSet.Quoatation_FileNameDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5688,9 +4501,9 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet.DataExchangeDataTable GetData() {
+        public virtual AZUREDBDataSet.Quoatation_FileNameDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet.DataExchangeDataTable dataTable = new AZUREDBDataSet.DataExchangeDataTable();
+            AZUREDBDataSet.Quoatation_FileNameDataTable dataTable = new AZUREDBDataSet.Quoatation_FileNameDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5698,7 +4511,7 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet.DataExchangeDataTable dataTable) {
+        public virtual int Update(AZUREDBDataSet.Quoatation_FileNameDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5706,7 +4519,7 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(AZUREDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DataExchange");
+            return this.Adapter.Update(dataSet, "Quoatation_FileName");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5728,153 +4541,506 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    int Original_ID, 
-                    global::System.Nullable<int> Original_ShipID, 
-                    string Original_Shipname, 
-                    global::System.Nullable<global::System.DateTime> Original_MonthGroup, 
-                    global::System.Nullable<decimal> Original_AmountUSD, 
-                    global::System.Nullable<decimal> Original_AmountJPY, 
-                    global::System.Nullable<decimal> Original_exchangerate, 
-                    global::System.Nullable<decimal> Original_GrandTotalUSD, 
-                    string Original_PaymentDate, 
-                    string Original_Process, 
-                    string Original_Updateremark255, 
-                    global::System.Nullable<global::System.DateTime> Original_UpdateDatedate, 
-                    global::System.Nullable<decimal> Original_SpareMoney1, 
-                    global::System.Nullable<int> Original_Spareint1, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate1, 
-                    global::System.Nullable<bool> Original_SpareBit1, 
-                    global::System.Nullable<bool> Original_SpareBit2) {
+        public virtual int Delete(int Original_ID, int Original_QTNTBL_ID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_ShipID.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_QTNTBL_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int ID, string FileName, string UpdateRemark) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
+            if ((FileName == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FileName));
+            }
+            if ((UpdateRemark == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(UpdateRemark));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int ID, string FileName, string UpdateRemark, int Original_ID, int Original_QTNTBL_ID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
+            if ((FileName == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FileName));
+            }
+            if ((UpdateRemark == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(UpdateRemark));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_QTNTBL_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string FileName, string UpdateRemark, int Original_ID, int Original_QTNTBL_ID) {
+            return this.Update(Original_ID, FileName, UpdateRemark, Original_ID, Original_QTNTBL_ID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Quotation_DocumentTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public Quotation_DocumentTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Quotation_Document";
+            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("BLOBContainerPath", "BLOBContainerPath");
+            tableMapping.ColumnMappings.Add("Contractor", "Contractor");
+            tableMapping.ColumnMappings.Add("ContractorDetail", "ContractorDetail");
+            tableMapping.ColumnMappings.Add("ContractorPIC", "ContractorPIC");
+            tableMapping.ColumnMappings.Add("ContractorTarm", "ContractorTarm");
+            tableMapping.ColumnMappings.Add("PONumber", "PONumber");
+            tableMapping.ColumnMappings.Add("POReference", "POReference");
+            tableMapping.ColumnMappings.Add("PlanedDate", "PlanedDate");
+            tableMapping.ColumnMappings.Add("IsuueDate", "IsuueDate");
+            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
+            tableMapping.ColumnMappings.Add("PresentName", "PresentName");
+            tableMapping.ColumnMappings.Add("PlanedPort", "PlanedPort");
+            tableMapping.ColumnMappings.Add("PlanedPortAgent", "PlanedPortAgent");
+            tableMapping.ColumnMappings.Add("PlanedPortETA", "PlanedPortETA");
+            tableMapping.ColumnMappings.Add("PlanedPortRemark", "PlanedPortRemark");
+            tableMapping.ColumnMappings.Add("Orderer", "Orderer");
+            tableMapping.ColumnMappings.Add("OrdererPIC", "OrdererPIC");
+            tableMapping.ColumnMappings.Add("OrdererDetail", "OrdererDetail");
+            tableMapping.ColumnMappings.Add("Remark", "Remark");
+            tableMapping.ColumnMappings.Add("DateSpeare", "DateSpeare");
+            tableMapping.ColumnMappings.Add("IssuedDateSpeare", "IssuedDateSpeare");
+            tableMapping.ColumnMappings.Add("IntDateSpeare", "IntDateSpeare");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Quotation_Document] WHERE (([ID] = @Original_ID) AND ((@IsNull_PONumber = 1 AND [PONumber] IS NULL) OR ([PONumber] = @Original_PONumber)) AND ((@IsNull_PlanedDate = 1 AND [PlanedDate] IS NULL) OR ([PlanedDate] = @Original_PlanedDate)) AND ((@IsNull_IsuueDate = 1 AND [IsuueDate] IS NULL) OR ([IsuueDate] = @Original_IsuueDate)) AND ((@IsNull_ShipID = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)) AND ((@IsNull_PlanedPortETA = 1 AND [PlanedPortETA] IS NULL) OR ([PlanedPortETA] = @Original_PlanedPortETA)) AND ((@IsNull_DateSpeare = 1 AND [DateSpeare] IS NULL) OR ([DateSpeare] = @Original_DateSpeare)) AND ((@IsNull_IssuedDateSpeare = 1 AND [IssuedDateSpeare] IS NULL) OR ([IssuedDateSpeare] = @Original_IssuedDateSpeare)) AND ((@IsNull_IntDateSpeare = 1 AND [IntDateSpeare] IS NULL) OR ([IntDateSpeare] = @Original_IntDateSpeare)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PONumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PONumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PlanedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PlanedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsuueDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsuueDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsuueDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsuueDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PlanedPortETA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortETA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PlanedPortETA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortETA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSpeare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSpeare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IssuedDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IssuedDateSpeare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IssuedDateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IssuedDateSpeare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IntDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IntDateSpeare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IntDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IntDateSpeare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Quotation_Document] ([BLOBContainerPath], [Contractor], [ContractorDetail], [ContractorPIC], [ContractorTarm], [PONumber], [POReference], [PlanedDate], [IsuueDate], [ShipID], [PresentName], [PlanedPort], [PlanedPortAgent], [PlanedPortETA], [PlanedPortRemark], [Orderer], [OrdererPIC], [OrdererDetail], [Remark], [DateSpeare], [IssuedDateSpeare], [IntDateSpeare]) VALUES (@BLOBContainerPath, @Contractor, @ContractorDetail, @ContractorPIC, @ContractorTarm, @PONumber, @POReference, @PlanedDate, @IsuueDate, @ShipID, @PresentName, @PlanedPort, @PlanedPortAgent, @PlanedPortETA, @PlanedPortRemark, @Orderer, @OrdererPIC, @OrdererDetail, @Remark, @DateSpeare, @IssuedDateSpeare, @IntDateSpeare);
+SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, ContractorTarm, PONumber, POReference, PlanedDate, IsuueDate, ShipID, PresentName, PlanedPort, PlanedPortAgent, PlanedPortETA, PlanedPortRemark, Orderer, OrdererPIC, OrdererDetail, Remark, DateSpeare, IssuedDateSpeare, IntDateSpeare FROM Quotation_Document WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BLOBContainerPath", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BLOBContainerPath", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contractor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contractor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractorDetail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractorDetail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractorPIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractorPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractorTarm", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractorTarm", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PONumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POReference", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POReference", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsuueDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsuueDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PresentName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPort", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPort", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPortAgent", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortAgent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPortETA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortETA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPortRemark", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Orderer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Orderer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrdererPIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrdererPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrdererDetail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrdererDetail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSpeare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IssuedDateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IssuedDateSpeare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IntDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IntDateSpeare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Quotation_Document] SET [BLOBContainerPath] = @BLOBContainerPath, [" +
+                "Contractor] = @Contractor, [ContractorDetail] = @ContractorDetail, [ContractorPI" +
+                "C] = @ContractorPIC, [ContractorTarm] = @ContractorTarm, [PONumber] = @PONumber," +
+                " [POReference] = @POReference, [PlanedDate] = @PlanedDate, [IsuueDate] = @IsuueD" +
+                "ate, [ShipID] = @ShipID, [PresentName] = @PresentName, [PlanedPort] = @PlanedPor" +
+                "t, [PlanedPortAgent] = @PlanedPortAgent, [PlanedPortETA] = @PlanedPortETA, [Plan" +
+                "edPortRemark] = @PlanedPortRemark, [Orderer] = @Orderer, [OrdererPIC] = @Orderer" +
+                "PIC, [OrdererDetail] = @OrdererDetail, [Remark] = @Remark, [DateSpeare] = @DateS" +
+                "peare, [IssuedDateSpeare] = @IssuedDateSpeare, [IntDateSpeare] = @IntDateSpeare " +
+                "WHERE (([ID] = @Original_ID) AND ((@IsNull_PONumber = 1 AND [PONumber] IS NULL) " +
+                "OR ([PONumber] = @Original_PONumber)) AND ((@IsNull_PlanedDate = 1 AND [PlanedDa" +
+                "te] IS NULL) OR ([PlanedDate] = @Original_PlanedDate)) AND ((@IsNull_IsuueDate =" +
+                " 1 AND [IsuueDate] IS NULL) OR ([IsuueDate] = @Original_IsuueDate)) AND ((@IsNul" +
+                "l_ShipID = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)) AND ((@IsNu" +
+                "ll_PlanedPortETA = 1 AND [PlanedPortETA] IS NULL) OR ([PlanedPortETA] = @Origina" +
+                "l_PlanedPortETA)) AND ((@IsNull_DateSpeare = 1 AND [DateSpeare] IS NULL) OR ([Da" +
+                "teSpeare] = @Original_DateSpeare)) AND ((@IsNull_IssuedDateSpeare = 1 AND [Issue" +
+                "dDateSpeare] IS NULL) OR ([IssuedDateSpeare] = @Original_IssuedDateSpeare)) AND " +
+                "((@IsNull_IntDateSpeare = 1 AND [IntDateSpeare] IS NULL) OR ([IntDateSpeare] = @" +
+                "Original_IntDateSpeare)));\r\nSELECT ID, BLOBContainerPath, Contractor, Contractor" +
+                "Detail, ContractorPIC, ContractorTarm, PONumber, POReference, PlanedDate, IsuueD" +
+                "ate, ShipID, PresentName, PlanedPort, PlanedPortAgent, PlanedPortETA, PlanedPort" +
+                "Remark, Orderer, OrdererPIC, OrdererDetail, Remark, DateSpeare, IssuedDateSpeare" +
+                ", IntDateSpeare FROM Quotation_Document WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BLOBContainerPath", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BLOBContainerPath", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contractor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contractor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractorDetail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractorDetail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractorPIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractorPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractorTarm", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractorTarm", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PONumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POReference", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POReference", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsuueDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsuueDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PresentName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPort", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPort", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPortAgent", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortAgent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPortETA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortETA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PlanedPortRemark", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Orderer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Orderer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrdererPIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrdererPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OrdererDetail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OrdererDetail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSpeare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IssuedDateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IssuedDateSpeare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IntDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IntDateSpeare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PONumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PONumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PlanedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PlanedDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsuueDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsuueDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsuueDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsuueDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PlanedPortETA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortETA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PlanedPortETA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PlanedPortETA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSpeare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSpeare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IssuedDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IssuedDateSpeare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IssuedDateSpeare", global::System.Data.SqlDbType.Binary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IssuedDateSpeare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IntDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IntDateSpeare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IntDateSpeare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IntDateSpeare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::aa.Properties.Settings.Default.AZUREDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, ContractorTarm, PONumber, POReference, PlanedDate, IsuueDate, ShipID, PresentName, PlanedPort, PlanedPortAgent, PlanedPortETA, PlanedPortRemark, Orderer, OrdererPIC, OrdererDetail, Remark, DateSpeare, IssuedDateSpeare, IntDateSpeare FROM dbo.Quotation_Document";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(AZUREDBDataSet.Quotation_DocumentDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual AZUREDBDataSet.Quotation_DocumentDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            AZUREDBDataSet.Quotation_DocumentDataTable dataTable = new AZUREDBDataSet.Quotation_DocumentDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(AZUREDBDataSet.Quotation_DocumentDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(AZUREDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Quotation_Document");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_ID, global::System.Nullable<int> Original_PONumber, global::System.Nullable<global::System.DateTime> Original_PlanedDate, global::System.Nullable<global::System.DateTime> Original_IsuueDate, global::System.Nullable<int> Original_ShipID, global::System.Nullable<global::System.DateTime> Original_PlanedPortETA, byte[] Original_DateSpeare, byte[] Original_IssuedDateSpeare, global::System.Nullable<int> Original_IntDateSpeare) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+            if ((Original_PONumber.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ShipID.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PONumber.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_Shipname == null)) {
+            if ((Original_PlanedDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_PlanedDate.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Shipname));
-            }
-            if ((Original_MonthGroup.HasValue == true)) {
+            if ((Original_IsuueDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_MonthGroup.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_IsuueDate.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_AmountUSD.HasValue == true)) {
+            if ((Original_ShipID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_AmountUSD.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_ShipID.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_AmountJPY.HasValue == true)) {
+            if ((Original_PlanedPortETA.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_AmountJPY.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_PlanedPortETA.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_exchangerate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_exchangerate.Value));
-            }
-            else {
+            if ((Original_DateSpeare == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_GrandTotalUSD.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original_GrandTotalUSD.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((byte[])(Original_DateSpeare));
+            }
+            if ((Original_IssuedDateSpeare == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_PaymentDate == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((byte[])(Original_IssuedDateSpeare));
+            }
+            if ((Original_IntDateSpeare.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_IntDateSpeare.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_PaymentDate));
-            }
-            if ((Original_Process == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Process));
-            }
-            if ((Original_Updateremark255 == null)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Updateremark255));
-            }
-            if ((Original_UpdateDatedate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((System.DateTime)(Original_UpdateDatedate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareMoney1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((decimal)(Original_SpareMoney1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Spareint1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_Spareint1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareDate1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((System.DateTime)(Original_SpareDate1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareBit1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((bool)(Original_SpareBit1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareBit2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((bool)(Original_SpareBit2.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5896,146 +5062,160 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
+                    string BLOBContainerPath, 
+                    string Contractor, 
+                    string ContractorDetail, 
+                    string ContractorPIC, 
+                    string ContractorTarm, 
+                    global::System.Nullable<int> PONumber, 
+                    string POReference, 
+                    global::System.Nullable<global::System.DateTime> PlanedDate, 
+                    global::System.Nullable<global::System.DateTime> IsuueDate, 
                     global::System.Nullable<int> ShipID, 
-                    string Shipname, 
-                    global::System.Nullable<global::System.DateTime> MonthGroup, 
-                    string Description, 
-                    global::System.Nullable<decimal> AmountUSD, 
-                    global::System.Nullable<decimal> AmountJPY, 
-                    global::System.Nullable<decimal> exchangerate, 
-                    global::System.Nullable<decimal> GrandTotalUSD, 
-                    string PaymentDate, 
-                    string Process, 
+                    string PresentName, 
+                    string PlanedPort, 
+                    string PlanedPortAgent, 
+                    global::System.Nullable<global::System.DateTime> PlanedPortETA, 
+                    string PlanedPortRemark, 
+                    string Orderer, 
+                    string OrdererPIC, 
+                    string OrdererDetail, 
                     string Remark, 
-                    string Updateremark255, 
-                    global::System.Nullable<global::System.DateTime> UpdateDatedate, 
-                    string SupportDocks, 
-                    global::System.Nullable<decimal> SpareMoney1, 
-                    global::System.Nullable<int> Spareint1, 
-                    string Sparenver1, 
-                    global::System.Nullable<global::System.DateTime> SpareDate1, 
-                    global::System.Nullable<bool> SpareBit1, 
-                    global::System.Nullable<bool> SpareBit2) {
-            if ((ShipID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ShipID.Value));
-            }
-            else {
+                    byte[] DateSpeare, 
+                    byte[] IssuedDateSpeare, 
+                    global::System.Nullable<int> IntDateSpeare) {
+            if ((BLOBContainerPath == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Shipname == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(BLOBContainerPath));
+            }
+            if ((Contractor == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Shipname));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Contractor));
             }
-            if ((MonthGroup.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(MonthGroup.Value));
-            }
-            else {
+            if ((ContractorDetail == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Description == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ContractorDetail));
+            }
+            if ((ContractorPIC == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Description));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ContractorPIC));
             }
-            if ((AmountUSD.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(AmountUSD.Value));
-            }
-            else {
+            if ((ContractorTarm == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((AmountJPY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(AmountJPY.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ContractorTarm));
+            }
+            if ((PONumber.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(PONumber.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((exchangerate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(exchangerate.Value));
-            }
-            else {
+            if ((POReference == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((GrandTotalUSD.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(GrandTotalUSD.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(POReference));
+            }
+            if ((PlanedDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(PlanedDate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((PaymentDate == null)) {
+            if ((IsuueDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(IsuueDate.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(PaymentDate));
+            if ((ShipID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(ShipID.Value));
             }
-            if ((Process == null)) {
+            else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Process));
-            }
-            if ((Remark == null)) {
+            if ((PresentName == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Remark));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(PresentName));
             }
-            if ((Updateremark255 == null)) {
+            if ((PlanedPort == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Updateremark255));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(PlanedPort));
             }
-            if ((UpdateDatedate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(UpdateDatedate.Value));
-            }
-            else {
+            if ((PlanedPortAgent == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((SupportDocks == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(PlanedPortAgent));
+            }
+            if ((PlanedPortETA.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(PlanedPortETA.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(SupportDocks));
-            }
-            if ((SpareMoney1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((decimal)(SpareMoney1.Value));
-            }
-            else {
+            if ((PlanedPortRemark == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Spareint1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Spareint1.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(PlanedPortRemark));
+            }
+            if ((Orderer == null)) {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Sparenver1 == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Orderer));
+            }
+            if ((OrdererPIC == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Sparenver1));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(OrdererPIC));
             }
-            if ((SpareDate1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(SpareDate1.Value));
-            }
-            else {
+            if ((OrdererDetail == null)) {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((SpareBit1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(SpareBit1.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(OrdererDetail));
+            }
+            if ((Remark == null)) {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((SpareBit2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((bool)(SpareBit2.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Remark));
+            }
+            if ((DateSpeare == null)) {
                 this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((byte[])(DateSpeare));
+            }
+            if ((IssuedDateSpeare == null)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((byte[])(IssuedDateSpeare));
+            }
+            if ((IntDateSpeare.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((int)(IntDateSpeare.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6057,1560 +5237,236 @@ SELECT ID, ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exch
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
+                    string BLOBContainerPath, 
+                    string Contractor, 
+                    string ContractorDetail, 
+                    string ContractorPIC, 
+                    string ContractorTarm, 
+                    global::System.Nullable<int> PONumber, 
+                    string POReference, 
+                    global::System.Nullable<global::System.DateTime> PlanedDate, 
+                    global::System.Nullable<global::System.DateTime> IsuueDate, 
                     global::System.Nullable<int> ShipID, 
-                    string Shipname, 
-                    global::System.Nullable<global::System.DateTime> MonthGroup, 
-                    string Description, 
-                    global::System.Nullable<decimal> AmountUSD, 
-                    global::System.Nullable<decimal> AmountJPY, 
-                    global::System.Nullable<decimal> exchangerate, 
-                    global::System.Nullable<decimal> GrandTotalUSD, 
-                    string PaymentDate, 
-                    string Process, 
+                    string PresentName, 
+                    string PlanedPort, 
+                    string PlanedPortAgent, 
+                    global::System.Nullable<global::System.DateTime> PlanedPortETA, 
+                    string PlanedPortRemark, 
+                    string Orderer, 
+                    string OrdererPIC, 
+                    string OrdererDetail, 
                     string Remark, 
-                    string Updateremark255, 
-                    global::System.Nullable<global::System.DateTime> UpdateDatedate, 
-                    string SupportDocks, 
-                    global::System.Nullable<decimal> SpareMoney1, 
-                    global::System.Nullable<int> Spareint1, 
-                    string Sparenver1, 
-                    global::System.Nullable<global::System.DateTime> SpareDate1, 
-                    global::System.Nullable<bool> SpareBit1, 
-                    global::System.Nullable<bool> SpareBit2, 
+                    byte[] DateSpeare, 
+                    byte[] IssuedDateSpeare, 
+                    global::System.Nullable<int> IntDateSpeare, 
                     int Original_ID, 
+                    global::System.Nullable<int> Original_PONumber, 
+                    global::System.Nullable<global::System.DateTime> Original_PlanedDate, 
+                    global::System.Nullable<global::System.DateTime> Original_IsuueDate, 
                     global::System.Nullable<int> Original_ShipID, 
-                    string Original_Shipname, 
-                    global::System.Nullable<global::System.DateTime> Original_MonthGroup, 
-                    global::System.Nullable<decimal> Original_AmountUSD, 
-                    global::System.Nullable<decimal> Original_AmountJPY, 
-                    global::System.Nullable<decimal> Original_exchangerate, 
-                    global::System.Nullable<decimal> Original_GrandTotalUSD, 
-                    string Original_PaymentDate, 
-                    string Original_Process, 
-                    string Original_Updateremark255, 
-                    global::System.Nullable<global::System.DateTime> Original_UpdateDatedate, 
-                    global::System.Nullable<decimal> Original_SpareMoney1, 
-                    global::System.Nullable<int> Original_Spareint1, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate1, 
-                    global::System.Nullable<bool> Original_SpareBit1, 
-                    global::System.Nullable<bool> Original_SpareBit2, 
+                    global::System.Nullable<global::System.DateTime> Original_PlanedPortETA, 
+                    byte[] Original_DateSpeare, 
+                    byte[] Original_IssuedDateSpeare, 
+                    global::System.Nullable<int> Original_IntDateSpeare, 
                     int ID) {
-            if ((ShipID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ShipID.Value));
-            }
-            else {
+            if ((BLOBContainerPath == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Shipname == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(BLOBContainerPath));
+            }
+            if ((Contractor == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Shipname));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Contractor));
             }
-            if ((MonthGroup.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(MonthGroup.Value));
-            }
-            else {
+            if ((ContractorDetail == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Description == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ContractorDetail));
+            }
+            if ((ContractorPIC == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Description));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ContractorPIC));
             }
-            if ((AmountUSD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(AmountUSD.Value));
-            }
-            else {
+            if ((ContractorTarm == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((AmountJPY.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(AmountJPY.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ContractorTarm));
+            }
+            if ((PONumber.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(PONumber.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((exchangerate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(exchangerate.Value));
-            }
-            else {
+            if ((POReference == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((GrandTotalUSD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(GrandTotalUSD.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(POReference));
+            }
+            if ((PlanedDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(PlanedDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((PaymentDate == null)) {
+            if ((IsuueDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(IsuueDate.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(PaymentDate));
+            if ((ShipID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(ShipID.Value));
             }
-            if ((Process == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Process));
-            }
-            if ((Remark == null)) {
+            if ((PresentName == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Remark));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(PresentName));
             }
-            if ((Updateremark255 == null)) {
+            if ((PlanedPort == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Updateremark255));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(PlanedPort));
             }
-            if ((UpdateDatedate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(UpdateDatedate.Value));
-            }
-            else {
+            if ((PlanedPortAgent == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((SupportDocks == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(PlanedPortAgent));
+            }
+            if ((PlanedPortETA.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(PlanedPortETA.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(SupportDocks));
-            }
-            if ((SpareMoney1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(SpareMoney1.Value));
-            }
-            else {
+            if ((PlanedPortRemark == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Spareint1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Spareint1.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(PlanedPortRemark));
+            }
+            if ((Orderer == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Sparenver1 == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Orderer));
+            }
+            if ((OrdererPIC == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Sparenver1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(OrdererPIC));
             }
-            if ((SpareDate1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(SpareDate1.Value));
-            }
-            else {
+            if ((OrdererDetail == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((SpareBit1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(SpareBit1.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(OrdererDetail));
+            }
+            if ((Remark == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((SpareBit2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(SpareBit2.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Remark));
+            }
+            if ((DateSpeare == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_ID));
-            if ((Original_ShipID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_ShipID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Shipname == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Shipname));
-            }
-            if ((Original_MonthGroup.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_MonthGroup.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_AmountUSD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(Original_AmountUSD.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((Original_AmountJPY.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original_AmountJPY.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((Original_exchangerate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original_exchangerate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            if ((Original_GrandTotalUSD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_GrandTotalUSD.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PaymentDate == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_PaymentDate));
-            }
-            if ((Original_Process == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_Process));
-            }
-            if ((Original_Updateremark255 == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Updateremark255));
-            }
-            if ((Original_UpdateDatedate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((System.DateTime)(Original_UpdateDatedate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareMoney1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((decimal)(Original_SpareMoney1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Spareint1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_Spareint1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareDate1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((System.DateTime)(Original_SpareDate1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareBit1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((bool)(Original_SpareBit1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareBit2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_SpareBit2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[53].Value = ((int)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<int> ShipID, 
-                    string Shipname, 
-                    global::System.Nullable<global::System.DateTime> MonthGroup, 
-                    string Description, 
-                    global::System.Nullable<decimal> AmountUSD, 
-                    global::System.Nullable<decimal> AmountJPY, 
-                    global::System.Nullable<decimal> exchangerate, 
-                    global::System.Nullable<decimal> GrandTotalUSD, 
-                    string PaymentDate, 
-                    string Process, 
-                    string Remark, 
-                    string Updateremark255, 
-                    global::System.Nullable<global::System.DateTime> UpdateDatedate, 
-                    string SupportDocks, 
-                    global::System.Nullable<decimal> SpareMoney1, 
-                    global::System.Nullable<int> Spareint1, 
-                    string Sparenver1, 
-                    global::System.Nullable<global::System.DateTime> SpareDate1, 
-                    global::System.Nullable<bool> SpareBit1, 
-                    global::System.Nullable<bool> SpareBit2, 
-                    int Original_ID, 
-                    global::System.Nullable<int> Original_ShipID, 
-                    string Original_Shipname, 
-                    global::System.Nullable<global::System.DateTime> Original_MonthGroup, 
-                    global::System.Nullable<decimal> Original_AmountUSD, 
-                    global::System.Nullable<decimal> Original_AmountJPY, 
-                    global::System.Nullable<decimal> Original_exchangerate, 
-                    global::System.Nullable<decimal> Original_GrandTotalUSD, 
-                    string Original_PaymentDate, 
-                    string Original_Process, 
-                    string Original_Updateremark255, 
-                    global::System.Nullable<global::System.DateTime> Original_UpdateDatedate, 
-                    global::System.Nullable<decimal> Original_SpareMoney1, 
-                    global::System.Nullable<int> Original_Spareint1, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate1, 
-                    global::System.Nullable<bool> Original_SpareBit1, 
-                    global::System.Nullable<bool> Original_SpareBit2) {
-            return this.Update(ShipID, Shipname, MonthGroup, Description, AmountUSD, AmountJPY, exchangerate, GrandTotalUSD, PaymentDate, Process, Remark, Updateremark255, UpdateDatedate, SupportDocks, SpareMoney1, Spareint1, Sparenver1, SpareDate1, SpareBit1, SpareBit2, Original_ID, Original_ShipID, Original_Shipname, Original_MonthGroup, Original_AmountUSD, Original_AmountJPY, Original_exchangerate, Original_GrandTotalUSD, Original_PaymentDate, Original_Process, Original_Updateremark255, Original_UpdateDatedate, Original_SpareMoney1, Original_Spareint1, Original_SpareDate1, Original_SpareBit1, Original_SpareBit2, Original_ID);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataExchange_CommentTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataExchange_CommentTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataExchange_Comment";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("EditdateTime", "EditdateTime");
-            tableMapping.ColumnMappings.Add("Comment", "Comment");
-            tableMapping.ColumnMappings.Add("CommnetSpare", "CommnetSpare");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[DataExchange_Comment] WHERE (([ID] = @Original_ID) AND ((@IsNu" +
-                "ll_EditdateTime = 1 AND [EditdateTime] IS NULL) OR ([EditdateTime] = @Original_E" +
-                "ditdateTime)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EditdateTime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EditdateTime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EditdateTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EditdateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DataExchange_Comment] ([EditdateTime], [Comment], [CommnetSpar" +
-                "e]) VALUES (@EditdateTime, @Comment, @CommnetSpare);\r\nSELECT ID, EditdateTime, C" +
-                "omment, CommnetSpare FROM DataExchange_Comment WHERE (ID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EditdateTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EditdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CommnetSpare", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CommnetSpare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DataExchange_Comment] SET [EditdateTime] = @EditdateTime, [Comment] = @Comment, [CommnetSpare] = @CommnetSpare WHERE (([ID] = @Original_ID) AND ((@IsNull_EditdateTime = 1 AND [EditdateTime] IS NULL) OR ([EditdateTime] = @Original_EditdateTime)));
-SELECT ID, EditdateTime, Comment, CommnetSpare FROM DataExchange_Comment WHERE (ID = @ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EditdateTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EditdateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CommnetSpare", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CommnetSpare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EditdateTime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EditdateTime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EditdateTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EditdateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, EditdateTime, Comment, CommnetSpare FROM dbo.DataExchange_Comment";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet.DataExchange_CommentDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet.DataExchange_CommentDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet.DataExchange_CommentDataTable dataTable = new AZUREDBDataSet.DataExchange_CommentDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet.DataExchange_CommentDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DataExchange_Comment");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<global::System.DateTime> Original_EditdateTime) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_EditdateTime.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_EditdateTime.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> EditdateTime, string Comment, string CommnetSpare) {
-            if ((EditdateTime.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(EditdateTime.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Comment == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Comment));
-            }
-            if ((CommnetSpare == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CommnetSpare));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> EditdateTime, string Comment, string CommnetSpare, int Original_ID, global::System.Nullable<global::System.DateTime> Original_EditdateTime, int ID) {
-            if ((EditdateTime.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(EditdateTime.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Comment == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Comment));
-            }
-            if ((CommnetSpare == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CommnetSpare));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
-            if ((Original_EditdateTime.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_EditdateTime.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> EditdateTime, string Comment, string CommnetSpare, int Original_ID, global::System.Nullable<global::System.DateTime> Original_EditdateTime) {
-            return this.Update(EditdateTime, Comment, CommnetSpare, Original_ID, Original_EditdateTime, Original_ID);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataExchange_feeTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataExchange_feeTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataExchange_fee";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("MonthGroup", "MonthGroup");
-            tableMapping.ColumnMappings.Add("ShipID", "ShipID");
-            tableMapping.ColumnMappings.Add("shipname", "shipname");
-            tableMapping.ColumnMappings.Add("budjetbalance", "budjetbalance");
-            tableMapping.ColumnMappings.Add("Managementfee", "Managementfee");
-            tableMapping.ColumnMappings.Add("PaymentDate", "PaymentDate");
-            tableMapping.ColumnMappings.Add("Remark", "Remark");
-            tableMapping.ColumnMappings.Add("SapreRemark", "SapreRemark");
-            tableMapping.ColumnMappings.Add("SpareDate1", "SpareDate1");
-            tableMapping.ColumnMappings.Add("SpareDate2", "SpareDate2");
-            tableMapping.ColumnMappings.Add("MonthbeginTotal", "MonthbeginTotal");
-            tableMapping.ColumnMappings.Add("SpareMoney1", "SpareMoney1");
-            tableMapping.ColumnMappings.Add("SpareMoney2", "SpareMoney2");
-            tableMapping.ColumnMappings.Add("Sparevarch1", "Sparevarch1");
-            tableMapping.ColumnMappings.Add("Sparebit1", "Sparebit1");
-            tableMapping.ColumnMappings.Add("Sparebit2", "Sparebit2");
-            tableMapping.ColumnMappings.Add("Spareint1", "Spareint1");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DataExchange_fee] WHERE (([ID] = @Original_ID) AND ([MonthGroup] = @Original_MonthGroup) AND ((@IsNull_ShipID = 1 AND [ShipID] IS NULL) OR ([ShipID] = @Original_ShipID)) AND ((@IsNull_shipname = 1 AND [shipname] IS NULL) OR ([shipname] = @Original_shipname)) AND ((@IsNull_budjetbalance = 1 AND [budjetbalance] IS NULL) OR ([budjetbalance] = @Original_budjetbalance)) AND ((@IsNull_Managementfee = 1 AND [Managementfee] IS NULL) OR ([Managementfee] = @Original_Managementfee)) AND ((@IsNull_PaymentDate = 1 AND [PaymentDate] IS NULL) OR ([PaymentDate] = @Original_PaymentDate)) AND ((@IsNull_SpareDate1 = 1 AND [SpareDate1] IS NULL) OR ([SpareDate1] = @Original_SpareDate1)) AND ((@IsNull_SpareDate2 = 1 AND [SpareDate2] IS NULL) OR ([SpareDate2] = @Original_SpareDate2)) AND ((@IsNull_MonthbeginTotal = 1 AND [MonthbeginTotal] IS NULL) OR ([MonthbeginTotal] = @Original_MonthbeginTotal)) AND ((@IsNull_SpareMoney1 = 1 AND [SpareMoney1] IS NULL) OR ([SpareMoney1] = @Original_SpareMoney1)) AND ((@IsNull_SpareMoney2 = 1 AND [SpareMoney2] IS NULL) OR ([SpareMoney2] = @Original_SpareMoney2)) AND ((@IsNull_Sparebit1 = 1 AND [Sparebit1] IS NULL) OR ([Sparebit1] = @Original_Sparebit1)) AND ((@IsNull_Sparebit2 = 1 AND [Sparebit2] IS NULL) OR ([Sparebit2] = @Original_Sparebit2)) AND ((@IsNull_Spareint1 = 1 AND [Spareint1] IS NULL) OR ([Spareint1] = @Original_Spareint1)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_shipname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shipname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shipname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_budjetbalance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "budjetbalance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_budjetbalance", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "budjetbalance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Managementfee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Managementfee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Managementfee", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Managementfee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareDate1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareDate2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareDate2", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MonthbeginTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthbeginTotal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthbeginTotal", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthbeginTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareMoney1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareMoney1", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareMoney2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareMoney2", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sparebit1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sparebit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sparebit2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sparebit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DataExchange_fee] ([MonthGroup], [ShipID], [shipname], [budjetbalance], [Managementfee], [PaymentDate], [Remark], [SapreRemark], [SpareDate1], [SpareDate2], [MonthbeginTotal], [SpareMoney1], [SpareMoney2], [Sparevarch1], [Sparebit1], [Sparebit2], [Spareint1]) VALUES (@MonthGroup, @ShipID, @shipname, @budjetbalance, @Managementfee, @PaymentDate, @Remark, @SapreRemark, @SpareDate1, @SpareDate2, @MonthbeginTotal, @SpareMoney1, @SpareMoney2, @Sparevarch1, @Sparebit1, @Sparebit2, @Spareint1);
-SELECT ID, MonthGroup, ShipID, shipname, budjetbalance, Managementfee, PaymentDate, Remark, SapreRemark, SpareDate1, SpareDate2, MonthbeginTotal, SpareMoney1, SpareMoney2, Sparevarch1, Sparebit1, Sparebit2, Spareint1 FROM DataExchange_fee WHERE (ID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shipname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@budjetbalance", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "budjetbalance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Managementfee", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Managementfee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SapreRemark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SapreRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareDate2", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthbeginTotal", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthbeginTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareMoney1", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareMoney2", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparevarch1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparevarch1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparebit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparebit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[DataExchange_fee] SET [MonthGroup] = @MonthGroup, [ShipID] = @ShipI" +
-                "D, [shipname] = @shipname, [budjetbalance] = @budjetbalance, [Managementfee] = @" +
-                "Managementfee, [PaymentDate] = @PaymentDate, [Remark] = @Remark, [SapreRemark] =" +
-                " @SapreRemark, [SpareDate1] = @SpareDate1, [SpareDate2] = @SpareDate2, [Monthbeg" +
-                "inTotal] = @MonthbeginTotal, [SpareMoney1] = @SpareMoney1, [SpareMoney2] = @Spar" +
-                "eMoney2, [Sparevarch1] = @Sparevarch1, [Sparebit1] = @Sparebit1, [Sparebit2] = @" +
-                "Sparebit2, [Spareint1] = @Spareint1 WHERE (([ID] = @Original_ID) AND ([MonthGrou" +
-                "p] = @Original_MonthGroup) AND ((@IsNull_ShipID = 1 AND [ShipID] IS NULL) OR ([S" +
-                "hipID] = @Original_ShipID)) AND ((@IsNull_shipname = 1 AND [shipname] IS NULL) O" +
-                "R ([shipname] = @Original_shipname)) AND ((@IsNull_budjetbalance = 1 AND [budjet" +
-                "balance] IS NULL) OR ([budjetbalance] = @Original_budjetbalance)) AND ((@IsNull_" +
-                "Managementfee = 1 AND [Managementfee] IS NULL) OR ([Managementfee] = @Original_M" +
-                "anagementfee)) AND ((@IsNull_PaymentDate = 1 AND [PaymentDate] IS NULL) OR ([Pay" +
-                "mentDate] = @Original_PaymentDate)) AND ((@IsNull_SpareDate1 = 1 AND [SpareDate1" +
-                "] IS NULL) OR ([SpareDate1] = @Original_SpareDate1)) AND ((@IsNull_SpareDate2 = " +
-                "1 AND [SpareDate2] IS NULL) OR ([SpareDate2] = @Original_SpareDate2)) AND ((@IsN" +
-                "ull_MonthbeginTotal = 1 AND [MonthbeginTotal] IS NULL) OR ([MonthbeginTotal] = @" +
-                "Original_MonthbeginTotal)) AND ((@IsNull_SpareMoney1 = 1 AND [SpareMoney1] IS NU" +
-                "LL) OR ([SpareMoney1] = @Original_SpareMoney1)) AND ((@IsNull_SpareMoney2 = 1 AN" +
-                "D [SpareMoney2] IS NULL) OR ([SpareMoney2] = @Original_SpareMoney2)) AND ((@IsNu" +
-                "ll_Sparebit1 = 1 AND [Sparebit1] IS NULL) OR ([Sparebit1] = @Original_Sparebit1)" +
-                ") AND ((@IsNull_Sparebit2 = 1 AND [Sparebit2] IS NULL) OR ([Sparebit2] = @Origin" +
-                "al_Sparebit2)) AND ((@IsNull_Spareint1 = 1 AND [Spareint1] IS NULL) OR ([Sparein" +
-                "t1] = @Original_Spareint1)));\r\nSELECT ID, MonthGroup, ShipID, shipname, budjetba" +
-                "lance, Managementfee, PaymentDate, Remark, SapreRemark, SpareDate1, SpareDate2, " +
-                "MonthbeginTotal, SpareMoney1, SpareMoney2, Sparevarch1, Sparebit1, Sparebit2, Sp" +
-                "areint1 FROM DataExchange_fee WHERE (ID = @ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shipname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@budjetbalance", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "budjetbalance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Managementfee", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Managementfee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SapreRemark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SapreRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareDate2", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthbeginTotal", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthbeginTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareMoney1", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SpareMoney2", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparevarch1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparevarch1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparebit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sparebit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthGroup", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShipID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShipID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_shipname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shipname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_shipname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "shipname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_budjetbalance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "budjetbalance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_budjetbalance", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "budjetbalance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Managementfee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Managementfee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Managementfee", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Managementfee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareDate1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareDate1", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareDate2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareDate2", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareDate2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MonthbeginTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthbeginTotal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthbeginTotal", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthbeginTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareMoney1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareMoney1", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SpareMoney2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SpareMoney2", global::System.Data.SqlDbType.SmallMoney, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SpareMoney2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sparebit1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sparebit1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sparebit2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sparebit2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sparebit2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Spareint1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spareint1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, MonthGroup, ShipID, shipname, budjetbalance, Managementfee, PaymentDat" +
-                "e, Remark, SapreRemark, SpareDate1, SpareDate2, MonthbeginTotal, SpareMoney1, Sp" +
-                "areMoney2, Sparevarch1, Sparebit1, Sparebit2, Spareint1 FROM dbo.DataExchange_fe" +
-                "e";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet.DataExchange_feeDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet.DataExchange_feeDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet.DataExchange_feeDataTable dataTable = new AZUREDBDataSet.DataExchange_feeDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet.DataExchange_feeDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DataExchange_fee");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, System.DateTime Original_MonthGroup, global::System.Nullable<int> Original_ShipID, string Original_shipname, global::System.Nullable<decimal> Original_budjetbalance, global::System.Nullable<decimal> Original_Managementfee, global::System.Nullable<global::System.DateTime> Original_PaymentDate, global::System.Nullable<global::System.DateTime> Original_SpareDate1, global::System.Nullable<global::System.DateTime> Original_SpareDate2, global::System.Nullable<decimal> Original_MonthbeginTotal, global::System.Nullable<decimal> Original_SpareMoney1, global::System.Nullable<decimal> Original_SpareMoney2, global::System.Nullable<bool> Original_Sparebit1, global::System.Nullable<bool> Original_Sparebit2, global::System.Nullable<int> Original_Spareint1) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_MonthGroup));
-            if ((Original_ShipID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_ShipID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_shipname == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_shipname));
-            }
-            if ((Original_budjetbalance.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_budjetbalance.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Managementfee.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_Managementfee.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PaymentDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_PaymentDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareDate1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_SpareDate1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareDate2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((System.DateTime)(Original_SpareDate2.Value));
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((byte[])(DateSpeare));
             }
-            if ((Original_MonthbeginTotal.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original_MonthbeginTotal.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareMoney1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((decimal)(Original_SpareMoney1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SpareMoney2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((decimal)(Original_SpareMoney2.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Sparebit1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_Sparebit1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Sparebit2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((bool)(Original_Sparebit2.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Spareint1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((int)(Original_Spareint1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    System.DateTime MonthGroup, 
-                    global::System.Nullable<int> ShipID, 
-                    string shipname, 
-                    global::System.Nullable<decimal> budjetbalance, 
-                    global::System.Nullable<decimal> Managementfee, 
-                    global::System.Nullable<global::System.DateTime> PaymentDate, 
-                    string Remark, 
-                    string SapreRemark, 
-                    global::System.Nullable<global::System.DateTime> SpareDate1, 
-                    global::System.Nullable<global::System.DateTime> SpareDate2, 
-                    global::System.Nullable<decimal> MonthbeginTotal, 
-                    global::System.Nullable<decimal> SpareMoney1, 
-                    global::System.Nullable<decimal> SpareMoney2, 
-                    string Sparevarch1, 
-                    global::System.Nullable<bool> Sparebit1, 
-                    global::System.Nullable<bool> Sparebit2, 
-                    global::System.Nullable<int> Spareint1) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(MonthGroup));
-            if ((ShipID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ShipID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((shipname == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(shipname));
-            }
-            if ((budjetbalance.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(budjetbalance.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Managementfee.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(Managementfee.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((PaymentDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(PaymentDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Remark == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Remark));
-            }
-            if ((SapreRemark == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(SapreRemark));
-            }
-            if ((SpareDate1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(SpareDate1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((SpareDate2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(SpareDate2.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((MonthbeginTotal.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(MonthbeginTotal.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((SpareMoney1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(SpareMoney1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((SpareMoney2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(SpareMoney2.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Sparevarch1 == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Sparevarch1));
-            }
-            if ((Sparebit1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(Sparebit1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((Sparebit2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(Sparebit2.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Spareint1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(Spareint1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    System.DateTime MonthGroup, 
-                    global::System.Nullable<int> ShipID, 
-                    string shipname, 
-                    global::System.Nullable<decimal> budjetbalance, 
-                    global::System.Nullable<decimal> Managementfee, 
-                    global::System.Nullable<global::System.DateTime> PaymentDate, 
-                    string Remark, 
-                    string SapreRemark, 
-                    global::System.Nullable<global::System.DateTime> SpareDate1, 
-                    global::System.Nullable<global::System.DateTime> SpareDate2, 
-                    global::System.Nullable<decimal> MonthbeginTotal, 
-                    global::System.Nullable<decimal> SpareMoney1, 
-                    global::System.Nullable<decimal> SpareMoney2, 
-                    string Sparevarch1, 
-                    global::System.Nullable<bool> Sparebit1, 
-                    global::System.Nullable<bool> Sparebit2, 
-                    global::System.Nullable<int> Spareint1, 
-                    int Original_ID, 
-                    System.DateTime Original_MonthGroup, 
-                    global::System.Nullable<int> Original_ShipID, 
-                    string Original_shipname, 
-                    global::System.Nullable<decimal> Original_budjetbalance, 
-                    global::System.Nullable<decimal> Original_Managementfee, 
-                    global::System.Nullable<global::System.DateTime> Original_PaymentDate, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate1, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate2, 
-                    global::System.Nullable<decimal> Original_MonthbeginTotal, 
-                    global::System.Nullable<decimal> Original_SpareMoney1, 
-                    global::System.Nullable<decimal> Original_SpareMoney2, 
-                    global::System.Nullable<bool> Original_Sparebit1, 
-                    global::System.Nullable<bool> Original_Sparebit2, 
-                    global::System.Nullable<int> Original_Spareint1, 
-                    int ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(MonthGroup));
-            if ((ShipID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ShipID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((shipname == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(shipname));
-            }
-            if ((budjetbalance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(budjetbalance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Managementfee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Managementfee.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((PaymentDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(PaymentDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Remark == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Remark));
-            }
-            if ((SapreRemark == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(SapreRemark));
-            }
-            if ((SpareDate1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(SpareDate1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((SpareDate2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(SpareDate2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((MonthbeginTotal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(MonthbeginTotal.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((SpareMoney1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(SpareMoney1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((SpareMoney2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(SpareMoney2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Sparevarch1 == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Sparevarch1));
-            }
-            if ((Sparebit1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Sparebit1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((Sparebit2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Sparebit2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Spareint1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Spareint1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_MonthGroup));
-            if ((Original_ShipID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_ShipID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+            if ((IssuedDateSpeare == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_shipname == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((byte[])(IssuedDateSpeare));
+            }
+            if ((IntDateSpeare.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(IntDateSpeare.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_shipname));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((Original_budjetbalance.HasValue == true)) {
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_ID));
+            if ((Original_PONumber.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original_budjetbalance.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_PONumber.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Original_Managementfee.HasValue == true)) {
+            if ((Original_PlanedDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(Original_Managementfee.Value));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_PlanedDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
-            if ((Original_PaymentDate.HasValue == true)) {
+            if ((Original_IsuueDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.DateTime)(Original_PaymentDate.Value));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.DateTime)(Original_IsuueDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_SpareDate1.HasValue == true)) {
+            if ((Original_ShipID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((System.DateTime)(Original_SpareDate1.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ShipID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((Original_SpareDate2.HasValue == true)) {
+            if ((Original_PlanedPortETA.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_SpareDate2.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_PlanedPortETA.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
-            if ((Original_MonthbeginTotal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(Original_MonthbeginTotal.Value));
-            }
-            else {
+            if ((Original_DateSpeare == null)) {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
-            if ((Original_SpareMoney1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(Original_SpareMoney1.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((byte[])(Original_DateSpeare));
+            }
+            if ((Original_IssuedDateSpeare == null)) {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            if ((Original_SpareMoney2.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((byte[])(Original_IssuedDateSpeare));
+            }
+            if ((Original_IntDateSpeare.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(Original_SpareMoney2.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_IntDateSpeare.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
-            if ((Original_Sparebit1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((bool)(Original_Sparebit1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Sparebit2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((bool)(Original_Sparebit2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Spareint1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_Spareint1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(ID));
+            this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7632,39 +5488,38 @@ SELECT ID, MonthGroup, ShipID, shipname, budjetbalance, Managementfee, PaymentDa
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    System.DateTime MonthGroup, 
+                    string BLOBContainerPath, 
+                    string Contractor, 
+                    string ContractorDetail, 
+                    string ContractorPIC, 
+                    string ContractorTarm, 
+                    global::System.Nullable<int> PONumber, 
+                    string POReference, 
+                    global::System.Nullable<global::System.DateTime> PlanedDate, 
+                    global::System.Nullable<global::System.DateTime> IsuueDate, 
                     global::System.Nullable<int> ShipID, 
-                    string shipname, 
-                    global::System.Nullable<decimal> budjetbalance, 
-                    global::System.Nullable<decimal> Managementfee, 
-                    global::System.Nullable<global::System.DateTime> PaymentDate, 
+                    string PresentName, 
+                    string PlanedPort, 
+                    string PlanedPortAgent, 
+                    global::System.Nullable<global::System.DateTime> PlanedPortETA, 
+                    string PlanedPortRemark, 
+                    string Orderer, 
+                    string OrdererPIC, 
+                    string OrdererDetail, 
                     string Remark, 
-                    string SapreRemark, 
-                    global::System.Nullable<global::System.DateTime> SpareDate1, 
-                    global::System.Nullable<global::System.DateTime> SpareDate2, 
-                    global::System.Nullable<decimal> MonthbeginTotal, 
-                    global::System.Nullable<decimal> SpareMoney1, 
-                    global::System.Nullable<decimal> SpareMoney2, 
-                    string Sparevarch1, 
-                    global::System.Nullable<bool> Sparebit1, 
-                    global::System.Nullable<bool> Sparebit2, 
-                    global::System.Nullable<int> Spareint1, 
+                    byte[] DateSpeare, 
+                    byte[] IssuedDateSpeare, 
+                    global::System.Nullable<int> IntDateSpeare, 
                     int Original_ID, 
-                    System.DateTime Original_MonthGroup, 
+                    global::System.Nullable<int> Original_PONumber, 
+                    global::System.Nullable<global::System.DateTime> Original_PlanedDate, 
+                    global::System.Nullable<global::System.DateTime> Original_IsuueDate, 
                     global::System.Nullable<int> Original_ShipID, 
-                    string Original_shipname, 
-                    global::System.Nullable<decimal> Original_budjetbalance, 
-                    global::System.Nullable<decimal> Original_Managementfee, 
-                    global::System.Nullable<global::System.DateTime> Original_PaymentDate, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate1, 
-                    global::System.Nullable<global::System.DateTime> Original_SpareDate2, 
-                    global::System.Nullable<decimal> Original_MonthbeginTotal, 
-                    global::System.Nullable<decimal> Original_SpareMoney1, 
-                    global::System.Nullable<decimal> Original_SpareMoney2, 
-                    global::System.Nullable<bool> Original_Sparebit1, 
-                    global::System.Nullable<bool> Original_Sparebit2, 
-                    global::System.Nullable<int> Original_Spareint1) {
-            return this.Update(MonthGroup, ShipID, shipname, budjetbalance, Managementfee, PaymentDate, Remark, SapreRemark, SpareDate1, SpareDate2, MonthbeginTotal, SpareMoney1, SpareMoney2, Sparevarch1, Sparebit1, Sparebit2, Spareint1, Original_ID, Original_MonthGroup, Original_ShipID, Original_shipname, Original_budjetbalance, Original_Managementfee, Original_PaymentDate, Original_SpareDate1, Original_SpareDate2, Original_MonthbeginTotal, Original_SpareMoney1, Original_SpareMoney2, Original_Sparebit1, Original_Sparebit2, Original_Spareint1, Original_ID);
+                    global::System.Nullable<global::System.DateTime> Original_PlanedPortETA, 
+                    byte[] Original_DateSpeare, 
+                    byte[] Original_IssuedDateSpeare, 
+                    global::System.Nullable<int> Original_IntDateSpeare) {
+            return this.Update(BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, ContractorTarm, PONumber, POReference, PlanedDate, IsuueDate, ShipID, PresentName, PlanedPort, PlanedPortAgent, PlanedPortETA, PlanedPortRemark, Orderer, OrdererPIC, OrdererDetail, Remark, DateSpeare, IssuedDateSpeare, IntDateSpeare, Original_ID, Original_PONumber, Original_PlanedDate, Original_IsuueDate, Original_ShipID, Original_PlanedPortETA, Original_DateSpeare, Original_IssuedDateSpeare, Original_IntDateSpeare, Original_ID);
         }
     }
     
@@ -8132,7 +5987,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::aa.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9376,7 +7231,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Ship_Master_TB1TableAdapter : global::System.ComponentModel.Component {
+    public partial class Quoatation_FileName1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -9390,7 +7245,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Ship_Master_TB1TableAdapter() {
+        public Quoatation_FileName1TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -9487,42 +7342,45 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Ship_Master_TB1";
+            tableMapping.DataSetTable = "Quoatation_FileName1";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("PresentName", "PresentName");
+            tableMapping.ColumnMappings.Add("QTNTBL_ID", "QTNTBL_ID");
+            tableMapping.ColumnMappings.Add("FileName", "FileName");
+            tableMapping.ColumnMappings.Add("UpdateRemark", "UpdateRemark");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Ship_Master_TB] WHERE (([ID] = @Original_ID) AND ((@IsNull_PresentNa" +
-                "me = 1 AND [PresentName] IS NULL) OR ([PresentName] = @Original_PresentName)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Quoatation_FileName] WHERE (([ID] = @Original_ID) AND ([QTNTBL_ID] =" +
+                " @Original_QTNTBL_ID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PresentName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PresentName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNTBL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNTBL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Ship_Master_TB] ([ID], [PresentName]) VALUES (@ID, @PresentName);\r\nS" +
-                "ELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Quoatation_FileName] ([ID], [FileName], [UpdateRemark]) VALUES (@ID," +
+                " @FileName, @UpdateRemark);\r\nSELECT ID, QTNTBL_ID, FileName, UpdateRemark FROM Q" +
+                "uoatation_FileName WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PresentName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateRemark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Ship_Master_TB] SET [ID] = @ID, [PresentName] = @PresentName WHERE (([ID] = @Original_ID) AND ((@IsNull_PresentName = 1 AND [PresentName] IS NULL) OR ([PresentName] = @Original_PresentName)));
-SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Quoatation_FileName] SET [ID] = @ID, [FileName] = @FileName, [UpdateRemark] = @UpdateRemark WHERE (([ID] = @Original_ID) AND ([QTNTBL_ID] = @Original_QTNTBL_ID));
+SELECT ID, QTNTBL_ID, FileName, UpdateRemark FROM Quoatation_FileName WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PresentName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UpdateRemark", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UpdateRemark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PresentName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PresentName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PresentName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNTBL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNTBL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::NonBajetItem.Properties.Settings.Default.AZUREDBConnectionString;
+            this._connection.ConnectionString = global::aa.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9531,7 +7389,7 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT            ID, PresentName\r\nFROM              Ship_Master_TB";
+            this._commandCollection[0].CommandText = "SELECT            Quoatation_FileName.*\r\nFROM              Quoatation_FileName";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9539,7 +7397,7 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet.Ship_Master_TB1DataTable dataTable) {
+        public virtual int Fill(AZUREDBDataSet.Quoatation_FileName1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9552,9 +7410,9 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet.Ship_Master_TB1DataTable GetData() {
+        public virtual AZUREDBDataSet.Quoatation_FileName1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet.Ship_Master_TB1DataTable dataTable = new AZUREDBDataSet.Ship_Master_TB1DataTable();
+            AZUREDBDataSet.Quoatation_FileName1DataTable dataTable = new AZUREDBDataSet.Quoatation_FileName1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9562,7 +7420,7 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet.Ship_Master_TB1DataTable dataTable) {
+        public virtual int Update(AZUREDBDataSet.Quoatation_FileName1DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -9570,7 +7428,7 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(AZUREDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Ship_Master_TB1");
+            return this.Adapter.Update(dataSet, "Quoatation_FileName1");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9592,16 +7450,9 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_PresentName) {
+        public virtual int Delete(int Original_ID, int Original_QTNTBL_ID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_PresentName == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_PresentName));
-            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_QTNTBL_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9622,13 +7473,19 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, string PresentName) {
+        public virtual int Insert(int ID, string FileName, string UpdateRemark) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
-            if ((PresentName == null)) {
+            if ((FileName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(PresentName));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FileName));
+            }
+            if ((UpdateRemark == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(UpdateRemark));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9650,23 +7507,22 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, string PresentName, int Original_ID, string Original_PresentName) {
+        public virtual int Update(int ID, string FileName, string UpdateRemark, int Original_ID, int Original_QTNTBL_ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
-            if ((PresentName == null)) {
+            if ((FileName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(PresentName));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FileName));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID));
-            if ((Original_PresentName == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((UpdateRemark == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_PresentName));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(UpdateRemark));
             }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_QTNTBL_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9687,8 +7543,8 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string PresentName, int Original_ID, string Original_PresentName) {
-            return this.Update(Original_ID, PresentName, Original_ID, Original_PresentName);
+        public virtual int Update(string FileName, string UpdateRemark, int Original_ID, int Original_QTNTBL_ID) {
+            return this.Update(Original_ID, FileName, UpdateRemark, Original_ID, Original_QTNTBL_ID);
         }
     }
     
@@ -9704,15 +7560,13 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         
         private UpdateOrderOption _updateOrder;
         
-        private DataExchangeTableAdapter _dataExchangeTableAdapter;
+        private Quoatation_FileNameTableAdapter _quoatation_FileNameTableAdapter;
         
-        private DataExchange_CommentTableAdapter _dataExchange_CommentTableAdapter;
-        
-        private DataExchange_feeTableAdapter _dataExchange_feeTableAdapter;
+        private Quotation_DocumentTableAdapter _quotation_DocumentTableAdapter;
         
         private Ship_Master_TBTableAdapter _ship_Master_TBTableAdapter;
         
-        private Ship_Master_TB1TableAdapter _ship_Master_TB1TableAdapter;
+        private Quoatation_FileName1TableAdapter _quoatation_FileName1TableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -9734,12 +7588,12 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DataExchangeTableAdapter DataExchangeTableAdapter {
+        public Quoatation_FileNameTableAdapter Quoatation_FileNameTableAdapter {
             get {
-                return this._dataExchangeTableAdapter;
+                return this._quoatation_FileNameTableAdapter;
             }
             set {
-                this._dataExchangeTableAdapter = value;
+                this._quoatation_FileNameTableAdapter = value;
             }
         }
         
@@ -9748,26 +7602,12 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DataExchange_CommentTableAdapter DataExchange_CommentTableAdapter {
+        public Quotation_DocumentTableAdapter Quotation_DocumentTableAdapter {
             get {
-                return this._dataExchange_CommentTableAdapter;
+                return this._quotation_DocumentTableAdapter;
             }
             set {
-                this._dataExchange_CommentTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public DataExchange_feeTableAdapter DataExchange_feeTableAdapter {
-            get {
-                return this._dataExchange_feeTableAdapter;
-            }
-            set {
-                this._dataExchange_feeTableAdapter = value;
+                this._quotation_DocumentTableAdapter = value;
             }
         }
         
@@ -9790,12 +7630,12 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Ship_Master_TB1TableAdapter Ship_Master_TB1TableAdapter {
+        public Quoatation_FileName1TableAdapter Quoatation_FileName1TableAdapter {
             get {
-                return this._ship_Master_TB1TableAdapter;
+                return this._quoatation_FileName1TableAdapter;
             }
             set {
-                this._ship_Master_TB1TableAdapter = value;
+                this._quoatation_FileName1TableAdapter = value;
             }
         }
         
@@ -9818,25 +7658,21 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._dataExchangeTableAdapter != null) 
-                            && (this._dataExchangeTableAdapter.Connection != null))) {
-                    return this._dataExchangeTableAdapter.Connection;
+                if (((this._quoatation_FileNameTableAdapter != null) 
+                            && (this._quoatation_FileNameTableAdapter.Connection != null))) {
+                    return this._quoatation_FileNameTableAdapter.Connection;
                 }
-                if (((this._dataExchange_CommentTableAdapter != null) 
-                            && (this._dataExchange_CommentTableAdapter.Connection != null))) {
-                    return this._dataExchange_CommentTableAdapter.Connection;
-                }
-                if (((this._dataExchange_feeTableAdapter != null) 
-                            && (this._dataExchange_feeTableAdapter.Connection != null))) {
-                    return this._dataExchange_feeTableAdapter.Connection;
+                if (((this._quotation_DocumentTableAdapter != null) 
+                            && (this._quotation_DocumentTableAdapter.Connection != null))) {
+                    return this._quotation_DocumentTableAdapter.Connection;
                 }
                 if (((this._ship_Master_TBTableAdapter != null) 
                             && (this._ship_Master_TBTableAdapter.Connection != null))) {
                     return this._ship_Master_TBTableAdapter.Connection;
                 }
-                if (((this._ship_Master_TB1TableAdapter != null) 
-                            && (this._ship_Master_TB1TableAdapter.Connection != null))) {
-                    return this._ship_Master_TB1TableAdapter.Connection;
+                if (((this._quoatation_FileName1TableAdapter != null) 
+                            && (this._quoatation_FileName1TableAdapter.Connection != null))) {
+                    return this._quoatation_FileName1TableAdapter.Connection;
                 }
                 return null;
             }
@@ -9851,19 +7687,16 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._dataExchangeTableAdapter != null)) {
+                if ((this._quoatation_FileNameTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._dataExchange_CommentTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._dataExchange_feeTableAdapter != null)) {
+                if ((this._quotation_DocumentTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._ship_Master_TBTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._ship_Master_TB1TableAdapter != null)) {
+                if ((this._quoatation_FileName1TableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -9877,6 +7710,24 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._quotation_DocumentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Quotation_Document.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._quotation_DocumentTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._quoatation_FileNameTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Quoatation_FileName.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._quoatation_FileNameTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._ship_Master_TBTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Ship_Master_TB.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -9886,39 +7737,12 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._ship_Master_TB1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Ship_Master_TB1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._quoatation_FileName1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Quoatation_FileName1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._ship_Master_TB1TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._dataExchangeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DataExchange.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dataExchangeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._dataExchange_CommentTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DataExchange_Comment.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dataExchange_CommentTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._dataExchange_feeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DataExchange_fee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dataExchange_feeTableAdapter.Update(updatedRows));
+                    result = (result + this._quoatation_FileName1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9932,6 +7756,22 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._quotation_DocumentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Quotation_Document.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._quotation_DocumentTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._quoatation_FileNameTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Quoatation_FileName.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._quoatation_FileNameTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._ship_Master_TBTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Ship_Master_TB.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -9940,35 +7780,11 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._ship_Master_TB1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Ship_Master_TB1.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._quoatation_FileName1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Quoatation_FileName1.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._ship_Master_TB1TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._dataExchangeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DataExchange.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dataExchangeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._dataExchange_CommentTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DataExchange_Comment.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dataExchange_CommentTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._dataExchange_feeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DataExchange_fee.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dataExchange_feeTableAdapter.Update(addedRows));
+                    result = (result + this._quoatation_FileName1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9982,35 +7798,11 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dataExchange_feeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DataExchange_fee.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._quoatation_FileName1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Quoatation_FileName1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._dataExchange_feeTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._dataExchange_CommentTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DataExchange_Comment.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._dataExchange_CommentTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._dataExchangeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DataExchange.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._dataExchangeTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._ship_Master_TB1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Ship_Master_TB1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._ship_Master_TB1TableAdapter.Update(deletedRows));
+                    result = (result + this._quoatation_FileName1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -10019,6 +7811,22 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._ship_Master_TBTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._quoatation_FileNameTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Quoatation_FileName.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._quoatation_FileNameTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._quotation_DocumentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Quotation_Document.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._quotation_DocumentTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -10061,24 +7869,20 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._dataExchangeTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dataExchangeTableAdapter.Connection) == false))) {
+            if (((this._quoatation_FileNameTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._quoatation_FileNameTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
-            if (((this._dataExchange_CommentTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dataExchange_CommentTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
-            }
-            if (((this._dataExchange_feeTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dataExchange_feeTableAdapter.Connection) == false))) {
+            if (((this._quotation_DocumentTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._quotation_DocumentTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
             if (((this._ship_Master_TBTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._ship_Master_TBTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
-            if (((this._ship_Master_TB1TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._ship_Master_TB1TableAdapter.Connection) == false))) {
+            if (((this._quoatation_FileName1TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._quoatation_FileName1TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("TableAdapterManager で管理されるすべての TableAdapter は同一の接続文字列を使用する必要があります。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -10112,31 +7916,22 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._dataExchangeTableAdapter != null)) {
-                    revertConnections.Add(this._dataExchangeTableAdapter, this._dataExchangeTableAdapter.Connection);
-                    this._dataExchangeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dataExchangeTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dataExchangeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dataExchangeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dataExchangeTableAdapter.Adapter);
+                if ((this._quoatation_FileNameTableAdapter != null)) {
+                    revertConnections.Add(this._quoatation_FileNameTableAdapter, this._quoatation_FileNameTableAdapter.Connection);
+                    this._quoatation_FileNameTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._quoatation_FileNameTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._quoatation_FileNameTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._quoatation_FileNameTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._quoatation_FileNameTableAdapter.Adapter);
                     }
                 }
-                if ((this._dataExchange_CommentTableAdapter != null)) {
-                    revertConnections.Add(this._dataExchange_CommentTableAdapter, this._dataExchange_CommentTableAdapter.Connection);
-                    this._dataExchange_CommentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dataExchange_CommentTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dataExchange_CommentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dataExchange_CommentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dataExchange_CommentTableAdapter.Adapter);
-                    }
-                }
-                if ((this._dataExchange_feeTableAdapter != null)) {
-                    revertConnections.Add(this._dataExchange_feeTableAdapter, this._dataExchange_feeTableAdapter.Connection);
-                    this._dataExchange_feeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dataExchange_feeTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dataExchange_feeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dataExchange_feeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dataExchange_feeTableAdapter.Adapter);
+                if ((this._quotation_DocumentTableAdapter != null)) {
+                    revertConnections.Add(this._quotation_DocumentTableAdapter, this._quotation_DocumentTableAdapter.Connection);
+                    this._quotation_DocumentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._quotation_DocumentTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._quotation_DocumentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._quotation_DocumentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._quotation_DocumentTableAdapter.Adapter);
                     }
                 }
                 if ((this._ship_Master_TBTableAdapter != null)) {
@@ -10148,13 +7943,13 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._ship_Master_TBTableAdapter.Adapter);
                     }
                 }
-                if ((this._ship_Master_TB1TableAdapter != null)) {
-                    revertConnections.Add(this._ship_Master_TB1TableAdapter, this._ship_Master_TB1TableAdapter.Connection);
-                    this._ship_Master_TB1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._ship_Master_TB1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._ship_Master_TB1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._ship_Master_TB1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._ship_Master_TB1TableAdapter.Adapter);
+                if ((this._quoatation_FileName1TableAdapter != null)) {
+                    revertConnections.Add(this._quoatation_FileName1TableAdapter, this._quoatation_FileName1TableAdapter.Connection);
+                    this._quoatation_FileName1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._quoatation_FileName1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._quoatation_FileName1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._quoatation_FileName1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._quoatation_FileName1TableAdapter.Adapter);
                     }
                 }
                 // 
@@ -10215,25 +8010,21 @@ SELECT ID, PresentName FROM Ship_Master_TB WHERE (ID = @ID)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._dataExchangeTableAdapter != null)) {
-                    this._dataExchangeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dataExchangeTableAdapter]));
-                    this._dataExchangeTableAdapter.Transaction = null;
+                if ((this._quoatation_FileNameTableAdapter != null)) {
+                    this._quoatation_FileNameTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._quoatation_FileNameTableAdapter]));
+                    this._quoatation_FileNameTableAdapter.Transaction = null;
                 }
-                if ((this._dataExchange_CommentTableAdapter != null)) {
-                    this._dataExchange_CommentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dataExchange_CommentTableAdapter]));
-                    this._dataExchange_CommentTableAdapter.Transaction = null;
-                }
-                if ((this._dataExchange_feeTableAdapter != null)) {
-                    this._dataExchange_feeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dataExchange_feeTableAdapter]));
-                    this._dataExchange_feeTableAdapter.Transaction = null;
+                if ((this._quotation_DocumentTableAdapter != null)) {
+                    this._quotation_DocumentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._quotation_DocumentTableAdapter]));
+                    this._quotation_DocumentTableAdapter.Transaction = null;
                 }
                 if ((this._ship_Master_TBTableAdapter != null)) {
                     this._ship_Master_TBTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ship_Master_TBTableAdapter]));
                     this._ship_Master_TBTableAdapter.Transaction = null;
                 }
-                if ((this._ship_Master_TB1TableAdapter != null)) {
-                    this._ship_Master_TB1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ship_Master_TB1TableAdapter]));
-                    this._ship_Master_TB1TableAdapter.Transaction = null;
+                if ((this._quoatation_FileName1TableAdapter != null)) {
+                    this._quoatation_FileName1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._quoatation_FileName1TableAdapter]));
+                    this._quoatation_FileName1TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
