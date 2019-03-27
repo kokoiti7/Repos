@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ShipInvoice {
+namespace QuotationAPP {
     
     
     /// <summary>
@@ -1059,15 +1059,12 @@ namespace ShipInvoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Quotation_DocumentsRow AddQuotation_DocumentsRow(Quotation_DocumentRow parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents, string FileName) {
+            public Quotation_DocumentsRow AddQuotation_DocumentsRow(int ID, string FileName) {
                 Quotation_DocumentsRow rowQuotation_DocumentsRow = ((Quotation_DocumentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID,
                         null,
                         FileName};
-                if ((parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents != null)) {
-                    columnValuesArray[1] = parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents[0];
-                }
                 rowQuotation_DocumentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuotation_DocumentsRow);
                 return rowQuotation_DocumentsRow;
@@ -1113,13 +1110,13 @@ namespace ShipInvoice {
                 base.Columns.Add(this.columnFileName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
+                this.columnQTNID.AutoIncrement = true;
+                this.columnQTNID.AutoIncrementSeed = -1;
+                this.columnQTNID.AutoIncrementStep = -1;
                 this.columnQTNID.AllowDBNull = false;
+                this.columnQTNID.ReadOnly = true;
                 this.columnFileName.MaxLength = 2147483647;
             }
             
@@ -3769,7 +3766,7 @@ namespace ShipInvoice {
         }
     }
 }
-namespace ShipInvoice.AZUREDBDataSet1TableAdapters {
+namespace QuotationAPP.AZUREDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -4039,7 +4036,7 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShipInvoice.Properties.Settings.Default.AZUREDBConnection;
+            this._connection.ConnectionString = global::QuotationAPP.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4793,30 +4790,28 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quotation_Documents] ([QTNID], [FileName]) VALUES (@QTNID, @Fi" +
-                "leName);\r\nSELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = SCOPE_" +
-                "IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quotation_Documents] ([ID], [FileName]) VALUES (@ID, @FileName" +
+                ");\r\nSELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Quotation_Documents] SET [QTNID] = @QTNID, [FileName] = @FileName W" +
-                "HERE (([ID] = @Original_ID) AND ([QTNID] = @Original_QTNID));\r\nSELECT ID, QTNID," +
-                " FileName FROM Quotation_Documents WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Quotation_Documents] SET [ID] = @ID, [FileName] = @FileName WHERE (" +
+                "([ID] = @Original_ID) AND ([QTNID] = @Original_QTNID));\r\nSELECT ID, QTNID, FileN" +
+                "ame FROM Quotation_Documents WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShipInvoice.Properties.Settings.Default.AZUREDBConnection;
+            this._connection.ConnectionString = global::QuotationAPP.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4909,8 +4904,8 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int QTNID, string FileName) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(QTNID));
+        public virtual int Insert(int ID, string FileName) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((FileName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4937,8 +4932,8 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int QTNID, string FileName, int Original_ID, int Original_QTNID, int ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(QTNID));
+        public virtual int Update(int ID, string FileName, int Original_ID, int Original_QTNID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((FileName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4947,7 +4942,6 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_QTNID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4968,8 +4962,8 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int QTNID, string FileName, int Original_ID, int Original_QTNID) {
-            return this.Update(QTNID, FileName, Original_ID, Original_QTNID, Original_ID);
+        public virtual int Update(string FileName, int Original_ID, int Original_QTNID) {
+            return this.Update(Original_ID, FileName, Original_ID, Original_QTNID);
         }
     }
     
@@ -5437,7 +5431,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShipInvoice.Properties.Settings.Default.AZUREDBConnection;
+            this._connection.ConnectionString = global::QuotationAPP.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

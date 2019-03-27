@@ -1059,10 +1059,10 @@ namespace ShipInvoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Quotation_DocumentsRow AddQuotation_DocumentsRow(int ID, Quotation_DocumentRow parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents, string FileName) {
+            public Quotation_DocumentsRow AddQuotation_DocumentsRow(Quotation_DocumentRow parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents, string FileName) {
                 Quotation_DocumentsRow rowQuotation_DocumentsRow = ((Quotation_DocumentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
+                        null,
                         null,
                         FileName};
                 if ((parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents != null)) {
@@ -1113,8 +1113,13 @@ namespace ShipInvoice {
                 base.Columns.Add(this.columnFileName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
+                this.columnQTNID.AllowDBNull = false;
                 this.columnFileName.MaxLength = 2147483647;
             }
             
@@ -2692,12 +2697,7 @@ namespace ShipInvoice {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int QTNID {
                 get {
-                    try {
-                        return ((int)(this[this.tableQuotation_Documents.QTNIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'Quotation_Documents\' にある列 \'QTNID\' の値は DBNull です。", e);
-                    }
+                    return ((int)(this[this.tableQuotation_Documents.QTNIDColumn]));
                 }
                 set {
                     this[this.tableQuotation_Documents.QTNIDColumn] = value;
@@ -2729,18 +2729,6 @@ namespace ShipInvoice {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Quotation_Documents_Quotation_Documents"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsQTNIDNull() {
-                return this.IsNull(this.tableQuotation_Documents.QTNIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetQTNIDNull() {
-                this[this.tableQuotation_Documents.QTNIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4798,32 +4786,30 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Quotation_Documents] WHERE (([ID] = @Original_ID) AND ((@IsNul" +
-                "l_QTNID = 1 AND [QTNID] IS NULL) OR ([QTNID] = @Original_QTNID)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Quotation_Documents] WHERE (([ID] = @Original_ID) AND ([QTNID]" +
+                " = @Original_QTNID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quotation_Documents] ([ID], [QTNID], [FileName]) VALUES (@ID, " +
-                "@QTNID, @FileName);\r\nSELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (" +
-                "ID = @ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quotation_Documents] ([QTNID], [FileName]) VALUES (@QTNID, @Fi" +
+                "leName);\r\nSELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = SCOPE_" +
+                "IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Quotation_Documents] SET [ID] = @ID, [QTNID] = @QTNID, [FileName] = @FileName WHERE (([ID] = @Original_ID) AND ((@IsNull_QTNID = 1 AND [QTNID] IS NULL) OR ([QTNID] = @Original_QTNID)));
-SELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Quotation_Documents] SET [QTNID] = @QTNID, [FileName] = @FileName W" +
+                "HERE (([ID] = @Original_ID) AND ([QTNID] = @Original_QTNID));\r\nSELECT ID, QTNID," +
+                " FileName FROM Quotation_Documents WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4900,16 +4886,9 @@ SELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<int> Original_QTNID) {
+        public virtual int Delete(int Original_ID, int Original_QTNID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_QTNID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_QTNID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_QTNID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4930,19 +4909,13 @@ SELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, global::System.Nullable<int> QTNID, string FileName) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
-            if ((QTNID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(QTNID.Value));
-            }
-            else {
+        public virtual int Insert(int QTNID, string FileName) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(QTNID));
+            if ((FileName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((FileName == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(FileName));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FileName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4964,29 +4937,17 @@ SELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, global::System.Nullable<int> QTNID, string FileName, int Original_ID, global::System.Nullable<int> Original_QTNID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
-            if ((QTNID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(QTNID.Value));
-            }
-            else {
+        public virtual int Update(int QTNID, string FileName, int Original_ID, int Original_QTNID, int ID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(QTNID));
+            if ((FileName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((FileName == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(FileName));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FileName));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
-            if ((Original_QTNID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_QTNID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_QTNID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5007,8 +4968,8 @@ SELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> QTNID, string FileName, int Original_ID, global::System.Nullable<int> Original_QTNID) {
-            return this.Update(Original_ID, QTNID, FileName, Original_ID, Original_QTNID);
+        public virtual int Update(int QTNID, string FileName, int Original_ID, int Original_QTNID) {
+            return this.Update(QTNID, FileName, Original_ID, Original_QTNID, Original_ID);
         }
     }
     

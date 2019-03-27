@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ShipInvoice {
+namespace QuotationAPP {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace ShipInvoice {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AZUREDBDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("AZUREDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AZUREDBDataSet1 : global::System.Data.DataSet {
+    public partial class AZUREDBDataSet : global::System.Data.DataSet {
         
         private Quotation_DocumentDataTable tableQuotation_Document;
         
@@ -30,13 +30,13 @@ namespace ShipInvoice {
         
         private Ship_Master_TBDataTable tableShip_Master_TB;
         
-        private global::System.Data.DataRelation relationFK_Quotation_Documents_Quotation_Documents;
+        private global::System.Data.DataRelation relationQuotation_Document_Quotation_Documents;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public AZUREDBDataSet1() {
+        public AZUREDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -47,7 +47,7 @@ namespace ShipInvoice {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected AZUREDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected AZUREDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -159,7 +159,7 @@ namespace ShipInvoice {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AZUREDBDataSet1 cln = ((AZUREDBDataSet1)(base.Clone()));
+            AZUREDBDataSet cln = ((AZUREDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -244,15 +244,15 @@ namespace ShipInvoice {
                     this.tableShip_Master_TB.InitVars();
                 }
             }
-            this.relationFK_Quotation_Documents_Quotation_Documents = this.Relations["FK_Quotation_Documents_Quotation_Documents"];
+            this.relationQuotation_Document_Quotation_Documents = this.Relations["Quotation_Document_Quotation_Documents"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AZUREDBDataSet1";
+            this.DataSetName = "AZUREDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AZUREDBDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/AZUREDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableQuotation_Document = new Quotation_DocumentDataTable();
@@ -261,10 +261,10 @@ namespace ShipInvoice {
             base.Tables.Add(this.tableQuotation_Documents);
             this.tableShip_Master_TB = new Ship_Master_TBDataTable();
             base.Tables.Add(this.tableShip_Master_TB);
-            this.relationFK_Quotation_Documents_Quotation_Documents = new global::System.Data.DataRelation("FK_Quotation_Documents_Quotation_Documents", new global::System.Data.DataColumn[] {
+            this.relationQuotation_Document_Quotation_Documents = new global::System.Data.DataRelation("Quotation_Document_Quotation_Documents", new global::System.Data.DataColumn[] {
                         this.tableQuotation_Document.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableQuotation_Documents.QTNIDColumn}, false);
-            this.Relations.Add(this.relationFK_Quotation_Documents_Quotation_Documents);
+            this.Relations.Add(this.relationQuotation_Document_Quotation_Documents);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -296,7 +296,7 @@ namespace ShipInvoice {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AZUREDBDataSet1 ds = new AZUREDBDataSet1();
+            AZUREDBDataSet ds = new AZUREDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -893,7 +893,7 @@ namespace ShipInvoice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AZUREDBDataSet1 ds = new AZUREDBDataSet1();
+                AZUREDBDataSet ds = new AZUREDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1059,15 +1059,12 @@ namespace ShipInvoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Quotation_DocumentsRow AddQuotation_DocumentsRow(Quotation_DocumentRow parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents, string FileName) {
+            public Quotation_DocumentsRow AddQuotation_DocumentsRow(int ID, string FileName) {
                 Quotation_DocumentsRow rowQuotation_DocumentsRow = ((Quotation_DocumentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID,
                         null,
                         FileName};
-                if ((parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents != null)) {
-                    columnValuesArray[1] = parentQuotation_DocumentRowByFK_Quotation_Documents_Quotation_Documents[0];
-                }
                 rowQuotation_DocumentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuotation_DocumentsRow);
                 return rowQuotation_DocumentsRow;
@@ -1113,13 +1110,13 @@ namespace ShipInvoice {
                 base.Columns.Add(this.columnFileName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
+                this.columnQTNID.AutoIncrement = true;
+                this.columnQTNID.AutoIncrementSeed = -1;
+                this.columnQTNID.AutoIncrementStep = -1;
                 this.columnQTNID.AllowDBNull = false;
+                this.columnQTNID.ReadOnly = true;
                 this.columnFileName.MaxLength = 2147483647;
             }
             
@@ -1188,7 +1185,7 @@ namespace ShipInvoice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AZUREDBDataSet1 ds = new AZUREDBDataSet1();
+                AZUREDBDataSet ds = new AZUREDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1956,7 +1953,7 @@ namespace ShipInvoice {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AZUREDBDataSet1 ds = new AZUREDBDataSet1();
+                AZUREDBDataSet ds = new AZUREDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2659,11 +2656,11 @@ namespace ShipInvoice {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Quotation_DocumentsRow[] GetQuotation_DocumentsRows() {
-                if ((this.Table.ChildRelations["FK_Quotation_Documents_Quotation_Documents"] == null)) {
+                if ((this.Table.ChildRelations["Quotation_Document_Quotation_Documents"] == null)) {
                     return new Quotation_DocumentsRow[0];
                 }
                 else {
-                    return ((Quotation_DocumentsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Quotation_Documents_Quotation_Documents"])));
+                    return ((Quotation_DocumentsRow[])(base.GetChildRows(this.Table.ChildRelations["Quotation_Document_Quotation_Documents"])));
                 }
             }
         }
@@ -2724,10 +2721,10 @@ namespace ShipInvoice {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Quotation_DocumentRow Quotation_DocumentRow {
                 get {
-                    return ((Quotation_DocumentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Quotation_Documents_Quotation_Documents"])));
+                    return ((Quotation_DocumentRow)(this.GetParentRow(this.Table.ParentRelations["Quotation_Document_Quotation_Documents"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Quotation_Documents_Quotation_Documents"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["Quotation_Document_Quotation_Documents"]);
                 }
             }
             
@@ -3769,7 +3766,7 @@ namespace ShipInvoice {
         }
     }
 }
-namespace ShipInvoice.AZUREDBDataSet1TableAdapters {
+namespace QuotationAPP.AZUREDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -4039,7 +4036,7 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShipInvoice.Properties.Settings.Default.AZUREDBConnection;
+            this._connection.ConnectionString = global::QuotationAPP.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4056,7 +4053,7 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet1.Quotation_DocumentDataTable dataTable) {
+        public virtual int Fill(AZUREDBDataSet.Quotation_DocumentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4069,9 +4066,9 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet1.Quotation_DocumentDataTable GetData() {
+        public virtual AZUREDBDataSet.Quotation_DocumentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet1.Quotation_DocumentDataTable dataTable = new AZUREDBDataSet1.Quotation_DocumentDataTable();
+            AZUREDBDataSet.Quotation_DocumentDataTable dataTable = new AZUREDBDataSet.Quotation_DocumentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4079,14 +4076,14 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet1.Quotation_DocumentDataTable dataTable) {
+        public virtual int Update(AZUREDBDataSet.Quotation_DocumentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet1 dataSet) {
+        public virtual int Update(AZUREDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Quotation_Document");
         }
         
@@ -4793,30 +4790,28 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quotation_Documents] ([QTNID], [FileName]) VALUES (@QTNID, @Fi" +
-                "leName);\r\nSELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = SCOPE_" +
-                "IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quotation_Documents] ([ID], [FileName]) VALUES (@ID, @FileName" +
+                ");\r\nSELECT ID, QTNID, FileName FROM Quotation_Documents WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Quotation_Documents] SET [QTNID] = @QTNID, [FileName] = @FileName W" +
-                "HERE (([ID] = @Original_ID) AND ([QTNID] = @Original_QTNID));\r\nSELECT ID, QTNID," +
-                " FileName FROM Quotation_Documents WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Quotation_Documents] SET [ID] = @ID, [FileName] = @FileName WHERE (" +
+                "([ID] = @Original_ID) AND ([QTNID] = @Original_QTNID));\r\nSELECT ID, QTNID, FileN" +
+                "ame FROM Quotation_Documents WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FileName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTNID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTNID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShipInvoice.Properties.Settings.Default.AZUREDBConnection;
+            this._connection.ConnectionString = global::QuotationAPP.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4833,7 +4828,7 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet1.Quotation_DocumentsDataTable dataTable) {
+        public virtual int Fill(AZUREDBDataSet.Quotation_DocumentsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4846,9 +4841,9 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet1.Quotation_DocumentsDataTable GetData() {
+        public virtual AZUREDBDataSet.Quotation_DocumentsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet1.Quotation_DocumentsDataTable dataTable = new AZUREDBDataSet1.Quotation_DocumentsDataTable();
+            AZUREDBDataSet.Quotation_DocumentsDataTable dataTable = new AZUREDBDataSet.Quotation_DocumentsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4856,14 +4851,14 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet1.Quotation_DocumentsDataTable dataTable) {
+        public virtual int Update(AZUREDBDataSet.Quotation_DocumentsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet1 dataSet) {
+        public virtual int Update(AZUREDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Quotation_Documents");
         }
         
@@ -4909,8 +4904,8 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int QTNID, string FileName) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(QTNID));
+        public virtual int Insert(int ID, string FileName) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((FileName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4937,8 +4932,8 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int QTNID, string FileName, int Original_ID, int Original_QTNID, int ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(QTNID));
+        public virtual int Update(int ID, string FileName, int Original_ID, int Original_QTNID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((FileName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4947,7 +4942,6 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_QTNID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4968,8 +4962,8 @@ SELECT ID, BLOBContainerPath, Contractor, ContractorDetail, ContractorPIC, Contr
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int QTNID, string FileName, int Original_ID, int Original_QTNID) {
-            return this.Update(QTNID, FileName, Original_ID, Original_QTNID, Original_ID);
+        public virtual int Update(string FileName, int Original_ID, int Original_QTNID) {
+            return this.Update(Original_ID, FileName, Original_ID, Original_QTNID);
         }
     }
     
@@ -5437,7 +5431,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ShipInvoice.Properties.Settings.Default.AZUREDBConnection;
+            this._connection.ConnectionString = global::QuotationAPP.Properties.Settings.Default.AZUREDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5454,7 +5448,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AZUREDBDataSet1.Ship_Master_TBDataTable dataTable) {
+        public virtual int Fill(AZUREDBDataSet.Ship_Master_TBDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5467,9 +5461,9 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AZUREDBDataSet1.Ship_Master_TBDataTable GetData() {
+        public virtual AZUREDBDataSet.Ship_Master_TBDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AZUREDBDataSet1.Ship_Master_TBDataTable dataTable = new AZUREDBDataSet1.Ship_Master_TBDataTable();
+            AZUREDBDataSet.Ship_Master_TBDataTable dataTable = new AZUREDBDataSet.Ship_Master_TBDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5477,14 +5471,14 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet1.Ship_Master_TBDataTable dataTable) {
+        public virtual int Update(AZUREDBDataSet.Ship_Master_TBDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AZUREDBDataSet1 dataSet) {
+        public virtual int Update(AZUREDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Ship_Master_TB");
         }
         
@@ -6809,7 +6803,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(AZUREDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._quotation_DocumentTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Quotation_Document.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -6846,7 +6840,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(AZUREDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._quotation_DocumentTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Quotation_Document.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -6880,7 +6874,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(AZUREDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(AZUREDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._ship_Master_TBTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Ship_Master_TB.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -6938,7 +6932,7 @@ SELECT ID, OwnerGroup, PresentName, Shortcharacter, IMONumber, FBBtelephone, FBB
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(AZUREDBDataSet1 dataSet) {
+        public virtual int UpdateAll(AZUREDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

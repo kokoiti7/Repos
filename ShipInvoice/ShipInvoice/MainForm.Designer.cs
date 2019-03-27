@@ -38,27 +38,29 @@
             this.RemoveFilterButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
             this.QuotationIDCombobox = new System.Windows.Forms.ComboBox();
-            this.ship_Master_TBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aZUREDBDataSet1 = new ShipInvoice.AZUREDBDataSet();
             this.AllView = new System.Windows.Forms.Button();
             this.Save_Button = new System.Windows.Forms.Button();
             this.quotation_DocumentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aZUREDBDataSet1 = new ShipInvoice.AZUREDBDataSet();
             this.quotation_DocumentTableAdapter1 = new ShipInvoice.AZUREDBDataSetTableAdapters.Quotation_DocumentTableAdapter();
             this.tableAdapterManager1 = new ShipInvoice.AZUREDBDataSetTableAdapters.TableAdapterManager();
             this.quotation_DocumentsTableAdapter1 = new ShipInvoice.AZUREDBDataSetTableAdapters.Quotation_DocumentsTableAdapter();
+            this.ship_Master_TBTableAdapter1 = new ShipInvoice.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.quotation_DocumentDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,31 +68,23 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quotation_DocumentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quotation_DocumentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qTNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fileNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKQuotationDocumentsQuotationDocumentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ship_Master_TBTableAdapter1 = new ShipInvoice.AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter();
-            this.tableAdapterManager2 = new ShipInvoice.AZUREDBDataSet1TableAdapters.TableAdapterManager();
-            this.aZUREDBDataSet11 = new ShipInvoice.AZUREDBDataSet1();
-            this.ship_Master_TBBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ship_Master_TBTableAdapter2 = new ShipInvoice.AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter();
             this.MenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKQuotationDocumentsQuotationDocumentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuStrip
@@ -169,7 +163,7 @@
             // 
             // QuotationIDCombobox
             // 
-            this.QuotationIDCombobox.DataSource = this.ship_Master_TBBindingSource1;
+            this.QuotationIDCombobox.DataSource = this.shipMasterTBBindingSource;
             this.QuotationIDCombobox.DisplayMember = "ID";
             this.QuotationIDCombobox.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.QuotationIDCombobox.FormattingEnabled = true;
@@ -179,8 +173,16 @@
             this.QuotationIDCombobox.Size = new System.Drawing.Size(348, 32);
             this.QuotationIDCombobox.TabIndex = 5;
             this.QuotationIDCombobox.SelectedIndexChanged += new System.EventHandler(this.QuotationIDCombobox_SelectedIndexChanged);
-            this.QuotationIDCombobox.SelectionChangeCommitted += new System.EventHandler(this.QuotationIDCombobox_SelectionChangeCommitted);
-            this.QuotationIDCombobox.SelectedValueChanged += new System.EventHandler(this.QuotationIDCombobox_SelectedValueChanged);
+            // 
+            // shipMasterTBBindingSource
+            // 
+            this.shipMasterTBBindingSource.DataMember = "Ship_Master_TB";
+            this.shipMasterTBBindingSource.DataSource = this.aZUREDBDataSet1;
+            // 
+            // aZUREDBDataSet1
+            // 
+            this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet";
+            this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // AllView
             // 
@@ -212,11 +214,6 @@
             this.quotation_DocumentBindingSource.DataMember = "Quotation_Document";
             this.quotation_DocumentBindingSource.DataSource = this.aZUREDBDataSet1;
             // 
-            // aZUREDBDataSet1
-            // 
-            this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet";
-            this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // quotation_DocumentTableAdapter1
             // 
             this.quotation_DocumentTableAdapter1.ClearBeforeFill = true;
@@ -226,30 +223,35 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.Quotation_DocumentsTableAdapter = this.quotation_DocumentsTableAdapter1;
             this.tableAdapterManager1.Quotation_DocumentTableAdapter = this.quotation_DocumentTableAdapter1;
-            this.tableAdapterManager1.Ship_Master_TBTableAdapter = null;
+            this.tableAdapterManager1.Ship_Master_TBTableAdapter = this.ship_Master_TBTableAdapter1;
             this.tableAdapterManager1.UpdateOrder = ShipInvoice.AZUREDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // quotation_DocumentsTableAdapter1
             // 
             this.quotation_DocumentsTableAdapter1.ClearBeforeFill = true;
             // 
+            // ship_Master_TBTableAdapter1
+            // 
+            this.ship_Master_TBTableAdapter1.ClearBeforeFill = true;
+            // 
             // quotation_DocumentDataGridView
             // 
             this.quotation_DocumentDataGridView.AutoGenerateColumns = false;
             this.quotation_DocumentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.quotation_DocumentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
@@ -257,137 +259,145 @@
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
             this.dataGridViewImageColumn1,
             this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn22});
+            this.dataGridViewTextBoxColumn21});
             this.quotation_DocumentDataGridView.DataSource = this.quotation_DocumentBindingSource;
-            this.quotation_DocumentDataGridView.Location = new System.Drawing.Point(382, 33);
+            this.quotation_DocumentDataGridView.Location = new System.Drawing.Point(357, 31);
             this.quotation_DocumentDataGridView.Name = "quotation_DocumentDataGridView";
             this.quotation_DocumentDataGridView.RowTemplate.Height = 21;
-            this.quotation_DocumentDataGridView.Size = new System.Drawing.Size(877, 288);
-            this.quotation_DocumentDataGridView.TabIndex = 7;
-            this.quotation_DocumentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.quotation_DocumentDataGridView_CellContentClick_1);
+            this.quotation_DocumentDataGridView.Size = new System.Drawing.Size(922, 220);
+            this.quotation_DocumentDataGridView.TabIndex = 8;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 49;
             // 
-            // dataGridViewTextBoxColumn8
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "PONumber";
-            this.dataGridViewTextBoxColumn8.HeaderText = "PONumber";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "PONumber";
+            this.dataGridViewTextBoxColumn7.HeaderText = "PONumber";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "ShipID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ShipID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 76;
             // 
             // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "ShipID";
-            this.dataGridViewTextBoxColumn12.HeaderText = "ShipID";
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "PresentName";
+            this.dataGridViewTextBoxColumn12.HeaderText = "PresentName";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 117;
             // 
-            // dataGridViewTextBoxColumn13
+            // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "PresentName";
-            this.dataGridViewTextBoxColumn13.HeaderText = "PresentName";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "BLOBContainerPath";
+            this.dataGridViewTextBoxColumn2.HeaderText = "BLOBContainerPath";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 159;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "BLOBContainerPath";
-            this.dataGridViewTextBoxColumn3.HeaderText = "BLOBContainerPath";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Contractor";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Contractor";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Contractor";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Contractor";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ContractorDetail";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ContractorDetail";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ContractorDetail";
-            this.dataGridViewTextBoxColumn5.HeaderText = "ContractorDetail";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ContractorPIC";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ContractorPIC";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ContractorPIC";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ContractorPIC";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ContractorTarm";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ContractorTarm";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ContractorTarm";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ContractorTarm";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "POReference";
+            this.dataGridViewTextBoxColumn8.HeaderText = "POReference";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "POReference";
-            this.dataGridViewTextBoxColumn9.HeaderText = "POReference";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "PlanedDate";
+            this.dataGridViewTextBoxColumn9.HeaderText = "PlanedDate";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "PlanedDate";
-            this.dataGridViewTextBoxColumn10.HeaderText = "PlanedDate";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "IsuueDate";
+            this.dataGridViewTextBoxColumn10.HeaderText = "IsuueDate";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // dataGridViewTextBoxColumn11
+            // dataGridViewTextBoxColumn13
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "IsuueDate";
-            this.dataGridViewTextBoxColumn11.HeaderText = "IsuueDate";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "PlanedPort";
+            this.dataGridViewTextBoxColumn13.HeaderText = "PlanedPort";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "PlanedPort";
-            this.dataGridViewTextBoxColumn14.HeaderText = "PlanedPort";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "PlanedPortAgent";
+            this.dataGridViewTextBoxColumn14.HeaderText = "PlanedPortAgent";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // dataGridViewTextBoxColumn15
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "PlanedPortAgent";
-            this.dataGridViewTextBoxColumn15.HeaderText = "PlanedPortAgent";
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "PlanedPortETA";
+            this.dataGridViewTextBoxColumn15.HeaderText = "PlanedPortETA";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // dataGridViewTextBoxColumn16
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "PlanedPortETA";
-            this.dataGridViewTextBoxColumn16.HeaderText = "PlanedPortETA";
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "PlanedPortRemark";
+            this.dataGridViewTextBoxColumn16.HeaderText = "PlanedPortRemark";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // dataGridViewTextBoxColumn17
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "PlanedPortRemark";
-            this.dataGridViewTextBoxColumn17.HeaderText = "PlanedPortRemark";
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Orderer";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Orderer";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // dataGridViewTextBoxColumn18
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Orderer";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Orderer";
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "OrdererPIC";
+            this.dataGridViewTextBoxColumn18.HeaderText = "OrdererPIC";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn19
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "OrdererPIC";
-            this.dataGridViewTextBoxColumn19.HeaderText = "OrdererPIC";
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "OrdererDetail";
+            this.dataGridViewTextBoxColumn19.HeaderText = "OrdererDetail";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "OrdererDetail";
-            this.dataGridViewTextBoxColumn20.HeaderText = "OrdererDetail";
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Remark";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Remark";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Remark";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
             // dataGridViewImageColumn1
             // 
@@ -401,87 +411,61 @@
             this.dataGridViewImageColumn2.HeaderText = "IssuedDateSpeare";
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
-            // dataGridViewTextBoxColumn22
+            // dataGridViewTextBoxColumn21
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "IntDateSpeare";
-            this.dataGridViewTextBoxColumn22.HeaderText = "IntDateSpeare";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "IntDateSpeare";
+            this.dataGridViewTextBoxColumn21.HeaderText = "IntDateSpeare";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
             // quotation_DocumentsBindingSource
             // 
-            this.quotation_DocumentsBindingSource.DataMember = "Quotation_Documents";
-            this.quotation_DocumentsBindingSource.DataSource = this.aZUREDBDataSet1;
+            this.quotation_DocumentsBindingSource.DataMember = "FK_Quotation_Documents_Quotation_Documents";
+            this.quotation_DocumentsBindingSource.DataSource = this.quotation_DocumentBindingSource;
             // 
             // quotation_DocumentsDataGridView
             // 
             this.quotation_DocumentsDataGridView.AutoGenerateColumns = false;
             this.quotation_DocumentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.quotation_DocumentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.qTNIDDataGridViewTextBoxColumn,
-            this.fileNameDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24});
             this.quotation_DocumentsDataGridView.DataSource = this.fKQuotationDocumentsQuotationDocumentsBindingSource;
-            this.quotation_DocumentsDataGridView.Location = new System.Drawing.Point(382, 327);
+            this.quotation_DocumentsDataGridView.Location = new System.Drawing.Point(357, 257);
             this.quotation_DocumentsDataGridView.Name = "quotation_DocumentsDataGridView";
             this.quotation_DocumentsDataGridView.RowTemplate.Height = 21;
-            this.quotation_DocumentsDataGridView.Size = new System.Drawing.Size(877, 319);
-            this.quotation_DocumentsDataGridView.TabIndex = 7;
-            this.quotation_DocumentsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.quotation_DocumentsDataGridView_CellContentClick);
+            this.quotation_DocumentsDataGridView.Size = new System.Drawing.Size(922, 428);
+            this.quotation_DocumentsDataGridView.TabIndex = 8;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn22
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 49;
+            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn22.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Width = 49;
             // 
-            // qTNIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn23
             // 
-            this.qTNIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.qTNIDDataGridViewTextBoxColumn.DataPropertyName = "QTNID";
-            this.qTNIDDataGridViewTextBoxColumn.HeaderText = "QTNID";
-            this.qTNIDDataGridViewTextBoxColumn.Name = "qTNIDDataGridViewTextBoxColumn";
-            this.qTNIDDataGridViewTextBoxColumn.Width = 77;
+            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "QTNID";
+            this.dataGridViewTextBoxColumn23.HeaderText = "QTNID";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 77;
             // 
-            // fileNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn24
             // 
-            this.fileNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fileNameDataGridViewTextBoxColumn.DataPropertyName = "FileName";
-            this.fileNameDataGridViewTextBoxColumn.HeaderText = "FileName";
-            this.fileNameDataGridViewTextBoxColumn.Name = "fileNameDataGridViewTextBoxColumn";
-            this.fileNameDataGridViewTextBoxColumn.Width = 91;
+            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "FileName";
+            this.dataGridViewTextBoxColumn24.HeaderText = "FileName";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 91;
             // 
             // fKQuotationDocumentsQuotationDocumentsBindingSource
             // 
             this.fKQuotationDocumentsQuotationDocumentsBindingSource.DataMember = "FK_Quotation_Documents_Quotation_Documents";
             this.fKQuotationDocumentsQuotationDocumentsBindingSource.DataSource = this.quotation_DocumentBindingSource;
-            // 
-            // ship_Master_TBTableAdapter1
-            // 
-            this.ship_Master_TBTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager2
-            // 
-            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager2.Quotation_DocumentTableAdapter = null;
-            this.tableAdapterManager2.Quotation_itemTableAdapter = null;
-            this.tableAdapterManager2.Ship_Master_TBTableAdapter = this.ship_Master_TBTableAdapter1;
-            this.tableAdapterManager2.UpdateOrder = ShipInvoice.AZUREDBDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // aZUREDBDataSet11
-            // 
-            this.aZUREDBDataSet11.DataSetName = "AZUREDBDataSet1";
-            this.aZUREDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ship_Master_TBBindingSource1
-            // 
-            this.ship_Master_TBBindingSource1.DataMember = "Ship_Master_TB";
-            this.ship_Master_TBBindingSource1.DataSource = this.aZUREDBDataSet1;
-            // 
-            // ship_Master_TBTableAdapter2
-            // 
-            this.ship_Master_TBTableAdapter2.ClearBeforeFill = true;
             // 
             // MainForm
             // 
@@ -505,15 +489,13 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotation_DocumentsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKQuotationDocumentsQuotationDocumentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ship_Master_TBBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,29 +542,29 @@
         private System.Windows.Forms.DataGridViewImageColumn issuedDateSpeareDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn intDateSpeareDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button Save_Button;
+        private AZUREDBDataSet aZUREDBDataSet1;
         private System.Windows.Forms.BindingSource quotation_DocumentBindingSource;
         private AZUREDBDataSetTableAdapters.Quotation_DocumentTableAdapter quotation_DocumentTableAdapter1;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private AZUREDBDataSetTableAdapters.Quotation_DocumentsTableAdapter quotation_DocumentsTableAdapter1;
         private System.Windows.Forms.DataGridView quotation_DocumentDataGridView;
         private System.Windows.Forms.BindingSource quotation_DocumentsBindingSource;
-        private AZUREDBDataSet aZUREDBDataSet1;
         private System.Windows.Forms.DataGridView quotation_DocumentsDataGridView;
-        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource;
-        private AZUREDBDataSet1TableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter1;
-        private AZUREDBDataSet1TableAdapters.TableAdapterManager tableAdapterManager2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter1;
+        private System.Windows.Forms.BindingSource shipMasterTBBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
@@ -590,17 +572,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.BindingSource fKQuotationDocumentsQuotationDocumentsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qTNIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fileNameDataGridViewTextBoxColumn;
-        private AZUREDBDataSet1 aZUREDBDataSet11;
-        private System.Windows.Forms.BindingSource ship_Master_TBBindingSource1;
-        private AZUREDBDataSetTableAdapters.Ship_Master_TBTableAdapter ship_Master_TBTableAdapter2;
     }
 }
 
