@@ -25,12 +25,13 @@ namespace ShipInvoice
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+
+            // TODO: このコード行はデータを 'aZUREDBDataSet2.Quotation_Documents' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.quotation_DocumentsTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Documents);
+            // TODO: このコード行はデータを 'aZUREDBDataSet2.Quotation_Document' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.quotation_DocumentTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Document);
             // TODO: このコード行はデータを 'aZUREDBDataSet1.Ship_Master_TB' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.ship_Master_TBTableAdapter1.Fill(this.aZUREDBDataSet1.Ship_Master_TB);
-            // TODO: このコード行はデータを 'aZUREDBDataSet1.Quotation_Documents' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.quotation_DocumentsTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Documents);
-            // TODO: このコード行はデータを 'aZUREDBDataSet1.Quotation_Document' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.quotation_DocumentTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Document);
 
 
 
@@ -60,6 +61,7 @@ namespace ShipInvoice
 
             CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
 
+    
 
             DialogResult dr = OpenFileDialog.ShowDialog();
 
@@ -68,18 +70,13 @@ namespace ShipInvoice
 
                 var filename = Path.GetFileName(OpenFileDialog.FileName);
 
-                // MessageBox.Show(quotation_DocumentDataGridView.SelectedRows.Count.ToString());
-
                 try
                 {
-
-                    this.quotation_DocumentsBindingSource.AddNew();
-
+      
 
                     this.quotation_DocumentsDataGridView[2, quotation_DocumentsDataGridView.CurrentRow.Index].Value = quotation_DocumentDataGridView[0, quotation_DocumentDataGridView.CurrentRow.Index].Value + "\\" + filename;
 
                     this.quotation_DocumentDataGridView[4, quotation_DocumentDataGridView.CurrentRow.Index].Value = filename;
-
 
                     var IDname = quotation_DocumentDataGridView.CurrentCell.Value;
 
@@ -92,7 +89,7 @@ namespace ShipInvoice
 
                         this.Validate();
                         this.quotation_DocumentBindingSource.EndEdit();
-                        this.quotation_DocumentsBindingSource.EndEdit();
+                        this.fKQuotationDocumentsQuotationDocumentsBindingSource1.EndEdit();
                         this.quotation_DocumentTableAdapter1.Update(aZUREDBDataSet1.Quotation_Document);
                         this.quotation_DocumentsTableAdapter1.Update(aZUREDBDataSet1.Quotation_Documents);
 
@@ -100,9 +97,9 @@ namespace ShipInvoice
                     }
                 }
 
-                catch (NoNullAllowedException ex)
+                catch (NotFiniteNumberException ex)
                 {
-
+                    MessageBox.Show("例外");
                     this.quotation_DocumentsDataGridView[1, quotation_DocumentsDataGridView.NewRowIndex].Value = this.quotation_DocumentsDataGridView[1, quotation_DocumentsDataGridView.CurrentRow.Index].Value;
                     this.quotation_DocumentsDataGridView[2, quotation_DocumentsDataGridView.NewRowIndex].Value = this.quotation_DocumentDataGridView[0, quotation_DocumentDataGridView.CurrentRow.Index].Value + "\\" + filename;
 
@@ -124,8 +121,8 @@ namespace ShipInvoice
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-
-          this.quotation_DocumentTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Document);
+            this.quotation_DocumentsTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Documents);
+           this.quotation_DocumentTableAdapter1.Fill(this.aZUREDBDataSet1.Quotation_Document);
         }
 
         private void RemoveFilterButton_Click(object sender, EventArgs e)
@@ -146,19 +143,38 @@ namespace ShipInvoice
        
         }
 
-        private void quotation_DocumentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Save_Button_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.quotation_DocumentBindingSource.EndEdit();
-            this.quotation_DocumentsBindingSource.EndEdit();
+            this.fKQuotationDocumentsQuotationDocumentsBindingSource1.EndEdit();
             this.quotation_DocumentTableAdapter1.Update(aZUREDBDataSet1.Quotation_Document);
             this.quotation_DocumentsTableAdapter1.Update(aZUREDBDataSet1.Quotation_Documents);
         }
 
+        private void quotation_DocumentsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.Accesskey);
+
+            CloudBlobClient blobClientWithSAS = storageAccount.CreateCloudBlobClient();
+
+            CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
+
+            CloudBlockBlob blob = container.GetBlockBlobReference(quotation_DocumentsDataGridView.CurrentRow.Cells[2].Value.ToString());
+
+            SharedAccessBlobPolicy sasConstraints = new SharedAccessBlobPolicy();
+            sasConstraints.SharedAccessStartTime = DateTimeOffset.UtcNow.AddMinutes(-5);
+            sasConstraints.SharedAccessExpiryTime = DateTimeOffset.UtcNow.AddHours(24);
+            sasConstraints.Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.Write;
+
+            string sasBlobToken = blob.GetSharedAccessSignature(sasConstraints);
+
+            Process.Start(blob.Uri + sasBlobToken);
+        }
+
+        private void quotation_DocumentsDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
