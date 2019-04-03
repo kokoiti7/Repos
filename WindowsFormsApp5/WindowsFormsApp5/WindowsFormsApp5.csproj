@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B659152C-5678-48B2-B775-B6AD8C11378C}</ProjectGuid>
+    <ProjectGuid>{7D474093-6F4B-463B-AB56-FD1847E16A3B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ShipInvoice</RootNamespace>
-    <AssemblyName>ShipInvoice</AssemblyName>
+    <RootNamespace>WindowsFormsApp5</RootNamespace>
+    <AssemblyName>WindowsFormsApp5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,14 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.3.0.3\lib\net452\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WindowsAzure.Storage.9.3.3\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,32 +60,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AZUREDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AZUREDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AZUREDBDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AZUREDBDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuotationUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuotationUpdate.Designer.cs">
-      <DependentUpon>QuotationUpdate.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,10 +79,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QuotationUpdate.resx">
-      <DependentUpon>QuotationUpdate.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="AZUREDBDataSet.xsc">
       <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
     </None>
@@ -109,28 +91,6 @@
     </None>
     <None Include="AZUREDBDataSet.xss">
       <DependentUpon>AZUREDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AZUREDBDataSet1.xsc">
-      <DependentUpon>AZUREDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="AZUREDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AZUREDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AZUREDBDataSet1.xss">
-      <DependentUpon>AZUREDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="AZUREDBDataSet2.xsc">
-      <DependentUpon>AZUREDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="AZUREDBDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AZUREDBDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AZUREDBDataSet2.xss">
-      <DependentUpon>AZUREDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -145,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\テムマリタイム.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

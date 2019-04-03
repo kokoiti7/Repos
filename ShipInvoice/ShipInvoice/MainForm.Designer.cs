@@ -40,7 +40,6 @@
             this.QuotationIDCombobox = new System.Windows.Forms.ComboBox();
             this.shipMasterTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aZUREDBDataSet1 = new ShipInvoice.AZUREDBDataSet();
-            this.AllView = new System.Windows.Forms.Button();
             this.Save_Button = new System.Windows.Forms.Button();
             this.quotation_DocumentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quotation_DocumentTableAdapter1 = new ShipInvoice.AZUREDBDataSetTableAdapters.Quotation_DocumentTableAdapter();
@@ -76,6 +75,7 @@
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKQuotationDocumentsQuotationDocumentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shipMasterTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aZUREDBDataSet1)).BeginInit();
@@ -137,10 +137,10 @@
             // 
             this.RemoveFilterButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RemoveFilterButton.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RemoveFilterButton.Location = new System.Drawing.Point(2, 167);
+            this.RemoveFilterButton.Location = new System.Drawing.Point(-2, 66);
             this.RemoveFilterButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RemoveFilterButton.Name = "RemoveFilterButton";
-            this.RemoveFilterButton.Size = new System.Drawing.Size(348, 82);
+            this.RemoveFilterButton.Size = new System.Drawing.Size(363, 68);
             this.RemoveFilterButton.TabIndex = 3;
             this.RemoveFilterButton.Text = "RemoveFilter";
             this.RemoveFilterButton.UseVisualStyleBackColor = false;
@@ -150,10 +150,10 @@
             // 
             this.RefreshButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RefreshButton.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RefreshButton.Location = new System.Drawing.Point(2, 249);
+            this.RefreshButton.Location = new System.Drawing.Point(-2, 158);
             this.RefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(348, 82);
+            this.RefreshButton.Size = new System.Drawing.Size(363, 68);
             this.RefreshButton.TabIndex = 4;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = false;
@@ -168,7 +168,7 @@
             this.QuotationIDCombobox.Location = new System.Drawing.Point(2, 33);
             this.QuotationIDCombobox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.QuotationIDCombobox.Name = "QuotationIDCombobox";
-            this.QuotationIDCombobox.Size = new System.Drawing.Size(348, 32);
+            this.QuotationIDCombobox.Size = new System.Drawing.Size(359, 32);
             this.QuotationIDCombobox.TabIndex = 5;
             this.QuotationIDCombobox.SelectedIndexChanged += new System.EventHandler(this.QuotationIDCombobox_SelectedIndexChanged);
             // 
@@ -182,26 +182,14 @@
             this.aZUREDBDataSet1.DataSetName = "AZUREDBDataSet";
             this.aZUREDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // AllView
-            // 
-            this.AllView.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.AllView.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.AllView.Location = new System.Drawing.Point(2, 84);
-            this.AllView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AllView.Name = "AllView";
-            this.AllView.Size = new System.Drawing.Size(348, 82);
-            this.AllView.TabIndex = 6;
-            this.AllView.Text = "AllView";
-            this.AllView.UseVisualStyleBackColor = false;
-            // 
             // Save_Button
             // 
             this.Save_Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Save_Button.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Save_Button.Location = new System.Drawing.Point(2, 331);
+            this.Save_Button.Location = new System.Drawing.Point(-2, 250);
             this.Save_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Save_Button.Name = "Save_Button";
-            this.Save_Button.Size = new System.Drawing.Size(348, 82);
+            this.Save_Button.Size = new System.Drawing.Size(363, 68);
             this.Save_Button.TabIndex = 7;
             this.Save_Button.Text = "Save";
             this.Save_Button.UseVisualStyleBackColor = false;
@@ -266,6 +254,7 @@
             this.quotation_DocumentDataGridView.RowTemplate.Height = 21;
             this.quotation_DocumentDataGridView.Size = new System.Drawing.Size(930, 376);
             this.quotation_DocumentDataGridView.TabIndex = 7;
+            this.quotation_DocumentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Quotation_DocumentDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -431,7 +420,8 @@
             this.quotation_DocumentsDataGridView.RowTemplate.Height = 21;
             this.quotation_DocumentsDataGridView.Size = new System.Drawing.Size(930, 278);
             this.quotation_DocumentsDataGridView.TabIndex = 7;
-            this.quotation_DocumentsDataGridView.SelectionChanged += new System.EventHandler(this.quotation_DocumentsDataGridView_SelectionChanged);
+            this.quotation_DocumentsDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Quotation_DocumentsDataGridView_CellContentDoubleClick);
+            this.quotation_DocumentsDataGridView.SelectionChanged += new System.EventHandler(this.Quotation_DocumentsDataGridView_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn22
             // 
@@ -459,16 +449,29 @@
             this.fKQuotationDocumentsQuotationDocumentsBindingSource1.DataMember = "FK_Quotation_Documents_Quotation_Documents";
             this.fKQuotationDocumentsQuotationDocumentsBindingSource1.DataSource = this.quotation_DocumentBindingSource;
             // 
+            // DeleteButton
+            // 
+            this.DeleteButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DeleteButton.Font = new System.Drawing.Font("メイリオ", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.DeleteButton.Location = new System.Drawing.Point(-2, 340);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(363, 68);
+            this.DeleteButton.TabIndex = 8;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1316, 713);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.quotation_DocumentsDataGridView);
             this.Controls.Add(this.quotation_DocumentDataGridView);
             this.Controls.Add(this.Save_Button);
-            this.Controls.Add(this.AllView);
             this.Controls.Add(this.QuotationIDCombobox);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.RemoveFilterButton);
@@ -503,7 +506,6 @@
         private System.Windows.Forms.Button RemoveFilterButton;
         private System.Windows.Forms.Button RefreshButton;
         private System.Windows.Forms.ComboBox QuotationIDCombobox;
-        private System.Windows.Forms.Button AllView;
         private AZUREDBDataSet aZUREDBDataSet;
         private AZUREDBDataSetTableAdapters.Quotation_DocumentTableAdapter quotation_DocumentTableAdapter;
         private AZUREDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
@@ -569,6 +571,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.BindingSource fKQuotationDocumentsQuotationDocumentsBindingSource1;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }
 

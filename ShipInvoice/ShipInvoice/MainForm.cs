@@ -61,8 +61,6 @@ namespace ShipInvoice
 
             CloudBlobContainer container = blobClientWithSAS.GetContainerReference(Properties.Settings.Default.Container);
 
-    
-
             DialogResult dr = OpenFileDialog.ShowDialog();
 
             if (dr == System.Windows.Forms.DialogResult.OK)
@@ -72,13 +70,17 @@ namespace ShipInvoice
 
                 try
                 {
-      
+                    if (quotation_DocumentsDataGridView.CurrentCell == null)
+                    {
+                        MessageBox.Show("新規行を選択してください");
+                        return;
+                    }
 
                     this.quotation_DocumentsDataGridView[2, quotation_DocumentsDataGridView.CurrentRow.Index].Value = quotation_DocumentDataGridView[0, quotation_DocumentDataGridView.CurrentRow.Index].Value + "\\" + filename;
 
                     this.quotation_DocumentDataGridView[4, quotation_DocumentDataGridView.CurrentRow.Index].Value = filename;
 
-                    var IDname = quotation_DocumentDataGridView.CurrentCell.Value;
+                    var IDname = this.quotation_DocumentDataGridView[1, quotation_DocumentDataGridView.CurrentRow.Index].Value;
 
                     CloudBlockBlob blockBlob_upload = container.GetBlockBlobReference(IDname + "\\" + filename);
 
@@ -97,11 +99,17 @@ namespace ShipInvoice
                     }
                 }
 
-                catch (NotFiniteNumberException ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("例外");
-                    this.quotation_DocumentsDataGridView[1, quotation_DocumentsDataGridView.NewRowIndex].Value = this.quotation_DocumentsDataGridView[1, quotation_DocumentsDataGridView.CurrentRow.Index].Value;
-                    this.quotation_DocumentsDataGridView[2, quotation_DocumentsDataGridView.NewRowIndex].Value = this.quotation_DocumentDataGridView[0, quotation_DocumentDataGridView.CurrentRow.Index].Value + "\\" + filename;
+
+                    if (quotation_DocumentsDataGridView.CurrentRow==null)
+                    {
+                        quotation_DocumentsDataGridView.CurrentCell = quotation_DocumentsDataGridView[0,0];
+                    }
+                    this.quotation_DocumentsDataGridView[2, quotation_DocumentsDataGridView.CurrentRow.Index].Value = quotation_DocumentDataGridView[0, quotation_DocumentDataGridView.CurrentRow.Index].Value + "\\" + filename;
+
+                    this.quotation_DocumentDataGridView[4, quotation_DocumentDataGridView.CurrentRow.Index].Value = filename;
 
                 }
 
@@ -152,7 +160,7 @@ namespace ShipInvoice
             this.quotation_DocumentsTableAdapter1.Update(aZUREDBDataSet1.Quotation_Documents);
         }
 
-        private void quotation_DocumentsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Quotation_DocumentsDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Properties.Settings.Default.Accesskey);
 
@@ -172,7 +180,28 @@ namespace ShipInvoice
             Process.Start(blob.Uri + sasBlobToken);
         }
 
-        private void quotation_DocumentsDataGridView_SelectionChanged(object sender, EventArgs e)
+        private void Quotation_DocumentsDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.fKQuotationDocumentsQuotationDocumentsBindingSource1.RemoveCurrent();
+                this.fKQuotationDocumentsQuotationDocumentsBindingSource1.EndEdit();
+                this.quotation_DocumentsTableAdapter1.Update(this.aZUREDBDataSet1.Quotation_Documents);
+                MessageBox.Show("Deleted");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("消す項目がありません");
+            }
+
+        }
+
+        private void Quotation_DocumentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
