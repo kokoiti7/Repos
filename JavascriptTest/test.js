@@ -1,1 +1,1 @@
-<i class="fa fa-anchor fa-lg"></i>
+<a href="javascript:window.close();">閉じる</a>
